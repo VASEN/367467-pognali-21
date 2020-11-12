@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Валерий Васен](https://up.htmlacademy.ru/adaptive/21/user/367467).
-* Наставник: `Неизвестно`.
+* Наставник: [Ярослав Баронин].
 
 ---
 
