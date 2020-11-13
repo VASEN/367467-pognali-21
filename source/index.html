@@ -5,7 +5,7 @@
   <title>HTML Academy: Погнали</title>
 </head>
 <body class="page__body">
-<header class="page__header main-header">
+  <header class="page__header main-header">
   <div class="container">
 <!--  Вопрос с поведением меню/навигации? Одно меню передвигается и меняет цвета???  -->
     <div class="main-header__navigation site-navigation site-navigation--theme">
@@ -84,9 +84,9 @@
     </div>
   </div>
 </header>
-<main class="page__main">
-  <h1 class="visually-hidden">Главная страница туристического сервиса "Погнали"</h1>
-  <section class="about-us">
+  <main class="page__main">
+    <h1 class="visually-hidden">Главная страница туристического сервиса "Погнали"</h1>
+    <section class="about-us">
     <div class="container">
       <a name="about-us"></a>
       <h2>О сервисе</h2>
@@ -103,7 +103,7 @@
       </a>
     </div>
   </section>
-  <section class="directions">
+    <section class="directions">
     <div class="container">
       <a name="directions"></a>
       <h2>Направления</h2>
@@ -145,7 +145,7 @@
       </a>
     </div>
   </section>
-  <section class="companions">
+    <section class="companions">
     <div class="container">
       <a name="companions"></a>
       <h2>Попутчики</h2>
@@ -235,7 +235,7 @@
       </a>
     </div>
   </section>
-  <section class="profile">
+    <section class="profile">
     <div class="container">
       <span class="profile__logo"><sup>Рубль</sup></span>
       <table>
@@ -261,6 +261,28 @@
       </a>
     </div>
   </section>
-</main>
+    <section class="feedback">
+      <div class="container">
+        <h2>Заинтересовались?</h2>
+        <p class="feedback__text">
+          Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.
+        </p>
+        <form class="" method="post" action="https://echo.htmlacademy.ru">
+          <div class="button button__wrapper">
+            <label class="visually-hidden">E-mail</label>
+            <input class="button__text" type="email" placeholder="E-mail">
+            <button class="button__icon" type="submit">Регистрация</button>
+          </div>
+        </form>
+        <p class="feedback__text">
+          Остались вопросы? Мы с радостью на них ответим!
+        </p>
+        <div class="feedback__contacts contacts">
+          <a class="contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
+          <a class="contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
