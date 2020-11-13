@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
-  </body>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+</head>
+<body class="page__body">
+<header class="page__header main-header">
+  <div class="container">
+<!--  Вопрос с поведением меню/навигации? Одно меню передвигается и меняет цвета???  -->
+    <div class="main-header__navigation site-navigation site-navigation--theme">
+      <a class="site-navigation__logo">
+        <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
+      </a>
+      <div class="site-navigation__menu menu">
+        <button class="menu__toggle" type="button">Открыть меню</button>
+        <nav class="menu__navigation main-navigation">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#about-us">О сервисе</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#directions">Направления</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#companions">Попутчики</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__contacts contacts">
+          <a class="contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
+          <a class="contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+        </div>
+        <div class="menu__user-navigation user-navigation">
+          <a class="login-button" href="#">Авторизация</a>
+        </div>
+        <div class="menu__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vk" aria-label="Погнали Вконтакте" href="#">Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--insta" aria-label="Погнали в Instagram" href="#">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main-header__promo promo">
+      <p class="promo__tittle">В путешествие с крутыми попутчиками!</p>
+      <img class="promo__image" src="https://via.placeholder.com/192x2555" width="192" height="255" alt="Путешественник с чемоданом">
+      <blockquote class="promo__quote promo-quote">
+        <p class="promo-quote__text">
+          «Лучшее приложение,<br>
+          что я видел в жизни!»
+        </p>
+        <cite class="promo-quote__author">
+          Мурат Эльтазин<br>
+          главный редактор<br>
+          газеты «гаджетлайф»
+        </cite>
+      </blockquote>
+      <ol class="promo__actions actions">
+        <li class="actions__item">
+          <p class="actions__text">Выберите направление</p>
+          <span class="actions__number">1</span>
+        </li>
+        <li class="actions__item">
+          <p class="actions__text">Изучите идеи путешественников</p>
+          <span class="actions__number">2</span>
+        </li>
+        <li class="actions__item">
+          <p class="actions__text">Находите тех, кто похож на вас</p>
+          <span class="actions__number">3</span>
+        </li>
+        <li class="actions__item">
+          <p class="actions__text">Путешествуйте вместе!</p>
+          <span class="actions__number">4</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</header>
+</body>
 </html>
