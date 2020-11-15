@@ -50,6 +50,149 @@
   </header>
   <main class="catalog-page__main">
     <h1 class="catalog-page__title">Попутчики</h1>
+    <section class="catalog-page__filter filter">
+      <div class="container filter__container">
+        <h2 class="filter__title">Фильтрация по странам:</h2>
+        <ul class="filter__continent-list">
+          <li class="filter__continent-item filter__continent-item--current">
+            <a href="#">Европа</a>
+          </li>
+          <li class="filter__continent-item">
+            <a href="#">Азия</a>
+          </li>
+          <li class="filter__continent-item">
+            <a href="#">Америка</a>
+          </li>
+          <li class="filter__continent-item">
+            <a href="#">Острова</a>
+          </li>
+        </ul>
+        <button class="filter__toggle" type="button">Показать все</button>
+        <table class="filter__alphabet alphabet">
+            <tr>
+              <td class="alphabet__item alphabet__item--current"><button>А</button></td>
+              <td class="alphabet__item"><button>Б</button></td>
+              <td class="alphabet__item"><button>В</button></td>
+              <td class="alphabet__item"><button>Г</button></td>
+              <td class="alphabet__item"><button>Д</button></td>
+            </tr>
+            <tr>
+              <td class="alphabet__item"><button>Е</button></td>
+              <td class="alphabet__item"><button>З</button></td>
+              <td class="alphabet__item"><button>И</button></td>
+              <td class="alphabet__item"><button>К</button></td>
+              <td class="alphabet__item"><button>Л</button></td>
+            </tr>
+            <tr>
+              <td class="alphabet__item"><button>М</button></td>
+              <td class="alphabet__item"><button>Н</button></td>
+              <td class="alphabet__item"><button>О</button></td>
+              <td class="alphabet__item"><button>П</button></td>
+              <td class="alphabet__item"><button>Р</button></td>
+            </tr>
+            <tr>
+              <td class="alphabet__item"><button>С</button></td>
+              <td class="alphabet__item"><button>Т</button></td>
+              <td class="alphabet__item"><button>У</button></td>
+              <td class="alphabet__item"><button>Ф</button></td>
+              <td class="alphabet__item"><button>Х</button></td>
+            </tr>
+            <tr>
+              <td class="alphabet__item"><button>Ч</button></td>
+              <td class="alphabet__item"><button>Ш</button></td>
+              <td class="alphabet__item"><button>Щ</button></td>
+              <td class="alphabet__item"><button>Э</button></td>
+              <td class="alphabet__item"><button>Ю</button></td>
+            </tr>
+          </table>
+        <ul class="country-selection__list">
+          <li class="country-selection__item"><a href="#">Австралия</a></li>
+          <li class="country-selection__item"><a href="#">Австрия</a></li>
+          <li class="country-selection__item"><a href="#">Азербайджан</a></li>
+          <li class="country-selection__item"><a href="#">Албания</a></li>
+          <li class="country-selection__item"><a href="#">Алжир</a></li>
+          <li class="country-selection__item"><a href="#">Ангола</a></li>
+          <li class="country-selection__item"><a href="#">Андорра</a></li>
+          <li class="country-selection__item"><a href="#">Антигуа и Барбуда</a></li>
+          <li class="country-selection__item"><a href="#">Аргентина</a></li>
+          <li class="country-selection__item"><a href="#">Армения</a></li>
+          <li class="country-selection__item"><a href="#">Афганистан</a></li>
+        </ul>
+        <button class="filter__close-button" type="button">Свернуть</button>
+      </div>
+    </section>
+    <section class="catalog-page__sort sort">
+      <div class="container sort__container">
+        <h2 class="filter__title">Подберите идеального попутчика</h2>
+        <form class="sort__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="sort__area">
+            <a class="sort__area--toggle" href="#">Хобби</a>
+          </fieldset>
+          <fieldset class="sort__area">
+            <a class="sort__area--toggle" href="#">Музыка</a>
+            <ul class="sort__list">
+              <li class="sort__item">
+                <input class="visually-hidden" type="checkbox" name="hard-rock" id="music__hard-rock" checked>
+                <label for="music__hard-rock">Тяжелый рок</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" type="checkbox" name="russian-rap" id="music__russian-rap" checked>
+                <label for="music__hard-rock">Русский рэп</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" type="checkbox" name="evrodance" id="music__evrodance" >
+                <label for="music__hard-rock">Евроденс</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="sort__area">
+            <a class="sort__area--toggle" href="#">Еда</a>
+          </fieldset>
+          <fieldset class="sort__area">
+            <a class="sort__area--toggle" href="#">Транспорт</a>
+            <ul class="sort__travel-list travel-list">
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-by-plane">Самолетом</label>
+                <input class="travel-list__plane" type="checkbox" name="plane" id="travel-by-plane" checked>
+              </li>
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-by-bus">На автобусе</label>
+                <input class="travel-list__bus" type="checkbox" name="bus" id="travel-by-bus" checked>
+              </li>
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-by-cycle">На велосипеде</label>
+                <input class="travel-list__cycle" type="checkbox" name="cycle" id="travel-by-cycle">
+              </li>
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-walk">Пешком</label>
+                <input class="travel-list__walk" type="checkbox" name="walk" id="travel-walk" checked>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="sort__area">
+            <a class="sort__area--toggle" href="#">Левел</a>
+            <div class="sort__level-range level-range">
+              <div class="level-range__element">
+                <label class="visually-hidden" for="min-level">Минимальный уровень:</label>
+                <input type="number" name="min-level" value="30" id="min-level" min="30">
+              </div>
+              <span>-</span>
+              <div class="level-range__element">
+                <label class="visually-hidden" for="max-level">Максимальный уровень:</label>
+                <input type="number" name="max-level" value="100" id="max-level" max="100">
+              </div>
+              <div class="level-range__range">
+                <div class="level-range__range--current">
+                  <div class="level-range__range--min" tabindex="1" aria-label="Минимальный уровень"></div>
+                  <div class="level-range__range--max" tabindex="1" aria-label="Максимальный уровень"></div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <button class="sort__button" type="submit">Показать</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 </body>
