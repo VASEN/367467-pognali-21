@@ -121,15 +121,15 @@
           <li class="plan-list__item">Шаг 3</li>
         </ul>
         <div class="new-plan__slider slider">
-          <div class="slider__item slider-item step-one" id="step-1">
-            <h3 class="slider-item__title">Шаг 1. Даты пребывания</h3>
-            <p class="slider-item__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-            <ul class="new-plan__list plan-list">
-              <li class="plan-list__item plan-list__item--current">Даты</li>
-              <li class="plan-list__item">Маршрут</li>
-              <li class="plan-list__item">Развлечения</li>
-            </ul>
-            <form class="step-one__form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="new-plan__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="slider__item slider-item step-one" id="step-1">
+              <h3 class="slider-item__title">Шаг 1. Даты пребывания</h3>
+              <p class="slider-item__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <ul class="new-plan__list plan-list">
+                <li class="plan-list__item plan-list__item--current">Даты</li>
+                <li class="plan-list__item">Маршрут</li>
+                <li class="plan-list__item">Развлечения</li>
+              </ul>
               <div class="form__module button-module up-down-button">
                 <label for="step-one-companions">Ищу попутчиков:</label>
                 <span class="button-module__caption">чел.</span>
@@ -241,11 +241,126 @@
                   </tr>
                 </table>
               </div>
-              <a href="#step-2">Следующий шаг</a>
-            </form>
-          </div>
-
-
+              <a class="form__next-step" href="#step-2">Следующий шаг</a>
+            </div>
+            <div class="slider-item slider-item step-two" id="step-2">
+              <h3 class="slider-item__title">Шаг 2. Маршрут</h3>
+              <p class="slider-item__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              <ul class="new-plan__list plan-list">
+                <li class="plan-list__item">Даты</li>
+                <li class="plan-list__item plan-list__item--current">Маршрут</li>
+                <li class="plan-list__item">Развлечения</li>
+              </ul>
+              <div class="step-two__route route">
+                <div class="form__module route-module route__item route__item--selected">
+                  <label>
+                    <input class="route-module__selector" type="text" value="Босния и Герцеговина" name="route-item">
+                  </label>
+                  <span class="route__graph"></span>
+                  <img class="route__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Босния и герцеговина">
+                  <button class="route__button delete-button" type="button">Удалить страну</button>
+                </div>
+                <div class="form__module route__item route__item--selected">
+                  <label>
+                    <input class="route-module__selector" type="text" value="Чехия" name="route-item">
+                  </label>
+                  <span class="route__graph"></span>
+                  <img class="route__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+                  <button class="route__button delete-button" type="button">Удалить страну</button>
+                </div>
+                <div class="form__module route__item route__item--select">
+                  <label>
+                    <input class="route-module__selector" type="text" value="Выберите страну">
+                  </label>
+                  <div class="route__selection country-selection">
+                    <table class="country-selection__alphabet alphabet">
+                      <tr>
+                        <td class="alphabet__item alphabet__item--current">А</td>
+                        <td class="alphabet__item">Б</td>
+                        <td class="alphabet__item">В</td>
+                        <td class="alphabet__item">Г</td>
+                        <td class="alphabet__item">Д</td>
+                      </tr>
+                      <tr>
+                        <td class="alphabet__item">Е</td>
+                        <td class="alphabet__item">З</td>
+                        <td class="alphabet__item">И</td>
+                        <td class="alphabet__item">К</td>
+                        <td class="alphabet__item">Л</td>
+                      </tr>
+                      <tr>
+                        <td class="alphabet__item">М</td>
+                        <td class="alphabet__item">Н</td>
+                        <td class="alphabet__item">О</td>
+                        <td class="alphabet__item">П</td>
+                        <td class="alphabet__item">Р</td>
+                      </tr>
+                      <tr>
+                        <td class="alphabet__item">С</td>
+                        <td class="alphabet__item">Т</td>
+                        <td class="alphabet__item">У</td>
+                        <td class="alphabet__item">Ф</td>
+                        <td class="alphabet__item">Х</td>
+                      </tr>
+                      <tr>
+                        <td class="alphabet__item">Ч</td>
+                        <td class="alphabet__item">Ш</td>
+                        <td class="alphabet__item">Щ</td>
+                        <td class="alphabet__item">Э</td>
+                        <td class="alphabet__item">Ю</td>
+                      </tr>
+                    </table>
+                    <ul class="country-selection__list">
+                      <li class="country-selection__item">Австралия</li>
+                      <li class="country-selection__item">Австрия</li>
+                      <li class="country-selection__item">Азербайджан</li>
+                      <li class="country-selection__item">Албания</li>
+                      <li class="country-selection__item">Алжир</li>
+                      <li class="country-selection__item">Ангола</li>
+                      <li class="country-selection__item">Андорра</li>
+                      <li class="country-selection__item">Антигуа и Барбуда</li>
+                      <li class="country-selection__item">Аргентина</li>
+                      <li class="country-selection__item">Армения</li>
+                      <li class="country-selection__item">Афганистан</li>
+                    </ul>
+                  </div>
+                  <span class="route__graph"></span>
+                  <button class="route__button delete-button" type="button">Удалить страну</button>
+                </div>
+                <div class="form__module route__item route__item--add">
+                  <label>
+                    <input class="route-module__selector" type="text" value="Добавить страну">
+                  </label>
+                  <span class="route__graph"></span>
+                </div>
+              </div>
+              <a class="form__next-step" href="#step-3">Следующий шаг</a>
+              <a href="#step-1">На шаг назад</a>
+            </div>
+            <div class="slide__item slider-item step-three" id="step-3">
+              <h3 class="slider-item__title">Шаг 3. Развлечения</h3>
+              <p>Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ul class="new-plan__list plan-list">
+                <li class="plan-list__item">Даты</li>
+                <li class="plan-list__item">Маршрут</li>
+                <li class="plan-list__item plan-list__item--current">Развлечения</li>
+              </ul>
+              <div class="form__module country-plan">
+                <h4 class="country-plan__title">Босния и Герцеговина</h4>
+                <textarea placeholder="План действий"></textarea>
+                <img class="country-plan__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Босния и герцеговина">
+                <span class="country-plan__graph"></span>
+              </div>
+              <div class="form__module country-plan">
+                <h4 class="country-plan__title">Чехия</h4>
+                <textarea name="" id="" placeholder="План действий"></textarea>
+                <img class="country-plan__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+                <span class="country-plan__graph"></span>
+              </div>
+              <button type="submit">Отправить</button>
+              <a href="#step-2">На шаг назад</a>
+            </div>
+          </form>
         </div>
       </div>
     </section>
