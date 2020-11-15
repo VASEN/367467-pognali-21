@@ -48,6 +48,48 @@
       </div>
     </div>
   </header>
+  <main class="form-page__main">
+    <h1 class="form-page__title">Направления</h1>
+    <section class="user-profile">
+      <div class="container user-profile__container">
+        <h2 class="visually-hidden">Профиль пользователя Петя Демин</h2>
+        <div class="user-profile__card user-card">
+          <div class="user-card__level level">
+            <span class="level__number">99</span>
+            <span class="level__text">level</span>
+          </div>
+          <img class="user-profile__photo user-card__photo" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Петя Демин">
+          <button class="button" type="button">Сменить фото</button>
+          <fieldset class="user-profile__fieldset">
+            <legend class="user-profile__legend">Тэги</legend>
+            <label class="visually-hidden" for="user-profile__tags">Тэги</label>
+            <textarea class="user-profile__tags-editor" name="tags" id="user-profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+          </fieldset>
+          <fieldset class="user-profile__fieldset">
+            <legend class="user-profile__legend">Транспорт</legend>
+            <ul class="user-profile__travel-list travel-list">
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-by-plane">Самолетом</label>
+                <input class="travel-list__plane" type="checkbox" name="plane" id="travel-by-plane" checked>
+              </li>
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-by-bus">На автобусе</label>
+                <input class="travel-list__bus" type="checkbox" name="bus" id="travel-by-bus" checked>
+              </li>
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-by-cycle">На велосипеде</label>
+                <input class="travel-list__cycle" type="checkbox" name="cycle" id="travel-by-cycle">
+              </li>
+              <li class="travel-list__item">
+                <label class="visually-hidden" for="travel-walk">Пешком</label>
+                <input class="travel-list__walk" type="checkbox" name="walk" id="travel-walk" checked>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+    </section>
 
+  </main>
 </body>
 </html>
