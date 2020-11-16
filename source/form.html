@@ -153,95 +153,99 @@
               </div>
               <div class="form__module month-module">
                 <label class="visually-hidden" for="step-one-month">Выбор месяца</label>
-                <button class="month-module__prev">Февраль 2019</button>
+                <button class="month-module__prev" type="button"></button>
                 <input class="step-one__month" type="text" value="Март 2019" name="month" id="step-one-month">
-                <button class="month-module__next">Апрель 2019</button>
+                <button class="month-module__next" type="button"></button>
                 <table class="month-module__calendar calendar">
-                  <tr class="calendar__title">
-                    <th class="calendar__title-day" aria-label="Понедельник">
-                      <span class="calendar__title--short">П</span><span class="calendar__title--full">н</span>
-                    </th>
-                    <th class="calendar__title-day" aria-label="Вторинк">
-                      <span class="calendar__title--short">В</span><span class="calendar__title--full">т</span>
-                    </th>
-                    <th class="calendar__title-day" aria-label="Среда">
-                      <span class="calendar__title--short">С</span><span class="calendar__title--full">р</span>
-                    </th>
-                    <th class="calendar__title-day" aria-label="Четверг">
-                      <span class="calendar__title--short">Ч</span><span class="calendar__title--full">т</span>
-                    </th>
-                    <th class="calendar__title-day" aria-label="Пятница">
-                      <span class="calendar__title--short">П</span><span class="calendar__title--full">т</span>
-                    </th>
-                    <th class="calendar__title-day calendar__title-day--holiday" aria-label="Суббота">
-                      <span class="calendar__title--short">С</span><span class="calendar__title--full">б</span>
-                    </th>
-                    <th class="calendar__title-day calendar__title-day--holiday" aria-label="Воскресенье">
-                      <span class="calendar__title--short">В</span><span class="calendar__title--full">с</span>
-                    </th>
-                  </tr>
-                  <tr class="calendar__week week">
-                    <td class="week__day day">
-                      <!-- вариант реализации календаря. пока думаю -->
-                      <div class="day__module">
-                        <label>
-                          <input class="visually-hidden" type="checkbox">23
-                        </label>
-                      </div>
-                      <!-- конец реализации -->
-                    </td>
-                    <td class="week__day day">24</td>
-                    <td class="week__day day">25</td>
-                    <td class="week__day day">26</td>
-                    <td class="week__day day">27</td>
-                    <td class="week__day day">28</td>
-                    <td class="week__day day">1<span class="day__start-month">мар</span></td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="week__day day">2</td>
-                    <td class="week__day day">3</td>
-                    <td class="week__day day">4</td>
-                    <td class="week__day day">5</td>
-                    <td class="week__day day">6</td>
-                    <td class="week__day day">7</td>
-                    <td class="week__day day">8</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="week__day day">9</td>
-                    <td class="week__day day">10</td>
-                    <td class="week__day day">11</td>
-                    <td class="week__day day">12</td>
-                    <td class="week__day day">13</td>
-                    <td class="week__day day">14</td>
-                    <td class="week__day day">15</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="week__day day">16</td>
-                    <td class="week__day day">17</td>
-                    <td class="week__day day">18</td>
-                    <td class="week__day day">19</td>
-                    <td class="week__day day">20</td>
-                    <td class="week__day day">21</td>
-                    <td class="week__day day">22</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="week__day day">23</td>
-                    <td class="week__day day">24</td>
-                    <td class="week__day day">25</td>
-                    <td class="week__day day day__start day--selected">26</td>
-                    <td class="week__day day day--selected">27</td>
-                    <td class="week__day day day__end day--selected">28</td>
-                    <td class="week__day day day--available">29</td>
-                  </tr>
-                  <tr class="calendar__week">
-                    <td class="week__day day day--available">30</td>
-                    <td class="week__day day day--available">31</td>
-                    <td class="week__day day day--available">1<span class="day__start-month">апр</span></td>
-                    <td class="week__day day day--available">2</td>
-                    <td class="week__day day day--available">3</td>
-                    <td class="week__day day day--available">4</td>
-                    <td class="week__day day day--available">5</td>
-                  </tr>
+                  <thead>
+                    <tr class="calendar__title">
+                      <th class="calendar__title-day" aria-label="Понедельник">
+                        <span class="calendar__title--short">П</span><span class="calendar__title--full">н</span>
+                      </th>
+                      <th class="calendar__title-day" aria-label="Вторинк">
+                        <span class="calendar__title--short">В</span><span class="calendar__title--full">т</span>
+                      </th>
+                      <th class="calendar__title-day" aria-label="Среда">
+                        <span class="calendar__title--short">С</span><span class="calendar__title--full">р</span>
+                      </th>
+                      <th class="calendar__title-day" aria-label="Четверг">
+                        <span class="calendar__title--short">Ч</span><span class="calendar__title--full">т</span>
+                      </th>
+                      <th class="calendar__title-day" aria-label="Пятница">
+                        <span class="calendar__title--short">П</span><span class="calendar__title--full">т</span>
+                      </th>
+                      <th class="calendar__title-day calendar__title-day--holiday" aria-label="Суббота">
+                        <span class="calendar__title--short">С</span><span class="calendar__title--full">б</span>
+                      </th>
+                      <th class="calendar__title-day calendar__title-day--holiday" aria-label="Воскресенье">
+                        <span class="calendar__title--short">В</span><span class="calendar__title--full">с</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="calendar__week week">
+                      <td class="week__day day">
+                        <!-- вариант реализации календаря. пока думаю -->
+                        <div class="day__module">
+                          <label>
+                            <input class="visually-hidden" type="checkbox">23
+                          </label>
+                        </div>
+                        <!-- конец реализации -->
+                      </td>
+                      <td class="week__day day">24</td>
+                      <td class="week__day day">25</td>
+                      <td class="week__day day">26</td>
+                      <td class="week__day day">27</td>
+                      <td class="week__day day">28</td>
+                      <td class="week__day day">1<span class="day__start-month">мар</span></td>
+                    </tr>
+                    <tr class="calendar__week">
+                      <td class="week__day day">2</td>
+                      <td class="week__day day">3</td>
+                      <td class="week__day day">4</td>
+                      <td class="week__day day">5</td>
+                      <td class="week__day day">6</td>
+                      <td class="week__day day">7</td>
+                      <td class="week__day day">8</td>
+                    </tr>
+                    <tr class="calendar__week">
+                      <td class="week__day day">9</td>
+                      <td class="week__day day">10</td>
+                      <td class="week__day day">11</td>
+                      <td class="week__day day">12</td>
+                      <td class="week__day day">13</td>
+                      <td class="week__day day">14</td>
+                      <td class="week__day day">15</td>
+                    </tr>
+                    <tr class="calendar__week">
+                      <td class="week__day day">16</td>
+                      <td class="week__day day">17</td>
+                      <td class="week__day day">18</td>
+                      <td class="week__day day">19</td>
+                      <td class="week__day day">20</td>
+                      <td class="week__day day">21</td>
+                      <td class="week__day day">22</td>
+                    </tr>
+                    <tr class="calendar__week">
+                      <td class="week__day day">23</td>
+                      <td class="week__day day">24</td>
+                      <td class="week__day day">25</td>
+                      <td class="week__day day day__start day--selected">26</td>
+                      <td class="week__day day day--selected">27</td>
+                      <td class="week__day day day__end day--selected">28</td>
+                      <td class="week__day day day--available">29</td>
+                    </tr>
+                    <tr class="calendar__week">
+                      <td class="week__day day day--available">30</td>
+                      <td class="week__day day day--available">31</td>
+                      <td class="week__day day day--available">1<span class="day__start-month">апр</span></td>
+                      <td class="week__day day day--available">2</td>
+                      <td class="week__day day day--available">3</td>
+                      <td class="week__day day day--available">4</td>
+                      <td class="week__day day day--available">5</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
               <a class="form__next-step" href="#step-2">Следующий шаг</a>
