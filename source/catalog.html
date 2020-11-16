@@ -125,11 +125,11 @@
       <div class="container sort__container">
         <h2 class="filter__title">Подберите идеального попутчика</h2>
         <form class="sort__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="sort__area">
-            <a class="sort__area--toggle" href="#">Хобби</a>
-          </fieldset>
-          <fieldset class="sort__area">
-            <a class="sort__area--toggle" href="#">Музыка</a>
+          <div class="sort__area">
+            <a class="sort__area-toggle sort__area-toggle--close" href="#">Хобби</a>
+          </div>
+          <div class="sort__area">
+            <a class="sort__area-toggle sort__area-toggle--open" href="#">Музыка</a>
             <ul class="sort__list">
               <li class="sort__item">
                 <input class="visually-hidden" type="checkbox" name="hard-rock" id="music__hard-rock" checked>
@@ -144,12 +144,12 @@
                 <label for="music__hard-rock">Евроденс</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="sort__area">
-            <a class="sort__area--toggle" href="#">Еда</a>
-          </fieldset>
-          <fieldset class="sort__area">
-            <a class="sort__area--toggle" href="#">Транспорт</a>
+          </div>
+          <div class="sort__area">
+            <a class="sort__area-toggle sort__area-toggle--close" href="#">Еда</a>
+          </div>
+          <div class="sort__area">
+            <a class="sort__area-toggle sort__area-toggle--open" href="#">Транспорт</a>
             <ul class="sort__travel-list travel-list">
               <li class="travel-list__item">
                 <label class="visually-hidden" for="travel-by-plane">Самолетом</label>
@@ -168,9 +168,9 @@
                 <input class="travel-list__walk" type="checkbox" name="walk" id="travel-walk" checked>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="sort__area">
-            <a class="sort__area--toggle" href="#">Левел</a>
+          </div>
+          <div class="sort__area">
+            <a class="sort__area-toggle sort__area-toggle--open" href="#">Левел</a>
             <div class="sort__level-range level-range">
               <div class="level-range__element">
                 <label class="visually-hidden" for="min-level">Минимальный уровень:</label>
@@ -188,7 +188,7 @@
                 </div>
               </div>
             </div>
-          </fieldset>
+          </div>
           <button class="sort__button" type="submit">Показать</button>
         </form>
       </div>
