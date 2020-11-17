@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .contacts {
   @include font(16px, 18px, $font-weight-bold, normal, uppercase);
@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
 
-  color: $$color-blue-cobalt;
+  color: $color-blue-cobalt;
   &::before {
     content: "";
 
@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
 
-  color: $$color-blue-cobalt;
+  color: $color-blue-cobalt;
   &::before {
     content: "";
 

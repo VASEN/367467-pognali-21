@@ -4,11 +4,11 @@
 @import "common/mixins";
 @import "common/helpers";
 // Стили .header
-@import "work/header";
-@import "work/menu";
-@import "work/main-navigation";
-@import "work/login-button";
-@import "work/contacts";
-@import "work/social";
+@import "index/header/header";
+@import "index/header/menu";
+@import "index/header/main-navigation";
+@import "index/header/login-button";
+@import "index/header/contacts";
+@import "index/header/social";
 // Стили .page_main
-@import "work/hero";
+@import "index/main/hero";
