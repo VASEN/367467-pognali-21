@@ -1,0 +1,14 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 41px 80px 41px 95px;
+}
+
+.social__link {
+  width: 21px;
+  height: 21px;
+
+  background-color: tomato;
+}

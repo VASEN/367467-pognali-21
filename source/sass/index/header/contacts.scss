@@ -1,0 +1,35 @@
+.contacts {
+  @include font(16px, 18px, $bold, normal, uppercase);
+}
+
+.contacts__telephone {
+  display: flex;
+  align-items: center;
+
+  color: $menu-blue;
+  &::before {
+    content: "";
+
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+
+    background-color: tomato;
+  }
+}
+
+.contacts__email {
+  display: flex;
+  align-items: center;
+
+  color: $menu-blue;
+  &::before {
+    content: "";
+
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+
+    background-color: tomato;
+  }
+}

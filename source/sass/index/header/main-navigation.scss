@@ -1,0 +1,20 @@
+.main-navigation {
+  padding-top: 45px;
+  padding-bottom: 51px;
+}
+
+.main-navigation__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-navigation__item {
+  text-align: center;
+}
+
+.main-navigation__link {
+  @include font(30px, 35px, $medium, normal, uppercase);
+  color: $menu-blue;
+}
