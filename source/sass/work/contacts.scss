@@ -1,19 +1,22 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
 .contacts {
-  @include font(16px, 18px, $bold, normal, uppercase);
+  @include font(16px, 18px, $font-weight-bold, normal, uppercase);
 }
 
 .contacts__telephone {
   display: flex;
   align-items: center;
 
-  color: $menu-blue;
+  color: $$color-blue-cobalt;
   &::before {
     content: "";
 
     width: 45px;
     height: 45px;
     margin-right: 16px;
-
+    // Распорка
     background-color: tomato;
   }
 }
@@ -22,7 +25,7 @@
   display: flex;
   align-items: center;
 
-  color: $menu-blue;
+  color: $$color-blue-cobalt;
   &::before {
     content: "";
 

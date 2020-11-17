@@ -1,0 +1,12 @@
+@import "source/sass/common/variables";
+
+.header {
+  color: $color-white;
+
+  background-color: $color-blue-sapphire;
+}
+
+.header__container {
+  padding-left: 25px;
+  padding-right: 25px;
+}

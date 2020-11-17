@@ -1,0 +1,16 @@
+@import "/source/sass/common/variables";
+@import "/source/sass/common/mixins";
+
+.login-button {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 81px 8px 78px;
+  box-sizing: border-box;
+
+  @include font(17px, 30px, $font-weight-bold, normal, uppercase);
+  text-align: center;
+  color: $color-blue-sapphire;
+
+  background-color: $color-yellow;
+  border-radius: 25px;
+}

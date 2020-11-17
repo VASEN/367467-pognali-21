@@ -1,12 +1,14 @@
-@import "source/sass/fonts.scss";
-@import "source/sass/global.scss";
-@import "source/sass/variables.scss";
-@import "source/sass/mixins.scss";
-//Стили .header
-@import "source/sass/index/header/header.scss";
-@import "source/sass/container/container.scss";
-@import "source/sass/index/header/menu.scss";
-@import "source/sass/index/header/main-navigation.scss";
-@import "source/sass/index/header/login-button.scss";
-@import "source/sass/index/header/contacts.scss";
-@import "source/sass/index/header/social.scss";
+@import "common/fonts";
+@import "common/global";
+@import "common/variables";
+@import "common/mixins";
+@import "common/helpers";
+// Стили .header
+@import "work/header";
+@import "work/menu";
+@import "work/main-navigation";
+@import "work/login-button";
+@import "work/contacts";
+@import "work/social";
+// Стили .page_main
+@import "work/hero";
