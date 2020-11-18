@@ -1,12 +1,49 @@
-@import "../../common/variables";
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
 
 .hero {
+  padding-bottom: 39px;
+
   color: $color-white;
 
   background-color: $color-blue-sapphire;
 }
 
 .hero__wrapper {
-  //background-image: url("../../../img/globe-back-mobile-1.png");
-  //background-repeat: no-repeat;
+  background-image: url("/source/img/globe-back-mobile-1.png");
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  margin: 0;
+  padding: 21px 16px 10px;
+
+  @include font(36px, 40px, $font-weight-bold, normal, none);
+}
+
+.hero__contacts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero__phone {
+  &::before {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+  }
+}
+
+.hero__email {
+  &::before {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+  }
+}
+
+.hero__login-button {
+  padding: 13px 28px 11px 29px;
+
+  line-height: 20px;
 }

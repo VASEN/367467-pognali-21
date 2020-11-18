@@ -1,7 +1,7 @@
 @import "common/fonts";
-@import "common/global";
 @import "common/variables";
 @import "common/mixins";
+@import "common/global";
 @import "common/helpers";
 // Стили .header
 @import "index/header/header";
@@ -12,3 +12,6 @@
 @import "index/header/social";
 // Стили .page_main
 @import "index/main/hero";
+@import "index/main/hero-quote";
+@import "index/main/actions";
+
