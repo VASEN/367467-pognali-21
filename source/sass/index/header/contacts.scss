@@ -14,8 +14,9 @@
     width: 45px;
     height: 45px;
     margin-right: 16px;
-    // Распорка
-    background-color: tomato;
+
+    background-color: $color-blue-dark;
+    border-radius: 22px;
   }
 }
 
@@ -31,6 +32,7 @@
     height: 45px;
     margin-right: 16px;
 
-    background-color: tomato;
+    background-color: $color-blue-dark;
+    border-radius: 22px;
   }
 }
