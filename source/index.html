@@ -272,26 +272,37 @@
     </section>
     <section class="profile">
       <div class="container profile__container">
-        <h2 class="profile_title title">Добавьте свой профиль</h2>
-        <span class="profile__logo"><sup>Рубль</sup></span>
-        <table class="profile__price-list price-list">
-          <tr class="price-list__item price-item">
-            <td class="price-item__number">1</td>
-            <td class="price-item__title">Базовое размещение</td>
-            <td class="price-item__cost">Бесплатно</td>
-          </tr>
-          <tr class="price-list__item price-item">
-            <td class="price-item__number">2</td>
-            <td class="price-item__title">Вывод на первых позициях</td>
-            <td class="price-item__cost">99 руб./мес</td>
-          </tr>
-          <tr class="price-list__item price-item">
-            <td class="price-item__number">3</td>
-            <td class="price-item__title">Кастомный цвет карточки</td>
-            <td class="price-item__cost">59 руб./мес</td>
-          </tr>
-        </table>
-        <a class="business-button" href="#">Показать тарифы для бизнеса</a>
+        <div class="profile__wrapper">
+          <h2 class="profile__title title">Добавьте свой профиль</h2>
+          <div class="profile__wrapper-logo">
+            <span class="profile__logo"></span>
+            <div class="profile__currency">₽</div>
+          </div>
+        </div>
+        <ol class="profile__price-list price-list">
+          <li class="price-list__item">
+            <div class="price-list__wrapper-item">
+              <p class="price-list__item-text">Базовое размещение</p>
+              <p class="price-list__item-text">Бесплатно</p>
+            </div>
+            <span class="price-list__item-number">1</span>
+          </li>
+          <li class="price-list__item">
+            <div class="price-list__wrapper-item">
+              <p class="price-list__item-text">Вывод на первых позициях</p>
+              <p class="price-list__item-text">99 руб./мес</p>
+            </div>
+            <span class="price-list__item-number">2</span>
+          </li>
+          <li class="price-list__item">
+            <div class="price-list__wrapper-item">
+              <p class="price-list__item-text">Кастомный цвет карточки</p>
+              <p class="price-list__item-text">59 руб./мес</p>
+            </div>
+            <span class="price-list__item-number">3</span>
+          </li>
+        </ol>
+        <a class="button-business" href="#">Показать тарифы для бизнеса</a>
       </div>
     </section>
     <section class="feedback">
