@@ -1,0 +1,8 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.footer {
+  position: relative;
+  background-color: $color-white;
+  z-index: 1;
+}
