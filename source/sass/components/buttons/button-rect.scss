@@ -1,0 +1,25 @@
+@import "../../common/variables";
+@import "../../common/mixins";
+
+.button-rect {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 22px 23px;
+
+  @include font(18px, 18px, $font-weight-bold, normal, none);
+  color: $color-blue-ocean;
+
+  background-color: $color-yellow-sunrise;
+  border-radius: 10px;
+  &::after {
+    content: "";
+
+    width: 12px;
+
+    border-left: 12px solid $color-blue-ocean;
+    border-top: 9px solid transparent;
+    border-bottom:9px solid transparent;
+  }
+}

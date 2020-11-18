@@ -1,7 +1,7 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
-.login-button {
+.button-login {
   display: inline-block;
   margin: 0;
   padding: 12px 81px 8px 78px;

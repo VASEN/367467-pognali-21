@@ -42,8 +42,9 @@
   }
 }
 
-.hero__login-button {
-  padding: 13px 28px 11px 29px;
+.hero__button-login {
+  padding: 11px 28px 9px 29px;
+  box-sizing: border-box;
 
   line-height: 20px;
 }

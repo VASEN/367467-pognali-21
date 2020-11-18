@@ -1,0 +1,30 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.about-us {
+
+  font-weight: $font-weight-light;
+  color: $color-white;
+
+  background-color: $color-blue-deep;
+}
+
+.about-us__wrapper {
+  padding: 33px 35px 82px 24px;
+}
+
+.about-us__title {
+  margin-bottom: 19px;
+
+  color: $color-orange;
+}
+
+.about-us__text {
+  margin: 0 0 20px;
+  padding: 0;
+  &--bold {
+    margin-bottom: 0;
+
+    font-weight: $font-weight-bold;
+  }
+}

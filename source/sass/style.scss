@@ -3,15 +3,18 @@
 @import "common/mixins";
 @import "common/global";
 @import "common/helpers";
+@import "common/title";
 // Стили .header
 @import "index/header/header";
 @import "index/header/menu";
 @import "index/header/main-navigation";
-@import "index/header/login-button";
+@import "components/buttons/button";
+@import "components/buttons/button-rect";
 @import "index/header/contacts";
 @import "index/header/social";
 // Стили .page_main
 @import "index/main/hero";
 @import "index/main/hero-quote";
 @import "index/main/actions";
+@import "index/main/about-us";
 
