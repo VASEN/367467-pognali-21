@@ -2,11 +2,15 @@
 @import "source/sass/common/mixins";
 
 .about-us {
-
   font-weight: $font-weight-light;
   color: $color-white;
 
+  background-color: $color-white-smoky;
+}
+
+.about-us__container {
   background-color: $color-blue-deep;
+  border-radius: 0 0 25px 25px;
 }
 
 .about-us__wrapper {
