@@ -49,8 +49,7 @@
   top: 156px;
 
   z-index: -1;
-}
-
-.map__image--google {
-  display: none;
+  &--google {
+    border: none;
+  }
 }

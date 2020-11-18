@@ -1,0 +1,16 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 13px 0 18px 0;
+  border-top: 1px solid $color-white-smoky-light;
+}
+
+.copyright__title {
+  @include font(16px, 16px, $font-weight-normal, normal, none);
+  color: $color-black-bluish;
+}
