@@ -1,0 +1,67 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.user-card {
+  position: relative;
+
+  min-height: 428px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+
+  background-color: $color-white;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.user-card__level {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+}
+
+.user-card__visited-countries {
+  position: relative;
+  top: -20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card__country-flag {
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.user-card__status {
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+
+  border-radius: 3px;
+  &--offline {
+    background-color: $color-pink;
+  }
+  &--online {
+    background-color: $color-green-electriclime;
+  }
+}
+
+.user-card__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+}
+
+.user-card__user {
+  margin: 0;
+  padding: 0;
+
+  @include font(21px, 21px, $font-weight-bold, normal, none);
+  color: $color-blue-ocean;
+}

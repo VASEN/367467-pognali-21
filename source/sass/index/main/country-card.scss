@@ -4,8 +4,9 @@
 .country-card {
   position: relative;
 
-  min-height: 190px;
+  max-height: 190px;
   margin-bottom: 10px;
+  box-sizing: border-box;
 
   &:last-child {
     margin-bottom: 0;
@@ -21,8 +22,8 @@
 }
 
 .country-card__wrapper {
-  position: absolute;
-  top: 99px;
+  position: relative;
+  top: -18px;
 
   display: flex;
   justify-content: space-between;

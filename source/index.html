@@ -156,16 +156,17 @@
         <a class="button button-rect" href="form.html">Показать все</a>
       </div>
     </section>
-    <section class="companions">
+    <section class="companions" id="companions">
       <div class="container companions__container">
-        <a id="companions"></a>
-        <h2 class="companions__title title">Попутчики</h2>
-        <p class="companions__text">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-        </p>
-        <p class="companions__text--bold">
-          Теперь можно легко найти единомышленников!
-        </p>
+        <div class="companions__wrapper">
+          <h2 class="companions__title title">Попутчики</h2>
+          <p class="companions__text">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+          </p>
+          <p class="companions__text--bold">
+            Теперь можно легко найти единомышленников!
+          </p>
+        </div>
         <div class="companions__cards cards">
           <ul class="cards__list">
             <li class="cards__item user-card">
@@ -175,12 +176,14 @@
               </div>
               <img class="user-card__photo" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
               <div class="user-card__visited-countries">
-                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Шри Ланки">
-                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Таиланда">
-                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Сейшел">
+                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Шри Ланки">
+                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Таиланда">
+                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Сейшел">
               </div>
-              <span class="user-card__status user-card__status--offline"></span>
-              <h3 class="user-card__user">Таня Фирсова</h3>
+              <div class="user-card__wrapper">
+                <span class="user-card__status user-card__status--offline"></span>
+                <h3 class="user-card__user">Таня Фирсова</h3>
+              </div>
               <ul class="user-card__tags tags-list">
                 <li class="tags-list__item">
                   <a href="" class="tags-list__link">#ЗОЖ</a>
@@ -226,23 +229,25 @@
                 <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Бельгии">
                 <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Чехии">
               </div>
-              <span class="user-card__status user-card__status--online"></span>
-              <h3 class="user-card__user">Петя Демин</h3>
+              <div class="user-card__wrapper">
+                <span class="user-card__status user-card__status--online"></span>
+                <h3 class="user-card__user">Петя Демин</h3>
+              </div>
               <ul class="user-card__tags tags-list">
                 <li class="tags-list__item">
-                  <a href="" class="tags-list__link">#бургер</a>
+                  <a href="" class="tags-list__link">#бургер </a>
                 </li>
                 <li class="tags-list__item">
-                  <a href="" class="tags-list__link">#бар</a>
+                  <a href="" class="tags-list__link">#бар </a>
                 </li>
                 <li class="tags-list__item">
-                  <a href="" class="tags-list__link">#футбол</a>
+                  <a href="" class="tags-list__link">#футбол </a>
                 </li>
                 <li class="tags-list__item">
-                  <a href="" class="tags-list__link">#концерт</a>
+                  <a href="" class="tags-list__link">#концерт </a>
                 </li>
                 <li class="tags-list__item">
-                  <a href="" class="tags-list__link">#крафт</a>
+                  <a href="" class="tags-list__link">#крафт </a>
                 </li>
               </ul>
               <ul class="user-card__travel-list travel-list">
@@ -262,7 +267,7 @@
             </li>
           </ul>
         </div>
-        <a class="button" href="catalog.html">Показать всех</a>
+        <a class="button button-rect" href="catalog.html">Показать всех</a>
       </div>
     </section>
     <section class="profile">
