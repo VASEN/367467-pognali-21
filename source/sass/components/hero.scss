@@ -1,5 +1,5 @@
-@import "../../common/variables";
-@import "../../common/mixins";
+@import "../common/variables";
+@import "../common/mixins";
 
 .hero {
   padding-bottom: 39px;
@@ -31,6 +31,9 @@
     width: 40px;
     height: 40px;
     margin-right: 0;
+
+    background-color: $color-orange;
+    border-radius: 20px;
   }
 }
 
@@ -39,6 +42,9 @@
     width: 40px;
     height: 40px;
     margin-right: 0;
+
+    background-color: $color-yellow-saffron;
+    border-radius: 20px;
   }
 }
 

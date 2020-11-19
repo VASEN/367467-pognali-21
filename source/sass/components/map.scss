@@ -1,5 +1,5 @@
-@import "../../common/variables";
-@import "../../common/mixins";
+@import "../common/variables";
+@import "../common/mixins";
 
 .map {
   position: relative;
@@ -26,6 +26,7 @@
   box-sizing: border-box;
 
   @include font(16px, 22px, $font-weight-bold);
+  font-style: normal;
   text-transform: uppercase;
 
   &::before {

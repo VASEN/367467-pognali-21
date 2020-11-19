@@ -17,10 +17,26 @@
 }
 
 .button-business {
-  padding: 0 25px 0 25px;
+  display: flex;
+  justify-content: center;
 
   font-weight: $font-weight-bold;
   color: $color-blue-screen;
+}
+
+.profile-button {
+  margin: 0;
+  padding: 21px 78px;
+  box-sizing: border-box;
+
+  font: inherit;
+
+  @include font(16px, 24px, $font-weight-bold);
+  text-transform: uppercase;
+
+  background-color: $color-white-smoky-light;
+  border: none;
+  border-radius: 0 0 25px 25px;
 }
 
 .button-rect {
@@ -37,6 +53,51 @@
   &::after {
     content: "";
     width: 12px;
+    border-left: 12px solid $color-blue-ocean;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+}
+
+.button-feedback {
+  display: block;
+  max-width: 270px;
+  margin: 0;
+  padding: 21px 60px 21px 25px;
+  box-sizing: border-box;
+
+  @include font(18px, 18px, $font-weight-bold);
+  font: inherit;
+
+  border-radius: 10px;
+  border: none;
+
+  &::placeholder {
+    color: rgba($color-black-bluish, 0.3);
+  }
+}
+
+.button-feedback__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 62px;
+  box-sizing: border-box;
+
+  background-color: $color-yellow-sunrise;
+  border-radius: 10px;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 28px;
+
+    width: 12px;
+
     border-left: 12px solid $color-blue-ocean;
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;

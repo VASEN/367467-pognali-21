@@ -1,0 +1,46 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.feedback {
+  @include font(16px, 22px, $font-weight-light);
+  color: $color-white;
+
+  background-color: $color-yellow-sunrise;
+}
+
+.feedback__container {
+  padding: 72px 25px 16px 25px;
+
+  background-color: $color-blue-cobalt;
+  border-radius: 0 0 25px 25px;
+}
+
+.feedback__title {
+  text-align: center;
+  color: $color-orange;
+}
+
+.feedback__text {
+  margin: 0;
+  padding: 19px 30px 29px 30px;
+
+  text-align: center;
+}
+
+.feedback__link {
+  text-decoration: underline;
+  color: $color-yellow-sunrise;
+}
+
+.feedback__form {
+  position: relative;
+}
+
+.feedback__telephone,
+.feedback__email {
+  color: $color-yellow-sunrise;
+}
+
+.feedback__email {
+  margin-bottom: 13px;
+}

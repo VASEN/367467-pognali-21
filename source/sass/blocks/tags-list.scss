@@ -2,15 +2,14 @@
 @import "../common/mixins";
 
 .tags-list {
+  @include reset-list;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  margin: 0;
   padding: 0 36px 15px 46px;
 
   @include font(16px, 18px, $font-weight-normal);
-  list-style: none;
 }
 
 .tags-list__item {

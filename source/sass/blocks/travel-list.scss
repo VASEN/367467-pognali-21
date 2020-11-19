@@ -1,16 +1,15 @@
-@import "../../common/variables";
-@import "../../common/mixins";
+@import "../common/variables";
+@import "../common/mixins";
 
 .travel-list {
+  @include reset-list;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  margin: 0;
   padding: 0 75px;
 
   line-height: 10px;
-  list-style: none;
 }
 
 .travel-list__item {

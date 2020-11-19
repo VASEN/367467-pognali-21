@@ -1,5 +1,5 @@
-@import "../../common/variables";
-@import "../../common/mixins";
+@import "../common/variables";
+@import "../common/mixins";
 
 .profile {
   @include font(16px, 16px, $font-weight-light);
@@ -56,4 +56,9 @@
 
   background-color: $color-yellow-sunrise;
   border-radius: 17px;
+}
+
+.profile__modal-title {
+  margin: 0;
+  padding: 34px 27px 28px 26px;
 }

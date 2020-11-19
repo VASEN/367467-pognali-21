@@ -1,11 +1,10 @@
-@import "../../common/variables";
-@import "../../common/mixins";
+@import "../common/variables";
+@import "../common/mixins";
 
 .price-list {
+  @include reset-list;
   margin: 0 0 31px;
   padding: 13px 0 15px 25px;
-
-  list-style: none;
 }
 
 .price-list__item {

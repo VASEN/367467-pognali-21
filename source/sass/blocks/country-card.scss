@@ -1,5 +1,5 @@
-@import "../../common/variables";
-@import "../../common/mixins";
+@import "../common/variables";
+@import "../common/mixins";
 
 .country-card {
   position: relative;
@@ -65,7 +65,7 @@
     width: 14px;
     height: 14px;
     margin-right: 5px;
-
+    // Заглушка
     background-color: tomato;
   }
 }
