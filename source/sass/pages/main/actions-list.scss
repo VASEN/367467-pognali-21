@@ -1,7 +1,7 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
-.actions {
+.actions-list {
   margin: 0;
   padding: 0;
 
@@ -11,30 +11,32 @@
   border-radius: 6px;
 }
 
-.actions__item {
+.actions-list__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 22px 21px 22px 24px;
 
-  @include font(18px, 18px, $font-weight-bold, normal, none);
+  @include font(18px, 18px, $font-weight-bold);
+
   &:nth-child(2) {
     background-color: $color-orange-light;
     border-radius: 6px 6px 0 0;
   }
+
   &:nth-child(3) {
-    background-color: $color-orange-light;
     background-color: $color-yellow-saffron;
     border-radius: 6px 6px 0 0;
   }
+
   &:nth-child(4) {
     border-radius: 6px;
     background-color: $color-yellow-sunrise;
   }
 }
 
-.actions__text {
+.actions-list__text {
   max-width: 150px;
   margin: 0;
 

@@ -1,5 +1,4 @@
-//@import "/source/sass/common/variables";
-//@import "/source/sass/common/mixins";
+@import "../../common/variables";
 
 .menu {
   background-color: $color-white;
@@ -22,6 +21,7 @@
 
   background-color: transparent;
   border: none;
+
   &::before {
     content: "";
 
@@ -35,6 +35,7 @@
     background-color: $color-white;
     border-radius: 1.5px;
   }
+
   &::after {
     content: "";
 

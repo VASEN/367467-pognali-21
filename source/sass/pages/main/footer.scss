@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .footer {
   position: relative;
@@ -28,4 +28,3 @@
   background-color: $color-yellow-sunrise;
   border-radius: 22px;
 }
-

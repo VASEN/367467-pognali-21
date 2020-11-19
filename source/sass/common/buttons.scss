@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+.button-login {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 81px 8px 78px;
+  box-sizing: border-box;
+
+  @include font(17px, 30px, $font-weight-bold);
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-blue-sapphire;
+
+  background-color: $color-yellow-sunrise;
+  border-radius: 25px;
+}
+
+.button-business {
+  padding: 0 25px 0 25px;
+
+  font-weight: $font-weight-bold;
+  color: $color-blue-screen;
+}
+
+.button-rect {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 22px 23px;
+
+  @include font(18px, 18px, $font-weight-bold);
+  color: $color-blue-ocean;
+  background-color: $color-yellow-sunrise;
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    width: 12px;
+    border-left: 12px solid $color-blue-ocean;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+}

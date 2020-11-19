@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .country-card {
   position: relative;
@@ -41,7 +41,7 @@
   margin: 0;
   padding: 0;
 
-  @include font(21px, 21px, $font-weight-bold, normal, none);
+  @include font(21px, 21px, $font-weight-bold);
   color: $color-black;
 }
 
@@ -49,15 +49,16 @@
   margin: 0;
   padding: 0;
 
-  @include font(16px, 18px, $font-weight-medium, normal, none);
+  @include font(16px, 18px, $font-weight-medium);
   color: rgba($color-black-bluish, 0.3);
 }
 
 .country-card__stats {
   display: flex;
 
-  @include font(16px, 20px, $font-weight-medium, normal, none);
+  @include font(16px, 20px, $font-weight-medium);
   color: rgba($color-blue-sapphire, 0.3);
+
   &::before {
     content: "";
 

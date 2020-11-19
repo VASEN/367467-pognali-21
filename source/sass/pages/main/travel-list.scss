@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .travel-list {
   display: flex;
@@ -15,6 +15,7 @@
 
 .travel-list__item {
   margin-right: 9px;
+
   &:last-child {
     margin-right: 0;
   }

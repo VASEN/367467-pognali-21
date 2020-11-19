@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .price-list {
   margin: 0 0 31px;
@@ -14,25 +14,26 @@
   align-items: baseline;
 
   margin-bottom: 32px;
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:nth-child(1) .price-list__item-number {
+    background-color: $color-orange;
+  }
+
+  &:nth-child(2) .price-list__item-number {
+    background-color: $color-yellow-saffron;
+  }
+
+  &:nth-child(3) .price-list__item-number {
+    background-color: $color-yellow-sunrise;
   }
 }
 
 .price-list__item-text {
   margin: 0;
-}
-
-.price-list__item {
-  &:nth-child(1) .price-list__item-number {
-    background-color: $color-orange;
-  }
-  &:nth-child(2) .price-list__item-number {
-    background-color: $color-yellow-saffron;
-  }
-  &:nth-child(3) .price-list__item-number {
-    background-color: $color-yellow-sunrise;
-  }
 }
 
 .price-list__item-number {
@@ -48,4 +49,3 @@
 
   border-radius: 17px;
 }
-

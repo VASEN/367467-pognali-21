@@ -1,5 +1,4 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
 
 .about-us {
   font-weight: $font-weight-light;
@@ -26,6 +25,7 @@
 .about-us__text {
   margin: 0 0 20px;
   padding: 0;
+
   &--bold {
     margin-bottom: 0;
 

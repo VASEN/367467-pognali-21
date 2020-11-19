@@ -1,8 +1,8 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .profile {
-  @include font(16px, 16px, $font-weight-light, normal, none);
+  @include font(16px, 16px, $font-weight-light);
   color: $color-black-bluish;
 
   background-color: $color-blue-cobalt;
@@ -52,7 +52,7 @@
   width: 34px;
   height: 34px;
 
-  @include font(21px, 21px, $font-weight-bold, normal, none);
+  @include font(21px, 21px, $font-weight-bold);
 
   background-color: $color-yellow-sunrise;
   border-radius: 17px;

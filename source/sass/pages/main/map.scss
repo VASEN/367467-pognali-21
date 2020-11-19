@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .map {
   position: relative;
@@ -7,7 +7,8 @@
   min-height: 467px;
   z-index: 1;
 
-  @include font(16px, 22px, $font-weight-bold, normal, uppercase);
+  @include font(16px, 22px, $font-weight-bold);
+  text-transform: uppercase;
   color: $color-blue-ocean;
 }
 
@@ -20,13 +21,12 @@
 
 .map__address {
   display: flex;
-  //flex-wrap: wrap;
 
   margin-bottom: 32px;
-  //padding-right: 66px;
-
   box-sizing: border-box;
-  @include font(16px, 22px, $font-weight-bold, normal, uppercase);
+
+  @include font(16px, 22px, $font-weight-bold);
+  text-transform: uppercase;
 
   &::before {
     content: "";
@@ -49,6 +49,7 @@
   top: 156px;
 
   z-index: -1;
+
   &--google {
     border: none;
   }

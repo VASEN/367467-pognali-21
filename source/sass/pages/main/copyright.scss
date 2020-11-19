@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .copyright {
   display: flex;
@@ -11,6 +11,6 @@
 }
 
 .copyright__title {
-  @include font(16px, 16px, $font-weight-normal, normal, none);
+  @include font(16px, 16px, $font-weight-normal);
   color: $color-black-bluish;
 }

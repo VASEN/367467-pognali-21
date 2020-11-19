@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .tags-list {
   display: flex;
@@ -9,12 +9,13 @@
   margin: 0;
   padding: 0 36px 15px 46px;
 
-  @include font(16px, 18px, $font-weight-normal, normal, none);
+  @include font(16px, 18px, $font-weight-normal);
   list-style: none;
 }
 
 .tags-list__item {
   margin-right: 5px;
+
   &:last-child {
     margin-right: 0;
   }

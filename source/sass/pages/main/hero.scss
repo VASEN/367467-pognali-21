@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .hero {
   padding-bottom: 39px;
@@ -18,7 +18,7 @@
   margin: 0;
   padding: 21px 16px 10px;
 
-  @include font(36px, 40px, $font-weight-bold, normal, none);
+  @include font(36px, 40px, $font-weight-bold);
 }
 
 .hero__contacts {

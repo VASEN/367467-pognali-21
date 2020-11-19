@@ -1,5 +1,5 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .level {
   display: flex;
@@ -17,11 +17,11 @@
 }
 
 .level__number {
-  @include font(24px, 24px, $font-weight-bold, normal, none);
+  @include font(24px, 24px, $font-weight-bold);
 
   border-bottom: 2px solid rgba($color-white, 0.3);
 }
 
 .level__text {
-  @include font(14px, 14px, $font-weight-normal, normal, none);
+  @include font(14px, 14px, $font-weight-normal);
 }

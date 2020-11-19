@@ -1,8 +1,8 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .feedback {
-  @include font(16px, 22px, $font-weight-light, normal, none);
+  @include font(16px, 22px, $font-weight-light);
   color: $color-white;
 
   background-color: $color-yellow-sunrise;
@@ -43,11 +43,12 @@
   padding: 21px 60px 21px 25px;
   box-sizing: border-box;
 
+  @include font(18px, 18px, $font-weight-bold);
   font: inherit;
-  @include font(18px, 18px, $font-weight-bold, normal, none);
 
   border-radius: 10px;
   border: none;
+
   &::placeholder {
     color: rgba($color-black-bluish, 0.3);
   }
@@ -65,6 +66,7 @@
   background-color: $color-yellow-sunrise;
   border-radius: 10px;
   border: none;
+
   &::after {
     content: "";
     position: absolute;
@@ -75,7 +77,7 @@
 
     border-left: 12px solid $color-blue-ocean;
     border-top: 9px solid transparent;
-    border-bottom:9px solid transparent;
+    border-bottom: 9px solid transparent;
   }
 }
 

@@ -1,14 +1,16 @@
-@import "source/sass/common/variables";
-@import "source/sass/common/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .contacts {
-  @include font(16px, 18px, $font-weight-bold, normal, uppercase);
+  @include font(16px, 18px, $font-weight-bold);
+  text-transform: uppercase;
 }
 
 .contacts__telephone {
   display: flex;
   align-items: center;
   color: $color-blue-cobalt;
+
   &::before {
     content: "";
     width: 45px;
@@ -25,6 +27,7 @@
   align-items: center;
 
   color: $color-blue-cobalt;
+
   &::before {
     content: "";
 
