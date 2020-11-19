@@ -8,7 +8,7 @@
 @import "components/header";
 @import "pages/main/menu";
 @import "pages/main/main-navigation";
-@import "pages/main/contacts";
+@import "components/contacts";
 @import "components/social";
 @import "pages/main/main";
 @import "pages/main/hero";
@@ -20,12 +20,12 @@
 @import "pages/main/country-card";
 @import "pages/main/companions";
 @import "pages/main/user-card";
-@import "pages/main/level";
-@import "pages/main/tags-list";
+@import "components/level";
+@import "components/tags-list";
 @import "pages/main/travel-list";
 @import "pages/main/profile";
 @import "pages/main/price-list";
 @import "pages/main/feedback";
 @import "pages/main/map";
-@import "pages/main/footer";
+@import "components/footer";
 @import "pages/main/copyright";
