@@ -1,6 +1,21 @@
 @import "variables";
 @import "mixins";
 
+.button-change-photo {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  @include font(20px, 18px, $font-weight-medium);
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-blue-sapphire;
+
+
+  background-color: $color-lavender;
+  border-radius: 20px;
+}
+
 .button-login {
   display: inline-block;
   margin: 0;
