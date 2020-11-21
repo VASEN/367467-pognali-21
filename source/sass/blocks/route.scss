@@ -1,0 +1,122 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.route-module {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  &--select {
+    position: relative;
+
+    display: block;
+  }
+}
+
+.route-module__wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  min-height: 42px;
+  padding-left: 11px;
+  padding-right: 11px;
+  box-sizing: border-box;
+
+  border: 1px solid $color-telegray-light;
+  border-radius: 4px;
+
+  &--select {
+    background-color: $color-blue-ocean;
+    border-radius: 4px 4px 0 0;
+    border: none;
+  }
+
+  &--add {
+    background-color: $color-white-smoky;
+    border: none;
+  }
+}
+
+.route-module__wrapper label {
+  margin-left: 10px;
+  width: 11px;
+  height: 8px;
+
+  background-color: tomato;
+}
+
+.route-module__wrapper--add label {
+  position: relative;
+
+  width: 14px;
+  height: 14px;
+  margin: 0;
+
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+
+    width: 2px;
+    height: 14px;
+
+    background-color: $color-blue-pale;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+    width: 14px;
+    height: 2px;
+
+    background-color: $color-blue-pale;
+  }
+}
+
+.route-module__input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+
+  @include font(14px, 18px, $font-weight-medium);
+  text-transform: uppercase;
+  text-overflow: fade;
+
+  background-color: transparent;
+  border: none;
+
+  &--select {
+    color: $color-white;
+  }
+
+  &--add {
+    text-align: left;
+  }
+}
+
+.route__country-wrapper {
+  flex-shrink: 0;
+  position: relative;
+
+  display: inline-block;
+  max-height: 42px;
+  padding: 9px;
+  box-sizing: border-box;
+
+  border: 1px solid $color-telegray-light;
+  border-left: none;
+  border-radius: 4px;
+}

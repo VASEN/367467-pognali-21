@@ -1,0 +1,24 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.new-plan {
+  background-color: $color-lavender;
+}
+
+.new-plan__container {
+  padding-bottom: 43px;
+  background-color: $color-lightgrey;
+  border-radius: 25px 25px 0 0;
+}
+
+.new-plan__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-plan__title {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 29px;
+}

@@ -1,0 +1,65 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.alphabet {
+  position: absolute;
+  width: 100%;
+  min-height: 220px;
+  box-sizing: border-box;
+  z-index: 1;
+
+  border-collapse: collapse;
+}
+
+.alphabet__item {
+  min-width: 44px;
+  min-height: 44px;
+  box-sizing: border-box;
+
+  background-color: $color-white;
+  border: 1px solid $color-telegray-light;
+}
+
+.alphabet__item button {
+  min-width: 43px;
+  min-height: 43px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: transparent;
+  border: none;
+}
+
+
+.alphabet__country-selection {
+  position: absolute;
+  top: 219px;
+  left: 0;
+
+  @include reset-list;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  background-color: $color-white;
+  border: 1px solid $color-telegray-light;
+}
+
+.alphabet__country-item {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.alphabet__country-item button {
+  width: 100%;
+  min-height: min-content;
+
+  font: inherit;
+  @include font(16px, 22px, $font-weight-normal);
+  text-align: left;
+}
+

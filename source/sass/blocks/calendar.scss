@@ -1,0 +1,39 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.calendar {
+  width: 100%;
+
+  @include font(14px, 18px, $font-weight-normal);
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.calendar__day {
+  padding: 8px 8px 5px;
+  box-sizing: border-box;
+
+  color: rgba($color-black-bluish, 0.3);
+  text-align: center;
+
+  border: 1px solid $color-grey-light;
+}
+
+.calendar__title-day {
+  &--holiday {
+    color: $color-orange-hotred;
+  }
+}
+
+.calendar__title {
+  color: $color-black-bluish;
+
+  &--full {
+    display: none;
+  }
+}
+
+.day__start-month {
+  display: none;
+}
+
