@@ -9,7 +9,7 @@
   <header class="page__header header">
     <div class="container header__container">
       <div class="header__menu-wrapper">
-        <a class="header__logo-link logo-link">
+        <a class="header__logo-link logo-link" href="index.html">
           <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
         </a>
         <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
@@ -93,27 +93,33 @@
       </div>
     </section>
     <section class="user-plans">
-      <h2 class="user-plans__title title">Мои планы:</h2>
-      <table class="user-plans__list">
-        <tr class="user-plans__item plan-item">
-          <td class="plan-item__number">1.</td>
-          <td class="plan-item__countries">Франция, Италия</td>
-          <td class="plan-item__companions">3 попутчика</td>
-          <td class="plan-item__dates">26 мар — 29 мар</td>
-          <td class="plan-item__change">
-            <a href="#">Изменить</a>
-          </td>
-        </tr>
-        <tr class="user-plans__item plan-item">
-          <td class="plan-item__number">2.</td>
-          <td class="plan-item__countries">Таиланд, Индонезия</td>
-          <td class="plan-item__companions">1 попутчик</td>
-          <td class="plan-item__dates">1 июл — 15 июл</td>
-          <td class="plan-item__change">
-            <a href="#">Изменить</a>
-          </td>
-        </tr>
-      </table>
+      <div class="user-plans__container container">
+        <h2 class="user-plans__title title">Мои планы:</h2>
+        <ol class="user-plans__list">
+          <li class="user-plans__item plan-item">
+            <div class="plan-item__col-1">
+              <span class="plan-item__number">1.</span>
+              <p class="plan-item__countries">Франция, Италия</p>
+            </div>
+            <div class="plan-item__col-2">
+              <p class="plan-item__companions plan-item__text">3 попутчика</p>
+              <p class="plan-item__dates plan-item__text">26 мар — 29 мар</p>
+            </div>
+            <a class="plan-item__change" href="#">Изменить</a>
+          </li>
+          <li class="user-plans__item plan-item">
+            <div class="plan-item__col-1">
+              <span class="plan-item__number">2.</span>
+              <p class="plan-item__countries">Таиланд, Индонезия</p>
+            </div>
+            <div class="plan-item__col-2">
+              <p class="plan-item__companions plan-item__text">1 попутчик</p>
+              <p class="plan-item__dates plan-item__text">1 июл — 15 июл</p>
+            </div>
+            <a class="plan-item__change" href="#">Изменить</a>
+          </li>
+        </ol>
+      </div>
     </section>
     <section class="new-plan">
       <div class="container new-plan__container">

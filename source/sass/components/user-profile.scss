@@ -21,7 +21,19 @@
   width: 100px;
   height: 100px;
 
+  background-color: transparent;
   border-radius: 50px;
+}
+
+.user-profile__level .level__number {
+  @include font(38px, 38px, $font-weight-bold);
+  border-color: rgba($color-black-bluish, 0.3);
+}
+
+.user-profile__level .level__text {
+  margin-top: 6px;
+
+  @include font(18px, 18px, $font-weight-normal);
 }
 
 .user-profile__photo {
