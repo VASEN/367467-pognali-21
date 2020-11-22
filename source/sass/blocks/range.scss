@@ -1,0 +1,86 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.level-range__range-wrapper {
+  padding: 25px 0;
+}
+
+.level-range__range {
+  width: 100%;
+  height: 2px;
+
+  background-color: rgba($color-blue-ocean, 0.2);
+}
+
+.level-range__range--current {
+  position: relative;
+  width: 138px;
+  height: 2px;
+
+  background-color: $color-blue-ocean;
+}
+
+.level-range__range--min,
+.level-range__range--max {
+  cursor: pointer;
+}
+
+.level-range__range--min:focus,
+.level-range__range--max:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.level-range__range--min {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+
+  background-color: $color-blue-ocean;
+  border-radius: 50%;
+}
+
+.level-range__range--max {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+
+  background-color: $color-blue-ocean;
+  border-radius: 50%;
+}
+
+.level-range {
+  background-color: $color-white;
+  border: 1px solid $color-telegray-light;
+  border-radius: 4px;
+}
+
+.level-range__wrapper {
+  //position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.level-range__element {
+  display: block;
+
+  margin: 0;
+}
+
+.level-range__element > input[type="number"] {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
+
+  font: inherit;
+  @include font(14px, 13px, $font-weight-medium);
+  text-align: center;
+
+  border: none;
+}
