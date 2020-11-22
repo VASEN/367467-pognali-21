@@ -373,6 +373,24 @@
   }
 }
 
+.button-X {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 40px;
+
+  font: inherit;
+
+  @include font(16px, 20px, $font-weight-bold);
+  text-transform: uppercase;
+
+  background-color: $color-grey-light;
+  border: none;
+  border-radius: 20px;
+}
+
 .button-prev {
   display: flex;
   justify-content: center;

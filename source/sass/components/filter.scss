@@ -1,0 +1,104 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.filter {
+  background-color: $color-white-smoky;
+}
+
+.filter__container {
+  background-color: $color-grey-lavender-light;
+  border-radius: 0 0 25px 25px;
+}
+
+.filter__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 17px;
+}
+
+.filter__title {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+
+  @include font(16px, 18px, $font-weight-bold);
+  text-transform: uppercase;
+  color: $color-blue-cobalt;
+
+  &:before {
+    content: "";
+
+    width: 15px;
+    height: 10px;
+    margin-right: 11px;
+
+    background-color: tomato;
+  }
+}
+
+.filter__toggle {
+  display: flex;
+
+  width: 17px;
+  height: 3px;
+  margin: 0;
+  padding: 0;
+
+  background-color: tomato;
+  border: none;
+}
+
+.filter__content-wrapper {
+  padding-bottom: 28px;
+}
+
+.filter__content {
+  min-height: 700px;
+
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.filter__continent-list {
+  @include reset-list;
+  padding: 20px 0;
+}
+
+.filter__continent-item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter__continent-link {
+  @include font(16px, 18px, $font-weight-bold);
+  text-transform: uppercase;
+  color: rgba($color-blue-cobalt, 0.3);
+
+  &--current {
+    color: $color-blue-cobalt;
+  }
+}
+
+.filter__alphabet {
+  //display: none;
+  position: relative;
+}
+
+.filter__alphabet .alphabet__country-selection {
+  padding-left: 0;
+  padding-right: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+.filter__close-button {
+
+}

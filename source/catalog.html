@@ -49,73 +49,83 @@
     </div>
     <section class="catalog-page__filter filter">
       <div class="container filter__container">
-        <h2 class="filter__title">Фильтрация по странам:</h2>
-        <ul class="filter__continent-list">
-          <li class="filter__continent-item filter__continent-item--current">
-            <a href="#">Европа</a>
-          </li>
-          <li class="filter__continent-item">
-            <a href="#">Азия</a>
-          </li>
-          <li class="filter__continent-item">
-            <a href="#">Америка</a>
-          </li>
-          <li class="filter__continent-item">
-            <a href="#">Острова</a>
-          </li>
-        </ul>
-        <button class="filter__toggle" type="button">Показать все</button>
-        <table class="filter__alphabet alphabet">
-            <tr>
-              <td class="alphabet__item alphabet__item--current"><button type="button">А</button></td>
-              <td class="alphabet__item"><button type="button">Б</button></td>
-              <td class="alphabet__item"><button type="button">В</button></td>
-              <td class="alphabet__item"><button type="button">Г</button></td>
-              <td class="alphabet__item"><button type="button">Д</button></td>
-            </tr>
-            <tr>
-              <td class="alphabet__item"><button type="button">Е</button></td>
-              <td class="alphabet__item"><button type="button">З</button></td>
-              <td class="alphabet__item"><button type="button">И</button></td>
-              <td class="alphabet__item"><button type="button">К</button></td>
-              <td class="alphabet__item"><button type="button">Л</button></td>
-            </tr>
-            <tr>
-              <td class="alphabet__item"><button type="button">М</button></td>
-              <td class="alphabet__item"><button type="button">Н</button></td>
-              <td class="alphabet__item"><button type="button">О</button></td>
-              <td class="alphabet__item"><button type="button">П</button></td>
-              <td class="alphabet__item"><button type="button">Р</button></td>
-            </tr>
-            <tr>
-              <td class="alphabet__item"><button type="button">С</button></td>
-              <td class="alphabet__item"><button type="button">Т</button></td>
-              <td class="alphabet__item"><button type="button">У</button></td>
-              <td class="alphabet__item"><button type="button">Ф</button></td>
-              <td class="alphabet__item"><button type="button">Х</button></td>
-            </tr>
-            <tr>
-              <td class="alphabet__item"><button type="button">Ч</button></td>
-              <td class="alphabet__item"><button type="button">Ш</button></td>
-              <td class="alphabet__item"><button type="button">Щ</button></td>
-              <td class="alphabet__item"><button type="button">Э</button></td>
-              <td class="alphabet__item"><button type="button">Ю</button></td>
-            </tr>
-          </table>
-        <ul class="country-selection__list">
-          <li class="country-selection__item"><a href="#">Австралия</a></li>
-          <li class="country-selection__item"><a href="#">Австрия</a></li>
-          <li class="country-selection__item"><a href="#">Азербайджан</a></li>
-          <li class="country-selection__item"><a href="#">Албания</a></li>
-          <li class="country-selection__item"><a href="#">Алжир</a></li>
-          <li class="country-selection__item"><a href="#">Ангола</a></li>
-          <li class="country-selection__item"><a href="#">Андорра</a></li>
-          <li class="country-selection__item"><a href="#">Антигуа и Барбуда</a></li>
-          <li class="country-selection__item"><a href="#">Аргентина</a></li>
-          <li class="country-selection__item"><a href="#">Армения</a></li>
-          <li class="country-selection__item"><a href="#">Афганистан</a></li>
-        </ul>
-        <button class="filter__close-button" type="button">Свернуть</button>
+        <div class="filter__wrapper">
+          <h2 class="filter__title title">Фильтрация по странам:</h2>
+          <button class="filter__toggle" type="button" aria-label="Показать все"></button>
+        </div>
+        <div class="filter__content-wrapper">
+          <div class="filter__content">
+            <ul class="filter__continent-list">
+              <li class="filter__continent-item">
+                <a class="filter__continent-link filter__continent-link--current" href="#">Европа</a>
+              </li>
+              <li class="filter__continent-item">
+                <a class="filter__continent-link" href="#">Азия</a>
+              </li>
+              <li class="filter__continent-item">
+                <a class="filter__continent-link" href="#">Америка</a>
+              </li>
+              <li class="filter__continent-item">
+                <a class="filter__continent-link" href="#">Острова</a>
+              </li>
+            </ul>
+            <table class="filter__alphabet alphabet" cellspacing="0" cellpadding="0">
+              <tbody>
+              <tr>
+                <td class="alphabet__item alphabet__item--current">
+                  <button type="button">А</button>
+                  <ul class="alphabet__country-selection">
+                    <li class="alphabet__country-item"><button type="button">Австралия</button></li>
+                    <li class="alphabet__country-item"><button type="button">Австрия</button></li>
+                    <li class="alphabet__country-item"><button type="button">Азербайджан</button></li>
+                    <li class="alphabet__country-item"><button type="button">Албания</button></li>
+                    <li class="alphabet__country-item"><button type="button">Алжир</button></li>
+                    <li class="alphabet__country-item"><button type="button">Ангола</button></li>
+                    <li class="alphabet__country-item"><button type="button">Андорра</button></li>
+                    <li class="alphabet__country-item"><button type="button">Антигуа и Барбуда</button></li>
+                    <li class="alphabet__country-item"><button type="button">Аргентина</button></li>
+                    <li class="alphabet__country-item"><button type="button">Армения</button></li>
+                    <li class="alphabet__country-item"><button type="button">Афганистан</button></li>
+                  </ul>
+                </td>
+                <td class="alphabet__item"><button type="button">Б</button></td>
+                <td class="alphabet__item"><button type="button">В</button></td>
+                <td class="alphabet__item"><button type="button">Г</button></td>
+                <td class="alphabet__item"><button type="button">Д</button></td>
+              </tr>
+              <tr>
+                <td class="alphabet__item"><button type="button">Е</button></td>
+                <td class="alphabet__item"><button type="button">З</button></td>
+                <td class="alphabet__item"><button type="button">И</button></td>
+                <td class="alphabet__item"><button type="button">К</button></td>
+                <td class="alphabet__item"><button type="button">Л</button></td>
+              </tr>
+              <tr>
+                <td class="alphabet__item"><button type="button">М</button></td>
+                <td class="alphabet__item"><button type="button">Н</button></td>
+                <td class="alphabet__item"><button type="button">О</button></td>
+                <td class="alphabet__item"><button type="button">П</button></td>
+                <td class="alphabet__item"><button type="button">Р</button></td>
+              </tr>
+              <tr>
+                <td class="alphabet__item"><button type="button">С</button></td>
+                <td class="alphabet__item"><button type="button">Т</button></td>
+                <td class="alphabet__item"><button type="button">У</button></td>
+                <td class="alphabet__item"><button type="button">Ф</button></td>
+                <td class="alphabet__item"><button type="button">Х</button></td>
+              </tr>
+              <tr>
+                <td class="alphabet__item"><button type="button">Ч</button></td>
+                <td class="alphabet__item"><button type="button">Ш</button></td>
+                <td class="alphabet__item"><button type="button">Щ</button></td>
+                <td class="alphabet__item"><button type="button">Э</button></td>
+                <td class="alphabet__item"><button type="button">Ю</button></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="filter__close-button button-X" type="button">Свернуть</button>
+        </div>
       </div>
     </section>
     <section class="catalog-page__sort sort">
