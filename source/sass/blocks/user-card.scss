@@ -4,7 +4,6 @@
 .user-card {
   position: relative;
 
-  min-height: 428px;
   margin-bottom: 10px;
   padding-bottom: 20px;
 
@@ -56,10 +55,84 @@
   padding: 15px;
 }
 
+.user-card__like-wrapper {
+  position: absolute;
+  top: 53px;
+  left: 67px;
+}
+
+.user-card__button-like {
+  width: 30px;
+  height: 30px;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: $color-grey-lavender-light;
+  border-radius: 50%;
+  border: none;
+
+  &--active {
+    background-color: $color-pink-linen;
+  }
+}
+
+.user-card__user-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
 .user-card__user {
   margin: 0;
   padding: 0;
 
   @include font(21px, 21px, $font-weight-bold);
   color: $color-blue-ocean;
+}
+
+.user-card__fieldset-wrapper {
+  display: flex;
+}
+
+.user-card__fieldset {
+  position: relative;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 26px;
+
+  border-top: 1px solid $color-white-smoky;
+}
+
+.user-card__legend {
+  position: absolute;
+  top: -8px;
+  left: 15px;
+
+  margin: 0;
+  padding: 0 10px;
+
+  @include font(15px, 16px ,$font-weight-normal);
+  color: $color-black-bluish;
+
+  background-color: $color-white;
+}
+
+.user-card__to-visit {
+  @include reset-list;
+}
+
+.user-card__country-card {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.user-card__country-card-title {
+  margin-left: 15px;
+
+  @include font(15px, 16px, $font-weight-medium);
+  text-transform: uppercase;
 }

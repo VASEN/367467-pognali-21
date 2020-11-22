@@ -22,11 +22,16 @@
 
   width: 100%;
   margin: 0;
+  padding: 0;
 
+  font: inherit;
   @include font(17px, 30px, $font-weight-bold);
   text-transform: uppercase;
   text-align: center;
   color: $color-blue-sapphire;
+
+  border: none;
+  background-color: transparent;
 }
 
 .button-round {
@@ -47,6 +52,7 @@
 
   background-color: $color-yellow-sunrise;
   border-radius: 25px;
+  border: none;
 }
 
 .button-business {
@@ -364,5 +370,48 @@
     height: 11px;
 
     background-color: $color-white;
+  }
+}
+
+.button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 134px;
+  min-height: 50px;
+
+  background-color: $color-white;
+  border-radius: 20px 0 0 20px;
+  box-sizing: border-box;
+
+  &:before {
+    content: "";
+
+    width: 20px;
+    height: 20px;
+
+    background-color: tomato;
+  }
+}
+
+.button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 134px;
+  min-height: 50px;
+
+  background-color: $color-white;
+  border-radius: 0 20px 20px 0;
+
+  &:before {
+    content: "";
+
+    width: 20px;
+    height: 20px;
+
+    background-color: tomato;
   }
 }
