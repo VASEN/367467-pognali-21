@@ -4,14 +4,20 @@
 .social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
-  padding: 41px 80px 41px 95px;
+  padding: 41px 0;
 }
 
 .social__link {
   width: 21px;
   height: 21px;
 
+  margin-right: 20px;
+
   background-color: tomato;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }

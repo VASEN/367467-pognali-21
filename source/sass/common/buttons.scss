@@ -61,9 +61,9 @@
 
 .button-feedback {
   display: block;
-  max-width: 270px;
+  max-width: 100%;
   margin: 0;
-  padding: 21px 60px 21px 25px;
+  padding: 20px 60px 20px 25px;
   box-sizing: border-box;
 
   @include font(18px, 18px, $font-weight-bold);
