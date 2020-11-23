@@ -1,0 +1,58 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.map {
+  position: relative;
+
+  min-height: 467px;
+  z-index: 1;
+
+  @include font(16px, 22px, $font-weight-bold);
+  text-transform: uppercase;
+  color: $color-blue-ocean;
+}
+
+.map__container {
+  padding: 31px 25px 35px 25px;
+
+  background-color: $color-yellow-sunrise;
+  border-radius: 0 0 25px 25px;
+}
+
+.map__address {
+  display: flex;
+
+  margin-bottom: 32px;
+  box-sizing: border-box;
+
+  @include font(16px, 22px, $font-weight-bold);
+  font-style: normal;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+
+    background-color: $color-blue-dark;
+    border-radius: 22px;
+  }
+}
+
+.map__button-rect {
+  border: 3px solid $color-blue-cobalt;
+}
+
+.map__image {
+  position: absolute;
+  top: 156px;
+
+  width: 100%;
+  z-index: -1;
+
+  &--google {
+    border: none;
+  }
+}

@@ -1,0 +1,51 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.actions-list {
+  counter-reset: action;
+
+  @include reset-list;
+
+  background-color: $color-orange;
+  border-radius: 6px;
+}
+
+.actions-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 21px 22px 24px;
+
+  @include font(18px, 18px, $font-weight-bold);
+
+  &:nth-child(2) {
+    background-color: $color-orange-light;
+    border-radius: 6px 6px 0 0;
+  }
+
+  &:nth-child(3) {
+    background-color: $color-yellow-saffron;
+    border-radius: 6px 6px 0 0;
+  }
+
+  &:nth-child(4) {
+    border-radius: 6px;
+    background-color: $color-yellow-sunrise;
+  }
+}
+
+.actions-list__text {
+  max-width: 150px;
+  margin: 0;
+
+  color: $color-blue-sapphire;
+}
+
+.actions-list__number {
+  &::before {
+    counter-increment: action;
+
+    content: counter(action);
+  }
+}

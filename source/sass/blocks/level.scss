@@ -1,0 +1,27 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  box-sizing: border-box;
+
+  background-color: $color-black-opacity-60;
+  border-radius: 30px;
+}
+
+.level__number {
+  @include font(24px, 24px, $font-weight-bold);
+
+  border-bottom: 2px solid rgba($color-white, 0.3);
+}
+
+.level__text {
+  @include font(14px, 14px, $font-weight-normal);
+}

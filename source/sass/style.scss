@@ -1,1 +1,31 @@
-// Начните писать стили здесь
+@import "common/fonts";
+@import "common/variables";
+@import "common/mixins";
+@import "common/global";
+@import "common/helpers";
+@import "common/buttons";
+// Стили .main
+@import "components/header";
+@import "blocks/header-navigation";
+@import "blocks/contacts";
+@import "blocks/social";
+@import "pages/main/main";
+@import "components/hero";
+@import "common/hero-quote";
+@import "blocks/actions-list";
+@import "components/about-us";
+@import "components/directions";
+@import "blocks/cards";
+@import "blocks/country-card";
+@import "components/companions";
+@import "blocks/user-card";
+@import "blocks/level";
+@import "blocks/tags-list";
+@import "blocks/travel-list";
+@import "components/profile";
+@import "blocks/price-list";
+@import "components/feedback";
+@import "components/map";
+@import "components/footer";
+@import "blocks/copyright";
+@import "blocks/business-list";

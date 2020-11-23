@@ -1,0 +1,66 @@
+@import "../common/variables";
+
+.header {
+  color: $color-white;
+
+  background-color: $color-blue-sapphire;
+}
+
+.header__container {
+  background-color: $color-white;
+}
+
+.header__menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 28px;
+  padding-bottom: 31px;
+}
+
+.header__menu-toggle {
+  position: relative;
+
+  width: 25px;
+  height: 11px;
+
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: $color-white;
+    border-radius: 1.5px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: $color-white;
+    border-radius: 1.5px;
+  }
+}
+
+.header__menu {
+  background-color: $color-white;
+}
+
+.header__user-navigation {
+  margin-bottom: 51px;
+}

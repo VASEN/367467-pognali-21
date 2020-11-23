@@ -1,0 +1,41 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.contacts {
+  @include font(16px, 18px, $font-weight-bold);
+  text-transform: uppercase;
+}
+
+.contacts__telephone {
+  display: flex;
+  align-items: center;
+  color: $color-blue-cobalt;
+
+  &::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+
+    background-color: $color-blue-dark;
+    border-radius: 22px;
+  }
+}
+
+.contacts__email {
+  display: flex;
+  align-items: center;
+
+  color: $color-blue-cobalt;
+
+  &::before {
+    content: "";
+
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+
+    background-color: $color-blue-dark;
+    border-radius: 22px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "source/sass/common/mixins";
+
+.cards__list {
+  @include reset-list;
+}
+
+.cards__item {
+  border-radius: 10px;
+}

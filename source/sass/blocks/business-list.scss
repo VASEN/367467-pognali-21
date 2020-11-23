@@ -1,0 +1,21 @@
+@import "source/sass/common/mixins";
+
+.business-list {
+  @include reset-list;
+  padding: 0 26px 34px 25px;
+}
+
+.business-list__item {
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  border-top: 1px solid rgba($color-black, 0.05);
+
+  &:last-child {
+    border-bottom: 1px solid rgba($color-black, 0.05);
+  }
+}
+
+.business-list__text {
+  margin: 0;
+}

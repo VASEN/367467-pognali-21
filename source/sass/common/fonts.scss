@@ -1,0 +1,9 @@
+@import "mixins";
+@include font-face("Blogger", "bloggersans", 400);
+@include font-face("Blogger Bold", "bloggersans-bold", 700);
+@include font-face("Blogger Bold Italic", "bloggersans-bolditalic", 700, italic);
+@include font-face("Blogger Italic", "bloggersans-italic", 400, italic);
+@include font-face("Blogger Light", "bloggersans-light", 300);
+@include font-face("Blogger Light Italic", "bloggersans-lightitalic", 300, italic);
+@include font-face("Blogger Medium", "bloggersans-medium", 500);
+@include font-face("Blogger Medium Italic", "bloggersans-mediumitalic", 500, italic);

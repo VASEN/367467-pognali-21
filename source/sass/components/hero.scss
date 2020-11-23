@@ -1,0 +1,56 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.hero {
+  padding-bottom: 39px;
+
+  color: $color-white;
+
+  background-color: $color-blue-sapphire;
+}
+
+.hero__wrapper {
+  background-image: url("/source/img/globe-back-mobile-1.png");
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  margin: 0;
+  padding: 21px 16px 10px;
+
+  @include font(36px, 40px, $font-weight-bold);
+}
+
+.hero__contacts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero__phone {
+  &::before {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+
+    background-color: $color-orange;
+    border-radius: 20px;
+  }
+}
+
+.hero__email {
+  &::before {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+
+    background-color: $color-yellow-saffron;
+    border-radius: 20px;
+  }
+}
+
+.hero__button-login {
+  padding: 11px 28px 9px 29px;
+  box-sizing: border-box;
+
+  line-height: 20px;
+}
