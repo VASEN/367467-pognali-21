@@ -29,7 +29,7 @@
   text-transform: uppercase;
   color: $color-blue-cobalt;
 
-  &:before {
+  &::before {
     content: "";
 
     width: 15px;

@@ -79,6 +79,7 @@
   box-sizing: border-box;
 
   font: inherit;
+
   @include font(16px, 18px, $font-weight-normal);
   color: rgba($color-black-bluish, 0.6);
 

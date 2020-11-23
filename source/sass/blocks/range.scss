@@ -79,6 +79,7 @@
   box-sizing: border-box;
 
   font: inherit;
+
   @include font(14px, 13px, $font-weight-medium);
   text-align: center;
 

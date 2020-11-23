@@ -25,6 +25,7 @@
   padding: 0;
 
   font: inherit;
+
   @include font(17px, 30px, $font-weight-bold);
   text-transform: uppercase;
   text-align: center;
@@ -45,6 +46,7 @@
   box-sizing: border-box;
 
   font: inherit;
+
   @include font(17px, 30px, $font-weight-bold);
   text-transform: uppercase;
   text-align: center;
@@ -236,6 +238,7 @@
 
 .up-down-button__input {
   font: inherit;
+
   @include font(14px, 14px, $font-weight-medium);
   color: $color-blue-ocean;
 
@@ -247,6 +250,7 @@
   align-items: center;
 
   @include font(15px, 15px, $font-weight-normal);
+
   &::before {
     content: "";
 
@@ -284,6 +288,7 @@
   padding: 0;
 
   font: inherit;
+
   @include font(20px, 20px, $font-weight-bold);
   text-align: center;
 
@@ -406,7 +411,7 @@
   border-radius: 20px 0 0 20px;
   box-sizing: border-box;
 
-  &:before {
+  &::before {
     content: "";
 
     width: 20px;
@@ -427,7 +432,7 @@
   background-color: $color-white;
   border-radius: 0 20px 20px 0;
 
-  &:before {
+  &::before {
     content: "";
 
     width: 20px;
@@ -446,6 +451,7 @@
   padding: 12px 0;
 
   font: inherit;
+
   @include font(16px, 18px, $font-weight-bold);
   text-transform: uppercase;
   color: $color-blue-ocean;
