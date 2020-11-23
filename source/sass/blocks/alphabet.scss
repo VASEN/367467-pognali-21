@@ -59,7 +59,7 @@
   min-height: min-content;
 
   font: inherit;
+
   @include font(16px, 22px, $font-weight-normal);
   text-align: left;
 }
-

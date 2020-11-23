@@ -71,7 +71,7 @@
     background-color: $color-blue-pale;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 6px;
