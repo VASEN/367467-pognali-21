@@ -1,0 +1,54 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.slider-item {
+  margin-bottom: 10px;
+
+  padding: 25px;
+
+  background-color: $color-white;
+  border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.slider-item__title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin: 0 0 16px;
+
+  @include font(20px, 20px, $font-weight-bold);
+  color: $color-blue-ocean;
+}
+
+.slider-item__description {
+  margin: 0 0 20px;
+}
+
+.slider-item__module {
+  margin-bottom: 20px;
+}
+
+.month-module__wrapper {
+  margin-bottom: 22px;
+}
+
+.slider-item__next-step {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.step-two__next-step {
+  margin-bottom: 13px;
+}
+
+.step-tree__button-round {
+  display: inline-block;
+  margin: 0 0 17px;
+
+  border: none;
+}

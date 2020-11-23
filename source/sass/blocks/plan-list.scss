@@ -1,0 +1,25 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.plan-list {
+  display: flex;
+
+  @include reset-list;
+}
+
+.plan-list-with-desc {
+  display: none;
+}
+
+.plan-list__item {
+  width: 5px;
+  height: 5px;
+  margin-right: 16px;
+
+  background-color: $color-blue-ocean;
+  border-radius: 50%;
+
+  &:last-child {
+    margin-right: 19px;
+  }
+}

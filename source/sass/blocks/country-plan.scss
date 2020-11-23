@@ -1,0 +1,39 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.country-plan__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 13px;
+  padding-left: 10px;
+}
+
+.country-plan__title {
+  display: inline;
+  margin: 0;
+
+  @include font(18px, 18px, $font-weight-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.country-plan__country-flag {
+  margin-left: 20px;
+}
+
+.country-plan__text {
+  min-width: 220px;
+  min-height: 220px;
+  margin: 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+
+  font: inherit;
+
+  @include font(16px, 22px, $font-weight-normal);
+
+  border: 1px solid $color-telegray-light;
+  border-radius: 4px;
+}

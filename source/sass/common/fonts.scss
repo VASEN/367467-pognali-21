@@ -1,9 +1,11 @@
+@import "variables";
 @import "mixins";
-@include font-face("Blogger", "bloggersans", 400);
-@include font-face("Blogger Bold", "bloggersans-bold", 700);
-@include font-face("Blogger Bold Italic", "bloggersans-bolditalic", 700, italic);
-@include font-face("Blogger Italic", "bloggersans-italic", 400, italic);
-@include font-face("Blogger Light", "bloggersans-light", 300);
-@include font-face("Blogger Light Italic", "bloggersans-lightitalic", 300, italic);
-@include font-face("Blogger Medium", "bloggersans-medium", 500);
-@include font-face("Blogger Medium Italic", "bloggersans-mediumitalic", 500, italic);
+// Что-то не так с поключением шрифтов
+@include font-face("Blogger", "bloggersans", $font-weight-normal);
+@include font-face("Blogger Bold", "bloggersans-bold", $font-weight-bold);
+@include font-face("Blogger BoldItalic", "bloggersans-bolditalic", $font-weight-bold, italic);
+@include font-face("Blogger Italic", "bloggersans-italic", $font-weight-normal, italic);
+@include font-face("Blogger Light", "bloggersans-light", $font-weight-light);
+@include font-face("Blogger LightItalic", "bloggersans-lightitalic", $font-weight-light, italic);
+@include font-face("Blogger Medium", "bloggersans-medium", $font-weight-medium);
+@include font-face("Blogger MediumItalic", "bloggersans-mediumitalic", $font-weight-medium, italic);
