@@ -2,8 +2,15 @@
 @import "../common/mixins";
 
 .contacts {
+  grid-column: 1/-1;
+
   @include font(16px, 18px, $font-weight-bold);
   text-transform: uppercase;
+
+  @media (min-width: $width-tablet) {
+    order: 5;
+    padding-left: 60px;
+  }
 }
 
 .contacts__telephone {
