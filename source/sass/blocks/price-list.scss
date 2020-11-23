@@ -2,6 +2,8 @@
 @import "../common/mixins";
 
 .price-list {
+  counter-reset: list;
+
   @include reset-list;
   margin: 0 0 31px;
   padding: 13px 0 15px 25px;
@@ -47,4 +49,10 @@
   color: $color-white;
 
   border-radius: 17px;
+
+  &::before {
+    counter-increment: list;
+
+    content: counter(list);
+  }
 }

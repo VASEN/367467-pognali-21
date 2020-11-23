@@ -7,6 +7,10 @@
   @include reset-list;
 }
 
+.plan-list-with-desc {
+  display: none;
+}
+
 .plan-list__item {
   width: 5px;
   height: 5px;
