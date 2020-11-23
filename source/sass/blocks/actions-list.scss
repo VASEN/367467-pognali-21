@@ -43,7 +43,7 @@
 }
 
 .actions-list__number {
-  &::before{
+  &::before {
     counter-increment: action;
 
     content: counter(action);
