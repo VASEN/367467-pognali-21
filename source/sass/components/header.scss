@@ -79,6 +79,21 @@
   }
 }
 
+.header__contacts {
+  grid-column: 1/-1;
+}
+
+.header__telephone,
+.header__email {
+  color: $color-blue-cobalt;
+
+  &::before {
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+  }
+}
+
 .header__social {
   grid-column: 1/-1;
 

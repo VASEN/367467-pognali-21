@@ -31,8 +31,8 @@
           <a class="button-round" href="#">Авторизация</a>
         </div>
         <div class="header__contacts contacts">
-          <a class="contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
-          <a class="contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
+          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
         </div>
         <div class="header__social social">
           <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
@@ -306,17 +306,19 @@
     </section>
     <section class="feedback">
       <div class="container feedback__container">
-        <h2 class="feedback__title title">Заинтересовались?</h2>
-        <p class="feedback__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
-        <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
-          <label class="visually-hidden" for="feedback__email">E-mail</label>
-          <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email">
-          <button class="button-feedback__icon" type="submit" aria-label="Обратная связь"></button>
-        </form>
-        <p class="feedback__text">Остались вопросы? Мы с радостью на них ответим!</p>
-        <div class="feedback__contacts contacts">
-          <a class="feedback__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
-          <a class="feedback__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+        <div class="feedback__wrapper">
+          <h2 class="feedback__title title">Заинтересовались?</h2>
+          <p class="feedback__text">Зарегистрируйтесь, <br class="feedback__br-mobile"> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
+          <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="feedback__email">E-mail</label>
+            <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email">
+            <button class="button-feedback__icon" type="submit" aria-label="Обратная связь"><span class="button-feedback__icon--full">Регистрация</span></button>
+          </form>
+          <p class="feedback__text feedback__text--contact">Остались вопросы? Мы с радостью на них ответим!</p>
+          <div class="feedback__contacts contacts">
+            <a class="contacts__telephone feedback__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
+            <a class="feedback__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+          </div>
         </div>
       </div>
     </section>

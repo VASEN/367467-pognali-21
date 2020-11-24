@@ -2,15 +2,16 @@
 @import "mixins";
 
 .container {
-  min-width: 320px;
+  @include container(320px, 25px);
   margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
   box-sizing: border-box;
 
-  @media (min-width: $width-tablet) {
-    padding-left: 40px;
-    padding-right: 40px;
+  @include mq($width-tablet) {
+    @include container(768px, 40px);
+  }
+
+  @include mq($width-desktop) {
+    @include container(1440px, 58px)
   }
 }
 

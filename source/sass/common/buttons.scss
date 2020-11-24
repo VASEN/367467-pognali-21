@@ -102,19 +102,29 @@
 
 .button-feedback {
   display: block;
-  max-width: 100%;
+  width: 100%;
   margin: 0;
-  padding: 20px 60px 20px 25px;
+  padding: 22px 85px 22px 25px;
   box-sizing: border-box;
 
-  @include font(18px, 18px, $font-weight-bold);
   font: inherit;
+  @include font(18px, 18px, $font-weight-bold);
 
   border-radius: 10px;
   border: none;
 
+  @include mq($width-tablet) {
+    padding: 28px 36px;
+
+    border-radius: 10px 0 0 10px;
+  }
+
   &::placeholder {
     color: rgba($color-black-bluish, 0.3);
+
+    @include mq($width-tablet) {
+      @include font(24px, 24px, $font-weight-bold);
+    }
   }
 }
 
@@ -127,9 +137,41 @@
   height: 62px;
   box-sizing: border-box;
 
+  font: inherit;
+  color: $color-blue-ocean;
+
   background-color: $color-yellow-sunrise;
   border-radius: 10px;
   border: none;
+
+  @include mq($width-tablet) {
+    position: relative;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+
+    border-radius: 0 10px 10px 0;
+  }
+
+  @include mq($width-desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 330px;
+  }
+
+  &--full {
+    display: none;
+
+    @include mq($width-desktop) {
+      display: block;
+
+      margin-left: 35px;
+
+      @include font(24px, 24px, $font-weight-bold);
+    }
+  }
 
   &::after {
     content: "";
@@ -142,6 +184,20 @@
     border-left: 12px solid $color-blue-ocean;
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
+
+    @include mq($width-tablet) {
+      top: 30px;
+      left: 36px;
+    }
+
+    @include mq($width-desktop) {
+      position: relative;
+      top: 0;
+      left: 0;
+
+      margin-right: 22px;
+
+    }
   }
 }
 
