@@ -10,13 +10,6 @@
   background-color: $color-white;
 }
 
-//.header__menu-wrapper {
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//  height: 73px;
-//}
-
 .header__menu-toggle {
   position: relative;
 
@@ -83,5 +76,17 @@
     grid-column: 3/-1;
 
     margin: 0;
+  }
+}
+
+.header__social {
+  grid-column: 1/-1;
+
+  @media (min-width: $width-tablet) {
+    order: 6;
+    justify-content: start;
+
+    margin: 0;
+    padding-left: 80px;
   }
 }
