@@ -2,11 +2,16 @@
 @import "mixins";
 
 .container {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
   padding-left: 25px;
   padding-right: 25px;
   box-sizing: border-box;
+
+  @media (min-width: $width-tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .title {
@@ -44,4 +49,47 @@
     background-color: $color-orange;
     border-radius: 4px;
   }
+}
+
+.cross {
+  position: relative;
+
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+
+    width: 2px;
+    height: 18px;
+
+    background-color: $color-blue-ocean;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 18px;
+    height: 2px;
+
+    background-color: $color-blue-ocean;
+    border-radius: 2px;
+  }
+}
+
+.rectangle {
+  width: 10px;
+  height: 6px;
+
+  background-color: tomato;
 }

@@ -1,0 +1,70 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.sort__container {
+  padding: 20px 25px;
+}
+
+.sort__wrapper {
+  padding: 25px;
+
+  background-color: $color-yellow-sunrise;
+  border-radius: 20px;
+}
+
+.sort__title {
+  @include font(22px, 22px, $font-weight-bold);
+  color: $color-blue-ocean;
+}
+
+.sort__area {
+  border-top: 1px solid $color-yellow-saffron-light;
+}
+
+.sort__list {
+  @include reset-list;
+}
+
+.sort__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.sort__item label {
+  display: flex;
+
+  &::before {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+
+    background-color: tomato;
+  }
+}
+
+.sort__travel-list {
+  justify-content: start;
+
+  padding-bottom: 20px;
+}
+
+.travel-list__item label {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  background-color: $color-white;
+  border-radius: 50%;
+}
+
+.sort__button {
+  @include font(17px, 17px, $font-weight-bold);
+
+  background-color: $color-white;
+}

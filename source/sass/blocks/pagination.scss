@@ -1,0 +1,7 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}
