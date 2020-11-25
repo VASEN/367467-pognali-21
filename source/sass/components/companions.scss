@@ -9,29 +9,159 @@
 }
 
 .companions__container {
-  padding-top: 34px;
-  padding-bottom: 31px;
+  padding-top: 35px;
+  padding-bottom: 30px;
 
   background-color: $color-blue-cobalt;
   border-radius: 0 0 25px 25px;
+
+  @include mq($width-tablet) {
+    @include container(768px, 75px);
+
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
 }
 
 .companions__wrapper {
-  padding: 34px 29px 54px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 35px 25px 50px;
+
+  @include mq($width-tablet) {
+    padding: 68px 0 60px;
+  }
+
+  @include mq($width-desktop) {
+    padding: 60px 70px 85px;
+  }
 }
 
 .companions__title {
   color: $color-orange;
+
+  @include mq($width-tablet) {
+    margin-bottom: 55px;
+
+    @include font(45px, 45px, $font-weight-bold);
+  }
 }
 
 .companions__text {
+  max-width: 275px;
+
+  margin: 0 0 25px;
+
+  @include mq($width-tablet) {
+    max-width: 429px;
+    margin-bottom: 40px;
+
+    @include font(28px, 34px, $font-weight-light);
+  }
+
   &--bold {
+    max-width: 260px;
+    margin-bottom: 0;
+
     font-weight: $font-weight-bold;
+
+    @include mq($width-tablet) {
+      @include font(21px, 24px, $font-weight-bold);
+    }
   }
 }
 
 .companions__cards {
   margin-bottom: 20px;
+
+  @include mq($width-tablet) {
+    margin-bottom: 81px;
+  }
+}
+
+.companions__cards-list {
+  @include mq($width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.companions .user-card {
+  max-width: 270px;
+
+  @media (min-width: 370px) {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 1fr 1fr 1fr;
+
+    padding-bottom: 0;
+  }
+
+  @include mq($width-tablet) {
+    display: block;
+    max-width: 285px;
+    margin-bottom: 0;
+  }
+}
+
+.companions .user-card__wrapper {
+  @include mq($width-tablet) {
+    padding-top: 0;
+  }
+}
+
+.companions__photo {
+  @media (min-width: 370px) {
+    grid-row: 1/5;
+  }
+
+  @include mq($width-tablet) {
+    width: 285px;
+    height: 285px;
+  }
+}
+
+.companions .user-card__visited-countries {
+  @media (min-width: 370px) {
+    order: 2;
+
+    top: auto;
+  }
+
+  @include mq($width-tablet) {
+    top: -20px;
+  }
+}
+
+.companions .user-card__country-flag {
+  object-fit: contain;
+}
+
+.companions .tags-list {
+  @media (min-width: 370px) {
+    order: 3;
+    align-items: center;
+    padding: 0;
+  }
+
+  @include mq($width-tablet) {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+  }
+}
+
+.companions .travel-list {
+  @media (min-width: 370px) {
+    order: 4;
+  }
+
+  @include mq($width-tablet) {
+    margin-bottom: 25px;
+  }
 }
 
 .companions__level {
