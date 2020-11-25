@@ -7,11 +7,31 @@
   color: $color-white;
 
   background-color: $color-blue-sapphire;
+
+  @include mq($width-tablet) {
+    padding-bottom: 95px;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include mq($width-desktop) {
+    padding-bottom: 125px;
+  }
 }
 
 .hero__wrapper {
-  background-image: url("/source/img/globe-back-mobile-1.png");
-  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include mq($width-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .hero__title {
@@ -19,6 +39,43 @@
   padding: 21px 16px 10px;
 
   @include font(36px, 40px, $font-weight-bold);
+  text-align: center;
+
+  @include mq($width-tablet) {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    @include font(60px, 70px, $font-weight-bold);
+  }
+
+  @include mq($width-desktop) {
+    margin: 0;
+    padding: 100px 60px 100px 70px;
+
+    text-align: left;
+  }
+}
+
+.hero__image {
+  @include mq($width-tablet) {
+    align-self: end;
+
+    width: 372px;
+    height: 451px;
+    padding-right: 70px;
+  }
+
+  @include mq($width-desktop) {
+    position: absolute;
+    left: 546px;
+
+    width: 431px;
+    height: 640px;
+    padding: 0;
+
+    z-index: 0;
+  }
 }
 
 .hero__contacts {
@@ -45,6 +102,21 @@
 
     background-color: $color-yellow-saffron;
     border-radius: 20px;
+  }
+}
+
+.hero-quote {
+  @include mq($width-tablet) {
+    position: absolute;
+    bottom: 210px;
+
+    padding-left: 30px;
+  }
+
+  @include mq($width-desktop) {
+    position: static;
+
+    padding: 110px 25px 115px 60px;
   }
 }
 

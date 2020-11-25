@@ -1,0 +1,26 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.hero-quote {
+  margin: 0;
+  padding: 50px 84px 30px 25px;
+
+  @include font(16px, 22px, $font-weight-light);
+}
+
+.hero-quote__text {
+  margin: 0 0 18px;
+
+  @include mq($width-tablet) {
+    @include font(28px, 33px, $font-weight-light);
+  }
+}
+
+.hero-quote__author {
+  font-style: normal;
+  font-weight: $font-weight-bold;
+
+  @include mq($width-tablet) {
+    @include font(21px, 25px, $font-weight-bold);
+  }
+}
