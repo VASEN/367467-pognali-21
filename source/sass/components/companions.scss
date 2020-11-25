@@ -21,6 +21,12 @@
     padding-top: 70px;
     padding-bottom: 90px;
   }
+
+  @include mq($width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto min-content;
+  }
 }
 
 .companions__wrapper {
@@ -34,7 +40,8 @@
   }
 
   @include mq($width-desktop) {
-    padding: 60px 70px 85px;
+    max-width: 428px;
+    padding: 60px 70px;
   }
 }
 
@@ -78,6 +85,15 @@
   @include mq($width-tablet) {
     margin-bottom: 81px;
   }
+
+  @include mq($width-desktop) {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    align-items: center;
+
+    margin-bottom: 0;
+    padding-top: 60px;
+  }
 }
 
 .companions__cards-list {
@@ -104,12 +120,20 @@
     display: block;
     max-width: 285px;
     margin-bottom: 0;
+
+    border-radius: 20px;
   }
 }
 
 .companions .user-card__wrapper {
   @include mq($width-tablet) {
     padding-top: 0;
+  }
+}
+
+.companions .user-card__user {
+  @include mq($width-tablet) {
+    @include font(24px, 22px, $font-weight-bold);
   }
 }
 
@@ -151,6 +175,8 @@
     padding-right: 30px;
     padding-left: 30px;
     padding-bottom: 25px;
+
+    @include font(20px, 23px, $font-weight-normal);
   }
 }
 
@@ -168,4 +194,20 @@
   position: absolute;
   top: 17px;
   left: 17px;
+}
+
+.companions .button-rect {
+  @include mq($width-tablet) {
+    padding: 29px 33px;
+
+    @include font(24px, 24px, $font-weight-bold);
+
+    border-radius: 20px;
+  }
+
+  @include mq($width-desktop) {
+    max-width: 280px;
+    max-height: 80px;
+    margin-left: 70px;
+  }
 }
