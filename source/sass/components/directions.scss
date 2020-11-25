@@ -9,24 +9,175 @@
 }
 
 .directions__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
   background-color: $color-white-smoky;
   border-radius: 0 0 25px 25px;
-  padding-bottom: 34px;
+  padding-top: 70px;
+  padding-bottom: 35px;
+
+  @include mq($width-tablet) {
+    @include container($width-tablet, 75px);
+    padding-bottom: 80px;
+  }
+
+  @include mq($width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+    grid-column-gap: 170px;
+
+    @include container($width-desktop, 130px);
+  }
 }
 
 .directions__wrapper {
-  padding: 71px 30px 60px 24px;
+  padding: 0 30px 60px 24px;
+
+  @include mq($width-desktop) {
+    order: 1;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+
+    padding: 0;
+  }
 }
 
 .directions__title {
   color: $color-orange;
+
+  @include mq($width-tablet) {
+    @include font(45px, 45px, $font-weight-bold);
+  }
+
+  @include mq($width-tablet) {
+    margin-bottom: 60px;
+  }
 }
 
 .directions__promo {
   margin: 0;
   padding: 0;
+
+  @include mq($width-tablet) {
+    @include font(28px, 33px, $font-weight-light);
+  }
 }
 
 .directions__cards {
   margin-bottom: 25px;
+
+  @include mq($width-desktop) {
+    grid-row: 1/-1;
+
+    margin-bottom: 0;
+  }
+}
+
+.directions .cards__list {
+  @media (min-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.directions .country-card {
+  @media (min-width: 400px) {
+    display: grid;
+    grid-template-columns: auto 186px;
+
+    min-width: 100%;
+    max-width: 616px;
+  }
+
+  @include mq($width-tablet) {
+    min-width: 616px;
+  }
+
+  @include mq($width-desktop) {
+    max-width: 560px;
+    min-width: 560px;
+  }
+}
+
+.directions__cards .country-card__photo {
+  @media (min-width: 400px) {
+    order: 1;
+    object-fit: cover;
+
+    border-radius: 0 20px 20px 0;
+  }
+
+  @include mq($width-tablet) {
+    max-width: 186px;
+  }
+}
+
+.directions .country-card__flag {
+  @media (min-width: 400px) {
+    min-width: 70px;
+    top: 17px;
+    left: auto;
+    right: 150px;
+
+    border-radius: 5px;
+  }
+}
+
+.directions__cards .country-card__wrapper {
+  @media (min-width: 400px) {
+    top: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+
+    min-width: 100%;
+    min-height: 140px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 20px 0 0 20px;
+  }
+}
+
+.directions .country-card__title {
+  @include mq($width-tablet) {
+    margin-bottom: 5px;
+
+    @include font(24px, 24px, $font-weight-bold);
+  }
+}
+
+.directions .country-card__promo {
+  @include mq($width-tablet) {
+    @include font(20px, 20px, $font-weight-medium);
+  }
+}
+
+.directions .country-card__stats {
+  @include mq($width-tablet) {
+    font-size: 20px;
+  }
+}
+
+.directions .button-rect {
+  max-width: 270px;
+
+  @media (min-width: 400px) {
+    max-width: 618px;
+  }
+
+  @include mq($width-tablet) {
+    @include font(24px, 24px, $font-weight-bold);
+  }
+
+  @include mq($width-desktop) {
+    max-width: 280px;
+    max-height: 80px;
+
+    border-radius: 20px;
+  }
 }
