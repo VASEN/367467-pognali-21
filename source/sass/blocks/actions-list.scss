@@ -106,9 +106,7 @@
     color: $color-white;
 
     @include mq($width-tablet) {
-      @include mq($width-tablet) {
-        @include font(30px, 30px, $font-weight-bold);
-      }
+      @include font(30px, 30px, $font-weight-bold);
     }
   }
 }

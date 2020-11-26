@@ -57,6 +57,7 @@
 
   @include mq($width-tablet) {
     max-width: 750px;
+
     @include container(688px, 40px);
   }
 }

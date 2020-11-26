@@ -53,6 +53,13 @@
   }
 }
 
+.page__title-wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+
+  background-color: $color-white-smoky;
+}
+
 .cross {
   position: relative;
 
