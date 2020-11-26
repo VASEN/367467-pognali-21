@@ -2,16 +2,17 @@
 @import "../common/mixins";
 
 .about-us {
+  position: relative;
+
   font-weight: $font-weight-light;
   color: $color-white;
 
-  background-color: $color-white-smoky;
+  background-color: $color-blue-deep;
+  border-radius: 0 0 25px 25px;
+  z-index: 6;
 }
 
 .about-us__container {
-  background-color: $color-blue-deep;
-  border-radius: 0 0 25px 25px;
-
   @include mq($width-tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -2,18 +2,21 @@
 @import "../common/mixins";
 
 .companions {
+  position: relative;
+
+  margin-top: -20px;
+
   font-weight: $font-weight-light;
   color: $color-white;
 
-  background-color: $color-grey-lavender;
+  background-color: $color-blue-cobalt;
+  border-radius: 0 0 25px 25px;
+  z-index: 4;
 }
 
 .companions__container {
   padding-top: 35px;
   padding-bottom: 30px;
-
-  background-color: $color-blue-cobalt;
-  border-radius: 0 0 25px 25px;
 
   @include mq($width-tablet) {
     @include container(768px, 75px);

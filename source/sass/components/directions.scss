@@ -2,10 +2,16 @@
 @import "../common/mixins";
 
 .directions {
+  position: relative;
+
+  margin-top: -20px;
+  z-index: 5;
+
   font-weight: $font-weight-light;
   color: $color-black-bluish;
 
-  background-color: $color-blue-cobalt;
+  background-color: $color-white-smoky;
+  border-radius: 0 0 25px 25px;
 }
 
 .directions__container {
@@ -13,8 +19,6 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  background-color: $color-white-smoky;
-  border-radius: 0 0 25px 25px;
   padding-top: 70px;
   padding-bottom: 35px;
 

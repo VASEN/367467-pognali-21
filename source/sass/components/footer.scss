@@ -4,18 +4,17 @@
 .footer {
   position: relative;
 
+  margin-top: -20px;
   z-index: 1;
 
-  background-color: $color-lightgrey;
+  background-color: $color-white;
+  border-radius: 25px 25px 0 0;
 }
 
 .footer__container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
-  background-color: $color-white;
-  border-radius: 25px 25px 0 0;
 
   @include mq($width-tablet) {
     flex-direction: row;
