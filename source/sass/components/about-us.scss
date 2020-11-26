@@ -83,5 +83,10 @@
     display: flex;
 
     max-width: 280px;
+    min-height: 80px;
+
+    @include font(24px, 24px, $font-weight-bold);
+
+    border-radius: 20px;
   }
 }

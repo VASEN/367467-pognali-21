@@ -55,6 +55,18 @@
   background-color: $color-yellow-sunrise;
   border-radius: 25px;
   border: none;
+
+  @include mq($width-tablet) {
+    max-width: 188px;
+    margin-left: auto;
+    padding: 15px 30px;
+
+    @include font(20px, 20px, $font-weight-normal);
+  }
+
+  @include mq($width-desktop) {
+    @include font(20px, 20px, $font-weight-bold);
+  }
 }
 
 .button-business {

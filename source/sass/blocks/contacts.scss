@@ -4,25 +4,9 @@
 .contacts {
   @include font(16px, 18px, $font-weight-bold);
   text-transform: uppercase;
-
-  @media (min-width: $width-tablet) {
-    order: 5;
-    padding-left: 60px;
-  }
 }
 
-.contacts__telephone {
-  display: flex;
-  align-items: center;
-
-  &::before {
-    content: "";
-
-    background-color: $color-blue-dark;
-    border-radius: 50%;
-  }
-}
-
+.contacts__telephone,
 .contacts__email {
   display: flex;
   align-items: center;

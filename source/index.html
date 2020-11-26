@@ -8,12 +8,15 @@
 </head>
 <body class="page__body">
   <header class="page__header header">
-    <div class="container header__container">
-      <div class="header__menu">
+<!--  <header class="page__header header header&#45;&#45;opened">-->
+<!--  <header class="page__header header header&#45;&#45;scroll">-->
+    <div class="container header__container ">
+      <div class="header__menu header__menu--closed">
+<!--      <div class="header__menu header__menu&#45;&#45;opened">-->
         <a class="header__logo-link logo-link">
           <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
         </a>
-        <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
+        <button class="header__menu-toggle header__menu-toggle--closed" type="button" aria-label="Открыть меню"></button>
         <nav class="header__navigation header-navigation">
           <ul class="header-navigation__list">
             <li class="header-navigation__item">
@@ -31,8 +34,8 @@
           <a class="button-round" href="#">Авторизация</a>
         </div>
         <div class="header__contacts contacts">
-          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
-          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!"><span class="header__telephone--full">8 800 555-86-28</span></a>
+          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"><span class="header__email--full">mail@htmlacademy.ru</span></a>
         </div>
         <div class="header__social social">
           <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
@@ -344,7 +347,7 @@
       <div class="footer__copyright copyright">
         <a class="copyright__title" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="source/img/htmlacademy.svg" width="27" height="33" alt="HTMLAcademy">
+          <img src="img/htmlacademy.svg" width="27" height="33" alt="HTMLAcademy">
         </a>
       </div>
     </div>
@@ -373,5 +376,6 @@
       <button class="button-profile" type="button">Закрыть окно</button>
     </div>
   </section>
+<script src="js/header-open.js"></script>
 </body>
 </html>

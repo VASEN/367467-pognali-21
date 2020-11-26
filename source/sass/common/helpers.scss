@@ -3,6 +3,7 @@
 
 .container {
   @include container(320px, 25px);
+  max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
 
