@@ -51,9 +51,26 @@
   border-radius: 17px;
 }
 
+.profile__modal .container {
+  @include mq(270px, 25px);
+  min-width: 270px;
+
+  @include mq($width-tablet) {
+    max-width: 750px;
+    @include container(688px, 40px);
+  }
+}
+
 .profile__modal-title {
+  display: flex;
+  justify-content: center;
+
   margin: 0;
-  padding: 34px 27px 28px 26px;
+  padding: 34px 0 28px 0;
 
   color: $color-orange;
+
+  @include mq($width-tablet) {
+    @include font(45px, 45px, $font-weight-bold);
+  }
 }

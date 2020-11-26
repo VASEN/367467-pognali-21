@@ -78,8 +78,12 @@
 }
 
 .button-profile {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
   margin: 0;
-  padding: 21px 78px;
+  padding: 21px 0;
   box-sizing: border-box;
 
   font: inherit;
@@ -90,6 +94,12 @@
   background-color: $color-white-smoky-light;
   border: none;
   border-radius: 0 0 25px 25px;
+
+  @include mq($width-tablet) {
+    padding: 41px 0;
+
+    @include font(24px, 24px, $font-weight-bold);
+  }
 }
 
 .button-rect {
