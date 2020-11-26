@@ -13,14 +13,34 @@
 }
 
 .map__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
   padding: 31px 25px 35px 25px;
 
   background-color: $color-yellow-sunrise;
   border-radius: 0 0 25px 25px;
+
+  @include mq($width-tablet) {
+    @include container($width-tablet, 75px);
+    padding-top: 50px;
+    padding-bottom: 85px;
+  }
+
+  @include mq($width-desktop) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
 }
 
 .map__address {
   display: flex;
+  align-items: center;
 
   margin-bottom: 32px;
   box-sizing: border-box;
@@ -28,6 +48,14 @@
   @include font(16px, 22px, $font-weight-bold);
   font-style: normal;
   text-transform: uppercase;
+
+  @include mq($width-tablet) {
+    @include font(28px,28px, $font-weight-bold);
+  }
+
+  @include mq($width-desktop) {
+    margin-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -37,12 +65,38 @@
     margin-right: 16px;
 
     background-color: $color-blue-dark;
-    border-radius: 22px;
+    border-radius: 50%;
+
+    @include mq($width-tablet) {
+      width: 68px;
+      height: 68px;
+    }
+
+    @include mq($width-desktop) {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}
+
+.map__address br {
+  @include mq($width-tablet) {
+    display: none;
   }
 }
 
 .map__button-rect {
+  text-transform: none;
+
   border: 3px solid $color-blue-cobalt;
+
+  @include mq($width-tablet) {
+    min-height: 80px;
+
+    @include font(24px, 24px, $font-weight-bold);
+
+    border-radius: 20px;
+  }
 }
 
 .map__image {

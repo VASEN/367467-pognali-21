@@ -58,7 +58,12 @@
   margin-right: 0;
 
   background-color: $color-yellow-sunrise;
-  border-radius: 22px;
+  border-radius: 50%;
+
+  @include mq($width-tablet) {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .footer__copyright {

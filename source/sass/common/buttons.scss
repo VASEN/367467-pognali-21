@@ -117,17 +117,20 @@
 .button-feedback {
   display: block;
   width: 100%;
+  max-height: 62px;
   margin: 0;
   padding: 22px 85px 22px 25px;
   box-sizing: border-box;
 
   font: inherit;
+
   @include font(18px, 18px, $font-weight-bold);
 
   border-radius: 10px;
   border: none;
 
   @include mq($width-tablet) {
+    max-height: 80px;
     padding: 28px 36px;
 
     border-radius: 25px 0 0 25px;
