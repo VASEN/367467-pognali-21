@@ -75,6 +75,24 @@
 
   font-weight: $font-weight-bold;
   color: $color-blue-screen;
+
+  @include mq($width-tablet) {
+    justify-content: start;
+    align-items: center;
+
+    @include font(20px, 20px, $font-weight-bold);
+
+    &::before {
+      content: "";
+
+      width: 68px;
+      height: 68px;
+      margin-right: 20px;
+
+      background-color: $color-grey-lavender-light;
+      border-radius: 50%;
+    }
+  }
 }
 
 .button-profile {
