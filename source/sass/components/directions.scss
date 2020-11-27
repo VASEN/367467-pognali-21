@@ -81,7 +81,7 @@
 }
 
 .directions .cards__list {
-  @media (min-width: 400px) {
+  @media (min-width: 425px) {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -89,7 +89,7 @@
 }
 
 .directions .country-card {
-  @media (min-width: 400px) {
+  @media (min-width: 425px) {
     display: grid;
     grid-template-columns: auto 186px;
 
@@ -132,7 +132,7 @@
 }
 
 .directions__cards .country-card__wrapper {
-  @media (min-width: 400px) {
+  @media (min-width: 425px) {
     top: auto;
     flex-direction: column;
     justify-content: space-around;
@@ -170,7 +170,7 @@
 .directions .button-rect {
   max-width: 270px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 425px) {
     max-width: 618px;
   }
 
