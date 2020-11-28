@@ -2,29 +2,29 @@
 <html class="page form-page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body form-page__body">
   <header class="page__header header">
-    <div class="container header__container">
-      <div class="header__menu-wrapper">
+    <div class="container header__container ">
+      <div class="header__menu header__menu--closed">
         <a class="header__logo-link logo-link" href="index.html">
           <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
         </a>
-        <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
-      </div>
-      <div class="header__menu">
+        <button class="header__menu-toggle header__menu-toggle--closed" type="button" aria-label="Открыть меню"></button>
         <nav class="header__navigation header-navigation">
           <ul class="header-navigation__list">
             <li class="header-navigation__item">
               <a class="header-navigation__link" href="#about-us">О сервисе</a>
             </li>
             <li class="header-navigation__item">
-              <a class="header-navigation__link" href="#directions">Направления</a>
+              <a class="header-navigation__link" href="#">Направления</a>
             </li>
             <li class="header-navigation__item">
-              <a class="header-navigation__link" href="#companions">Попутчики</a>
+              <a class="header-navigation__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
         </nav>
@@ -32,8 +32,8 @@
           <a class="button-round" href="#">Авторизация</a>
         </div>
         <div class="header__contacts contacts">
-          <a class="contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
-          <a class="contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!"><span class="header__telephone--full">8 800 555-86-28</span></a>
+          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"><span class="header__email--full">mail@htmlacademy.ru</span></a>
         </div>
         <div class="header__social social">
           <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
@@ -370,7 +370,7 @@
                         </tbody>
                       </table>
                   <span class="route__graph"></span>
-                  <button class="route__button button-delete" type="button">Удалить страну</button>
+                  <button class="route__button button-delete" type="button"></button>
                 </div>
                 <div class="slider-item__module route-module route-module--add">
                   <div class="route-module__wrapper route-module__wrapper--add">
@@ -431,10 +431,11 @@
       <div class="footer__copyright copyright">
         <a class="copyright__title" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="source/img/htmlacademy.svg" width="27" height="33" alt="HTMLAcademy">
+          <img src="img/htmlacademy.svg" width="27" height="33" alt="HTMLAcademy">
         </a>
       </div>
     </div>
   </footer>
+  <script src="js/header-open.js"></script>
 </body>
 </html>

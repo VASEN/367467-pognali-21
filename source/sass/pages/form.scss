@@ -1,0 +1,26 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.form-page .header {
+  background-color: $color-cobalt-blue;
+
+  &--closed {
+    background-color: $color-cobalt-blue;
+  }
+
+  &--opened {
+    background-color: $color-white;
+  }
+}
+
+.form-page .header__menu {
+  background-color: $color-cobalt-blue;
+
+  &--closed {
+    background-color: $color-cobalt-blue;
+  }
+
+  &--opened {
+    background-color: $color-white;
+  }
+}
