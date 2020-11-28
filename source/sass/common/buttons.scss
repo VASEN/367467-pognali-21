@@ -15,6 +15,11 @@
 
   background-color: $color-lavender;
   border-radius: 20px;
+
+  @include mq($width-tablet) {
+    border-radius: 10px;
+    padding: 20px 0;
+  }
 }
 
 .button {
