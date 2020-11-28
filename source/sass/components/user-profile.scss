@@ -11,21 +11,28 @@
   background-color: $color-white-smoky;
 }
 
-.user-profile__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-top: 20px;
-  padding-bottom: 34px;
-
-  background-color: inherit;
+.user-profile__container {
+  padding-top: 40px;
+  padding-bottom: 55px;
 }
 
-.user-profile__level {
+.user-profile .user-card {
+  background-color: $color-white-smoky;
+
+  padding-bottom: 0;
+}
+
+.user-profile__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+  align-items: center;
+}
+
+.user-profile .level {
   width: 100px;
   height: 100px;
+  margin: 0 auto;
 
   background-color: transparent;
   border-radius: 50px;
@@ -43,7 +50,10 @@
 }
 
 .user-profile__photo {
+  margin: 0 auto;
   object-fit: contain;
+
+  border-radius: 50%;
 }
 
 .user-profile__change-photo {
@@ -51,9 +61,11 @@
 }
 
 .user-profile__wrapper {
+  grid-column: 1/-1;
+
   position: relative;
   width: 100%;
-  padding: 25px;
+  padding: 25px 26px;
   box-sizing: border-box;
 
   border: 1px solid $color-telegray-light;
@@ -61,13 +73,12 @@
 }
 
 .user-profile__legend {
-  position: absolute;
-  top: -9px;
-
   display: flex;
-  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  margin: 0;
+  width: fit-content;
+  margin: -35px auto 20px;
   padding-left: 17px;
   padding-right: 17px;
 
