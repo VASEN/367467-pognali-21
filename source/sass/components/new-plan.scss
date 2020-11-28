@@ -2,13 +2,15 @@
 @import "source/sass/common/mixins";
 
 .new-plan {
-  background-color: $color-lavender;
+  position: relative;
+  z-index: 3;
+
+  background-color: $color-lightgrey;
+  border-radius: 25px 25px 0 0;
 }
 
 .new-plan__container {
   padding-bottom: 43px;
-  background-color: $color-lightgrey;
-  border-radius: 25px 25px 0 0;
 }
 
 .new-plan__wrapper {

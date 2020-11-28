@@ -1,7 +1,13 @@
 @import "source/sass/common/variables";
 @import "source/sass/common/mixins";
 
-.user-profile__container {
+.user-profile {
+  position: relative;
+
+  margin-top: -20px;
+  margin-bottom: -20px;
+  z-index: 1;
+
   background-color: $color-white-smoky;
 }
 

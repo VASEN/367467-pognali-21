@@ -2,15 +2,17 @@
 @import "source/sass/common/mixins";
 
 .user-plans {
-  background-color: $color-white-smoky;
+  position: relative;
+  margin-bottom: -20px;
+  z-index: 2;
+
+  background-color: $color-lavender;
+  border-radius: 25px 25px 0 0;
 }
 
 .user-plans__container {
   padding-top: 28px;
   padding-bottom: 30px;
-
-  background-color: $color-lavender;
-  border-radius: 25px 25px 0 0;
 }
 
 .user-plans__title {
