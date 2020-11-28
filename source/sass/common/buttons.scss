@@ -20,6 +20,19 @@
     border-radius: 10px;
     padding: 20px 0;
   }
+
+  @include mq($width-desktop) {
+    grid-column: none;
+
+    position: absolute;
+    top: -75px;
+    right: 0;
+
+    width: auto;
+    min-width: 190px;
+
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 .button {

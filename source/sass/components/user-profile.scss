@@ -2,11 +2,8 @@
 @import "source/sass/common/mixins";
 
 .user-profile {
-  position: relative;
-
   margin-top: -20px;
   margin-bottom: -20px;
-  z-index: 1;
 
   background-color: $color-white-smoky;
 }
@@ -14,6 +11,11 @@
 .user-profile__container {
   padding-top: 40px;
   padding-bottom: 55px;
+
+  @include mq($width-desktop) {
+    padding-top: 95px;
+    padding-bottom: 75px;
+  }
 }
 
 .user-profile .user-card {
@@ -37,6 +39,11 @@
     grid-template-columns: auto 1fr auto;
     grid-column-gap: 60px;
   }
+
+  @include mq($width-desktop) {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 140px;
+  }
 }
 
 .user-profile .level {
@@ -46,17 +53,33 @@
 
   background-color: transparent;
   border-radius: 50px;
+
+  @include mq($width-desktop) {
+    position: absolute;
+    top: -200px;
+    right: 230px;
+
+    z-index: 2;
+  }
 }
 
 .user-profile__level .level__number {
   @include font(38px, 38px, $font-weight-bold);
   border-color: rgba($color-black-bluish, 0.3);
+
+  @include mq($width-desktop) {
+    color: $color-white;
+  }
 }
 
 .user-profile__level .level__text {
   margin-top: 6px;
 
   @include font(18px, 18px, $font-weight-normal);
+
+  @include mq($width-desktop) {
+    color: $color-white;
+  }
 }
 
 .user-profile__photo {
@@ -67,6 +90,18 @@
 
   @include mq($width-tablet) {
     border-radius: 7px;
+  }
+
+  @include mq($width-desktop) {
+    position: absolute;
+    top: -265px;
+    right: 0;
+
+    width: 190px;
+    height: 190px;
+    z-index: 2;
+
+    border-radius: 10px 10px 0 0;
   }
 }
 
@@ -84,6 +119,10 @@
 
   border: 1px solid $color-telegray-light;
   border-radius: 10px;
+
+  @include mq($width-desktop) {
+    grid-column: auto;
+  }
 }
 
 .user-profile__travel-wrapper {
