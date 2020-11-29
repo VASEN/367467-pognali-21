@@ -2,13 +2,22 @@
 @import "source/sass/common/mixins";
 
 .alphabet {
+  display: none;
+
   position: absolute;
+  top: 42px;
+  left: 0;
+
   min-width: 220px;
   min-height: 220px;
   box-sizing: border-box;
   z-index: 1;
 
   border-collapse: collapse;
+}
+
+.alphabet--show {
+  display: block;
 }
 
 .alphabet__item {

@@ -7,16 +7,39 @@
 
   width: 100%;
 
-  &--select {
-    position: relative;
+  margin-bottom: 22px;
+}
 
-    display: block;
+.route-module__select {
+  position: relative;
+
+  display: block;
+
+  &--active {
+
+    background-color: $color-blue-ocean;
+    border-radius: 4px 4px 0 0;
+    border: none;
+  }
+
+  &--active .button-delete {
+    display: none;
+  }
+
+  &--active label {
+    display: none;
+  }
+
+  &--active .route-module__input {
+    color: $color-white;
+  }
+
+  &--active .route-module__wrapper {
+    border: none;
   }
 }
 
 .route-module__wrapper {
-  position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,12 +52,6 @@
 
   border: 1px solid $color-telegray-light;
   border-radius: 4px;
-
-  &--select {
-    background-color: $color-blue-ocean;
-    border-radius: 4px 4px 0 0;
-    border: none;
-  }
 
   &--add {
     background-color: $color-white-smoky;
