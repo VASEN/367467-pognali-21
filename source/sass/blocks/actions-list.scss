@@ -9,7 +9,7 @@
   background-color: $color-orange;
   border-radius: 6px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -17,7 +17,7 @@
     border-radius: 20px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     display: flex;
     //justify-content: stretch;
   }
@@ -33,12 +33,12 @@
 
   @include font(18px, 18px, $font-weight-bold);
 
-  @include mq($width-tablet) {
+  @include tablet {
     flex-direction: column;
   }
 
   &:nth-child(1) {
-    @include mq($width-tablet) {
+    @include tablet {
       border-radius: 20px 0 0 0;
     }
   }
@@ -47,11 +47,11 @@
     background-color: $color-orange-light;
     border-radius: 6px 6px 0 0;
 
-    @include mq($width-tablet) {
+    @include tablet {
       border-radius: 20px 20px 0 0;
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       border-radius: 20px 0 0 20px;
     }
   }
@@ -60,11 +60,11 @@
     background-color: $color-yellow-saffron;
     border-radius: 6px 6px 0 0;
 
-    @include mq($width-tablet) {
+    @include tablet {
       border-radius: 0 0 0 20px;
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       border-radius: 20px 0 0 20px;
     }
   }
@@ -73,11 +73,11 @@
     border-radius: 6px;
     background-color: $color-yellow-sunrise;
 
-    @include mq($width-tablet) {
+    @include tablet {
       border-radius: 0 0 20px 20px;
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       border-radius: 20px;
     }
   }
@@ -89,7 +89,7 @@
 
   color: $color-blue-sapphire;
 
-  @include mq($width-tablet) {
+  @include tablet {
     max-width: 195px;
     margin-bottom: 10px;
 
@@ -105,7 +105,7 @@
 
     color: $color-white;
 
-    @include mq($width-tablet) {
+    @include tablet {
       @include font(30px, 30px, $font-weight-bold);
     }
   }

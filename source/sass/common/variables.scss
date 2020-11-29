@@ -6,14 +6,9 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // Media
-$breakpoints: (
-  "mobile": 320px,
-  "tablet": 768px,
-  "desktop": 1440px
-);
-
-$width-tablet: "tablet";
-$width-desktop: "desktop";
+$width-mobile: 320px;
+$width-tablet: 768px;
+$width-desktop: 1440px;
 
 // Color
 $color-white: #ffffff;

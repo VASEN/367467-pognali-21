@@ -56,7 +56,7 @@
   border-radius: 25px;
   border: none;
 
-  @include mq($width-tablet) {
+  @include tablet {
     max-width: 188px;
     margin-left: auto;
     padding: 15px 30px;
@@ -64,7 +64,7 @@
     @include font(20px, 20px, $font-weight-normal);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     @include font(20px, 20px, $font-weight-bold);
   }
 }
@@ -76,7 +76,7 @@
   font-weight: $font-weight-bold;
   color: $color-blue-screen;
 
-  @include mq($width-tablet) {
+  @include tablet {
     justify-content: start;
     align-items: center;
 
@@ -113,7 +113,7 @@
   border: none;
   border-radius: 0 0 25px 25px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding: 41px 0;
 
     @include font(24px, 24px, $font-weight-bold);
@@ -157,7 +157,7 @@
   border-radius: 10px;
   border: none;
 
-  @include mq($width-tablet) {
+  @include tablet {
     max-height: 80px;
     padding: 28px 36px;
 
@@ -167,7 +167,7 @@
   &::placeholder {
     color: rgba($color-black-bluish, 0.3);
 
-    @include mq($width-tablet) {
+    @include tablet {
       @include font(24px, 24px, $font-weight-bold);
     }
   }
@@ -189,7 +189,7 @@
   border-radius: 10px;
   border: none;
 
-  @include mq($width-tablet) {
+  @include tablet {
     position: relative;
     flex-shrink: 0;
     width: 80px;
@@ -198,7 +198,7 @@
     border-radius: 0 25px 25px 0;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -209,7 +209,7 @@
   &--full {
     display: none;
 
-    @include mq($width-desktop) {
+    @include desktop {
       display: block;
 
       margin-left: 35px;
@@ -230,12 +230,12 @@
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
 
-    @include mq($width-tablet) {
+    @include tablet {
       top: 30px;
       left: 36px;
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       position: relative;
       top: 0;
       left: 0;

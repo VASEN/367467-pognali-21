@@ -13,7 +13,7 @@
 }
 
 .about-us__container {
-  @include mq($width-tablet) {
+  @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -22,7 +22,7 @@
 .about-us__wrapper {
   padding: 33px 35px 82px 24px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding-left: 35px;
   }
 }
@@ -32,13 +32,13 @@
 
   color: $color-orange;
 
-  @include mq($width-tablet) {
+  @include tablet {
     margin-bottom: 40px;
 
     @include font(45px, 45px, $font-weight-bold);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     margin-bottom: 60px;
   }
 }
@@ -47,13 +47,13 @@
   margin: 0 0 20px;
   padding: 0;
 
-  @include mq($width-tablet) {
+  @include tablet {
     margin-bottom: 40px;
 
     @include font(28px, 33px, $font-weight-light);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     max-width: 620px;
   }
 
@@ -62,13 +62,13 @@
 
     font-weight: $font-weight-bold;
 
-    @include mq($width-tablet) {
+    @include tablet {
       margin-bottom: 50px;
 
       @include font(21px, 25px, $font-weight-bold);
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       max-width: 425px;
       margin-bottom: 80px;
     }
@@ -80,7 +80,7 @@
     display: none;
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     display: flex;
 
     max-width: 280px;

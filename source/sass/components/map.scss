@@ -22,13 +22,11 @@
 
   padding: 31px 25px 35px 25px;
 
-  @include mq($width-tablet) {
-    @include container($width-tablet, 75px);
-    padding-top: 50px;
-    padding-bottom: 85px;
+  @include tablet {
+    padding: 50px 35px 85px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -49,11 +47,11 @@
   font-style: normal;
   text-transform: uppercase;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(28px,28px, $font-weight-bold);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     margin-bottom: 0;
   }
 
@@ -67,12 +65,12 @@
     background-color: $color-blue-dark;
     border-radius: 50%;
 
-    @include mq($width-tablet) {
+    @include tablet {
       width: 68px;
       height: 68px;
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       width: 90px;
       height: 90px;
     }
@@ -80,7 +78,7 @@
 }
 
 .map__address br {
-  @include mq($width-tablet) {
+  @include tablet {
     display: none;
   }
 }
@@ -90,12 +88,16 @@
 
   border: 3px solid $color-blue-cobalt;
 
-  @include mq($width-tablet) {
+  @include tablet {
     min-height: 80px;
 
     @include font(24px, 24px, $font-weight-bold);
 
     border-radius: 20px;
+  }
+
+  @include desktop {
+    min-width: 324px;
   }
 }
 

@@ -5,7 +5,7 @@
   @include reset-list;
   padding: 0 26px 34px 25px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding: 0 90px 50px 90px;
   }
 }
@@ -20,7 +20,7 @@
     border-bottom: 1px solid rgba($color-black, 0.05);
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -33,7 +33,7 @@
   font-weight: $font-weight-light;
   color: $color-black-bluish;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(22px, 28px, $font-weight-light);
   }
 }
