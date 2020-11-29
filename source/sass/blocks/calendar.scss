@@ -11,6 +11,9 @@
   @include tablet {
     @include font(18px, 18px, $font-weight-normal);
   }
+
+  @include desktop {
+  }
 }
 
 .calendar__day {
@@ -25,6 +28,17 @@
   @include tablet {
     padding: 25px;
     min-height: 70px;
+  }
+
+  @include desktop {
+    //min-width: 144px;
+    height: 70px;
+    min-width: 138px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+
+    text-align: left;
+    vertical-align: top;
   }
 }
 
@@ -47,8 +61,36 @@
   &--holiday {
     color: $color-orange-hotred;
   }
+
+  @include desktop {
+    padding-left: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    text-align: left;
+  }
 }
 
 .day__start-month {
   display: none;
+
+  @include desktop {
+    display: inline;
+  }
+}
+
+.calendar__day--start,
+.calendar__day--end {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calendar__day--start span,
+.calendar__day--end span {
+  display: none;
+
+  @include desktop {
+    display: inline;
+  }
 }

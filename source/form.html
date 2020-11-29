@@ -136,23 +136,23 @@
         <div class="new-plan__slider slider">
           <form class="new-plan__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="slider__item slider-item step-one" id="step-1">
-              <h3 class="slider-item__title">
-                <span>Шаг 1.</span>
-                <span>Даты пребывания</span>
-              </h3>
-              <p class="slider-item__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <ul class="new-plan__list plan-list plan-list-with-desc">
-                <li class="plan-list__item plan-list__item--current">Даты</li>
-                <li class="plan-list__item">Маршрут</li>
-                <li class="plan-list__item">Развлечения</li>
-              </ul>
+              <div class="slider-item__step-one-wrapper">
+                <h3 class="slider-item__title">
+                  <span>Шаг 1.</span>
+                  <span>Даты пребывания</span>
+                </h3>
+                <p class="slider-item__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <ul class="new-plan__list plan-list plan-list-with-desc">
+                  <li class="plan-list__item plan-list__item--current">Даты</li>
+                  <li class="plan-list__item">Маршрут</li>
+                  <li class="plan-list__item">Развлечения</li>
+                </ul>
+              </div>
 
               <div class="slider-item__module-wrapper">
                 <div class="slider-item__module button-module up-down-button up-down-button-companions">
-                  <div class="button-module__wrapper">
-                    <label for="step-one-companions">Ищу попутчиков:</label>
-                    <span class="button-module__caption">чел.</span>
-                  </div>
+                  <label for="step-one-companions">Ищу попутчиков:</label>
+                  <span class="button-module__caption">чел.</span>
                   <div class="up-down-button__wrapper">
                     <button class="button-down" type="button"></button>
                     <input class="up-down-button__input" type="number" min="1" max="10" name="companions" value="2" id="step-one-companions">
@@ -160,10 +160,8 @@
                   </div>
                 </div>
                 <div class="slider-item__module button-module up-down-button up-down-button-duration">
-                  <div class="button-module__wrapper">
-                    <label for="step-one-duration">Длительность:</label>
-                    <span class="button-module__caption">дн.</span>
-                  </div>
+                  <label for="step-one-duration">Длительность:</label>
+                  <span class="button-module__caption">дн.</span>
                   <div class="up-down-button__wrapper">
                     <button class="button-down" type="button"></button>
                     <input class="up-down-button__input" type="number" min="1" max="365" name="duration" value="3" id="step-one-duration">
@@ -225,7 +223,7 @@
                       <td class="calendar__day">26</td>
                       <td class="calendar__day">27</td>
                       <td class="calendar__day">28</td>
-                      <td class="calendar__day">1<span class="day__start-month">мар</span></td>
+                      <td class="calendar__day">1<span class="day__start-month"> мар</span></td>
                     </tr>
                     <tr class="calendar__week">
                       <td class="calendar__day">2</td>
@@ -258,15 +256,15 @@
                       <td class="calendar__day">23</td>
                       <td class="calendar__day">24</td>
                       <td class="calendar__day">25</td>
-                      <td class="calendar__day calendar__day--start calendar__day--selected">26</td>
+                      <td class="calendar__day calendar__day--start calendar__day--selected">26 <span>Заезд</span></td>
                       <td class="calendar__day calendar__day--selected">27</td>
-                      <td class="calendar__day calendar__day--end calendar__day--selected">28</td>
+                      <td class="calendar__day calendar__day--end calendar__day--selected">28 <span>Выезд</span></td>
                       <td class="calendar__day calendar__day--available">29</td>
                     </tr>
                     <tr class="calendar__week">
                       <td class="calendar__day calendar__day--available">30</td>
                       <td class="calendar__day calendar__day--available">31</td>
-                      <td class="calendar__day calendar__day--available">1<span class="day__start-month">апр</span></td>
+                      <td class="calendar__day calendar__day--available">1<span class="day__start-month"> апр</span></td>
                       <td class="calendar__day calendar__day--available">2</td>
                       <td class="calendar__day calendar__day--available">3</td>
                       <td class="calendar__day calendar__day--available">4</td>

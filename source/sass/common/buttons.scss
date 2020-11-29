@@ -265,37 +265,47 @@
 }
 
 .button-module {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.button-module__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 8px;
 
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 
   @include font(16px, 16px, $font-weight-medium);
   text-transform: uppercase;
   color: $color-blue-ocean;
 
   @include tablet {
-    margin-bottom: 0;
-    padding: 25px 0;
+    grid-template-rows: 70px 70px;
+    grid-row-gap: 0;
+    align-items: center;
+
+    margin-bottom: 25px;
 
     @include font(20px, 18px, $font-weight-medium);
 
     border-top: 1px solid $color-grey-platinum;
   }
+
+  @include desktop {
+    grid-template-columns: 1fr 180px 1fr;
+    grid-template-rows: 70px;
+
+    margin-bottom: 0;
+
+    border: none;
+  }
 }
 
 .button-module__caption {
+  margin-left: auto;
+
   color: rgba($color-blue-ocean, 0.3);
 }
 
 .up-down-button__wrapper {
+  grid-column: 1/-1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -311,6 +321,13 @@
   @include tablet {
     min-height: 70px;
     padding: 0 25px;
+  }
+
+  @include desktop {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    padding: 0 20px;
   }
 }
 
@@ -372,6 +389,18 @@
   &::after {
     transform: rotate(90deg);
   }
+
+  @include tablet {
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      left: 9px;
+
+      height: 20px;
+    }
+  }
 }
 
 .up-down-button__input {
@@ -386,11 +415,24 @@
   @include tablet {
     @include font(20px, 20px, $font-weight-medium);
   }
+
+  @include desktop {
+    max-width: 80px;
+  }
+}
+
+.checkbox-module {
+  @include desktop {
+    align-self: center;
+    margin-left: auto;
+  }
 }
 
 .checkbox-module label {
   display: flex;
   align-items: center;
+
+  margin-bottom: 20px;
 
   @include font(15px, 15px, $font-weight-normal);
   color: $color-blue-ocean;
@@ -410,10 +452,16 @@
     @include font(20px, 20px, $font-weight-medium);
     text-transform: uppercase;
 
+    margin-bottom: 25px;
+
     &::before {
       width: 36px;
       height: 36px;
     }
+  }
+
+  @include desktop {
+    margin-bottom: 0;
   }
 }
 
