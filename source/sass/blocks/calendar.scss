@@ -7,6 +7,10 @@
   @include font(14px, 18px, $font-weight-normal);
   border-spacing: 0;
   border-collapse: collapse;
+
+  @include tablet {
+    @include font(18px, 18px, $font-weight-normal);
+  }
 }
 
 .calendar__day {
@@ -17,19 +21,31 @@
   text-align: center;
 
   border: 1px solid $color-grey-light;
-}
 
-.calendar__title-day {
-  &--holiday {
-    color: $color-orange-hotred;
+  @include tablet {
+    padding: 25px;
+    min-height: 70px;
   }
 }
 
 .calendar__title {
+  text-align: center;
   color: $color-black-bluish;
 
   &--full {
     display: none;
+
+    @include tablet {
+      display: inline;
+    }
+  }
+}
+
+.calendar__title-day {
+  padding: 0 0 10px;
+
+  &--holiday {
+    color: $color-orange-hotred;
   }
 }
 

@@ -23,6 +23,14 @@
   &--opened {
     background-color: $color-white;
   }
+
+  &--closed .header__user-navigation {
+    display: none;
+  }
+
+    &--closed .header__contacts {
+    display: none;
+  }
 }
 
 .form-page .footer {

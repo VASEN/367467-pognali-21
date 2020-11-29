@@ -14,14 +14,14 @@
   padding-top: 28px;
   padding-bottom: 50px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include container($width-tablet, 75px);
 
     padding-top: 60px;
     padding-bottom: 95px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     padding: 55px 58px 120px 125px;
   }
 }
@@ -31,7 +31,7 @@
 
   color: $color-blue-ocean;
 
-  @include mq($width-tablet) {
+  @include tablet {
     margin-bottom: 48px;
 
     @include font(36px, 36px, $font-weight-bold);

@@ -3,7 +3,6 @@
 
 .slider-item {
   margin-bottom: 10px;
-
   padding: 25px;
 
   background-color: $color-white;
@@ -11,6 +10,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin-bottom: 40px;
+    padding: 50px 40px 55px;
   }
 }
 
@@ -23,14 +27,48 @@
 
   @include font(20px, 20px, $font-weight-bold);
   color: $color-blue-ocean;
+
+  @include tablet {
+    margin-bottom: 35px;
+
+    @include font(36px, 36px, $font-weight-bold);
+  }
 }
 
 .slider-item__description {
   margin: 0 0 20px;
+
+  color: $color-black-bluish;
+
+  @include tablet {
+    margin-bottom: 40px;
+
+    @include font(20px, 24px, $font-weight-normal);
+  }
 }
 
 .slider-item__module {
   margin-bottom: 20px;
+}
+
+.slider-item .month-module {
+  @include tablet {
+    margin-bottom: 45px;
+  }
+}
+
+.slider-item__module-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.slider-item .checkbox-module {
+  order: 1;
+}
+
+.slider-item .up-down-button-duration {
+  order: 2;
 }
 
 .month-module__wrapper {
@@ -38,8 +76,36 @@
 }
 
 .slider-item__next-step {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  justify-content: center;
+  padding: 7px;
+
+  @include font(17px, 30px, $font-weight-bold);
+
+  text-transform: uppercase;
+
+  border-radius: 50px;
+
+  &::after {
+    display: none;
+  }
+
+  @include tablet {
+    display: inline-flex;
+    justify-content: space-between;
+
+    min-width: 285px;
+    min-height: 80px;
+    padding: 28px 35px;
+
+    @include font(24px, 24px, $font-weight-bold);
+    text-transform: none;
+
+    border-radius: 20px;
+
+    &::after {
+      display: block;
+    }
+  }
 }
 
 .step-two__next-step {

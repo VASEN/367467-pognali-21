@@ -16,7 +16,7 @@
     margin-bottom: 0;
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     display: grid;
     grid-template-columns: auto min-content;
     grid-template-rows: 1fr auto;
@@ -25,7 +25,7 @@
     padding: 0;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     grid-template-columns: 1fr 400px auto;
     grid-template-rows: 100px;
     grid-column-gap: 0;
@@ -42,7 +42,7 @@
 
   color: $color-blue-ocean;
 
-  @include mq($width-tablet) {
+  @include tablet {
     grid-column: 1/-1;
     justify-content: space-between;
 
@@ -52,7 +52,7 @@
     border-bottom: 1px solid rgba($color-telegray-light, 0.3);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     grid-column: 1/2;
     justify-content: start;
 
@@ -65,13 +65,13 @@
 
   @include font(16px, 16px, $font-weight-medium);
 
-  @include mq($width-tablet) {
+  @include tablet {
     order: 1;
 
     @include font(20px, 20px, $font-weight-medium);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     order: 0;
 
     padding-left: 40px;
@@ -84,7 +84,7 @@
 
   @include font(16px, 16px, $font-weight-bold);
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(24px, 24px, $font-weight-bold);
   }
 }
@@ -97,7 +97,7 @@
 
   color: $color-blue-ocean;
 
-  @include mq($width-tablet) {
+  @include tablet {
     flex-direction: row;
     justify-content: space-between;
 
@@ -105,7 +105,7 @@
     padding: 20px 20px 14px 40px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     padding: 0 40px;
   }
 }
@@ -116,7 +116,7 @@
   @include font(14px, 14px, $font-weight-medium);
   text-transform: uppercase;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(20px, 20px, $font-weight-medium);
   }
 }
@@ -124,11 +124,11 @@
 .plan-item__companions {
   margin-bottom: 5px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     margin-bottom: 0;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     //margin-right: 30px;
   }
 }
@@ -141,14 +141,14 @@
   text-transform: uppercase;
   color: rgba($color-black, 0.3);
 
-  @include mq($width-tablet) {
+  @include tablet {
     align-self: center;
     padding: 20px 40px 14px 20px;
 
     @include font(20px, 20px, $font-weight-medium);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     padding: 0 40px;
   }
 }
