@@ -23,21 +23,26 @@
   list-style: none;
 }
 
-@mixin container ($mw: 100%, $px: 25px) {
-  width: 100%;
+@mixin container ($mw: 320px, $px: 25px) {
   min-width: $mw;
   padding-left: $px;
   padding-right: $px;
 }
 
-@mixin mq($width, $type: min) {
-  @if map-has-key($breakpoints, $width) {
-    $width: map-get($breakpoints, $width);
-    @if $type == max {
-      $width: $width - 1px;
-    }
-    @media (#{$type}-width: $width) {
-      @content;
-    }
+@mixin mobile {
+  @media (min-width: #{$width-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$width-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$width-desktop - 1px}) {
+    @content;
   }
 }

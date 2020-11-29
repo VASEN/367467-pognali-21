@@ -38,7 +38,7 @@
 
     background-color: $color-blue-sapphire;
 
-    @include mq($width-tablet) {
+    @include tablet {
       min-height: 132px;
     }
   }
@@ -46,7 +46,7 @@
   &--closed > .header-navigation {
     display: none;
 
-    @include mq($width-desktop) {
+    @include desktop {
       display: flex;
       align-items: center;
     }
@@ -71,7 +71,7 @@
       display: none;
     }
 
-    @include mq($width-tablet) {
+    @include tablet {
       position: static;
       display: block;
     }
@@ -81,7 +81,7 @@
     max-height: 40px;
     padding: 8px 40px 8px;
 
-    @include mq($width-tablet) {
+    @include tablet {
       max-height: 50px;
       padding: 15px 28px;
 
@@ -101,7 +101,7 @@
       display: none;
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       position: static;
 
       display: flex;
@@ -120,7 +120,7 @@
 
       margin-right: 0;
 
-      @include mq($width-desktop) {
+      @include desktop {
         width: 50px;
         height: 50px;
       }
@@ -139,12 +139,12 @@
     }
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 132px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -180,11 +180,11 @@
     border-radius: 1.5px;
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     margin: 0 auto;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     display: none;
   }
 
@@ -214,14 +214,14 @@
   grid-column: 1/-1;
   margin-bottom: 51px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     order: 2;
     grid-column: 3/-1;
 
     margin: 0;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     order: 6;
   }
 }
@@ -231,12 +231,12 @@
 
   margin-bottom: 40px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     order: 5;
     padding-left: 60px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     display: flex;
 
     margin: 0 0 0 auto;
@@ -248,12 +248,12 @@
 .header__email {
   color: $color-blue-cobalt;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(28px, 28px, $font-weight-bold);
   }
 
   &--full {
-    @include mq($width-desktop) {
+    @include desktop {
       display: none;
     }
   }
@@ -263,14 +263,14 @@
     height: 45px;
     margin-right: 16px;
 
-    @include mq($width-tablet) {
+    @include tablet {
       width: 68px;
       height: 68px;
 
       margin-right: 25px;
     }
 
-    @include mq($width-desktop) {
+    @include desktop {
       width: 50px;
       height: 50px;
 
@@ -281,7 +281,7 @@
 
 .header .header__email {
   &::before {
-    @include mq($width-desktop) {
+    @include desktop {
       background-color: $color-yellow-saffron;
     }
   }
@@ -289,7 +289,7 @@
 
 .header .header__telephone {
   &::before {
-    @include mq($width-desktop) {
+    @include desktop {
       background-color: $color-orange;
     }
   }
@@ -300,7 +300,7 @@
 
   margin: 0 auto;
 
-  @include mq($width-tablet) {
+  @include tablet {
     order: 6;
     justify-content: start;
 
@@ -308,7 +308,7 @@
     padding-left: 80px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     display: none;
   }
 }

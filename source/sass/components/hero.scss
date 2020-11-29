@@ -8,7 +8,7 @@
 
   background-color: $color-blue-sapphire;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding-bottom: 95px;
   }
 }
@@ -18,7 +18,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  @include mq($width-desktop) {
+  @include desktop {
     padding-bottom: 125px;
   }
 }
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
 
-  @include mq($width-desktop) {
+  @include desktop {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -41,7 +41,7 @@
   @include font(36px, 40px, $font-weight-bold);
   text-align: center;
 
-  @include mq($width-tablet) {
+  @include tablet {
     max-width: 400px;
     margin: 0 auto;
     padding-bottom: 30px;
@@ -49,7 +49,7 @@
     @include font(60px, 70px, $font-weight-bold);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     margin: 0;
     padding: 100px 60px 100px 70px;
 
@@ -58,7 +58,7 @@
 }
 
 .hero__image {
-  @include mq($width-tablet) {
+  @include tablet {
     align-self: end;
 
     width: 372px;
@@ -66,7 +66,7 @@
     padding-right: 70px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     position: absolute;
     left: 546px;
 
@@ -106,14 +106,14 @@
 }
 
 .hero-quote {
-  @include mq($width-tablet) {
+  @include tablet {
     position: absolute;
     bottom: 210px;
 
     padding-left: 30px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     position: static;
 
     padding: 110px 25px 115px 60px;

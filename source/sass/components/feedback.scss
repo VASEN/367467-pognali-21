@@ -24,11 +24,11 @@
 .feedback__wrapper {
   padding: 70px 0 30px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding: 75px 35px 60px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     padding: 105px 75px;
   }
 }
@@ -39,13 +39,13 @@
   text-align: center;
   color: $color-orange;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(45px, 45px, $font-weight-bold);
   }
 }
 
 .feedback__br-mobile {
-  @include mq($width-tablet) {
+  @include tablet {
     display: none;
   }
 }
@@ -57,7 +57,7 @@
 
   text-align: center;
 
-  @include mq($width-tablet) {
+  @include tablet {
     max-width: 100%;
     padding: 60px 0;
 
@@ -77,13 +77,13 @@
 .feedback__form {
   position: relative;
 
-  @include mq($width-tablet) {
+  @include tablet {
     display: flex;
   }
 }
 
 .feedback__contacts {
-  @include mq($width-desktop) {
+  @include desktop {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -94,7 +94,7 @@
 .feedback__email {
   color: $color-yellow-sunrise;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(28px, 28px, $font-weight-bold);
   }
 
@@ -103,7 +103,7 @@
     height: 45px;
     margin-right: 16px;
 
-    @include mq($width-tablet) {
+    @include tablet {
       width: 68px;
       height: 68px;
       margin-right: 22px;
@@ -112,7 +112,7 @@
 }
 
 .feedback__telephone {
-  @include mq($width-desktop) {
+  @include desktop {
     margin-right: 110px;
   }
 }

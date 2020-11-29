@@ -22,12 +22,12 @@
   padding-top: 70px;
   padding-bottom: 35px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include container($width-tablet, 75px);
     padding-bottom: 80px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr min-content;
@@ -40,7 +40,7 @@
 .directions__wrapper {
   padding: 0 30px 60px 24px;
 
-  @include mq($width-desktop) {
+  @include desktop {
     order: 1;
     grid-column: 2/-1;
     grid-row: 1/2;
@@ -52,11 +52,11 @@
 .directions__title {
   color: $color-orange;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(45px, 45px, $font-weight-bold);
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     margin-bottom: 60px;
   }
 }
@@ -65,7 +65,7 @@
   margin: 0;
   padding: 0;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(28px, 33px, $font-weight-light);
   }
 }
@@ -73,7 +73,7 @@
 .directions__cards {
   margin-bottom: 25px;
 
-  @include mq($width-desktop) {
+  @include desktop {
     grid-row: 1/-1;
 
     margin-bottom: 0;
@@ -97,11 +97,11 @@
     max-width: 616px;
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     min-width: 616px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     max-width: 560px;
     min-width: 560px;
   }
@@ -115,7 +115,7 @@
     border-radius: 0 20px 20px 0;
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     max-width: 186px;
   }
 }
@@ -148,7 +148,7 @@
 }
 
 .directions .country-card__title {
-  @include mq($width-tablet) {
+  @include tablet {
     margin-bottom: 5px;
 
     @include font(24px, 24px, $font-weight-bold);
@@ -156,13 +156,13 @@
 }
 
 .directions .country-card__promo {
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(20px, 20px, $font-weight-medium);
   }
 }
 
 .directions .country-card__stats {
-  @include mq($width-tablet) {
+  @include tablet {
     font-size: 20px;
   }
 }
@@ -174,11 +174,11 @@
     max-width: 618px;
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(24px, 24px, $font-weight-bold);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     max-width: 280px;
     min-height: 80px;
 

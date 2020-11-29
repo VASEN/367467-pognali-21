@@ -16,7 +16,7 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  @include mq($width-tablet) {
+  @include tablet {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
     height: 140px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     height: 154px;
   }
 }
@@ -36,7 +36,7 @@
 
   padding: 40px 0 20px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     justify-content: start;
 
     padding: 0;
@@ -46,7 +46,7 @@
 .footer__social {
   padding: 20px 0 40px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding: 0;
   }
 }
@@ -59,7 +59,7 @@
   background-color: $color-yellow-sunrise;
   border-radius: 50%;
 
-  @include mq($width-tablet) {
+  @include tablet {
     width: 62px;
     height: 62px;
   }
@@ -69,7 +69,7 @@
   padding: 13px 0 18px 0;
   border-top: 1px solid $color-white-smoky-light;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding: 0;
     border: none;
   }

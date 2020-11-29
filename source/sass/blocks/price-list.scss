@@ -2,7 +2,7 @@
 @import "../common/mixins";
 
 .price-list__wrapper {
-  @include mq($width-tablet) {
+  @include tablet {
     position: relative;
   }
 }
@@ -14,9 +14,13 @@
   margin: 0 0 31px;
   padding: 13px 0 15px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     margin-bottom: 35px;
     padding: 0;
+  }
+
+  @include desktop {
+    margin-right: 184px;
   }
 }
 
@@ -25,7 +29,7 @@
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
 
-  @include mq($width-tablet) {
+  @include tablet {
     grid-template-columns: min-content 2fr 1fr;
     grid-template-rows: auto;
     align-items: center;
@@ -36,7 +40,7 @@
   margin-bottom: 32px;
 
   &:first-child .price-list__item-text--grey {
-    @include mq($width-tablet) {
+    @include tablet {
       position: relative;
 
       &::before {
@@ -61,13 +65,13 @@
   }
 
   &:last-child .price-list__item-text--border {
-    @include mq($width-tablet) {
+    @include tablet {
       border-bottom: 1px solid $color-grey-platinum;
     }
   }
 
   &:last-child .price-list__item-text--grey {
-    @include mq($width-tablet) {
+    @include tablet {
       position: relative;
 
       &::before {
@@ -101,7 +105,8 @@
 
 .price-list__item-text {
   margin: 0;
-  @include mq($width-tablet) {
+
+  @include tablet {
     padding: 20px 0 18px;
 
     @include font(28px, 28px, $font-weight-light);
@@ -109,17 +114,16 @@
 }
 
 .price-list__item-text--border {
-  @include mq($width-tablet) {
+  @include tablet {
     border-top: 1px solid $color-grey-platinum;
   }
 }
 
 .price-list__item-text--grey {
-  @include mq($width-tablet) {
+  @include tablet {
     text-align: center;
     background-color: $color-grey-lavender-light;
     border-top: 1px solid $color-grey-lavender-light;
-
   }
 }
 
@@ -146,7 +150,7 @@
     content: counter(list);
   }
 
-  @include mq($width-tablet) {
+  @include tablet {
     grid-column: 1/2;
     margin-left: 0;
 

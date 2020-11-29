@@ -2,17 +2,18 @@
 @import "mixins";
 
 .container {
-  @include container(320px, 25px);
+  @include container($width-mobile, 25px);
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
 
-  @include mq($width-tablet) {
-    @include container(768px, 40px);
+  @include tablet {
+    @include container($width-tablet, 40px);
   }
 
-  @include mq($width-desktop) {
-    @include container(1440px, 58px);
+  @include desktop {
+    @include container($width-desktop, 58px);
   }
 }
 

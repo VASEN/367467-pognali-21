@@ -14,7 +14,7 @@
   background-color: $color-grey-lavender;
   border-radius: 0 0 25px 25px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     //position: static;
   }
 }
@@ -23,11 +23,11 @@
   position: relative;
   padding: 53px 0 37px 25px;
 
-  @include mq($width-tablet) {
+  @include tablet {
     padding-top: 75px;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     padding-top: 175px;
     padding-bottom: 165px;
   }
@@ -40,7 +40,7 @@
   color: $color-orange;
   word-wrap: break-word;
 
-  @include mq($width-tablet) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -51,9 +51,8 @@
     @include font(45px, 45px, $font-weight-bold);
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     margin-bottom: 135px;
-
   }
 }
 
@@ -68,7 +67,7 @@
   background-color: $color-white;
   border-radius: 50%;
 
-  @include mq($width-tablet) {
+  @include tablet {
     top: auto;
     bottom: -100px;
     right: 45px;
@@ -76,10 +75,10 @@
     z-index: 1;
   }
 
-  @include mq($width-desktop) {
+  @include desktop {
     top: 0;
     bottom: auto;
-    right: -125px;
+    right: 25px;
 
     width: 200px;
     height: 200px;
@@ -101,7 +100,7 @@
   background-color: $color-yellow-sunrise;
   border-radius: 50%;
 
-  @include mq($width-desktop) {
+  @include desktop {
     width: 65px;
     height: 65px;
 
@@ -110,11 +109,8 @@
 }
 
 .profile__modal .container {
-  @include mq(270px, 25px);
-  min-width: 270px;
-
-  @include mq($width-tablet) {
-    max-width: 750px;
+  @include tablet {
+    max-width: 688px;
 
     @include container(688px, 40px);
   }
@@ -129,7 +125,7 @@
 
   color: $color-orange;
 
-  @include mq($width-tablet) {
+  @include tablet {
     @include font(45px, 45px, $font-weight-bold);
   }
 }
