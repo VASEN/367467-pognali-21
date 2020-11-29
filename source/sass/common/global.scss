@@ -32,3 +32,11 @@ input[type="checkbox"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.page__main {
+  background-color: $color-white;
+}
+
+.catalog-page__main {
+  background-color: $color-white-smoky;
+}

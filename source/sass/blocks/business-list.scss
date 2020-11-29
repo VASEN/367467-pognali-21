@@ -1,8 +1,13 @@
+@import "source/sass/common/variables";
 @import "source/sass/common/mixins";
 
 .business-list {
   @include reset-list;
   padding: 0 26px 34px 25px;
+
+  @include tablet {
+    padding: 0 90px 50px 90px;
+  }
 }
 
 .business-list__item {
@@ -14,8 +19,21 @@
   &:last-child {
     border-bottom: 1px solid rgba($color-black, 0.05);
   }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .business-list__text {
   margin: 0;
+
+  font-weight: $font-weight-light;
+  color: $color-black-bluish;
+
+  @include tablet {
+    @include font(22px, 28px, $font-weight-light);
+  }
 }

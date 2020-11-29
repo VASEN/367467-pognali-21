@@ -1,62 +1,17 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .header {
   color: $color-white;
 
-  background-color: $color-cobalt-blue;
-}
+  background-color: $color-blue-sapphire;
 
-.header__container {
-  background-color: $color-white;
-}
-
-//.header__menu-wrapper {
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//  height: 73px;
-//}
-
-.header__menu-toggle {
-  position: relative;
-
-  width: 25px;
-  height: 11px;
-  margin-left: auto;
-
-  background-color: transparent;
-  border: none;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 25px;
-    height: 3px;
-
-    background-color: $color-grey-greaterly;
-    border-radius: 1.5px;
+  &--scroll {
+    background-color: $color-white;
   }
 
-  &::after {
-    content: "";
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 25px;
-    height: 3px;
-
-    background-color: $color-grey-greaterly;
-    border-radius: 1.5px;
-  }
-
-  @media (min-width: $width-tablet) {
-    margin: 0 auto;
+  &--opened {
+    background-color: $color-white;
   }
 }
 
@@ -66,11 +21,192 @@
   grid-template-rows: 73px;
   align-items: center;
 
-  background-color: $color-white;
+  padding-bottom: 40px;
 
-  @media (min-width: $width-tablet) {
-    grid-template-columns: auto auto auto;
+  &--opened {
+    background-color: $color-white;
+  }
+
+  &--closed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 73px;
+
+    padding: 0;
+
+    background-color: $color-blue-sapphire;
+
+    @include tablet {
+      min-height: 132px;
+    }
+  }
+
+  &--closed > .header-navigation {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--closed .header-navigation__link {
+    color: $color-white;
+  }
+
+  &--closed .header__social {
+    display: none;
+  }
+
+  &--closed .header__user-navigation {
+    position: absolute;
+    top: 458px;
+    right: 25px;
+
+    z-index: 1;
+
+    @media (min-width: 321px) {
+      display: none;
+    }
+
+    @include tablet {
+      position: static;
+      display: block;
+    }
+  }
+
+  &--closed .button-round {
+    max-height: 40px;
+    padding: 8px 40px 8px;
+
+    @include tablet {
+      max-height: 50px;
+      padding: 15px 28px;
+
+      @include font(20px, 20px, $font-weight-bold);
+    }
+  }
+
+  &--closed .header__contacts {
+    position: absolute;
+    top: 458px;
+    left: 25px;
+
+    display: flex;
+    z-index: 1;
+
+    @media (min-width: 321px) {
+      display: none;
+    }
+
+    @include desktop {
+      position: static;
+
+      display: flex;
+    }
+  }
+
+  &--closed .header__telephone,
+  &--closed .header__email {
+    &--full {
+      display: none;
+    }
+
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      margin-right: 0;
+
+      @include desktop {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &--closed .header__telephone {
+    &::before {
+      background-color: $color-orange;
+    }
+  }
+
+  &--closed .header__email {
+    &::before {
+      background-color: $color-yellow-saffron;
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 132px;
+
+    padding-bottom: 90px;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    min-height: 90px;
+    padding-bottom: 0;
+  }
+}
+
+.header__menu-toggle {
+  position: relative;
+
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 13px;
+    left: 0;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: $color-grey-greaterly;
+    border-radius: 1.5px;
+  }
+
+  @include tablet {
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &--opened {
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &--closed {
+    &::before {
+      top: 7px;
+    }
+
+    &--after {
+      bottom: 7px;
+      top: auto;
+    }
   }
 }
 
@@ -78,10 +214,101 @@
   grid-column: 1/-1;
   margin-bottom: 51px;
 
-  @media (min-width: $width-tablet) {
+  @include tablet {
     order: 2;
     grid-column: 3/-1;
 
     margin: 0;
+  }
+
+  @include desktop {
+    order: 6;
+  }
+}
+
+.header__contacts {
+  grid-column: 1/-1;
+
+  margin-bottom: 40px;
+
+  @include tablet {
+    order: 5;
+    padding-left: 60px;
+  }
+
+  @include desktop {
+    display: flex;
+
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+}
+
+.header__telephone,
+.header__email {
+  color: $color-blue-cobalt;
+
+  @include tablet {
+    @include font(28px, 28px, $font-weight-bold);
+  }
+
+  &--full {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &::before {
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+
+    @include tablet {
+      width: 68px;
+      height: 68px;
+
+      margin-right: 25px;
+    }
+
+    @include desktop {
+      width: 50px;
+      height: 50px;
+
+      margin-right: 0;
+    }
+  }
+}
+
+.header .header__email {
+  &::before {
+    @include desktop {
+      background-color: $color-yellow-saffron;
+    }
+  }
+}
+
+.header .header__telephone {
+  &::before {
+    @include desktop {
+      background-color: $color-orange;
+    }
+  }
+}
+
+.header .social {
+  grid-column: 1/-1;
+
+  margin: 0 auto;
+
+  @include tablet {
+    order: 6;
+    justify-content: start;
+
+    margin: 0;
+    padding-left: 80px;
+  }
+
+  @include desktop {
+    display: none;
   }
 }

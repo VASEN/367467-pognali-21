@@ -2,15 +2,18 @@
 @import "mixins";
 
 .container {
-  min-width: 320px;
+  @include container($width-mobile, 25px);
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
   box-sizing: border-box;
 
-  @media (min-width: $width-tablet) {
-    padding-left: 40px;
-    padding-right: 40px;
+  @include tablet {
+    @include container($width-tablet, 40px);
+  }
+
+  @include desktop {
+    @include container($width-desktop, 58px);
   }
 }
 
@@ -49,6 +52,13 @@
     background-color: $color-orange;
     border-radius: 4px;
   }
+}
+
+.page__title-wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+
+  background-color: $color-white-smoky;
 }
 
 .cross {

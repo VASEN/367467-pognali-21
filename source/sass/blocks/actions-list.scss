@@ -8,30 +8,78 @@
 
   background-color: $color-orange;
   border-radius: 6px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    border-radius: 20px;
+  }
+
+  @include desktop {
+    display: flex;
+    //justify-content: stretch;
+  }
 }
 
 .actions-list__item {
+  flex-grow: 1;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   padding: 22px 21px 22px 24px;
+  z-index: 1;
 
   @include font(18px, 18px, $font-weight-bold);
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &:nth-child(1) {
+    @include tablet {
+      border-radius: 20px 0 0 0;
+    }
+  }
 
   &:nth-child(2) {
     background-color: $color-orange-light;
     border-radius: 6px 6px 0 0;
+
+    @include tablet {
+      border-radius: 20px 20px 0 0;
+    }
+
+    @include desktop {
+      border-radius: 20px 0 0 20px;
+    }
   }
 
   &:nth-child(3) {
     background-color: $color-yellow-saffron;
     border-radius: 6px 6px 0 0;
+
+    @include tablet {
+      border-radius: 0 0 0 20px;
+    }
+
+    @include desktop {
+      border-radius: 20px 0 0 20px;
+    }
   }
 
   &:nth-child(4) {
     border-radius: 6px;
     background-color: $color-yellow-sunrise;
+
+    @include tablet {
+      border-radius: 0 0 20px 20px;
+    }
+
+    @include desktop {
+      border-radius: 20px;
+    }
   }
 }
 
@@ -40,6 +88,13 @@
   margin: 0;
 
   color: $color-blue-sapphire;
+
+  @include tablet {
+    max-width: 195px;
+    margin-bottom: 10px;
+
+    @include font(24px, 24px, $font-weight-bold);
+  }
 }
 
 .actions-list__number {
@@ -47,5 +102,11 @@
     counter-increment: action;
 
     content: counter(action);
+
+    color: $color-white;
+
+    @include tablet {
+      @include font(30px, 30px, $font-weight-bold);
+    }
   }
 }

@@ -55,6 +55,18 @@
   background-color: $color-yellow-sunrise;
   border-radius: 25px;
   border: none;
+
+  @include tablet {
+    max-width: 188px;
+    margin-left: auto;
+    padding: 15px 30px;
+
+    @include font(20px, 20px, $font-weight-normal);
+  }
+
+  @include desktop {
+    @include font(20px, 20px, $font-weight-bold);
+  }
 }
 
 .button-business {
@@ -63,11 +75,33 @@
 
   font-weight: $font-weight-bold;
   color: $color-blue-screen;
+
+  @include tablet {
+    justify-content: start;
+    align-items: center;
+
+    @include font(20px, 20px, $font-weight-bold);
+
+    &::before {
+      content: "";
+
+      width: 68px;
+      height: 68px;
+      margin-right: 20px;
+
+      background-color: $color-grey-lavender-light;
+      border-radius: 50%;
+    }
+  }
 }
 
 .button-profile {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
   margin: 0;
-  padding: 21px 78px;
+  padding: 21px 0;
   box-sizing: border-box;
 
   font: inherit;
@@ -78,13 +112,21 @@
   background-color: $color-white-smoky-light;
   border: none;
   border-radius: 0 0 25px 25px;
+
+  @include tablet {
+    padding: 41px 0;
+
+    @include font(24px, 24px, $font-weight-bold);
+  }
 }
 
 .button-rect {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 22px 23px;
+  box-sizing: border-box;
 
   @include font(18px, 18px, $font-weight-bold);
   color: $color-blue-ocean;
@@ -93,7 +135,7 @@
 
   &::after {
     content: "";
-    width: 12px;
+    height: 0;
     border-left: 12px solid $color-blue-ocean;
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
@@ -102,19 +144,32 @@
 
 .button-feedback {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-height: 62px;
   margin: 0;
-  padding: 20px 60px 20px 25px;
+  padding: 22px 85px 22px 25px;
   box-sizing: border-box;
 
-  @include font(18px, 18px, $font-weight-bold);
   font: inherit;
+
+  @include font(18px, 18px, $font-weight-bold);
 
   border-radius: 10px;
   border: none;
 
+  @include tablet {
+    max-height: 80px;
+    padding: 28px 36px;
+
+    border-radius: 25px 0 0 25px;
+  }
+
   &::placeholder {
     color: rgba($color-black-bluish, 0.3);
+
+    @include tablet {
+      @include font(24px, 24px, $font-weight-bold);
+    }
   }
 }
 
@@ -127,9 +182,41 @@
   height: 62px;
   box-sizing: border-box;
 
+  font: inherit;
+  color: $color-blue-ocean;
+
   background-color: $color-yellow-sunrise;
   border-radius: 10px;
   border: none;
+
+  @include tablet {
+    position: relative;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+
+    border-radius: 0 25px 25px 0;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 330px;
+  }
+
+  &--full {
+    display: none;
+
+    @include desktop {
+      display: block;
+
+      margin-left: 35px;
+
+      @include font(24px, 24px, $font-weight-bold);
+    }
+  }
 
   &::after {
     content: "";
@@ -142,6 +229,19 @@
     border-left: 12px solid $color-blue-ocean;
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
+
+    @include tablet {
+      top: 30px;
+      left: 36px;
+    }
+
+    @include desktop {
+      position: relative;
+      top: 0;
+      left: 0;
+
+      margin-right: 22px;
+    }
   }
 }
 

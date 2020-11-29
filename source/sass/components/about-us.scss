@@ -1,34 +1,93 @@
 @import "../common/variables";
+@import "../common/mixins";
 
 .about-us {
+  position: relative;
+
   font-weight: $font-weight-light;
   color: $color-white;
 
-  background-color: $color-white-smoky;
+  background-color: $color-blue-deep;
+  border-radius: 0 0 25px 25px;
+  z-index: 6;
 }
 
 .about-us__container {
-  background-color: $color-blue-deep;
-  border-radius: 0 0 25px 25px;
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .about-us__wrapper {
   padding: 33px 35px 82px 24px;
+
+  @include tablet {
+    padding-left: 35px;
+  }
 }
 
 .about-us__title {
   margin-bottom: 19px;
 
   color: $color-orange;
+
+  @include tablet {
+    margin-bottom: 40px;
+
+    @include font(45px, 45px, $font-weight-bold);
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 
 .about-us__text {
   margin: 0 0 20px;
   padding: 0;
 
+  @include tablet {
+    margin-bottom: 40px;
+
+    @include font(28px, 33px, $font-weight-light);
+  }
+
+  @include desktop {
+    max-width: 620px;
+  }
+
   &--bold {
     margin-bottom: 0;
 
     font-weight: $font-weight-bold;
+
+    @include tablet {
+      margin-bottom: 50px;
+
+      @include font(21px, 25px, $font-weight-bold);
+    }
+
+    @include desktop {
+      max-width: 425px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.about-us .button-rect {
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @include tablet {
+    display: flex;
+
+    max-width: 280px;
+    min-height: 80px;
+
+    @include font(24px, 24px, $font-weight-bold);
+
+    border-radius: 20px;
   }
 }

@@ -4,19 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="page__header header">
-    <div class="container header__container">
-      <div class="header__menu-wrapper">
-
-      </div>
-      <div class="header__menu">
+    <div class="container header__container ">
+      <div class="header__menu header__menu--closed">
         <a class="header__logo-link logo-link">
           <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
         </a>
-        <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
+        <button class="header__menu-toggle header__menu-toggle--closed" type="button" aria-label="Открыть меню"></button>
         <nav class="header__navigation header-navigation">
           <ul class="header-navigation__list">
             <li class="header-navigation__item">
@@ -34,8 +32,8 @@
           <a class="button-round" href="#">Авторизация</a>
         </div>
         <div class="header__contacts contacts">
-          <a class="contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
-          <a class="contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!"><span class="header__telephone--full">8 800 555-86-28</span></a>
+          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"><span class="header__email--full">mail@htmlacademy.ru</span></a>
         </div>
         <div class="header__social social">
           <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
@@ -52,25 +50,25 @@
         <div class="hero__wrapper">
           <p class="hero__title">В путешествие с крутыми попутчиками!</p>
           <img class="hero__image" src="https://via.placeholder.com/192x255" width="192" height="255" alt="Путешественник с чемоданом">
-          <div class="hero__navigation">
-            <div class="hero__contacts contacts">
-              <a class="contacts__telephone hero__phone" href="tel:88005558628" aria-label="Позвоните нам!"></a>
-              <a class="contacts__email hero__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"></a>
-              <a class="hero__button-round button-round" href="#">Авторизация</a>
-            </div>
-          </div>
+<!--          <div class="hero__navigation">-->
+<!--            <div class="hero__contacts contacts">-->
+<!--              <a class="contacts__telephone hero__phone" href="tel:88005558628" aria-label="Позвоните нам!"></a>-->
+<!--              <a class="contacts__email hero__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"></a>-->
+<!--              <a class="hero__button-round button-round" href="#">Авторизация</a>-->
+<!--            </div>-->
+<!--          </div>-->
+          <blockquote class="hero__quote hero-quote">
+            <p class="hero-quote__text">
+              «Лучшее приложение,<br>
+              что я видел в жизни!»
+            </p>
+            <cite class="hero-quote__author">
+              Мурат Эльтазин<br>
+              главный редактор<br>
+              газеты «гаджетлайф»
+            </cite>
+          </blockquote>
         </div>
-        <blockquote class="hero__quote hero-quote">
-          <p class="hero-quote__text">
-            «Лучшее приложение,<br>
-            что я видел в жизни!»
-          </p>
-          <cite class="hero-quote__author">
-            Мурат Эльтазин<br>
-            главный редактор<br>
-            газеты «гаджетлайф»
-          </cite>
-        </blockquote>
         <ol class="hero__actions actions-list">
           <li class="actions-list__item">
             <p class="actions-list__text">Выберите направление</p>
@@ -99,10 +97,9 @@
             Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
           </p>
           <p class="about-us__text about-us__text--bold">
-            <!--   Возможно обойтись просто тегом <b>   -->
             А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
           </p>
-          <a class="button-rect visually-hidden">Подробнее</a>
+          <a class="button-rect">Подробнее</a>
         </div>
       </div>
     </section>
@@ -165,18 +162,18 @@
           <p class="companions__text">
             Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
           </p>
-          <p class="companions__text--bold">
+          <p class="companions__text companions__text--bold">
             Теперь можно легко найти единомышленников!
           </p>
         </div>
         <div class="companions__cards cards">
-          <ul class="cards__list">
+          <ul class="cards__list companions__cards-list">
             <li class="cards__item user-card">
               <div class="user-card__level level companions__level">
                 <span class="level__number">99</span>
                 <span class="level__text">level</span>
               </div>
-              <img class="user-card__photo" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
+              <img class="user-card__photo companions__photo" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
               <div class="user-card__visited-countries">
                 <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Шри Ланки">
                 <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Таиланда">
@@ -222,14 +219,14 @@
               </ul>
             </li>
             <li class="cards__item user-card">
-              <div class="user-card__level level">
+              <div class="user-card__level level companions__level">
                 <span class="level__number">80</span>
                 <span class="level__text">level</span>
               </div>
-              <img class="user-card__photo" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
+              <img class="user-card__photo companions__photo" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
               <div class="user-card__visited-countries">
-                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Бельгии">
-                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Чехии">
+                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Бельгии">
+                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Чехии">
               </div>
               <div class="user-card__wrapper">
                 <span class="user-card__status user-card__status--online"></span>
@@ -276,60 +273,62 @@
       <div class="container profile__container">
         <div class="profile__wrapper">
           <h2 class="profile__title title">Добавьте свой профиль</h2>
-          <div class="profile__wrapper-logo">
-            <span class="profile__logo"></span>
-            <div class="profile__currency">₽</div>
+          <div class="price-list__wrapper">
+            <div class="profile__wrapper-logo">
+              <span class="profile__logo"></span>
+              <div class="profile__currency">₽</div>
+            </div>
+            <ol class="profile__price-list price-list">
+              <li class="price-list__item">
+                <span class="price-list__item-number"></span>
+                <p class="price-list__item-text price-list__item-text--border">Базовое размещение</p>
+                <p class="price-list__item-text price-list__item-text--grey">Бесплатно</p>
+              </li>
+              <li class="price-list__item">
+                <span class="price-list__item-number"></span>
+                <p class="price-list__item-text price-list__item-text--border">Вывод на первых позициях</p>
+                <p class="price-list__item-text price-list__item-text--grey">99 руб./мес</p>
+              </li>
+              <li class="price-list__item">
+                <span class="price-list__item-number"></span>
+                <p class="price-list__item-text price-list__item-text--border">Кастомный цвет карточки</p>
+                <p class="price-list__item-text price-list__item-text--grey">59 руб./мес</p>
+              </li>
+            </ol>
           </div>
+          <a class="button-business" href="#">Показать тарифы для бизнеса</a>
         </div>
-        <ol class="profile__price-list price-list">
-          <li class="price-list__item">
-            <div class="price-list__wrapper-item">
-              <p class="price-list__item-text">Базовое размещение</p>
-              <p class="price-list__item-text">Бесплатно</p>
-            </div>
-            <span class="price-list__item-number"></span>
-          </li>
-          <li class="price-list__item">
-            <div class="price-list__wrapper-item">
-              <p class="price-list__item-text">Вывод на первых позициях</p>
-              <p class="price-list__item-text">99 руб./мес</p>
-            </div>
-            <span class="price-list__item-number"></span>
-          </li>
-          <li class="price-list__item">
-            <div class="price-list__wrapper-item">
-              <p class="price-list__item-text">Кастомный цвет карточки</p>
-              <p class="price-list__item-text">59 руб./мес</p>
-            </div>
-            <span class="price-list__item-number"></span>
-          </li>
-        </ol>
-        <a class="button-business" href="#">Показать тарифы для бизнеса</a>
       </div>
     </section>
     <section class="feedback">
       <div class="container feedback__container">
-        <h2 class="feedback__title title">Заинтересовались?</h2>
-        <p class="feedback__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
-        <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
-          <label class="visually-hidden" for="feedback__email">E-mail</label>
-          <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email">
-          <button class="button-feedback__icon" type="submit" aria-label="Обратная связь"></button>
-        </form>
-        <p class="feedback__text">Остались вопросы? Мы с радостью на них ответим!</p>
-        <div class="feedback__contacts contacts">
-          <a class="feedback__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
-          <a class="feedback__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+        <div class="feedback__wrapper">
+          <h2 class="feedback__title title">Заинтересовались?</h2>
+          <p class="feedback__text">Зарегистрируйтесь, <br class="feedback__br-mobile"> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
+          <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="feedback__email">E-mail</label>
+            <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email">
+            <button class="button-feedback__icon" type="submit" aria-label="Обратная связь"><span class="button-feedback__icon--full">Регистрация</span></button>
+          </form>
+          <p class="feedback__text feedback__text--contact">Остались вопросы? Мы с радостью на них ответим!</p>
+          <div class="feedback__contacts contacts">
+            <a class="contacts__telephone feedback__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
+            <a class="feedback__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+          </div>
         </div>
       </div>
     </section>
     <section class="map">
       <div class="container map__container">
-        <h2 class="visually-hidden">Как нас найти?</h2>
-        <address class="map__address">ул. Большая<br>Конюшенная, 19/8</address>
-        <a class="map__button-rect button-rect" href="https://goo.gl/maps/PA7gGHQuVuknziV7A">Проложить маршрут</a>
+        <div class="map__wrapper">
+          <h2 class="visually-hidden">Как нас найти?</h2>
+          <address class="map__address">ул. Большая<br> Конюшенная, 19/8</address>
+          <a class="map__button-rect button-rect" href="https://goo.gl/maps/PA7gGHQuVuknziV7A">Проложить маршрут</a>
+        </div>
       </div>
-<!--      <img class="map__image map__image&#45;&#45;static" src="https://via.placeholder.com/320x424" width="320" height="424" alt="ул. Большая Конюшенная, 19/8">-->
+    </section>
+    <section class="map-image">
+      <!--      <img class="map__image map__image&#45;&#45;static" src="https://via.placeholder.com/320x424" width="320" height="424" alt="ул. Большая Конюшенная, 19/8">-->
       <iframe class="map__image map__image--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533234!2d30.32085871603106!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605307150234!5m2!1sru!2sru" width="320" height="424" aria-hidden="false" tabindex="0"></iframe>
     </section>
   </main>
@@ -346,7 +345,7 @@
       <div class="footer__copyright copyright">
         <a class="copyright__title" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="source/img/htmlacademy.svg" width="27" height="33" alt="HTMLAcademy">
+          <img src="img/htmlacademy.svg" width="27" height="33" alt="HTMLAcademy">
         </a>
       </div>
     </div>
@@ -375,5 +374,6 @@
       <button class="button-profile" type="button">Закрыть окно</button>
     </div>
   </section>
+<script src="js/header-open.js"></script>
 </body>
 </html>

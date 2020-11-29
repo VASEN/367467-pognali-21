@@ -2,40 +2,215 @@
 @import "../common/mixins";
 
 .companions {
+  position: relative;
+
+  margin-top: -20px;
+
   font-weight: $font-weight-light;
   color: $color-white;
 
-  background-color: $color-grey-lavender;
+  background-color: $color-blue-cobalt;
+  border-radius: 0 0 25px 25px;
+  z-index: 4;
 }
 
 .companions__container {
-  padding-top: 34px;
-  padding-bottom: 31px;
+  padding-top: 35px;
+  padding-bottom: 30px;
 
-  background-color: $color-blue-cobalt;
-  border-radius: 0 0 25px 25px;
+  @include tablet {
+    @include container($width-tablet, 75px);
+
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto min-content;
+  }
 }
 
 .companions__wrapper {
-  padding: 34px 29px 54px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 35px 25px 50px;
+
+  @include tablet {
+    padding: 68px 0 60px;
+  }
+
+  @include desktop {
+    max-width: 428px;
+    padding: 60px 70px;
+  }
 }
 
 .companions__title {
   color: $color-orange;
+
+  @include tablet {
+    margin-bottom: 55px;
+
+    @include font(45px, 45px, $font-weight-bold);
+  }
 }
 
 .companions__text {
+  max-width: 275px;
+
+  margin: 0 0 25px;
+
+  @include tablet {
+    max-width: 429px;
+    margin-bottom: 40px;
+
+    @include font(28px, 34px, $font-weight-light);
+  }
+
   &--bold {
+    max-width: 260px;
+    margin-bottom: 0;
+
     font-weight: $font-weight-bold;
+
+    @include tablet {
+      @include font(21px, 24px, $font-weight-bold);
+    }
   }
 }
 
 .companions__cards {
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 81px;
+  }
+
+  @include desktop {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    align-items: center;
+
+    margin-bottom: 0;
+    padding-top: 60px;
+  }
+}
+
+.companions__cards-list {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.companions .user-card {
+  max-width: 270px;
+
+  @media (min-width: 425px) {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 1fr 1fr 1fr;
+
+    padding-bottom: 0;
+  }
+
+  @include tablet {
+    display: block;
+    max-width: 285px;
+    margin-bottom: 0;
+
+    border-radius: 20px;
+  }
+}
+
+.companions .user-card__wrapper {
+  @include tablet {
+    padding-top: 0;
+  }
+}
+
+.companions .user-card__user {
+  @include tablet {
+    @include font(24px, 22px, $font-weight-bold);
+  }
+}
+
+.companions__photo {
+  @media (min-width: 425px) {
+    grid-row: 1/5;
+  }
+
+  @include tablet {
+    width: 285px;
+    height: 285px;
+  }
+}
+
+.companions .user-card__visited-countries {
+  @media (min-width: 425px) {
+    order: 2;
+
+    top: auto;
+  }
+
+  @include tablet {
+    top: -20px;
+  }
+}
+
+.companions .user-card__country-flag {
+  object-fit: contain;
+}
+
+.companions .tags-list {
+  @media (min-width: 425px) {
+    order: 3;
+    align-items: center;
+    padding: 0;
+  }
+
+  @include tablet {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+
+    @include font(20px, 23px, $font-weight-normal);
+  }
+}
+
+.companions .travel-list {
+  @media (min-width: 425px) {
+    order: 4;
+  }
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
 }
 
 .companions__level {
   position: absolute;
   top: 17px;
   left: 17px;
+}
+
+.companions .button-rect {
+  @include tablet {
+    padding: 29px 33px;
+
+    @include font(24px, 24px, $font-weight-bold);
+
+    border-radius: 20px;
+  }
+
+  @include desktop {
+    max-width: 280px;
+    max-height: 80px;
+    margin-left: 70px;
+  }
 }
