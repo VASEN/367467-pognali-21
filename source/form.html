@@ -313,7 +313,6 @@
                   <div class="route-module__wrapper">
                     <input class="route-module__input" type="text" value="Выберите страну">
                     <label></label>
-                    <button class="route__button button-delete" type="button" aria-label="Удалить страну"></button>
                     <button class="route__button button-close" type="button" aria-label="Закрыть"></button>
                     <table class="route__alphabet alphabet" cellspacing="0" cellpadding="0">
                       <tbody>
@@ -373,7 +372,7 @@
                   <span class="route__graph"></span>
                   <button class="route__button button-delete" type="button"></button>
                 </div>
-                <div class="slider-item__module route-module route-module--add">
+                <div class="slider-item__module route-module route-module__add">
                   <div class="route-module__wrapper route-module__wrapper--add">
                     <button class="route-module__input route-module__input--add" type="button">Добавить страну</button>
                     <label></label>
@@ -381,8 +380,10 @@
                   <span class="route__graph"></span>
                 </div>
               </div>
-              <a class="slider-item__next-step step-two__next-step button-rect href="#step-3">Следующий шаг</a>
-              <a class="form__prev-step button" href="#step-1">На шаг назад</a>
+              <div class="slider-item__button-wrapper">
+                <a class="slider-item__next-step step-two__next-step button-rect" href="#step-3">Следующий шаг</a>
+                <a class="slider-item__prev-step button" href="#step-1">На шаг назад</a>
+              </div>
             </div>
             <div class="slide__item slider-item step-three" id="step-3">
               <h3 class="slider-item__title">

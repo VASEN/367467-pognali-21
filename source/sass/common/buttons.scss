@@ -522,9 +522,8 @@
   border: none;
   border-radius: 50%;
 
-  transform: rotate(45deg);
-
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 10px;
@@ -536,16 +535,29 @@
     background-color: $color-grey-agate;
   }
 
+  &::before {
+    transform: rotate(-45deg);
+  }
+
   &::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 10px;
+    transform: rotate(45deg);
+  }
 
-    width: 1px;
-    height: 11px;
+  @include tablet {
+    position: relative;
+    top: auto;
+    right: auto;
 
-    background-color: $color-grey-agate;
+    margin-left: auto;
+
+    background: transparent;
+
+    &::before,
+    &::after {
+      left: 0;
+
+      width: 24px;
+    }
   }
 }
 
@@ -558,9 +570,8 @@
   background-color: transparent;
   border: none;
 
-  transform: rotate(45deg);
-
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 5px;
@@ -572,16 +583,12 @@
     background-color: $color-white;
   }
 
+  &::before {
+    transform: rotate(-45deg);
+  }
+
   &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 5px;
-
-    width: 1px;
-    height: 11px;
-
-    background-color: $color-white;
+    transform: rotate(45deg);
   }
 }
 

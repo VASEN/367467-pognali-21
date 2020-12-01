@@ -124,6 +124,17 @@
   }
 }
 
+.slider-item__button-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .slider-item__next-step {
   justify-content: center;
   padding: 7px;
@@ -159,6 +170,30 @@
 
 .step-two__next-step {
   margin-bottom: 13px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.slider-item__prev-step {
+  @include tablet {
+    justify-content: end;
+
+    @include font(24px, 22px, $font-weight-bold);
+    text-transform: none;
+
+    &::before {
+      content: "";
+
+      height: 0;
+      margin-right: 20px;
+
+      border-right: 12px solid $color-blue-ocean;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+    }
+  }
 }
 
 .step-tree__button-round {

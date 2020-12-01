@@ -14,6 +14,15 @@
   z-index: 1;
 
   border-collapse: collapse;
+
+  @include tablet {
+    top: 70px;
+    width: 100%;
+    //min-width: 368px;
+    padding: 35px 0 33px 27px;
+
+    background-color: $color-white;
+  }
 }
 
 .alphabet--show {
@@ -27,6 +36,11 @@
 
   background-color: $color-white;
   border: 1px solid $color-telegray-light;
+
+  @include tablet {
+    min-width: 55px;
+    min-height: 70px;
+  }
 }
 
 .alphabet__item button {
@@ -36,8 +50,19 @@
   padding: 0;
   box-sizing: border-box;
 
+  font: inherit;
+
+  @include font(14px,18px, $font-weight-medium);
+
   background-color: transparent;
   border: none;
+
+  @include tablet {
+    min-width: 54px;
+    min-height: 69px;
+
+    @include font(20px, 20px,$font-weight-medium);
+  }
 }
 
 
@@ -48,11 +73,22 @@
 
   @include reset-list;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   box-sizing: border-box;
 
   background-color: $color-white;
   border: 1px solid $color-telegray-light;
+
+  @include tablet {
+    left: auto;
+    top: 0;
+    right: -40px;
+
+    width: 206px;
+    padding-top: 35px;
+    border: none;
+    border-left: 1px solid $color-telegray-light;
+  }
 }
 
 .alphabet__country-item {
@@ -60,6 +96,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin-bottom: 10px;
   }
 }
 
@@ -71,4 +111,9 @@
 
   @include font(16px, 22px, $font-weight-normal);
   text-align: left;
+  color: $color-black-bluish;
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-normal);
+  }
 }
