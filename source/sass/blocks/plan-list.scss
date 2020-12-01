@@ -9,6 +9,42 @@
 
 .plan-list-with-desc {
   display: none;
+
+  @include desktop {
+    grid-row: 1/-1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding-right: 45px;
+    padding-left: 190px;
+    list-style: disc;
+
+    @include font(20px, 24px, $font-weight-normal);
+  }
+}
+
+.plan-list-with-desc .plan-list__item {
+  @include desktop {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    padding-left: 35px;
+    padding-bottom: 25px;
+
+    text-transform: uppercase;
+
+    background-color: transparent;
+    border-radius: 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &::marker {
+      color: $color-blue-ocean;
+    }
+  }
 }
 
 .plan-list__item {
@@ -20,6 +56,6 @@
   border-radius: 50%;
 
   &:last-child {
-    margin-right: 19px;
+    margin-right: 0;
   }
 }

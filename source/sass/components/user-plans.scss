@@ -2,19 +2,40 @@
 @import "source/sass/common/mixins";
 
 .user-plans {
-  background-color: $color-white-smoky;
-}
-
-.user-plans__container {
-  padding-top: 28px;
-  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: -20px;
+  z-index: 2;
 
   background-color: $color-lavender;
   border-radius: 25px 25px 0 0;
 }
 
+.user-plans__container {
+  padding-top: 28px;
+  padding-bottom: 50px;
+
+  @include tablet {
+    @include container($width-tablet, 75px);
+
+    padding-top: 60px;
+    padding-bottom: 95px;
+  }
+
+  @include desktop {
+    padding: 55px 58px 120px 125px;
+  }
+}
+
 .user-plans__title {
+  margin-bottom: 29px;
+
   color: $color-blue-ocean;
+
+  @include tablet {
+    margin-bottom: 48px;
+
+    @include font(36px, 36px, $font-weight-bold);
+  }
 }
 
 .user-plans__list {

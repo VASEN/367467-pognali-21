@@ -2,6 +2,7 @@
 @import "mixins";
 
 .button-change-photo {
+  grid-column: 1/-1;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -14,6 +15,24 @@
 
   background-color: $color-lavender;
   border-radius: 20px;
+
+  @include tablet {
+    border-radius: 10px;
+    padding: 20px 0;
+  }
+
+  @include desktop {
+    grid-column: none;
+
+    position: absolute;
+    top: -75px;
+    right: 0;
+
+    width: auto;
+    min-width: 190px;
+
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 .button {
@@ -128,10 +147,13 @@
   padding: 22px 23px;
   box-sizing: border-box;
 
+  font: inherit;
+
   @include font(18px, 18px, $font-weight-bold);
   color: $color-blue-ocean;
   background-color: $color-yellow-sunrise;
   border-radius: 10px;
+  border: none;
 
   &::after {
     content: "";
@@ -246,38 +268,70 @@
 }
 
 .button-module {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.button-module__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 8px;
 
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 
   @include font(16px, 16px, $font-weight-medium);
   text-transform: uppercase;
   color: $color-blue-ocean;
+
+  @include tablet {
+    grid-template-rows: 70px 70px;
+    grid-row-gap: 0;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    @include font(20px, 18px, $font-weight-medium);
+
+    border-top: 1px solid $color-grey-platinum;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 180px 1fr;
+    grid-template-rows: 70px;
+
+    margin-bottom: 0;
+
+    border: none;
+  }
 }
 
 .button-module__caption {
+  margin-left: auto;
+
   color: rgba($color-blue-ocean, 0.3);
 }
 
 .up-down-button__wrapper {
+  grid-column: 1/-1;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
-  padding: 14px;
+  min-height: 43px;
+  padding: 0 14px;
   box-sizing: border-box;
 
   border: 1px solid $color-telegray-light;
   border-radius: 4px;
+
+  @include tablet {
+    min-height: 70px;
+    padding: 0 25px;
+  }
+
+  @include desktop {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    padding: 0 20px;
+  }
 }
 
 .button-down {
@@ -300,6 +354,17 @@
 
     background-color: $color-grey-greaterly;
   }
+
+  @include tablet {
+    width: 20px;
+    height: 20px;
+
+    &::after {
+      top: 9px;
+
+      width: 20px;
+    }
+  }
 }
 
 .button-up {
@@ -311,7 +376,8 @@
   background-color: transparent;
   border: none;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -324,15 +390,19 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 0;
+    transform: rotate(90deg);
+  }
 
-    width: 14px;
-    height: 2px;
+  @include tablet {
+    width: 20px;
+    height: 20px;
 
-    background-color: $color-grey-greaterly;
+    &::before,
+    &::after {
+      left: 9px;
+
+      height: 20px;
+    }
   }
 }
 
@@ -341,15 +411,34 @@
 
   @include font(14px, 14px, $font-weight-medium);
   color: $color-blue-ocean;
+  text-align: center;
 
   border: none;
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-medium);
+  }
+
+  @include desktop {
+    max-width: 80px;
+  }
+}
+
+.checkbox-module {
+  @include desktop {
+    align-self: center;
+    margin-left: auto;
+  }
 }
 
 .checkbox-module label {
   display: flex;
   align-items: center;
 
+  margin-bottom: 20px;
+
   @include font(15px, 15px, $font-weight-normal);
+  color: $color-blue-ocean;
 
   &::before {
     content: "";
@@ -361,6 +450,22 @@
     border: 1px solid $color-telegray-light;
     border-radius: 4px;
   }
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-medium);
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 
 .month-module__wrapper {
@@ -368,22 +473,31 @@
   justify-content: space-between;
   align-items: center;
 
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 0;
 
   border-top: 1px solid $color-grey-light;
   border-bottom: 1px solid $color-grey-light;
+
+  @include tablet {
+    padding: 25px 14px;
+  }
 }
 
-.month-module__prev {
+.month-module__prev,
+.month-module__next {
   width: 9px;
   height: 18px;
 
   border: none;
   background-color: tomato;
+
+  @include tablet {
+    width: 30px;
+    height: 36px;
+  }
 }
 
-.month-module__input {
+.month-module__text {
   margin: 0;
   padding: 0;
 
@@ -393,14 +507,10 @@
   text-align: center;
 
   border: none;
-}
 
-.month-module__next {
-  width: 9px;
-  height: 18px;
-
-  border: none;
-  background-color: tomato;
+  @include tablet {
+    @include font(36px, 36px, $font-weight-bold);
+  }
 }
 
 .button-delete {
@@ -415,9 +525,8 @@
   border: none;
   border-radius: 50%;
 
-  transform: rotate(45deg);
-
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 10px;
@@ -429,16 +538,29 @@
     background-color: $color-grey-agate;
   }
 
+  &::before {
+    transform: rotate(-45deg);
+  }
+
   &::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 10px;
+    transform: rotate(45deg);
+  }
 
-    width: 1px;
-    height: 11px;
+  @include tablet {
+    position: relative;
+    top: auto;
+    right: auto;
 
-    background-color: $color-grey-agate;
+    margin-left: auto;
+
+    background: transparent;
+
+    &::before,
+    &::after {
+      left: 0;
+
+      width: 24px;
+    }
   }
 }
 
@@ -451,9 +573,8 @@
   background-color: transparent;
   border: none;
 
-  transform: rotate(45deg);
-
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 5px;
@@ -465,16 +586,19 @@
     background-color: $color-white;
   }
 
+  &::before {
+    transform: rotate(-45deg);
+  }
+
   &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 5px;
+    transform: rotate(45deg);
+  }
 
-    width: 1px;
-    height: 11px;
-
-    background-color: $color-white;
+  @include tablet {
+    &::before,
+    &::after {
+      width: 24px;
+    }
   }
 }
 

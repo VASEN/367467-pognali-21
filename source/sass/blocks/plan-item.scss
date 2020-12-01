@@ -15,6 +15,22 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 35px;
+
+    padding: 0;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 400px auto;
+    grid-template-rows: 100px;
+    grid-column-gap: 0;
+    align-items: center;
+  }
 }
 
 .plan-item__col-1 {
@@ -25,18 +41,54 @@
   margin-bottom: 20px;
 
   color: $color-blue-ocean;
+
+  @include tablet {
+    grid-column: 1/-1;
+    justify-content: space-between;
+
+    margin-bottom: 0;
+    padding: 40px 32px 34px 40px;
+
+    border-bottom: 1px solid rgba($color-telegray-light, 0.3);
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    justify-content: start;
+
+    padding: 0;
+
+    border: none;
+  }
 }
 
 .plan-item__number {
   margin-right: 5px;
 
   @include font(16px, 16px, $font-weight-medium);
+
+  @include tablet {
+    order: 1;
+
+    @include font(20px, 20px, $font-weight-medium);
+  }
+
+  @include desktop {
+    order: 0;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .plan-item__countries {
   margin: 0;
 
   @include font(16px, 16px, $font-weight-bold);
+
+  @include tablet {
+    @include font(24px, 24px, $font-weight-bold);
+  }
 }
 
 .plan-item__col-2 {
@@ -46,6 +98,18 @@
   margin-bottom: 24px;
 
   color: $color-blue-ocean;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 0;
+    padding: 20px 20px 14px 40px;
+  }
+
+  @include desktop {
+    padding: 0 40px;
+  }
 }
 
 .plan-item__text {
@@ -53,14 +117,40 @@
 
   @include font(14px, 14px, $font-weight-medium);
   text-transform: uppercase;
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-medium);
+  }
 }
 
 .plan-item__companions {
   margin-bottom: 5px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    //margin-right: 30px;
+  }
 }
 
 .plan-item__change {
+  display: inline-flex;
+  width: fit-content;
+
   @include font(14px, 14px, $font-weight-medium);
   text-transform: uppercase;
   color: rgba($color-black, 0.3);
+
+  @include tablet {
+    align-self: center;
+    padding: 20px 40px 14px 20px;
+
+    @include font(20px, 20px, $font-weight-medium);
+  }
+
+  @include desktop {
+    padding: 0 40px;
+  }
 }

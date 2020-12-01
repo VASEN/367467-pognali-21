@@ -25,6 +25,8 @@
 
   &--opened {
     background-color: $color-white;
+
+    padding-bottom: 90px;
   }
 
   &--closed {
@@ -140,8 +142,6 @@
   @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 132px;
-
-    padding-bottom: 90px;
   }
 
   @include desktop {

@@ -1,43 +1,108 @@
 @import "source/sass/common/variables";
 @import "source/sass/common/mixins";
 
-.user-profile__container {
+.user-profile {
+  margin-top: -20px;
+  margin-bottom: -20px;
+
   background-color: $color-white-smoky;
 }
 
-.user-profile__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+.user-profile__container {
+  padding-top: 40px;
+  padding-bottom: 55px;
 
-  padding-top: 20px;
-  padding-bottom: 34px;
-
-  background-color: inherit;
+  @include desktop {
+    padding-top: 95px;
+    padding-bottom: 75px;
+  }
 }
 
-.user-profile__level {
+.user-profile .user-card {
+  background-color: $color-white-smoky;
+
+  padding-bottom: 0;
+
+  @include tablet {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.user-profile__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+  align-items: center;
+
+  @include tablet {
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 60px;
+  }
+
+  @include desktop {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 140px;
+  }
+}
+
+.user-profile .level {
   width: 100px;
   height: 100px;
+  margin: 0 auto;
 
   background-color: transparent;
   border-radius: 50px;
+
+  @include desktop {
+    position: absolute;
+    top: -200px;
+    right: 230px;
+
+    z-index: 2;
+  }
 }
 
 .user-profile__level .level__number {
   @include font(38px, 38px, $font-weight-bold);
   border-color: rgba($color-black-bluish, 0.3);
+
+  @include desktop {
+    color: $color-white;
+  }
 }
 
 .user-profile__level .level__text {
   margin-top: 6px;
 
   @include font(18px, 18px, $font-weight-normal);
+
+  @include desktop {
+    color: $color-white;
+  }
 }
 
 .user-profile__photo {
+  margin: 0 auto;
   object-fit: contain;
+
+  border-radius: 50%;
+
+  @include tablet {
+    border-radius: 7px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: -265px;
+    right: 0;
+
+    width: 190px;
+    height: 190px;
+    z-index: 2;
+
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 .user-profile__change-photo {
@@ -45,23 +110,39 @@
 }
 
 .user-profile__wrapper {
+  grid-column: 1/-1;
+
   position: relative;
   width: 100%;
-  padding: 25px;
+  padding: 25px 26px;
   box-sizing: border-box;
 
   border: 1px solid $color-telegray-light;
   border-radius: 10px;
+
+  @include desktop {
+    grid-column: auto;
+  }
+}
+
+.user-profile__travel-wrapper {
+  @include tablet {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
 
 .user-profile__legend {
   position: absolute;
-  top: -9px;
+  top: -7px;
+  left: 0;
+  right: 0;
 
   display: flex;
-  width: fit-content;
+  flex-wrap: wrap;
 
-  margin: 0;
+  width: fit-content;
+  margin: 0 auto;
   padding-left: 17px;
   padding-right: 17px;
 
@@ -70,6 +151,13 @@
   color: $color-blue-ocean;
 
   background-color: $color-white-smoky;
+
+  @include tablet {
+    top: auto;
+    bottom: -10px;
+
+    @include font(20px, 20px, $font-weight-medium);
+  }
 }
 
 .user-profile__tags-editor {
@@ -85,6 +173,12 @@
 
   background-color: transparent;
   border: none;
+
+  @include tablet {
+    //min-height: 20px;
+
+    @include font(20px, 22px, $font-weight-normal);
+  }
 }
 
 .user-profile__travel-list .travel-list__item {
