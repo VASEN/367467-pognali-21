@@ -8,7 +8,7 @@
 
     border-top: 1px solid $color-telegray-light;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       top: 0;
@@ -18,6 +18,16 @@
       height: 80px;
 
       background-color: $color-telegray-light;
+    }
+  }
+
+  @include desktop {
+    padding-top: 60px;
+
+    &::before {
+      right: 230px;
+
+      height: 90px;
     }
   }
 }
@@ -73,6 +83,10 @@
     &::after {
       display: none;
     }
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 80px 190px;
   }
 }
 
@@ -218,6 +232,7 @@
   @include font(14px, 18px, $font-weight-medium);
   text-transform: uppercase;
   text-overflow: fade;
+  color: $color-blue-ocean;
 
   background-color: transparent;
   border: none;
@@ -318,10 +333,14 @@
 .route-module__add .route__graph {
   @include tablet {
     &::before {
-      //z-index: 2;
-
       background: $color-white-smoky;
       border: 1px solid $color-telegray-light;
+    }
+  }
+
+  @include desktop {
+    &::after {
+      height: 188px;
     }
   }
 }

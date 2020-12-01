@@ -590,6 +590,13 @@
   &::after {
     transform: rotate(45deg);
   }
+
+  @include tablet {
+    &::before,
+    &::after {
+      width: 24px;
+    }
+  }
 }
 
 .button-X {

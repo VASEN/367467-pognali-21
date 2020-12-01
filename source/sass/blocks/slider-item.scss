@@ -23,7 +23,8 @@
   }
 }
 
-.slider-item__step-one-wrapper {
+.slider-item__step-one-wrapper,
+.slider-item__step-two-wrapper {
   @include desktop {
     display: grid;
     grid-template-columns: 1fr min-content;
@@ -178,6 +179,7 @@
 
 .slider-item__prev-step {
   @include tablet {
+    width: auto;
     justify-content: end;
 
     @include font(24px, 22px, $font-weight-bold);
