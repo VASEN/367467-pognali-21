@@ -65,6 +65,7 @@
   font: inherit;
 
   @include font(14px,18px, $font-weight-medium);
+  color: $color-blue-ocean;
 
   background-color: transparent;
   border: none;

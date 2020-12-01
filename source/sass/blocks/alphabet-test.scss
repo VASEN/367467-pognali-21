@@ -1,0 +1,33 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.alphabet-test {
+  display: grid;
+  grid-template-columns: 44px 44px 44px 44px 44px;
+  grid-template-rows: 44px 44px 44px 44px 44px auto;
+  align-items: center;
+
+  min-width: 220px;
+}
+
+.alphabet-test__countries {
+  display: none;
+
+  &--current {
+    display: block;
+    grid-column: 1/-1;
+    grid-row: 6/7;
+  }
+}
+
+.alphabet-test__button-letter {
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+
+  background-color: tomato;
+  border: 1px solid $color-grey-platinum;
+}

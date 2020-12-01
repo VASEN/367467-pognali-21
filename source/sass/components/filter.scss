@@ -2,21 +2,42 @@
 @import "source/sass/common/mixins";
 
 .filter {
-  background-color: $color-white-smoky;
+  position: relative;
+
+  margin-top: -20px;
+
+  background-color: $color-grey-lavender-light;
+  border-radius: 0 0 25px 25px;
+
+  &--opened .filter__toggle-wrapper {
+    &--opened {
+      display: flex;
+    }
+
+    &--closed {
+      display: none;
+    }
+  }
 }
 
 .filter__container {
-  background-color: $color-grey-lavender-light;
-  border-radius: 0 0 25px 25px;
+  @include tablet {
+    @include container($width-tablet, 70px);
+  }
 }
 
 .filter__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 50px auto;
   align-items: center;
 
   padding-top: 20px;
-  padding-bottom: 17px;
+
+  @include tablet {
+    grid-template-columns: auto auto;
+    grid-template-rows: 135px;
+  }
 }
 
 .filter__title {
@@ -38,35 +59,160 @@
 
     background-color: tomato;
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .filter__toggle {
-  display: flex;
+  cursor: pointer;
 
-  width: 17px;
-  height: 3px;
+  width: 16px;
+  height: 16px;
   margin: 0;
   padding: 0;
 
-  background-color: tomato;
+  font: inherit;
+
+  background-color: transparent;
   border: none;
+
+  @include tablet {
+    width: auto;
+    height: auto;
+  }
+}
+
+.filter__toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter__toggle-wrapper--opened {
+  display: none;
+}
+
+.filter__toggle-text {
+  display: none;
+
+  @include tablet {
+    display: flex;
+
+    @include font(20px, 20px, $font-weight-bold);
+    text-transform: uppercase;
+    color: $color-blue-cobalt;
+  }
+}
+
+.filter__toggle-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.filter__toggle-wrapper--closed .filter__toggle-icon {
+  width: 3px;
+  height: 3px;
+
+  background-color: $color-blue-cobalt;
+  border-radius: 50%;
+
+  box-shadow: 6px 0 0 black, 12px 0 0 black;
+
+  @include tablet {
+    width: 6px;
+    height: 6px;
+
+    box-shadow: -9px 0 0 black, -18px 0 0 black;
+  }
+}
+
+.filter__toggle-wrapper--opened .filter__toggle-icon {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 7px;
+
+    width: 2px;
+    height: 16px;
+
+    background-color: $color-blue-cobalt;
+
+    @include tablet {
+      left: 11px;
+
+      height: 24px;
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .filter__content-wrapper {
-  display: none;
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+}
+
+.filter__content-wrapper {
   padding-bottom: 28px;
 }
 
 .filter__content {
-  min-height: 700px;
+  min-height: 600px;
 
   padding-left: 25px;
   padding-right: 25px;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .filter__continent-list {
+  display: none;
+  order: 1;
+
   @include reset-list;
-  padding: 20px 0;
+  padding: 20px 25px;
+
+  @include tablet {
+    order: 0;
+
+    display: flex;
+    width: fit-content;
+  }
+}
+
+.filter__continent-list--show {
+  display: block;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .filter__continent-item {
@@ -74,6 +220,15 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+    margin-right: 28px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -85,11 +240,42 @@
   &--current {
     color: $color-blue-cobalt;
   }
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-bold);
+  }
 }
 
-.filter__alphabet {
-  //display: none;
+.filter .filter__alphabet {
   position: relative;
+  top: 0;
+
+  display: block;
+
+  @include tablet {
+    padding: 0 20px 0 0;
+
+    border-collapse: separate;
+    border-spacing: 25px;
+  }
+}
+
+.filter__alphabet .alphabet__item {
+  min-width: auto;
+  min-height: auto;
+
+  @include tablet {
+    border: none;
+  }
+}
+
+.filter__alphabet .alphabet__item > button {
+  @include tablet {
+    min-width: auto;
+    min-height: auto;
+
+    @include font(60px, 60px, $font-weight-bold);
+  }
 }
 
 .filter__alphabet .alphabet__country-selection {
@@ -98,6 +284,12 @@
 
   background-color: transparent;
   border: none;
+
+  @include tablet {
+    right: 0;
+
+    padding-top: 0;
+  }
 }
 
 .filter__close-button .cross {
