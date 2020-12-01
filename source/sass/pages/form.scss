@@ -26,11 +26,20 @@
 
   &--closed .header__user-navigation {
     display: none;
+
+    @include desktop {
+      display: block;
+    }
   }
 
   &--closed .header__contacts {
     display: none;
+
+    @include desktop {
+      display: flex;
+    }
   }
+
 }
 
 .form-page .footer {
