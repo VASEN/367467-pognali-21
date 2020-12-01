@@ -24,7 +24,8 @@
 }
 
 .slider-item__step-one-wrapper,
-.slider-item__step-two-wrapper {
+.slider-item__step-two-wrapper,
+.slider-item__step-three-wrapper {
   @include desktop {
     display: grid;
     grid-template-columns: 1fr min-content;
@@ -32,6 +33,15 @@
     align-items: center;
 
     margin-bottom: 55px;
+  }
+}
+
+.slider-item__step-three-wrapper {
+  @include tablet {
+    margin-bottom: 25px;
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid $color-grey-platinum;
   }
 }
 
@@ -199,8 +209,9 @@
 }
 
 .step-tree__button-round {
-  display: inline-block;
   margin: 0 0 17px;
 
-  border: none;
+  @include tablet {
+    margin: 0;
+  }
 }

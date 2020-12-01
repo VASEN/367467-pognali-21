@@ -11,9 +11,6 @@
   @include tablet {
     @include font(18px, 18px, $font-weight-normal);
   }
-
-  @include desktop {
-  }
 }
 
 .calendar__day {

@@ -147,10 +147,13 @@
   padding: 22px 23px;
   box-sizing: border-box;
 
+  font: inherit;
+
   @include font(18px, 18px, $font-weight-bold);
   color: $color-blue-ocean;
   background-color: $color-yellow-sunrise;
   border-radius: 10px;
+  border: none;
 
   &::after {
     content: "";

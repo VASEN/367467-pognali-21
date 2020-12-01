@@ -386,16 +386,18 @@
               </div>
             </div>
             <div class="slide__item slider-item step-three" id="step-3">
-              <h3 class="slider-item__title">
-                <span>Шаг 3.</span>
-                <span>Развлечения</span>
-              </h3>
-              <p class="slider-item__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-              <ul class="new-plan__list plan-list plan-list-with-desc">
-                <li class="plan-list__item">Даты</li>
-                <li class="plan-list__item">Маршрут</li>
-                <li class="plan-list__item plan-list__item--current">Развлечения</li>
-              </ul>
+              <div class="slider-item__step-three-wrapper">
+                <h3 class="slider-item__title">
+                  <span>Шаг 3.</span>
+                  <span>Развлечения</span>
+                </h3>
+                <p class="slider-item__description">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                <ul class="new-plan__list plan-list plan-list-with-desc">
+                  <li class="plan-list__item">Даты</li>
+                  <li class="plan-list__item">Маршрут</li>
+                  <li class="plan-list__item plan-list__item--current">Развлечения</li>
+                </ul>
+              </div>
               <div class="slider-item__module country-plan">
                 <div class="country-plan__wrapper">
                   <h4 class="country-plan__title">Босния и Герцеговина</h4>
@@ -412,8 +414,10 @@
                 <textarea class="country-plan__text" name="" id="" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 <span class="country-plan__graph"></span>
               </div>
-              <button class="button-round step-tree__button-round" type="submit">Отправить</button>
-              <a class="form__prev-step button" href="#step-2">На шаг назад</a>
+              <div class="slider-item__button-wrapper">
+                <button class="step-tree__button-round slider-item__next-step button-rect" type="submit">Отправить</button>
+                <a class="slider-item__prev-step button" href="#step-2">На шаг назад</a>
+              </div>
             </div>
           </form>
         </div>
