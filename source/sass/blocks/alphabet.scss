@@ -4,10 +4,6 @@
 .alphabet {
   display: none;
 
-  position: absolute;
-  top: 42px;
-  left: 0;
-
   min-width: 220px;
   min-height: 220px;
   box-sizing: border-box;
@@ -33,7 +29,7 @@
 }
 
 .alphabet--show {
-  display: block;
+  display: grid;
 }
 
 .alphabet__item {
