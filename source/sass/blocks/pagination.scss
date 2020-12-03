@@ -4,4 +4,46 @@
 .pagination {
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    padding: 25px;
+
+    background-color: $color-white;
+    border-radius: 20px;
+  }
+}
+
+.pagination__list {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+
+    @include reset-list;
+    margin-right: auto;
+  }
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 50px;
+  min-height: 50px;
+
+  @include font(20px, 20px, $font-weight-bold);
+  color: $color-blue-ocean;
+
+  border-radius: 50%;
+
+  &--current {
+    background-color: $color-yellow-sunrise;
+  }
+}
+
+.pagination__prev-button,
+.pagination__next-button {
+  min-width: auto;
 }

@@ -26,15 +26,14 @@
   padding-bottom: 15px;
 
   border-radius: 20px;
-}
 
-//.travellers .travellers__user-card-wrapper {
-//  justify-content: space-between;
-//  align-items: start;
-//
-//  margin-bottom: 15px;
-//  padding: 0 20px;
-//}
+  @include tablet {
+    grid-template-columns: auto 150px auto auto;
+    grid-template-rows: auto auto 60px auto;
+
+    padding: 35px 25px 25px 35px;
+  }
+}
 
 .travellers .user-card__photo {
   grid-column: 1/2;
@@ -44,22 +43,59 @@
   margin-bottom: 13px;
 
   border-radius: 50%;
+
+  @include tablet {
+    grid-row: 1/4;
+
+    min-width: 190px;
+    margin: 0 30px 0 0;
+
+    border-radius: 19px;
+  }
 }
 
 .travellers .user-card__like-wrapper {
   display: flex;
   align-items: center;
+  align-self: start;
+
+  @include tablet {
+    position: static;
+
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+}
+
+.travellers .user-card__button-like {
+  @include tablet {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .travellers .user-card__followers {
   margin-left: 5px;
 
   @include font(14px, 16px, $font-weight-bold);
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-bold);
+  }
 }
 
 .travellers .travellers__user-wrapper {
   grid-column: 2/-1;
   align-items: baseline;
+
+  @include tablet {
+    grid-column: 2/4;
+
+    justify-content: start;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
 }
 
 .travellers .travellers__user {
@@ -67,6 +103,14 @@
   flex-direction: column;
 
   @include font(20px, 20px, $font-weight-bold);
+
+  @include tablet {
+    flex-direction: row;
+
+    margin-right: 22px;
+
+    @include font(30px, 30px, $font-weight-bold);
+  }
 }
 
 .travellers .user-card__status {
@@ -79,18 +123,71 @@
 
   padding-left: 25px;
   padding-right: 25px;
+
+  @include tablet {
+    grid-column: 2/4;
+
+    align-items: center;
+
+    margin-right: 115px;
+    margin-bottom: 45px;
+    padding: 0;
+  }
+}
+
+.travellers .tags-list__item {
+  @include tablet {
+    @include font(20px, 23px, $font-weight-normal);
+  }
 }
 
 .travellers .travellers__fieldset-tovisit {
   grid-column: 1/-1;
+
+  @include tablet {
+    grid-column: 1/-1;
+  }
 }
 
-.travellers__fieldset-transport {
+.travellers .user-card__to-visit {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.travellers .user-card__country-card {
+  @include tablet {
+    margin-right: 25px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.travellers .travellers__fieldset-transport {
   grid-column: 1/3;
+
+  @include tablet {
+    grid-column: 4/5;
+    grid-row: 1/3;
+
+    padding: 0;
+    border: none;
+  }
+}
+
+.travellers__fieldset-transport .user-card__legend {
+  display: none;
 }
 
 .travellers .travellers__travel-list {
   justify-content: start;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .travellers .travellers__travel-list-item {
@@ -112,6 +209,22 @@
 
   padding-top: 20px;
   padding-bottom: 15px;
+
+  @include tablet {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    align-self: center;
+
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.travellers__fieldset-level .user-card__legend {
+  @include tablet {
+    display: none;
+  }
 }
 
 .travellers .travellers__level {
@@ -119,14 +232,26 @@
   height: 45px;
 
   background-color: $color-white;
+
+  @include tablet {
+    align-items: center;
+  }
 }
 
 .travellers .travellers__level-number {
   border: none;
+
+  @include tablet {
+    border-bottom: 1px solid rgba($color-black, 0.1);
+  }
 }
 
 .travellers .travellers__level-text {
   display: none;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 .travellers__button-round {
@@ -135,6 +260,20 @@
   width: auto;
   margin-left: 20px;
   margin-right: 20px;
+
+  @include tablet {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-items: center;
+    align-self: start;
+
+    min-width: 150px;
+    min-height: 50px;
+    margin: 0;
+    padding: 0;
+
+    font-weight: $font-weight-bold;
+  }
 }
 
 .travellers__button {
@@ -143,10 +282,29 @@
 
   margin-top: 20px;
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-top: 45px;
+    margin-bottom: 50px;
+
+    @include font(20px, 20px, $font-weight-bold);
+  }
 }
 
 .travellers .cross {
   &::before {
     transform: rotate(90deg);
+  }
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+
+    &::before,
+    &::after {
+      left: 11px;
+
+      height: 24px;
+    }
   }
 }
