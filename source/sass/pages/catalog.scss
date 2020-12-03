@@ -41,6 +41,18 @@
   }
 }
 
+.catalog-page__sort {
+  @include desktop {
+    order: 1;
+  }
+}
+
+.catalog-page__pagination {
+  @include desktop {
+    order: 2;
+  }
+}
+
 .catalog-page .footer {
   position: relative;
 

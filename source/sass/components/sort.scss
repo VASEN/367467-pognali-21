@@ -2,10 +2,16 @@
 @import "source/sass/common/mixins";
 
 .sort__container {
-  padding: 20px 25px;
+  padding: 20px 0;
+
+  @include desktop {
+    min-width: auto;
+    padding: 0;
+  }
 }
 
 .sort__wrapper {
+  //@include container(270px, 25px);
   padding: 25px;
 
   background-color: $color-yellow-sunrise;
@@ -17,8 +23,37 @@
   color: $color-blue-ocean;
 }
 
+.sort__area .sort__list {
+  display: none;
+}
+
+.sort__area .sort__travel-list {
+  display: none;
+}
+
+.sort__area .sort__level-range {
+  display: none;
+}
+
+.sort__area .level-range__range-wrapper {
+  display: none;
+}
+
 .sort__area {
   border-top: 1px solid $color-yellow-saffron-light;
+
+  &--show .sort__list {
+    display: block;
+  }
+
+  &--show .sort__travel-list {
+    display: flex;
+  }
+
+  &--show .sort__level-range,
+  &--show .level-range__range-wrapper {
+    display: block;
+  }
 }
 
 .sort__list {
