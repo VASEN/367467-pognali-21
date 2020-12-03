@@ -18,21 +18,31 @@
 }
 
 .travellers__user-card {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: auto;
+
   padding-top: 15px;
   padding-bottom: 15px;
 
   border-radius: 20px;
 }
 
-.travellers .travellers__user-card-wrapper {
-  justify-content: space-between;
-  align-items: start;
-
-  margin-bottom: 15px;
-  padding: 0 20px;
-}
+//.travellers .travellers__user-card-wrapper {
+//  justify-content: space-between;
+//  align-items: start;
+//
+//  margin-bottom: 15px;
+//  padding: 0 20px;
+//}
 
 .travellers .user-card__photo {
+  grid-column: 1/2;
+
+  margin-left: 18px;
+  margin-right: 16px;
+  margin-bottom: 13px;
+
   border-radius: 50%;
 }
 
@@ -48,10 +58,8 @@
 }
 
 .travellers .travellers__user-wrapper {
-  flex-grow: 1;
+  grid-column: 2/-1;
   align-items: baseline;
-
-  margin-left: 15px;
 }
 
 .travellers .travellers__user {
@@ -61,12 +69,24 @@
   @include font(20px, 20px, $font-weight-bold);
 }
 
+.travellers .user-card__status {
+  margin-right: 22px;
+}
+
 .travellers .travellers__tags-list {
+  grid-column: 1/-1;
   justify-content: start;
 
-  margin-bottom: 16px;
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.travellers .travellers__fieldset-tovisit {
+  grid-column: 1/-1;
+}
+
+.travellers__fieldset-transport {
+  grid-column: 1/3;
 }
 
 .travellers .travellers__travel-list {
@@ -87,9 +107,12 @@
   border-radius: 50%;
 }
 
-//.travellers .user-card__fieldset-wrapper {
-//  align-items: center;
-//}
+.travellers .travellers__fieldset-level {
+  grid-column: 3/-1;
+
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
 
 .travellers .travellers__level {
   width: 45px;
@@ -107,12 +130,11 @@
 }
 
 .travellers__button-round {
-  min-width: 230px;
+  grid-column: 1/-1;
+
   width: auto;
   margin-left: 20px;
   margin-right: 20px;
-
-  @include font(17px, 17px, $font-weight-bold);
 }
 
 .travellers__button {
