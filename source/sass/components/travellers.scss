@@ -106,12 +106,13 @@
   display: none;
 }
 
-.travellers .button-round {
+.travellers__button-round {
   min-width: 230px;
   width: auto;
-
   margin-left: 20px;
   margin-right: 20px;
+
+  @include font(17px, 17px, $font-weight-bold);
 }
 
 .travellers__button {
