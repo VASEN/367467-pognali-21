@@ -96,7 +96,8 @@
 
   background-color: transparent;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -104,19 +105,6 @@
 
     width: 2px;
     height: 18px;
-
-    background-color: $color-blue-ocean;
-    border-radius: 2px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 0;
-
-    width: 18px;
-    height: 2px;
 
     background-color: $color-blue-ocean;
     border-radius: 2px;

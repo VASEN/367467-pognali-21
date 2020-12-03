@@ -18,6 +18,10 @@
       display: none;
     }
   }
+
+  @include desktop {
+    background-color: $color-white-smoky;
+  }
 }
 
 .filter__container {
@@ -37,6 +41,11 @@
   @include tablet {
     grid-template-columns: auto auto;
     grid-template-rows: 135px;
+  }
+
+  @include tablet {
+    grid-template-columns: max-content auto 284px;
+    //align-items: start;
   }
 }
 
@@ -63,6 +72,13 @@
   @include tablet {
     display: none;
   }
+
+  @include desktop {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include font(20px, 20px, $font-weight-bold);
+  }
 }
 
 .filter__toggle {
@@ -88,6 +104,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include desktop {
+    margin-left: auto;
+  }
 }
 
 .filter__toggle-wrapper--opened {
@@ -179,11 +199,13 @@
 
 .filter__content-wrapper {
   padding-bottom: 28px;
+
+  @include tablet {
+    padding-bottom: 80px;
+  }
 }
 
 .filter__content {
-  min-height: 600px;
-
   padding-left: 25px;
   padding-right: 25px;
 
@@ -204,6 +226,11 @@
 
     display: flex;
     width: fit-content;
+    padding-left: 0;
+  }
+
+  @include desktop {
+    margin-left: 30px;
   }
 }
 
@@ -247,54 +274,151 @@
 }
 
 .filter .filter__alphabet {
-  position: relative;
-  top: 0;
-
-  display: block;
+  display: grid;
 
   @include tablet {
-    padding: 0 20px 0 0;
+    grid-gap: 35px;
+    grid-template-rows: auto auto auto auto auto;
+    margin-bottom: 78px;
+    padding: 0;
 
-    border-collapse: separate;
-    border-spacing: 25px;
+    background-color: $color-grey-lavender-light;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0;
+    grid-row-gap: 35px;
+
+    background-color: $color-white-smoky;
   }
 }
 
-.filter__alphabet .alphabet__item {
-  min-width: auto;
-  min-height: auto;
+.filter .alphabet-test__title {
+  @include desktop {
+    &:nth-of-type(n) {
+      order: 0;
+    }
 
+    &:nth-of-type(n + 6) {
+      order: 2;
+    }
+
+    &:nth-of-type(n + 11) {
+      order: 4;
+    }
+
+    &:nth-of-type(n + 16) {
+      order: 6;
+    }
+
+    &:nth-of-type(n + 21) {
+      order: 8;
+    }
+  }
+}
+
+.filter .alphabet-test__button-letter {
   @include tablet {
+    min-width: 44px;
+    min-height: auto;
+
+    @include font(60px, 60px, $font-weight-bold);
     border: none;
   }
 }
 
-.filter__alphabet .alphabet__item > button {
-  @include tablet {
-    min-width: auto;
-    min-height: auto;
-
-    @include font(60px, 60px, $font-weight-bold);
-  }
-}
-
-.filter__alphabet .alphabet__country-selection {
-  padding-left: 0;
-  padding-right: 0;
-
-  background-color: transparent;
+.filter .alphabet-test__countries--current {
+  background-color: $color-grey-lavender-light;
   border: none;
 
   @include tablet {
-    right: 0;
+    align-self: start;
 
-    padding-top: 0;
+    margin-left: 30px;
+  }
+
+  @include desktop {
+    grid-row: auto;
+    grid-column: auto;
+
+    background-color: $color-white-smoky;
+  }
+}
+
+.filter .alphabet-test__countries {
+  @include desktop {
+    display: block;
+    align-self: start;
+    margin-left: 0;
+
+    &:nth-of-type(n) {
+      order: 1;
+    }
+
+    &:nth-of-type(n + 6) {
+      order: 3;
+    }
+
+    &:nth-of-type(n + 11) {
+      order: 5;
+    }
+
+    &:nth-of-type(n + 16) {
+      order: 7;
+    }
+
+    &:nth-of-type(n + 21) {
+      order: 9;
+    }
+  }
+}
+
+.filter .alphabet-test__country-list {
+  padding-left: 0;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.filter .alphabet-test__button-country {
+  @include tablet {
+    @include font(20px, 30px, $font-weight-normal);
+  }
+}
+
+.filter__close-button {
+  color: $color-blue-cobalt;
+
+  @include tablet {
+    min-height: 100px;
+
+    @include font(20px, 20px, $font-weight-bold);
   }
 }
 
 .filter__close-button .cross {
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+  &::before,
+  &::after {
+    @include tablet {
+      left: 11px;
+
+      height: 24px;
+    }
+  }
+
   &::before {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
 
   &::after {
