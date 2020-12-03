@@ -10,8 +10,6 @@
     display: grid;
     grid-template-columns: 3fr 285px;
     grid-column-gap: 85px;
-
-    //min-width: 100%;
   }
 }
 
@@ -20,12 +18,13 @@
 }
 
 .travellers__user-card {
-  padding: 15px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   border-radius: 20px;
 }
 
-.travellers__user-card-wrapper {
+.travellers .travellers__user-card-wrapper {
   justify-content: space-between;
   align-items: start;
 
@@ -33,19 +32,36 @@
   padding: 0 20px;
 }
 
-.travellers__user {
-  display: flex;
-  flex-direction: column;
+.travellers .user-card__photo {
+  border-radius: 50%;
 }
 
-.travellers__user-wrapper {
+.travellers .user-card__like-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.travellers .user-card__followers {
+  margin-left: 5px;
+
+  @include font(14px, 16px, $font-weight-bold);
+}
+
+.travellers .travellers__user-wrapper {
   flex-grow: 1;
   align-items: baseline;
 
   margin-left: 15px;
 }
 
-.travellers__tags-list {
+.travellers .travellers__user {
+  display: flex;
+  flex-direction: column;
+
+  @include font(20px, 20px, $font-weight-bold);
+}
+
+.travellers .travellers__tags-list {
   justify-content: start;
 
   margin-bottom: 16px;
@@ -53,11 +69,11 @@
   padding-right: 25px;
 }
 
-.travellers__travel-list {
+.travellers .travellers__travel-list {
   justify-content: start;
 }
 
-.travellers__travel-list-item {
+.travellers .travellers__travel-list-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,24 +87,43 @@
   border-radius: 50%;
 }
 
-.travellers__level {
+//.travellers .user-card__fieldset-wrapper {
+//  align-items: center;
+//}
+
+.travellers .travellers__level {
   width: 45px;
   height: 45px;
 
   background-color: $color-white;
 }
 
-.travellers__level-number {
+.travellers .travellers__level-number {
   border: none;
 }
 
-.travellers__level-text {
+.travellers .travellers__level-text {
   display: none;
+}
+
+.travellers .button-round {
+  min-width: 230px;
+  width: auto;
+
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .travellers__button {
   display: flex;
   align-items: center;
 
+  margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.travellers .cross {
+  &::before {
+    transform: rotate(90deg);
+  }
 }
