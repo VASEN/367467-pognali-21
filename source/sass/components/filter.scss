@@ -43,9 +43,8 @@
     grid-template-rows: 135px;
   }
 
-  @include tablet {
+  @include desktop {
     grid-template-columns: max-content auto 284px;
-    //align-items: start;
   }
 }
 

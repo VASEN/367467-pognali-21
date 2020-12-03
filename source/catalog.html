@@ -434,98 +434,100 @@
             <div class="sort__wrapper">
               <h2 class="sort__title title">Подберите идеального попутчика</h2>
               <form class="sort__form" action="https://echo.htmlacademy.ru" method="post">
-                <div class="sort__area">
-                  <button class="button-sort-toggle sort__area-toggle sort__area-toggle--open" type="button">Хобби <span class="rectangle sort__rectangle"></span></button>
-                  <ul class="sort__list">
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="hard-rock" id="hobby__gym" checked>
-                      <label for="hobby__gym">Спортзал</label>
-                    </li>
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="russian-rap" id="hobby__shisha" checked>
-                      <label for="hobby__shisha">Кальян</label>
-                    </li>
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="evrodance" id="hobby__sofa" >
-                      <label for="hobby__sofa">Диван</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sort__area">
-                  <button class="button-sort-toggle sort__area-toggle sort__area-toggle--close" type="button">музыка <span class="rectangle sort__rectangle"></span></button>
-                  <ul class="sort__list">
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="hard-rock" id="music__hard-rock" checked>
-                      <label for="music__hard-rock">Тяжелый рок</label>
-                    </li>
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="russian-rap" id="music__russian-rap" checked>
-                      <label for="music__hard-rock">Русский рэп</label>
-                    </li>
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="evrodance" id="music__evrodance" >
-                      <label for="music__hard-rock">Евроденс</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sort__area">
-                  <button class="button-sort-toggle sort__area-toggle sort__area-toggle--open" type="button">еда<span class="rectangle sort__rectangle"></span></button>
-                  <ul class="sort__list">
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="hard-rock" id="food__meat" checked>
-                      <label for="food__meat">Мясоед</label>
-                    </li>
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="russian-rap" id="food__pp" checked>
-                      <label for="food__pp">Сидит на ПП</label>
-                    </li>
-                    <li class="sort__item">
-                      <input class="visually-hidden" type="checkbox" name="evrodance" id="food__vegan" >
-                      <label for="food__vegan">Веган</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sort__area">
-                  <button class="button-sort-toggle sort__area-toggle sort__area-toggle--close" type="button">транспорт<span class="rectangle sort__rectangle"></span></button>
-                  <ul class="sort__travel-list travel-list sort__list">
-                    <li class="travel-list__item">
-                      <label for="travel-by-plane" title="Самолетом"></label>
-                      <input class="visually-hidden" type="checkbox" name="plane" id="travel-by-plane" checked>
-                    </li>
-                    <li class="travel-list__item">
-                      <label for="travel-by-bus" title="На автобусе"></label>
-                      <input class="visually-hidden" type="checkbox" name="bus" id="travel-by-bus" checked>
-                    </li>
-                    <li class="travel-list__item">
-                      <label for="travel-by-cycle" title="На велосипеде"></label>
-                      <input class="visually-hidden" type="checkbox" name="cycle" id="travel-by-cycle">
-                    </li>
-                    <li class="travel-list__item">
-                      <label for="travel-walk" title="Пешком"></label>
-                      <input class="visually-hidden" type="checkbox" name="walk" id="travel-walk" checked>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sort__area">
-                  <button class="button-sort-toggle sort__area-toggle sort__area-toggle--close" type="button">Левел<span class="rectangle sort__rectangle"></span></button>
-                  <div class="sort__level-range level-range">
-                    <div class="level-range__wrapper">
-                      <div class="level-range__element">
-                        <label class="visually-hidden" for="min-level">Минимальный уровень:</label>
-                        <input type="number" name="min-level" value="30" id="min-level" min="30">
-                      </div>
-                      <span class="level-range__border">-</span>
-                      <div class="level-range__element">
-                        <label class="visually-hidden" for="max-level">Максимальный уровень:</label>
-                        <input type="number" name="max-level" value="100" id="max-level" max="100">
+                <div class="sort__area-wrapper">
+                  <div class="sort__area">
+                    <button class="button-sort-toggle sort__area-toggle" type="button">Хобби <span class="rectangle sort__rectangle"></span></button>
+                    <ul class="sort__list">
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="hard-rock" id="hobby__gym" checked>
+                        <label for="hobby__gym">Спортзал</label>
+                      </li>
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="russian-rap" id="hobby__shisha" checked>
+                        <label for="hobby__shisha">Кальян</label>
+                      </li>
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="evrodance" id="hobby__sofa" >
+                        <label for="hobby__sofa">Диван</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sort__area">
+                    <button class="button-sort-toggle sort__area-toggle" type="button">музыка <span class="rectangle sort__rectangle"></span></button>
+                    <ul class="sort__list">
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="hard-rock" id="music__hard-rock" checked>
+                        <label for="music__hard-rock">Тяжелый рок</label>
+                      </li>
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="russian-rap" id="music__russian-rap" checked>
+                        <label for="music__hard-rock">Русский рэп</label>
+                      </li>
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="evrodance" id="music__evrodance" >
+                        <label for="music__hard-rock">Евроденс</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sort__area">
+                    <button class="button-sort-toggle sort__area-toggle" type="button">еда<span class="rectangle sort__rectangle"></span></button>
+                    <ul class="sort__list">
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="hard-rock" id="food__meat" checked>
+                        <label for="food__meat">Мясоед</label>
+                      </li>
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="russian-rap" id="food__pp" checked>
+                        <label for="food__pp">Сидит на ПП</label>
+                      </li>
+                      <li class="sort__item">
+                        <input class="visually-hidden" type="checkbox" name="evrodance" id="food__vegan" >
+                        <label for="food__vegan">Веган</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sort__area">
+                    <button class="button-sort-toggle sort__area-toggle" type="button">транспорт<span class="rectangle sort__rectangle"></span></button>
+                    <ul class="sort__travel-list travel-list sort__list">
+                      <li class="travel-list__item">
+                        <label for="travel-by-plane" title="Самолетом"></label>
+                        <input class="visually-hidden" type="checkbox" name="plane" id="travel-by-plane" checked>
+                      </li>
+                      <li class="travel-list__item">
+                        <label for="travel-by-bus" title="На автобусе"></label>
+                        <input class="visually-hidden" type="checkbox" name="bus" id="travel-by-bus" checked>
+                      </li>
+                      <li class="travel-list__item">
+                        <label for="travel-by-cycle" title="На велосипеде"></label>
+                        <input class="visually-hidden" type="checkbox" name="cycle" id="travel-by-cycle">
+                      </li>
+                      <li class="travel-list__item">
+                        <label for="travel-walk" title="Пешком"></label>
+                        <input class="visually-hidden" type="checkbox" name="walk" id="travel-walk" checked>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sort__area sort__area-range">
+                    <button class="button-sort-toggle sort__area-toggle" type="button">Левел<span class="rectangle sort__rectangle"></span></button>
+                    <div class="sort__level-range level-range">
+                      <div class="level-range__wrapper">
+                        <div class="level-range__element">
+                          <label class="visually-hidden" for="min-level">Минимальный уровень:</label>
+                          <input type="number" name="min-level" value="30" id="min-level" min="30">
+                        </div>
+                        <span class="level-range__border">-</span>
+                        <div class="level-range__element">
+                          <label class="visually-hidden" for="max-level">Максимальный уровень:</label>
+                          <input type="number" name="max-level" value="100" id="max-level" max="100">
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="level-range__range-wrapper">
-                    <div class="level-range__range">
-                      <div class="level-range__range--current">
-                        <div class="level-range__range--min" tabindex="1" aria-label="Минимальный уровень"></div>
-                        <div class="level-range__range--max" tabindex="1" aria-label="Максимальный уровень"></div>
+                    <div class="level-range__range-wrapper">
+                      <div class="level-range__range">
+                        <div class="level-range__range--current">
+                          <div class="level-range__range--min" tabindex="1" aria-label="Минимальный уровень"></div>
+                          <div class="level-range__range--max" tabindex="1" aria-label="Максимальный уровень"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
