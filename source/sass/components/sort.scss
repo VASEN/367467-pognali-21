@@ -19,6 +19,10 @@
   @include tablet {
     padding: 35px;
   }
+
+  @include desktop {
+    padding: 45px;
+  }
 }
 
 .sort__title {
@@ -39,6 +43,13 @@
     border-top: 1px solid $color-yellow-saffron-light;
     border-bottom: 1px solid $color-yellow-saffron-light;
   }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border: none;
+  }
 }
 
 .sort__area .sort__list {
@@ -49,6 +60,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .sort__area .sort__travel-list {
@@ -58,6 +73,10 @@
     display: flex;
     justify-content: start;
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .sort__area .sort__level-range {
@@ -66,6 +85,10 @@
   @include tablet {
     display: block;
   }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .sort__area .level-range__range-wrapper {
@@ -73,6 +96,14 @@
 
   @include tablet {
     display: block;
+
+    padding-right: 60px;
+  }
+
+  @include desktop {
+    display: none;
+
+    padding-right: 0;
   }
 }
 
@@ -85,6 +116,10 @@
 
   &--show .sort__travel-list {
     display: flex;
+
+    @include desktop {
+      justify-content: center;
+    }
   }
 
   &--show .sort__level-range,
@@ -98,6 +133,10 @@
     align-items: center;
 
     border: none;
+  }
+
+  @include desktop {
+    display: block;
   }
 }
 
@@ -113,18 +152,16 @@
   }
 }
 
-.sort__area .level-range__range-wrapper {
-  @include tablet {
-    padding-right: 60px;
-  }
-}
-
 .sort__area-toggle {
   @include tablet {
     padding-top: 15px;
     padding-bottom: 15px;
 
     @include font(20px, 20px, $font-weight-medium);
+  }
+
+  @include desktop {
+    @include font(20px, 22px, $font-weight-medium);
   }
 }
 
@@ -145,6 +182,10 @@
 
   @include tablet {
     margin-bottom: 0;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
   }
 }
 
@@ -190,6 +231,11 @@
 
   background-color: $color-white;
   border-radius: 50%;
+
+  @include tablet {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .sort .button-round {
@@ -208,5 +254,9 @@
 .sort__rectangle {
   @include tablet {
     display: none;
+  }
+
+  @include desktop {
+    display: block;
   }
 }

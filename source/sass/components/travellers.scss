@@ -3,14 +3,12 @@
 
 .travellers {
   padding-bottom: 46px;
-
-
 }
 
 .travellers__container {
   @include desktop {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 285px;
     grid-column-gap: 85px;
 
     //min-width: 100%;
