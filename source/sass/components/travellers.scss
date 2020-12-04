@@ -237,6 +237,7 @@
 
 .travellers .user-card__country-card-title {
   color: $color-blue-ocean;
+
   @include tablet {
     @include font(20px, 20px, $font-weight-bold);
   }

@@ -187,6 +187,8 @@
 }
 
 .filter__content-wrapper {
+  padding-bottom: 28px;
+
   &--opened {
     display: block;
   }
@@ -194,10 +196,6 @@
   &--closed {
     display: none;
   }
-}
-
-.filter__content-wrapper {
-  padding-bottom: 28px;
 
   @include tablet {
     padding-bottom: 80px;
@@ -407,6 +405,7 @@
     width: 24px;
     height: 24px;
   }
+
   &::before,
   &::after {
     @include tablet {
