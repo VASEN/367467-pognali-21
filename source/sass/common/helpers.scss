@@ -13,7 +13,7 @@
   }
 
   @include desktop {
-    @include container($width-desktop, 58px);
+    @include container($width-desktop, 60px);
   }
 }
 
