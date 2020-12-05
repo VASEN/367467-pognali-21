@@ -1,0 +1,121 @@
+@import "source/sass/common/variables";
+@import "source/sass/common/mixins";
+
+.alphabet-test {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  align-items: center;
+
+
+  min-width: 220px;
+  margin: 0;
+  z-index: 1;
+  box-sizing: border-box;
+
+  background-color: $color-white;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
+
+    padding: 35px 0 33px 27px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 165px;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: $color-grey-light;
+
+      @include desktop {
+        right: 240px;
+      }
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: min-content min-content min-content min-content min-content auto;
+    grid-gap: 15px;
+  }
+}
+
+.alphabet-test__title {
+  margin: 0;
+}
+
+.alphabet-test__button-letter {
+  min-width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+
+  @include font(14px, 18px, $font-weight-medium);
+  font-family: inherit;
+  color: $color-blue-ocean;
+
+  background-color: transparent;
+  border: 1px solid $color-telegray-light;
+  border-collapse: collapse;
+
+  @include tablet {
+    min-width: 100%;
+    min-height: 70px;
+  }
+
+  @include desktop {
+    min-width: 60px;
+
+    border-radius: 4px;
+  }
+}
+
+.alphabet-test__countries {
+  display: none;
+
+  margin: 0;
+
+  border: 1px solid $color-telegray-light;
+
+  @include tablet {
+    border: none;
+  }
+
+  &--current {
+    display: block;
+    grid-column: 1/-1;
+    grid-row: 6/7;
+
+    @include tablet {
+      grid-column: -1/-2;
+      grid-row: 1/-1;
+
+      margin-left: 80px;
+    }
+
+    @include desktop {
+      align-self: start;
+      margin-left: 100px;
+    }
+  }
+}
+
+.alphabet-test__country-list {
+  @include reset-list;
+  padding: 20px;
+}
+
+.alphabet-test__country-item {
+  margin-bottom: 5px;
+}
+
+.alphabet-test__button-country {
+  @include font(16px, 22px, $font-weight-normal);
+  font-family: inherit;
+  color: $color-black-bluish;
+
+  background-color: transparent;
+  border: none;
+}

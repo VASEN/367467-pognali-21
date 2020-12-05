@@ -5,49 +5,279 @@
   padding-bottom: 46px;
 }
 
+.travellers__container {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 3fr 285px;
+    grid-column-gap: 85px;
+  }
+}
+
 .travellers__cards-list {
   margin-bottom: 20px;
 }
 
-.travellers__user-card {
-  padding: 15px 0;
+.travellers .travellers__user-card {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: auto;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   border-radius: 20px;
+
+  @include tablet {
+    grid-template-columns: auto 150px auto auto;
+    grid-template-rows: auto auto 60px auto;
+
+    padding: 35px 25px 25px 35px;
+  }
+
+  @include desktop {
+    grid-template-columns: auto min-content 1fr 1fr auto 45px;
+    grid-template-rows: 45px auto auto auto 45px;
+    grid-template-areas:
+      "foto . . . ."
+      "foto user user to-visit to-visit"
+      "foto tags tags to-visit to-visit"
+      "foto button like transport level"
+      "foto . . . .";
+
+    padding: 0;
+  }
 }
 
-.travellers__user-card-wrapper {
-  justify-content: space-between;
-  align-items: start;
+.travellers .user-card__photo {
+  grid-column: 1/2;
 
-  margin-bottom: 15px;
-  padding: 0 20px;
+  margin-left: 18px;
+  margin-right: 16px;
+  margin-bottom: 13px;
+
+  border-radius: 50%;
+
+  @include tablet {
+    grid-row: 1/4;
+
+    min-width: 190px;
+    margin: 0 30px 0 0;
+
+    border-radius: 19px;
+  }
+
+  @include desktop {
+    //grid-row: 1/4;
+    grid-area: foto;
+
+    min-width: 285px;
+
+    border-radius: 20px 0 0 20px;
+  }
 }
 
-.travellers__user {
+.travellers .user-card__like-wrapper {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  align-self: start;
+
+  @include tablet {
+    position: static;
+
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  @include desktop {
+    grid-area: like;
+  }
 }
 
-.travellers__user-wrapper {
-  flex-grow: 1;
+.travellers .user-card__button-like {
+  @include tablet {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.travellers .user-card__followers {
+  margin-left: 5px;
+
+  @include font(14px, 16px, $font-weight-bold);
+  color: $color-blue-sapphire;
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-bold);
+  }
+}
+
+.travellers .travellers__user-wrapper {
+  grid-column: 2/-1;
   align-items: baseline;
 
-  margin-left: 15px;
+  @include tablet {
+    grid-column: 2/4;
+
+    justify-content: start;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    grid-area: user;
+    //margin-top: 45px;
+  }
 }
 
-.travellers__tags-list {
+.travellers .travellers__user {
+  display: flex;
+  flex-direction: column;
+
+  @include font(20px, 20px, $font-weight-bold);
+
+  @include tablet {
+    flex-direction: row;
+
+    margin-right: 22px;
+
+    @include font(30px, 30px, $font-weight-bold);
+  }
+
+  @include desktop {
+    order: 1;
+  }
+}
+
+.travellers .user-card__status {
+  margin-right: 22px;
+}
+
+.travellers .travellers__tags-list {
+  grid-column: 1/-1;
   justify-content: start;
 
-  margin-bottom: 16px;
   padding-left: 25px;
   padding-right: 25px;
+
+  @include tablet {
+    grid-column: 2/4;
+
+    align-items: center;
+
+    margin-right: 115px;
+    margin-bottom: 45px;
+    padding: 0;
+  }
+
+  @include desktop {
+    grid-area: tags;
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 45px;
+    padding-right: 100px;
+  }
 }
 
-.travellers__travel-list {
+.travellers .tags-list__item {
+  @include tablet {
+    @include font(20px, 23px, $font-weight-normal);
+  }
+}
+
+.travellers .travellers__fieldset-tovisit {
+  grid-column: 1/-1;
+
+  @include tablet {
+    grid-column: 1/-1;
+  }
+
+  @include desktop {
+    grid-area: to-visit;
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.travellers__fieldset-tovisit .user-card__legend {
+  @include desktop {
+    display: none;
+  }
+}
+
+.travellers .user-card__to-visit {
+  @include tablet {
+    display: flex;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.travellers .user-card__country-card {
+  @include tablet {
+    margin-right: 25px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.travellers .user-card__country-card-title {
+  color: $color-blue-ocean;
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-bold);
+  }
+}
+
+.travellers .travellers__fieldset-transport {
+  grid-column: 1/3;
+
+  @include tablet {
+    grid-column: 4/5;
+    grid-row: 1/3;
+
+    padding: 0;
+    border: none;
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    grid-area: transport;
+  }
+}
+
+.travellers__fieldset-transport .user-card__legend {
+  display: none;
+}
+
+.travellers .travellers__travel-list {
   justify-content: start;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
-.travellers__travel-list-item {
+.travellers .travellers__travel-list-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,24 +291,118 @@
   border-radius: 50%;
 }
 
-.travellers__level {
+.travellers .travellers__fieldset-level {
+  grid-column: 3/-1;
+
+  padding-top: 20px;
+  padding-bottom: 15px;
+
+  @include tablet {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    align-self: center;
+
+    padding: 0;
+
+    border: none;
+  }
+
+  @include desktop {
+    grid-area: level;
+    //grid-column: 5/6;
+    //grid-row: 3/4;
+  }
+}
+
+.travellers__fieldset-level .user-card__legend {
+  @include tablet {
+    display: none;
+  }
+}
+
+.travellers .travellers__level {
   width: 45px;
   height: 45px;
 
   background-color: $color-white;
+
+  @include tablet {
+    align-items: center;
+  }
 }
 
-.travellers__level-number {
+.travellers .travellers__level-number {
   border: none;
+
+  @include tablet {
+    border-bottom: 1px solid rgba($color-black, 0.1);
+  }
 }
 
-.travellers__level-text {
+.travellers .travellers__level-text {
   display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.travellers__button-round {
+  grid-column: 1/-1;
+
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @include tablet {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-items: center;
+    align-self: start;
+
+    min-width: 150px;
+    min-height: 50px;
+    margin: 0;
+    padding: 0;
+
+    font-weight: $font-weight-bold;
+  }
+
+  @include desktop {
+    grid-area: button;
+    margin-left: 20px;
+  }
 }
 
 .travellers__button {
   display: flex;
   align-items: center;
 
+  margin-top: 20px;
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-top: 45px;
+    margin-bottom: 50px;
+
+    @include font(20px, 20px, $font-weight-bold);
+  }
+}
+
+.travellers .cross {
+  &::before {
+    transform: rotate(90deg);
+  }
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+
+    &::before,
+    &::after {
+      left: 11px;
+
+      height: 24px;
+    }
+  }
 }

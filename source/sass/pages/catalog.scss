@@ -1,7 +1,7 @@
 @import "source/sass/common/variables";
 @import "source/sass/common/mixins";
 
-.form-page .header {
+.catalog-page .header {
   background-color: $color-cobalt-blue;
 
   &--closed {
@@ -13,7 +13,7 @@
   }
 }
 
-.form-page .header__menu {
+.catalog-page .header__menu {
   background-color: $color-cobalt-blue;
 
   &--closed {
@@ -41,7 +41,19 @@
   }
 }
 
-.form-page .footer {
+.catalog-page__sort {
+  @include desktop {
+    order: 1;
+  }
+}
+
+.catalog-page__pagination {
+  @include desktop {
+    order: 2;
+  }
+}
+
+.catalog-page .footer {
   position: relative;
 
   z-index: 4;

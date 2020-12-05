@@ -2,7 +2,12 @@
 @import "source/sass/common/mixins";
 
 .sort__container {
-  padding: 20px 25px;
+  padding: 20px 0;
+
+  @include desktop {
+    min-width: auto;
+    padding: 0;
+  }
 }
 
 .sort__wrapper {
@@ -10,15 +15,154 @@
 
   background-color: $color-yellow-sunrise;
   border-radius: 20px;
+
+  @include tablet {
+    padding: 35px;
+  }
+
+  @include desktop {
+    padding: 45px;
+  }
 }
 
 .sort__title {
   @include font(22px, 22px, $font-weight-bold);
   color: $color-blue-ocean;
+
+  @include tablet {
+    @include font(30px, 30px, $font-weight-bold);
+  }
+}
+
+.sort__area-wrapper {
+  @include tablet {
+    margin-bottom: 35px;
+    padding-top: 20px;
+    padding-bottom: 35px;
+
+    border-top: 1px solid $color-yellow-saffron-light;
+    border-bottom: 1px solid $color-yellow-saffron-light;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border: none;
+  }
+}
+
+.sort__area .sort__list {
+  display: none;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.sort__area .sort__travel-list {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: start;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.sort__area .sort__level-range {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.sort__area .level-range__range-wrapper {
+  display: none;
+
+  @include tablet {
+    display: block;
+
+    padding-right: 60px;
+  }
+
+  @include desktop {
+    display: none;
+
+    padding-right: 0;
+  }
 }
 
 .sort__area {
   border-top: 1px solid $color-yellow-saffron-light;
+
+  &--show .sort__list {
+    display: block;
+  }
+
+  &--show .sort__travel-list {
+    display: flex;
+
+    @include desktop {
+      justify-content: center;
+    }
+  }
+
+  &--show .sort__level-range,
+  &--show .level-range__range-wrapper {
+    display: block;
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+
+    border: none;
+  }
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.sort__area-range {
+  @include tablet {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+.sort__level-range {
+  @include tablet {
+    order: 1;
+  }
+}
+
+.sort__area-toggle {
+  @include tablet {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include font(20px, 20px, $font-weight-medium);
+  }
+
+  @include desktop {
+    @include font(20px, 22px, $font-weight-medium);
+  }
 }
 
 .sort__list {
@@ -30,11 +174,26 @@
 
   &:last-child {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
   }
 }
 
 .sort__item label {
   display: flex;
+  align-items: center;
+
+  @include font(20px, 20px, $font-weight-normal);
 
   &::before {
     content: "";
@@ -44,6 +203,11 @@
     margin-right: 10px;
 
     background-color: tomato;
+
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
@@ -51,6 +215,12 @@
   justify-content: start;
 
   padding-bottom: 20px;
+}
+
+.sort .travel-list__item {
+  @include tablet {
+    margin-right: 0;
+  }
 }
 
 .travel-list__item label {
@@ -61,10 +231,34 @@
 
   background-color: $color-white;
   border-radius: 50%;
+
+  @include tablet {
+    width: 44px;
+    height: 44px;
+  }
 }
 
-.sort__button {
+.sort .button-round {
   @include font(17px, 17px, $font-weight-bold);
 
   background-color: $color-white;
+
+  @include tablet {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    @include font(20px, 20px, $font-weight-bold);
+  }
+}
+
+.sort__rectangle {
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: block;
+  }
 }
