@@ -10,11 +10,4 @@
 .contacts__email {
   display: flex;
   align-items: center;
-
-  &::before {
-    content: "";
-
-    background-color: $color-blue-dark;
-    border-radius: 50%;
-  }
 }

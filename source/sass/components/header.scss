@@ -67,10 +67,6 @@
 
     z-index: 1;
 
-    @media (min-width: 321px) {
-      display: none;
-    }
-
     @include tablet {
       position: static;
       display: block;
@@ -97,7 +93,8 @@
     display: flex;
     z-index: 1;
 
-    @media (min-width: 321px) {
+
+    @include tablet {
       display: none;
     }
 
@@ -293,6 +290,26 @@
       background-color: $color-orange;
     }
   }
+}
+
+.header__telephone-image,
+.header__mail-image {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-phone {
+  &:hover circle {
+    fill: tomato;
+  }
+}
+
+.icon-phone__circle {
+  fill: $color-orange;
+}
+
+.icon-mail__circle {
+  fill: $color-yellow-saffron;
 }
 
 .header .social {

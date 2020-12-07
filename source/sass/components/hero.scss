@@ -6,11 +6,27 @@
 
   color: $color-white;
 
+  background-image: url("../../img/hero-bg-mobile@1x.jpg");
   background-color: $color-blue-sapphire;
+  background-repeat: no-repeat;
+  background-position: center -73px;
+  background-size: 320px;
 
   @include tablet {
     padding-bottom: 95px;
   }
+
+
+  //
+  //@media (min-resolution: 2dppx) {
+  //  background-image: url("../../img/hero-bg-mobile@2x.jpg");
+  //}
+  //
+  //@include tablet {
+  //  background-image: url("../../img/hero-bg-tablet@1x.jpg");
+  //  background-repeat: no-repeat;
+  //  background-position: center;
+  //}
 }
 
 .hero__container {
@@ -58,12 +74,14 @@
 }
 
 .hero__image {
+  margin-left: 55px;
+
   @include tablet {
     align-self: end;
 
     width: 372px;
     height: 451px;
-    padding-right: 70px;
+    margin-left: 245px;
   }
 
   @include desktop {
@@ -73,6 +91,7 @@
     width: 431px;
     height: 640px;
     padding: 0;
+    margin-left: 0;
 
     z-index: 0;
   }

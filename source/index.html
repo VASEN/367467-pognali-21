@@ -12,7 +12,11 @@
     <div class="container header__container ">
       <div class="header__menu header__menu--closed">
         <a class="header__logo-link logo-link">
-          <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип туристического сервиса Погнали">
+          </picture>
         </a>
         <button class="header__menu-toggle header__menu-toggle--closed" type="button" aria-label="Открыть меню"></button>
         <nav class="header__navigation header-navigation">
@@ -32,8 +36,18 @@
           <a class="button-round" href="#">Авторизация</a>
         </div>
         <div class="header__contacts contacts">
-          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!"><span class="header__telephone--full">8 800 555-86-28</span></a>
-          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"><span class="header__email--full">mail@htmlacademy.ru</span></a>
+          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
+            <svg class="header__telephone-image" viewBox="0 0 40 40">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            <span class="header__telephone--full">8 800 555-86-28</span>
+          </a>
+          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
+            <svg class="header__mail-image" viewBox="0 0 40 40">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            <span class="header__email--full">mail@htmlacademy.ru</span>
+          </a>
         </div>
         <div class="header__social social">
           <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
@@ -48,15 +62,14 @@
       <div class="container hero__container">
         <h1 class="visually-hidden">Главная страница туристического сервиса "Погнали"</h1>
         <div class="hero__wrapper">
-          <p class="hero__title">В путешествие с крутыми попутчиками!</p>
-          <img class="hero__image" src="https://via.placeholder.com/192x255" width="192" height="255" alt="Путешественник с чемоданом">
-<!--          <div class="hero__navigation">-->
-<!--            <div class="hero__contacts contacts">-->
-<!--              <a class="contacts__telephone hero__phone" href="tel:88005558628" aria-label="Позвоните нам!"></a>-->
-<!--              <a class="contacts__email hero__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"></a>-->
-<!--              <a class="hero__button-round button-round" href="#">Авторизация</a>-->
-<!--            </div>-->
-<!--          </div>-->
+          <div class="hero__bg-wrapper">
+            <p class="hero__title">В путешествие с крутыми попутчиками!</p>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/hero-desktop@1x.png 1x, img/hero-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/hero-tablet@1x.png 1x, img/hero-tablet@2x.png 2x">
+              <img class="hero__image" src="img/hero-mobile@1x.png" srcset="img/hero-mobile@2x.png 2x" alt="Путешественник с чемоданом">
+            </picture>
+          </div>
           <blockquote class="hero__quote hero-quote">
             <p class="hero-quote__text">
               «Лучшее приложение,<br>
@@ -118,8 +131,14 @@
         <div class="directions__cards cards">
           <ul class="cards__list">
             <li class="cards__item country-card">
-              <img class="country-card__photo" src="img/thailand-mobile-1.png" width="270" height="110" alt="Фотография Таиланда">
-              <img class="country-card__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
+              <picture>
+                <source media="(min-width: 425px)" srcset="img/thailand-desktop@1x.png 1x, img/thailand-desktop@2x.png 2x">
+                <img class="country-card__photo" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Фотография Таиланда">
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/thailand-size-L@1x.png 1x, img/thailand-size-L@2x.png 2x">
+                <img class="country-card__flag" src="img/thailand-size-S@1x.png" srcset="img/thailand-size-S@2x.png 2x"  alt="Флаг Таиланда">
+              </picture>
               <div class="country-card__wrapper">
                 <div class="country-card__wrapper-text">
                   <h3 class="country-card__title">Таиланд</h3>
