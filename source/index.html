@@ -10,15 +10,20 @@
 <body class="page__body">
   <header class="page__header header">
     <div class="container header__container ">
-      <div class="header__menu header__menu--closed">
-        <a class="header__logo-link logo-link">
+      <div class="header__menu">
+        <a class="header__logo-link">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип туристического сервиса Погнали">
+            <source media="(min-width: 1439px)" srcset="img/logo-desktop-white@2x.png">
+            <source media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.png">
+            <img class="header__logo-image" src="img/logo-mobile-white@2x.png" alt="Логотип туристического сервиса Погнали">
+          </picture>
+          <picture>
+            <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
+            <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
+            <img class="header__logo-image--blue" src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
           </picture>
         </a>
-        <button class="header__menu-toggle header__menu-toggle--closed" type="button" aria-label="Открыть меню"></button>
+        <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
         <nav class="header__navigation header-navigation">
           <ul class="header-navigation__list">
             <li class="header-navigation__item">
@@ -33,41 +38,53 @@
           </ul>
         </nav>
         <div class="header__user-navigation">
-          <a class="button-round" href="#">Авторизация</a>
+          <a class="button-round header__user-navigation-button" href="#">Авторизация</a>
         </div>
         <div class="header__contacts contacts">
           <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
-            <svg class="header__telephone-image" viewBox="0 0 40 40">
+            <svg class="header__telephone-image" viewBox="0 0 45 45">
               <use xlink:href="img/sprite.svg#icon-phone"></use>
             </svg>
             <span class="header__telephone--full">8 800 555-86-28</span>
           </a>
           <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
-            <svg class="header__mail-image" viewBox="0 0 40 40">
+            <svg class="header__mail-image" viewBox="0 0 45 45">
               <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
             <span class="header__email--full">mail@htmlacademy.ru</span>
           </a>
         </div>
-        <div class="header__social social">
-          <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
-          <a class="social__link social__link--vk" aria-label="Погнали Вконтакте" href="#"></a>
-          <a class="social__link social__link--insta" aria-label="Погнали в Instagram" href="#"></a>
+        <div class="header__social">
+          <a class="header__social-link header__social-link--fb" aria-label="Погнали в Facebook" href="#">
+            <svg viewBox="0 0 14 28">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+          <a class="header__social-link header__social-link--vk" aria-label="Погнали Вконтакте" href="#">
+            <svg viewBox="0 0 31 16">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
+          <a class="header__social-link header__social-link--insta" aria-label="Погнали в Instagram" href="#">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="img/sprite.svg#icon-inst"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </header>
   <main class="page__main">
     <section class="hero">
-      <div class="container hero__container">
+      <div class="hero__container">
         <h1 class="visually-hidden">Главная страница туристического сервиса "Погнали"</h1>
         <div class="hero__wrapper">
           <div class="hero__bg-wrapper">
-            <p class="hero__title">В путешествие с крутыми попутчиками!</p>
+            <p class="hero__title">В путешествие <br>с крутыми <br>попутчиками!</p>
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/hero-desktop@1x.png 1x, img/hero-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/hero-tablet@1x.png 1x, img/hero-tablet@2x.png 2x">
-              <img class="hero__image" src="img/hero-mobile@1x.png" srcset="img/hero-mobile@2x.png 2x" alt="Путешественник с чемоданом">
+              <source media="(min-width: 1440px)" srcset="img/hero-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/hero-tablet@1x.png">
+              <img class="hero__image" src="img/hero-mobile@1x.png" alt="Путешественник с чемоданом">
             </picture>
           </div>
           <blockquote class="hero__quote hero-quote">
