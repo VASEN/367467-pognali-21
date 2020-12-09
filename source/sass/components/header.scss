@@ -2,6 +2,7 @@
 @import "../common/mixins";
 
 .header {
+  position: relative;
   color: $color-white;
 
   background-color: $color-blue-sapphire;
@@ -24,9 +25,15 @@
 }
 
 .header__menu {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 73px;
+  grid-template-areas:
+    "logo toggle"
+    "menu-nav menu-nav"
+    "items-wr items-wr"
+    "social social";
   align-items: center;
 
   padding-bottom: 0;
@@ -42,14 +49,46 @@
   }
 
   &--opened {
-    background-color: $color-white;
-
     padding-bottom: 90px;
+
+    background-color: $color-white;
 
     @include desktop {
       background-color: $color-blue-cobalt;
     }
   }
+
+  &--opened .header-navigation {
+    display: block;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &--opened .header__menu-items-wrapper {
+    position: static;
+    grid-area: items-wr;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "user-nav"
+      "contacts";
+  }
+
+  &--opened .header__user-navigation {
+    grid-area: user-nav;
+    order: 0;
+
+    display: flex;
+    min-height: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.header__logo-link {
+  grid-area: logo;
 
   &--opened .header__logo-image {
     display: none;
@@ -64,46 +103,6 @@
       @include desktop {
         display: none;
       }
-    }
-  }
-
-  &--opened .header-navigation {
-    display: block;
-
-    @include desktop {
-      display: flex;
-    }
-  }
-
-  &--opened .header__user-navigation {
-    display: flex;
-  }
-
-  &--opened .header__contacts {
-    grid-column: 1/-1;
-
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 40px;
-
-    @include desktop {
-      flex-direction: row;
-      margin: 0 0 0 auto;
-    }
-
-    &--full {
-      display: inline;
-    }
-  }
-
-  &--opened .header__social {
-    grid-column: 1/-1;
-
-    display: flex;
-
-    @include desktop {
-      display: none;
     }
   }
 }
@@ -129,6 +128,8 @@
     width: 96px;
     height: 15px;
 
+    cursor: pointer;
+
     @include tablet {
       width: 166px;
       height: 42px;
@@ -143,6 +144,7 @@
 
 .header__menu-toggle {
   position: relative;
+  grid-area: toggle;
 
   width: 25px;
   height: 25px;
@@ -202,10 +204,20 @@
   }
 }
 
-.header__user-navigation {
-  grid-column: 1/-1;
+.header__menu-items-wrapper {
+  position: absolute;
+  top: 457px;
 
-  display: none;
+  display: grid;
+  grid-auto-columns: min-content auto;
+  grid-template-areas: "contacts nav";
+
+  min-width: 100%;
+  z-index: 1;
+}
+
+.header__user-navigation {
+  grid-area: nav;
 
   @include tablet {
     grid-column: 3/-1;
@@ -226,8 +238,6 @@
 .header__user-navigation-button {
   align-items: center;
 
-  margin-bottom: 50px;
-
   @include tablet {
     margin: 0;
 
@@ -236,10 +246,52 @@
 }
 
 .header__contacts {
-  display: none;
+  grid-area: contacts;
+  display: flex;
 
   @include font(16px, 18px, $font-weight-bold);
   text-transform: uppercase;
+
+  &--opened {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+
+    @include desktop {
+      flex-direction: row;
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &--opened .header__telephone,
+  &--opened .header__email {
+    &--full {
+      display: inline;
+    }
+  }
+
+  &--opened .header__telephone-image-wrapper,
+  &--opened .header__email-image-wrapper {
+    width: 45px;
+    height: 45px;
+
+    background-color: $color-blue-dark;
+  }
+
+  &--opened .header__telephone-image {
+    display: none;
+
+    &--opened {
+      width: 18px;
+      height: 18px;
+      fill: $color-yellow-sunrise;
+    }
+  }
+
+  &--opened .header__mail-image {
+    fill: $color-yellow-sunrise;
+  }
 
   @include tablet {
     order: 3;
@@ -268,6 +320,7 @@
   }
 
   &--full {
+    display: none;
     margin-left: 15px;
 
     @include desktop {
@@ -296,10 +349,32 @@
   }
 }
 
+.header__telephone-image-wrapper,
+.header__email-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.header__telephone-image-wrapper {
+  background-color: $color-orange;
+}
+
+.header__email-image-wrapper {
+  background-color: $color-yellow-saffron;
+}
+
 .header__telephone-image,
 .header__mail-image {
-  width: 45px;
-  height: 45px;
+  width: 18px;
+  height: 18px;
+
+  fill: $color-blue-sapphire;
 
   @include tablet {
     width: 68px;
@@ -316,6 +391,16 @@
   display: none;
   flex-wrap: wrap;
   justify-content: center;
+
+  &--opened {
+    grid-column: 1/-1;
+
+    display: flex;
+
+    @include desktop {
+      display: none;
+    }
+  }
 
   @include tablet {
     order: 4;

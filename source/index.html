@@ -37,22 +37,32 @@
             </li>
           </ul>
         </nav>
-        <div class="header__user-navigation">
-          <a class="button-round header__user-navigation-button" href="#">Авторизация</a>
-        </div>
-        <div class="header__contacts contacts">
-          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
-            <svg class="header__telephone-image" viewBox="0 0 45 45">
-              <use xlink:href="img/sprite.svg#icon-phone"></use>
-            </svg>
-            <span class="header__telephone--full">8 800 555-86-28</span>
-          </a>
-          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
-            <svg class="header__mail-image" viewBox="0 0 45 45">
-              <use xlink:href="img/sprite.svg#icon-mail"></use>
-            </svg>
-            <span class="header__email--full">mail@htmlacademy.ru</span>
-          </a>
+        <div class="header__menu-items-wrapper">
+          <div class="header__user-navigation">
+            <a class="button-round header__user-navigation-button" href="#">Авторизация</a>
+          </div>
+          <div class="header__contacts">
+            <a class="header__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
+              <span class="header__telephone-image-wrapper">
+                <svg class="header__telephone-image" viewBox="0 0 18 18">
+                  <use xlink:href="img/sprite.svg#icon-call"></use>
+                </svg>
+  <!--              svg при открытом меню-->
+                <svg class="header__telephone-image--opened" viewBox="0 0 19 17">
+                  <use xlink:href="img/sprite.svg#icon-telephone"></use>
+                </svg>
+              </span>
+              <span class="header__telephone--full">8 800 555-86-28</span>
+            </a>
+            <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
+              <span class="header__email-image-wrapper">
+                <svg class="header__mail-image" viewBox="0 0 45 45">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </span>
+              <span class="header__email--full">mail@htmlacademy.ru</span>
+            </a>
+          </div>
         </div>
         <div class="header__social">
           <a class="header__social-link header__social-link--fb" aria-label="Погнали в Facebook" href="#">
