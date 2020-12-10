@@ -12,7 +12,7 @@
   }
 
   @include desktop {
-    background-color: $color-blue-cobalt;
+    background-color: $color-blue-sapphire;
   }
 
   &--opened {
@@ -37,21 +37,42 @@
   align-items: center;
 
   padding-bottom: 0;
+  box-sizing: border-box;
 
   @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 132px;
+
+    grid-template-areas:
+      "logo toggle user-nav"
+      "menu-nav menu-nav menu-nav"
+      "contacts contacts contacts"
+      "social social social";
   }
 
   @include desktop {
     display: flex;
     min-height: 100px;
+
+    background-color: $color-blue-sapphire;
   }
 
   &--opened {
-    padding-bottom: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 10;
 
     background-color: $color-white;
+
+    @include tablet {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
 
     @include desktop {
       background-color: $color-blue-cobalt;
@@ -69,12 +90,17 @@
   &--opened .header__menu-items-wrapper {
     position: static;
     grid-area: items-wr;
+    align-self: start;
 
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
       "user-nav"
       "contacts";
+
+    //@include tablet {
+    //
+    //}
   }
 
   &--opened .header__user-navigation {
@@ -84,6 +110,13 @@
     display: flex;
     min-height: 50px;
     margin-bottom: 50px;
+
+    @include tablet {
+      grid-column: 3/-1;
+      grid-row: 1/2;
+
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -214,6 +247,11 @@
 
   min-width: 100%;
   z-index: 1;
+
+  @include tablet {
+    position: static;
+    display: contents;
+  }
 }
 
 .header__user-navigation {
@@ -238,6 +276,15 @@
 .header__user-navigation-button {
   align-items: center;
 
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-saffron;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
+
   @include tablet {
     margin: 0;
 
@@ -252,11 +299,32 @@
   @include font(16px, 18px, $font-weight-bold);
   text-transform: uppercase;
 
+  @include tablet {
+    display: none;
+    order: 3;
+    padding-left: 60px;
+    padding-bottom: 130px;
+  }
+
+  @include desktop {
+    order: 3;
+    display: flex;
+
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+
   &--opened {
     display: flex;
     flex-direction: column;
 
     margin-bottom: 40px;
+
+    @include tablet {
+      display: flex;
+
+      grid-area: contacts;
+    }
 
     @include desktop {
       flex-direction: row;
@@ -269,6 +337,13 @@
     &--full {
       display: inline;
     }
+
+    &:hover .header__telephone-image-wrapper,
+    &:focus .header__telephone-image-wrapper,
+    &:hover .header__email-image-wrapper,
+    &:focus .header__email-image-wrapper {
+      background-color: $color-blue-dark;
+    }
   }
 
   &--opened .header__telephone-image-wrapper,
@@ -277,6 +352,11 @@
     height: 45px;
 
     background-color: $color-blue-dark;
+
+    @include tablet {
+      width: 68px;
+      height: 68px;
+    }
   }
 
   &--opened .header__telephone-image {
@@ -286,25 +366,21 @@
       width: 18px;
       height: 18px;
       fill: $color-yellow-sunrise;
+
+      @include tablet {
+        width: 23px;
+        height: 23px;
+      }
     }
   }
 
   &--opened .header__mail-image {
     fill: $color-yellow-sunrise;
-  }
 
-  @include tablet {
-    order: 3;
-    padding-left: 60px;
-    padding-bottom: 130px;
-  }
-
-  @include desktop {
-    order: 3;
-    display: flex;
-
-    margin: 0 0 0 auto;
-    padding: 0;
+    @include tablet {
+      width: 28px;
+      height: 19px;
+    }
   }
 }
 
@@ -327,25 +403,27 @@
       display: none;
     }
   }
+}
 
-  &::before {
-    width: 45px;
-    height: 45px;
-    margin-right: 16px;
+.header__telephone {
+  &:hover .header__telephone-image-wrapper,
+  &:focus .header__telephone-image-wrapper {
+    background-color: $color-orange-hover;
+  }
 
-    @include tablet {
-      width: 68px;
-      height: 68px;
+  &:active .header__telephone-image {
+    opacity: 0.3;
+  }
+}
 
-      margin-right: 25px;
-    }
+.header__email {
+  &:hover .header__email-image-wrapper,
+  &:focus .header__email-image-wrapper {
+    background-color: $color-orange;
+  }
 
-    @include desktop {
-      width: 50px;
-      height: 50px;
-
-      margin-right: 0;
-    }
+  &:active .header__mail-image {
+    opacity: 0.3;
   }
 }
 
@@ -359,6 +437,11 @@
   height: 40px;
 
   border-radius: 50%;
+
+  @include desktop {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .header__telephone-image-wrapper {
@@ -376,14 +459,9 @@
 
   fill: $color-blue-sapphire;
 
-  @include tablet {
-    width: 68px;
-    height: 68px;
-  }
-
   @include desktop {
-    width: 50px;
-    height: 50px;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -396,9 +474,21 @@
     grid-column: 1/-1;
 
     display: flex;
+    margin-bottom: 40px;
 
     @include desktop {
       display: none;
+    }
+  }
+
+  &--opened .header__social-link {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 

@@ -2,7 +2,9 @@
 @import "../common/mixins";
 
 .hero {
+  position: relative;
   padding-bottom: 39px;
+  z-index: 7;
 
   color: $color-white;
 
@@ -13,19 +15,30 @@
 
     background-color: $color-cobalt-blue;
   }
+
+  @include desktop {
+    min-height: 640px;
+    padding-bottom: 0;
+
+    background-color: $color-blue-sapphire;
+    background-image: url("../../img/hero-bg-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position-y: -110px;
+    background-size: cover;
+    border-radius: 0 0 50px 50px;
+  }
 }
 
 .hero__container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-  @include desktop {
-    padding-bottom: 125px;
-  }
+  padding: 0;
 }
 
 .hero__wrapper {
+  position: relative;
+
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
@@ -42,7 +55,23 @@
   background-position: center bottom;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/hero-bg-mobile@2x.jpg");
+  }
+
   @include tablet {
+    background-image: url("../../img/hero-bg-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 200px;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/hero-bg-tablet@2x.jpg");
+    }
+  }
+
+  @include desktop {
+    //background-image: url("../../img/hero-bg-desktop@1x.jpg");
     background-image: none;
   }
 }
@@ -75,6 +104,11 @@
 .hero__bg-wrapper picture {
   margin-left: auto;
   margin-right: 23px;
+  margin-bottom: -5px;
+
+  @include tablet {
+    margin-right: 110px;
+  }
 }
 
 .hero__image {
@@ -84,60 +118,54 @@
     width: 372px;
     height: 451px;
     margin-left: 245px;
+    margin-bottom: 140px;
   }
 
   @include desktop {
     position: absolute;
+    top: 0;
     left: 546px;
 
     width: 431px;
     height: 640px;
     padding: 0;
     margin-left: 0;
+    margin-bottom: 0;
 
     z-index: 0;
   }
 }
 
-.hero__contacts {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.hero__phone {
-  &::before {
-    width: 40px;
-    height: 40px;
-    margin-right: 0;
-
-    background-color: $color-orange;
-    border-radius: 20px;
-  }
-}
-
-.hero__email {
-  &::before {
-    width: 40px;
-    height: 40px;
-    margin-right: 0;
-
-    background-color: $color-yellow-saffron;
-    border-radius: 20px;
-  }
-}
-
 .hero-quote {
+  position: static;
+
   @include tablet {
     position: absolute;
-    bottom: 210px;
+    left: 40px;
+    bottom: 350px;
 
     padding-left: 30px;
   }
 
   @include desktop {
-    position: static;
+    position: absolute;
+    top: 0;
+    right: 23px;
+    left: auto;
 
     padding: 110px 25px 115px 60px;
+  }
+}
+
+.hero-quote__br {
+  &--mobile {
+    @media (min-width: 415px) {
+      display: none;
+    }
+
+    @include tablet {
+      display: inline;
+    }
   }
 }
 

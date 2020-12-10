@@ -77,7 +77,47 @@
   }
 
   @include desktop {
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 0 4px;
+
     @include font(20px, 20px, $font-weight-medium);
     color: $color-white;
+
+    &:hover span,
+    &:focus span {
+      color: $color-yellow-sunrise;
+
+      transform: translateY(-100%);
+    }
+
+    &:active {
+      color: $color-yellow-sunrise;
+      opacity: 0.3;
+    }
   }
 }
+
+.header-navigation__link span {
+  @include desktop {
+    position: relative;
+    display: inline-block;
+
+    transition: transform 0.3s;
+
+    &::before {
+      content: attr(data-hover);
+
+      position: absolute;
+      top: 100%;
+
+      box-sizing: border-box;
+
+      font-weight: $font-weight-bold;
+
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+

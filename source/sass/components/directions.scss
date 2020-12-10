@@ -25,6 +25,10 @@
   @include tablet {
     @include container($width-tablet, 75px);
     padding-bottom: 80px;
+
+    background-image: url("../../img/directions-bg@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 80px) 80px;
   }
 
   @include desktop {
@@ -80,100 +84,7 @@
   }
 }
 
-.directions .cards__list {
-  @media (min-width: 425px) {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-}
-
-.directions .country-card {
-  @media (min-width: 425px) {
-    display: grid;
-    grid-template-columns: auto 186px;
-
-    min-width: 100%;
-    max-width: 616px;
-  }
-
-  @include tablet {
-    min-width: 616px;
-  }
-
-  @include desktop {
-    max-width: 560px;
-    min-width: 560px;
-  }
-}
-
-.directions__cards .country-card__photo {
-  @media (min-width: 400px) {
-    order: 1;
-    object-fit: cover;
-
-    border-radius: 0 20px 20px 0;
-  }
-
-  @include tablet {
-    max-width: 186px;
-  }
-}
-
-.directions .country-card__flag {
-  @media (min-width: 400px) {
-    min-width: 70px;
-    top: 17px;
-    left: auto;
-    right: 150px;
-
-    border-radius: 5px;
-  }
-}
-
-.directions__cards .country-card__wrapper {
-  @media (min-width: 425px) {
-    top: auto;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-
-    min-width: 100%;
-    min-height: 140px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    border-radius: 20px 0 0 20px;
-  }
-}
-
-.directions .country-card__title {
-  @include tablet {
-    margin-bottom: 5px;
-
-    @include font(24px, 24px, $font-weight-bold);
-  }
-}
-
-.directions .country-card__promo {
-  @include tablet {
-    @include font(20px, 20px, $font-weight-medium);
-  }
-}
-
-.directions .country-card__stats {
-  @include tablet {
-    font-size: 20px;
-  }
-}
-
 .directions .button-rect {
-  max-width: 270px;
-
-  @media (min-width: 425px) {
-    max-width: 618px;
-  }
-
   @include tablet {
     @include font(24px, 24px, $font-weight-bold);
   }
