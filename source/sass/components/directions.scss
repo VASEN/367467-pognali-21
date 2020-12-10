@@ -12,6 +12,12 @@
 
   background-color: $color-white-smoky;
   border-radius: 0 0 25px 25px;
+
+  @include tablet {
+    margin-top: -50px;
+
+    border-radius: 0 0 50px 50px;
+  }
 }
 
 .directions__container {
@@ -24,11 +30,12 @@
 
   @include tablet {
     @include container($width-tablet, 75px);
+    padding-top: 120px;
     padding-bottom: 80px;
 
-    background-image: url("../../img/directions-bg@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: calc(100% - 80px) 80px;
+    background-image: url("../../img/directions-bg-flags@1x.png"), url("../../img/directions-bg-rect@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(100% - 40px) 130px, 40px 450px;
   }
 
   @include desktop {
@@ -37,12 +44,20 @@
     grid-template-rows: 1fr min-content;
     grid-column-gap: 170px;
 
-    @include container($width-desktop, 130px);
+    @include container($width-desktop, 60px);
+    padding-top: 140px;
+    padding-bottom: 90px;
+
+    background-position: calc(100% - 60px) 140px, 70px 140px;
   }
 }
 
 .directions__wrapper {
   padding: 0 30px 60px 24px;
+
+  @include tablet {
+    padding-bottom: 104px;
+  }
 
   @include desktop {
     order: 1;
@@ -50,6 +65,7 @@
     grid-row: 1/2;
 
     padding: 0;
+    padding-top: 70px;
   }
 }
 
@@ -72,15 +88,25 @@
   @include tablet {
     @include font(28px, 33px, $font-weight-light);
   }
+
+  @include desktop {
+    margin-bottom: 100px;
+  }
 }
 
 .directions__cards {
   margin-bottom: 25px;
 
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
   @include desktop {
     grid-row: 1/-1;
 
     margin-bottom: 0;
+    padding-top: 70px;
+    padding-left: 70px;
   }
 }
 
@@ -92,6 +118,7 @@
   @include desktop {
     max-width: 280px;
     min-height: 80px;
+    margin-bottom: 50px;
 
     border-radius: 20px;
   }
