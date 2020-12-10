@@ -11,6 +11,17 @@
   line-height: 10px;
 }
 
+.travel-list__image {
+  width: 24px;
+  height: 24px;
+
+  opacity: 0.15;
+
+  &--checked {
+    opacity: 1;
+  }
+}
+
 .travel-list__item {
   margin-right: 9px;
 

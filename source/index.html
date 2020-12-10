@@ -149,7 +149,9 @@
           <p class="about-us__text about-us__text--bold">
             А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
           </p>
-          <a class="button-rect">Подробнее</a>
+          <a class="button-rect" href="#">
+            <span>Подробнее</span>
+          </a>
         </div>
       </div>
     </section>
@@ -181,7 +183,12 @@
                   <h3 class="country-card__title">Таиланд</h3>
                   <p class="country-card__promo">Джунгли зовут!</p>
                 </div>
-                <span class="country-card__stats">18321</span>
+                <span class="country-card__stats">
+                  <svg viewBox="0 0 14 14">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                  18321
+                </span>
               </div>
             </li>
             <li class="cards__item country-card">
@@ -198,7 +205,12 @@
                   <h3 class="country-card__title">Франция</h3>
                   <p class="country-card__promo">Трэ бьен, манифик!</p>
                 </div>
-                <span class="country-card__stats">12518</span>
+                <span class="country-card__stats">
+                  <svg viewBox="0 0 14 14">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                  12518
+                </span>
               </div>
             </li>
             <li class="cards__item country-card">
@@ -215,12 +227,19 @@
                   <h3 class="country-card__title">Чехия</h3>
                   <p class="country-card__promo">Закоулки старой Европы</p>
                 </div>
-                <span class="country-card__stats">5236</span>
+                <span class="country-card__stats">
+                  <svg viewBox="0 0 14 14">
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                  </svg>
+                  5236
+                </span>
               </div>
             </li>
           </ul>
         </div>
-        <a class="button-rect" href="form.html">Показать все</a>
+        <a class="button-rect" href="form.html">
+          <span>Показать все</span>
+        </a>
       </div>
     </section>
     <section class="companions" id="companions">
@@ -241,11 +260,11 @@
                 <span class="level__number">99</span>
                 <span class="level__text">level</span>
               </div>
-              <img class="user-card__photo companions__photo" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
+              <img class="user-card__photo companions__photo" src="img/firsova-index-size-285@1x.png" alt="Таня Фирсова">
               <div class="user-card__visited-countries">
-                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Шри Ланки">
-                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Таиланда">
-                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Сейшел">
+                <img class="user-card__country-flag" src="img/srilanka-size-S@1x.png" alt="Флаг Шри Ланки">
+                <img class="user-card__country-flag" src="img/thailand-size-S@1x.png" alt="Флаг Таиланда">
+                <img class="user-card__country-flag" src="img/seychelles-size-S@1x.png" width="35" height="25" alt="Флаг Сейшел">
               </div>
               <div class="user-card__wrapper">
                 <span class="user-card__status user-card__status--offline"></span>
@@ -273,16 +292,24 @@
               </ul>
               <ul class="user-card__travel-list travel-list">
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--plane travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Самолетом">
+                  <svg class="travel-list__image travel-list__image--plane travel-list__image--checked">
+                    <use xlink:href="img/sprite.svg#icon-plane"></use>
+                  </svg>
                 </li>
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--bus" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На автобусе">
+                  <svg class="travel-list__image travel-list__image--bus">
+                    <use xlink:href="img/sprite.svg#icon-bus"></use>
+                  </svg>
                 </li>
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--circle" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На велосипеде">
+                  <svg class="travel-list__image travel-list__image--circle">
+                    <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                  </svg>
                 </li>
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--walk" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Пешком">
+                  <svg class="travel-list__image travel-list__image--walk">
+                    <use xlink:href="img/sprite.svg#icon-run"></use>
+                  </svg>
                 </li>
               </ul>
             </li>
@@ -291,10 +318,10 @@
                 <span class="level__number">80</span>
                 <span class="level__text">level</span>
               </div>
-              <img class="user-card__photo companions__photo" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
+              <img class="user-card__photo companions__photo" src="img/demin-index-size-285@1x.png" alt="Петя Демин">
               <div class="user-card__visited-countries">
-                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Бельгии">
-                <img class="user-card__country-flag" src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Чехии">
+                <img class="user-card__country-flag" src="img/belgium-size-S@1x.png" alt="Флаг Бельгии">
+                <img class="user-card__country-flag" src="img/czech-size-S@1x.png" alt="Флаг Чехии">
               </div>
               <div class="user-card__wrapper">
                 <span class="user-card__status user-card__status--online"></span>
@@ -319,22 +346,32 @@
               </ul>
               <ul class="user-card__travel-list travel-list">
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--plane travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Самолетом">
+                  <svg class="travel-list__image travel-list__image--plane travel-list__image--checked">
+                    <use xlink:href="img/sprite.svg#icon-plane"></use>
+                  </svg>
                 </li>
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--bus travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На автобусе">
+                  <svg class="travel-list__image travel-list__image--bus travel-list__image--checked">
+                    <use xlink:href="img/sprite.svg#icon-bus"></use>
+                  </svg>
                 </li>
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--circle" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На велосипеде">
+                  <svg class="travel-list__image travel-list__image--circle">
+                    <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                  </svg>
                 </li>
                 <li class="travel-list__item">
-                  <img class="travel-list__image travel-list__image--walk travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Пешком">
+                  <svg class="travel-list__image travel-list__image--walk travel-list__image--checked">
+                    <use xlink:href="img/sprite.svg#icon-run"></use>
+                  </svg>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
-        <a class="button-rect" href="catalog.html">Показать всех</a>
+        <a class="button-rect" href="catalog.html">
+          <span>Показать всех</span>
+        </a>
       </div>
     </section>
     <section class="profile">

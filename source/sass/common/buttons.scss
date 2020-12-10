@@ -160,6 +160,16 @@
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-saffron;
+  }
+
+  &:active span,
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .button-feedback {

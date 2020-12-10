@@ -93,18 +93,17 @@
 
 .country-card__stats {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 
   @include font(16px, 20px, $font-weight-medium);
   color: rgba($color-blue-sapphire, 0.3);
+}
 
-  &::before {
-    content: "";
+.country-card__stats svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
 
-    width: 14px;
-    height: 14px;
-    margin-right: 5px;
-    // Заглушка
-    background-color: tomato;
-  }
+  fill: $color-blue-cobalt;
+  opacity: 0.1;
 }

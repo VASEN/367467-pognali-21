@@ -15,8 +15,13 @@
 }
 
 .companions__container {
-  padding-top: 35px;
+  padding-top: 60px;
   padding-bottom: 30px;
+
+  background-image: url("../../img/companions-bg-rect-mobile.png"), url("../../img/rogovaya-bg-companions-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 60px, 0 300px;
+
 
   @include tablet {
     @include container($width-tablet, 75px);
@@ -36,7 +41,11 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 35px 25px 50px;
+  padding: 35px 25px 55px;
+
+  background-image: url("../../img/smolov-companion-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top right;
 
   @include tablet {
     padding: 68px 0 60px;
@@ -100,15 +109,18 @@
 }
 
 .companions__cards-list {
+  justify-content: space-around;
+
   @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
   }
 }
 
 .companions .user-card {
-  max-width: 270px;
 
   @media (min-width: 425px) {
     max-width: 100%;

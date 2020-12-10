@@ -4,19 +4,30 @@
 .user-card {
   position: relative;
 
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 270px;
+  grid-template-rows: auto;
   padding-bottom: 20px;
 
   background-color: $color-white;
+  border-radius: 10px;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
+.user-card__photo {
+  width: 270px;
+  height: 270px;
+
+  border-radius: 10px 10px 0 0;
+  object-fit: none;
+}
+
 .user-card__visited-countries {
-  position: relative;
-  top: -20px;
+  //position: relative;
+  margin-top: -12px;
 
   display: flex;
   flex-wrap: wrap;
