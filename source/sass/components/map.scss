@@ -4,7 +4,7 @@
 .map {
   position: relative;
 
-  margin-top: -20px;
+  margin-top: -25px;
   z-index: 1;
 
   @include font(16px, 22px, $font-weight-bold);
@@ -13,6 +13,18 @@
 
   background-color: $color-yellow-sunrise;
   border-radius: 0 0 25px 25px;
+
+  @include tablet {
+    margin-top: -50px;
+  }
+}
+
+.map__container {
+  padding-top: 25px;
+
+  @include tablet {
+    padding-top: 50px;
+  }
 }
 
 .map__wrapper {
@@ -20,15 +32,15 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  padding: 31px 25px 35px 25px;
+  padding: 31px 0 35px;
 
   @include tablet {
-    padding: 50px 35px 85px;
+    padding: 48px 35px 84px;
   }
 
   @include desktop {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
     padding-top: 55px;
@@ -54,26 +66,33 @@
   @include desktop {
     margin-bottom: 0;
   }
+}
 
-  &::before {
-    content: "";
+.map__address-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 45px;
-    height: 45px;
-    margin-right: 16px;
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
 
-    background-color: $color-blue-dark;
-    border-radius: 50%;
+  background-color: $color-blue-dark;
+  border-radius: 50%;
 
-    @include tablet {
-      width: 68px;
-      height: 68px;
-    }
+  @include tablet {
+    width: 68px;
+    height: 68px;
+  }
+}
 
-    @include desktop {
-      width: 90px;
-      height: 90px;
-    }
+.map__address-image {
+  width: 21px;
+  height: 21px;
+
+  @include tablet {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -84,9 +103,34 @@
 }
 
 .map__button-rect {
+  height: 62px;
+
   text-transform: none;
 
   border: 3px solid $color-blue-cobalt;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+
+    background-color: $color-blue-cobalt;
+    border: none;
+
+    &::after {
+      border-left-color: $color-white;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
 
   @include tablet {
     min-height: 80px;
@@ -101,15 +145,22 @@
   }
 }
 
-.map__image {
+.map-image {
   position: relative;
+}
 
+.map__image {
   width: 100%;
-  min-height: 262px;
+  height: 100%;
   margin-top: -20px;
   z-index: 0;
 
+  object-fit: cover;
+
   &--google {
+    position: absolute;
+    top: 0;
+    left: 0;
     border: none;
   }
 }

@@ -471,14 +471,29 @@
       <div class="container map__container">
         <div class="map__wrapper">
           <h2 class="visually-hidden">Как нас найти?</h2>
-          <address class="map__address">ул. Большая<br> Конюшенная, 19/8</address>
-          <a class="map__button-rect button-rect" href="https://goo.gl/maps/PA7gGHQuVuknziV7A">Проложить маршрут</a>
+          <address class="map__address">
+            <span class="map__address-image-wrapper">
+              <svg class="map__address-image" viewBox="0 0 21 21">
+                <use xlink:href="img/sprite.svg#icon-location"></use>
+              </svg>
+            </span>
+            <span>ул. Большая<br> Конюшенная, 19/8</span>
+          </address>
+          <a class="button-rect map__button-rect" href="https://goo.gl/maps/PA7gGHQuVuknziV7A">
+            <span>
+              Проложить маршрут
+            </span>
+          </a>
         </div>
       </div>
     </section>
     <section class="map-image">
-      <!--      <img class="map__image map__image&#45;&#45;static" src="https://via.placeholder.com/320x424" width="320" height="424" alt="ул. Большая Конюшенная, 19/8">-->
-      <iframe class="map__image map__image--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533234!2d30.32085871603106!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605307150234!5m2!1sru!2sru" width="320" height="424" aria-hidden="false" tabindex="0"></iframe>
+      <picture>
+        <source media="(min-width: 1439px)" srcset="img/map-bg-size-L@1x.jpg 1x, img/map-bg-size-L@2x.jpg 2x">
+        <source media="(min-width: 767px)" srcset="img/map-bg-size-M@1x.jpg 1x, img/map-bg-size-M@2x.jpg 2x">
+        <img class="map__image map__image--static" src="img/map-bg-size-S@1x.jpg" srcset="img/map-bg-size-S@2x.jpg 2x" alt="ул. Большая Конюшенная, 19/8">
+      </picture>
+      <iframe class="map__image map__image--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533234!2d30.32085871603106!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605307150234!5m2!1sru!2sru" aria-hidden="false" tabindex="0"></iframe>
     </section>
   </main>
   <footer class="page__footer footer">
