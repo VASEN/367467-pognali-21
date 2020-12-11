@@ -498,13 +498,35 @@
   </main>
   <footer class="page__footer footer">
     <div class="container footer__container">
-      <a class="footer__logo-link logo-link">
-        <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
+      <a class="footer__logo-link">
+        <picture>
+          <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
+          <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
+          <img class="footer__logo-image" src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
+        </picture>
       </a>
-      <div class="footer__social social">
-        <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
-        <a class="social__link social__link--vk" aria-label="Погнали Вконтакте" href="#"></a>
-        <a class="social__link social__link--insta" aria-label="Погнали в Instagram" href="#"></a>
+      <div class="footer__social">
+        <a class="footer__social-link footer__social-link--fb" aria-label="Погнали в Facebook" href="#">
+          <span class="footer__social-image-wrapper">
+            <svg class="footer__social-image" viewBox="0 0 14 28">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="footer__social-link footer__social-link--vk" aria-label="Погнали Вконтакте" href="#">
+          <span class="footer__social-image-wrapper">
+            <svg class="footer__social-image" viewBox="0 0 31 16">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="footer__social-link footer__social-link--insta" aria-label="Погнали в Instagram" href="#">
+          <span class="footer__social-image-wrapper">
+            <svg class="footer__social-image" viewBox="0 0 24 24">
+              <use xlink:href="img/sprite.svg#icon-inst"></use>
+            </svg>
+          </span>
+        </a>
       </div>
       <div class="footer__copyright copyright">
         <a class="copyright__title" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
