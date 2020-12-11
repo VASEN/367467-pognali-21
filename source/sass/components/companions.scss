@@ -12,6 +12,12 @@
   background-color: $color-blue-cobalt;
   border-radius: 0 0 25px 25px;
   z-index: 4;
+
+  @include tablet {
+    margin-top: -50px;
+
+    border-radius: 0 0 50px 50px;
+  }
 }
 
 .companions__container {
@@ -26,14 +32,23 @@
   @include tablet {
     @include container($width-tablet, 75px);
 
-    padding-top: 70px;
+    padding-top: 120px;
     padding-bottom: 90px;
+
+    background-image: url("../../img/smolov-companion-bg-mobile.png"), url("../../img/companions-bg-rect-tablet.png"), url("../../img/rogovaya-bg-companions-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 40px 425px, 60px 70px, calc(100% - 75px) 70px;
   }
 
   @include desktop {
+    @include container($width-desktop, 60px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto min-content;
+
+    padding-bottom: 135px;
+
+    background-position: 547px 205px, 40px 120px, 193px 442px;
   }
 }
 
@@ -49,6 +64,7 @@
 
   @include tablet {
     padding: 68px 0 60px;
+    background-image: none;
   }
 
   @include desktop {
@@ -112,37 +128,7 @@
   justify-content: space-around;
 
   @include tablet {
-    //display: flex;
-    //flex-wrap: wrap;
-    //justify-content: space-between;
     grid-template-columns: auto auto;
-    justify-content: space-around;
-  }
-}
-
-.companions .user-card {
-
-  @media (min-width: 425px) {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 1fr 1fr 1fr;
-
-    padding-bottom: 0;
-  }
-
-  @include tablet {
-    display: block;
-    max-width: 285px;
-    margin-bottom: 0;
-
-    border-radius: 20px;
-  }
-}
-
-.companions .user-card__wrapper {
-  @include tablet {
-    padding-top: 0;
   }
 }
 
@@ -152,53 +138,7 @@
   }
 }
 
-.companions__photo {
-  @media (min-width: 425px) {
-    grid-row: 1/5;
-  }
-
-  @include tablet {
-    width: 285px;
-    height: 285px;
-  }
-}
-
-.companions .user-card__visited-countries {
-  @media (min-width: 425px) {
-    order: 2;
-
-    top: auto;
-  }
-
-  @include tablet {
-    top: -20px;
-  }
-}
-
-.companions .user-card__country-flag {
-  object-fit: contain;
-}
-
-.companions .tags-list {
-  @media (min-width: 425px) {
-    order: 3;
-    align-items: center;
-    padding: 0;
-  }
-
-  @include tablet {
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-bottom: 25px;
-
-    @include font(20px, 23px, $font-weight-normal);
-  }
-}
-
 .companions .travel-list {
-  @media (min-width: 425px) {
-    order: 4;
-  }
 
   @include tablet {
     margin-bottom: 25px;

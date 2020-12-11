@@ -15,6 +15,16 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include tablet {
+    grid-template-columns: 285px;
+    grid-template-rows: auto;
+    grid-column-gap: 50px;
+
+    padding-bottom: 0;
+
+    border-radius: 20px;
+  }
 }
 
 .user-card__photo {
@@ -23,10 +33,17 @@
 
   border-radius: 10px 10px 0 0;
   object-fit: none;
+
+  @include tablet {
+    width: 285px;
+    height: 285px;
+    object-fit: contain;
+
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .user-card__visited-countries {
-  //position: relative;
   margin-top: -12px;
 
   display: flex;
@@ -64,6 +81,10 @@
   align-items: center;
 
   padding: 15px;
+
+  @include tablet {
+    padding: 19px 20px 23px;
+  }
 }
 
 .user-card__like-wrapper {

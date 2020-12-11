@@ -10,6 +10,10 @@
   padding: 0 36px 15px 46px;
 
   @include font(16px, 18px, $font-weight-normal);
+
+  @include tablet {
+    padding-bottom: 25px;
+  }
 }
 
 .tags-list__item {
