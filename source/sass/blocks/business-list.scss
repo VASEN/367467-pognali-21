@@ -3,7 +3,7 @@
 
 .business-list {
   @include reset-list;
-  padding: 0 26px 34px 25px;
+  padding: 0 25px 34px 25px;
 
   @include tablet {
     padding: 0 90px 50px 90px;
@@ -13,6 +13,7 @@
 .business-list__item {
   padding-top: 11px;
   padding-bottom: 11px;
+  box-sizing: border-box;
 
   border-top: 1px solid rgba($color-black, 0.05);
 
@@ -24,16 +25,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }
 
 .business-list__text {
-  margin: 0;
+  margin: 0 0 12px;
 
   font-weight: $font-weight-light;
   color: $color-black-bluish;
 
+  &--price {
+    margin-bottom: 0;
+  }
+
   @include tablet {
+    margin-bottom: 0;
+
     @include font(22px, 28px, $font-weight-light);
   }
 }

@@ -12,7 +12,7 @@
 
   @include reset-list;
   margin: 0 0 31px;
-  padding: 13px 0 15px;
+  padding: 0;
 
   @include tablet {
     margin-bottom: 35px;
@@ -26,8 +26,13 @@
 
 .price-list__item {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr auto;
+  //grid-template-rows: auto auto;
+
+  //padding-top: 13px;
+  //padding-bottom: 18px;
+
+  //border-top: 1px solid $color-grey-platinum;
 
   @include tablet {
     grid-template-columns: min-content 2fr 1fr;
@@ -36,8 +41,6 @@
 
     margin-bottom: 0;
   }
-
-  margin-bottom: 32px;
 
   &:first-child .price-list__item-text--grey {
     @include tablet {
@@ -62,6 +65,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:last-child .price-list__item-wrapper {
+    border-bottom: 1px solid $color-grey-lavender-light;
   }
 
   &:last-child .price-list__item-text--border {
@@ -103,6 +110,17 @@
   }
 }
 
+.price-list__item-wrapper {
+  padding-top: 13px;
+  padding-bottom: 18px;
+
+  border-top: 1px solid $color-grey-lavender-light;
+
+  @include tablet {
+    display: contents;
+  }
+}
+
 .price-list__item-text {
   margin: 0;
 
@@ -114,7 +132,11 @@
 }
 
 .price-list__item-text--border {
+  margin-bottom: 5px;
+
   @include tablet {
+    margin-bottom: 0;
+
     border-top: 1px solid $color-grey-platinum;
   }
 }
@@ -130,7 +152,8 @@
 .price-list__item-number {
   grid-column: 2/-1;
   grid-row: 1/-1;
-  margin-left: auto;
+  margin-left: 10px;
+  margin-top: 3px;
 
   display: flex;
   justify-content: center;
@@ -157,6 +180,7 @@
     width: 68px;
     height: 68px;
     margin-right: 20px;
+    margin-top: 0;
 
     @include font(28px, 28px, $font-weight-medium);
   }

@@ -377,31 +377,62 @@
     <section class="profile">
       <div class="container profile__container">
         <div class="profile__wrapper">
-          <h2 class="profile__title title">Добавьте свой профиль</h2>
+          <h2 class="profile__title title">Добавьте <br>свой <br>профиль</h2>
           <div class="price-list__wrapper">
             <div class="profile__wrapper-logo">
-              <span class="profile__logo"></span>
-              <div class="profile__currency">₽</div>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/profile-logo-size-L@1x.png">
+                <img src="img/profile-logo-size-S@1x.png">
+              </picture>
             </div>
             <ol class="profile__price-list price-list">
               <li class="price-list__item">
                 <span class="price-list__item-number"></span>
-                <p class="price-list__item-text price-list__item-text--border">Базовое размещение</p>
-                <p class="price-list__item-text price-list__item-text--grey">Бесплатно</p>
+                <div class="price-list__item-wrapper">
+                  <p class="price-list__item-text price-list__item-text--border">Базовое размещение</p>
+                  <p class="price-list__item-text price-list__item-text--grey">Бесплатно</p>
+                </div>
+
               </li>
               <li class="price-list__item">
                 <span class="price-list__item-number"></span>
-                <p class="price-list__item-text price-list__item-text--border">Вывод на первых позициях</p>
-                <p class="price-list__item-text price-list__item-text--grey">99 руб./мес</p>
+                <div class="price-list__item-wrapper">
+                  <p class="price-list__item-text price-list__item-text--border">Вывод на первых позициях</p>
+                  <p class="price-list__item-text price-list__item-text--grey">99 руб./мес</p>
+                </div>
               </li>
               <li class="price-list__item">
                 <span class="price-list__item-number"></span>
-                <p class="price-list__item-text price-list__item-text--border">Кастомный цвет карточки</p>
-                <p class="price-list__item-text price-list__item-text--grey">59 руб./мес</p>
+                <div class="price-list__item-wrapper">
+                  <p class="price-list__item-text price-list__item-text--border">Кастомный цвет карточки</p>
+                  <p class="price-list__item-text price-list__item-text--grey">59 руб./мес</p>
+                </div>
               </li>
             </ol>
           </div>
           <a class="button-business" href="#">Показать тарифы для бизнеса</a>
+          <div class="profile__modal">
+            <h2 class="profile__modal-title title">Бизнес-тарифы</h2>
+            <ul class="profile__business-list business-list">
+              <li class="business-list__item">
+                <p class="business-list__text">Реклама у блоггера</p>
+                <p class="business-list__text business-list__text--price">300 000 руб./пост</p>
+              </li>
+              <li class="business-list__item">
+                <p class="business-list__text">Накрутка подписчиков</p>
+                <p class="business-list__text business-list__text--price">от 1 руб./шт.</p>
+              </li>
+              <li class="business-list__item">
+                <p class="business-list__text">Лайки от ботов</p>
+                <p class="business-list__text business-list__text--price">от 20 коп./лайк</p>
+              </li>
+              <li class="business-list__item">
+                <p class="business-list__text">Ваш продакт-плейсмент</p>
+                <p class="business-list__text business-list__text--price">Индивидуально</p>
+              </li>
+            </ul>
+            <button class="button-profile" type="button">Закрыть окно</button>
+          </div>
         </div>
       </div>
     </section>
@@ -456,29 +487,8 @@
     </div>
   </footer>
   <section class="modal profile__modal ">
-    <div class="container">
-      <h2 class="profile__modal-title title">Бизнес-тарифы</h2>
-      <ul class="profile__business-list business-list">
-        <li class="business-list__item">
-          <p class="business-list__text">Реклама у блоггера</p>
-          <p class="business-list__text">300 000 руб./пост</p>
-        </li>
-        <li class="business-list__item">
-          <p class="business-list__text">Накрутка подписчиков</p>
-          <p class="business-list__text">от 1 руб./шт.</p>
-        </li>
-        <li class="business-list__item">
-          <p class="business-list__text">Лайки от ботов</p>
-          <p class="business-list__text">от 20 коп./лайк</p>
-        </li>
-        <li class="business-list__item">
-          <p class="business-list__text">Ваш продакт-плейсмент</p>
-          <p class="business-list__text">Индивидуально</p>
-        </li>
-      </ul>
-      <button class="button-profile" type="button">Закрыть окно</button>
-    </div>
   </section>
 <script src="js/header-open.js"></script>
+<script src="js/profile-modal.js"></script>
 </body>
 </html>
