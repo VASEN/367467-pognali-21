@@ -57,7 +57,6 @@
                 <svg class="header__telephone-image" viewBox="0 0 18 18">
                   <use xlink:href="img/sprite.svg#icon-call"></use>
                 </svg>
-                <!--              svg при открытом меню-->
                 <svg class="header__telephone-image--opened" viewBox="0 0 19 17">
                   <use xlink:href="img/sprite.svg#icon-telephone"></use>
                 </svg>
@@ -65,11 +64,11 @@
                 <span class="header__telephone--full">8 800 555-86-28</span>
               </a>
               <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
-              <span class="header__email-image-wrapper">
-                <svg class="header__mail-image" viewBox="0 0 45 45">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
-                </svg>
-              </span>
+                <span class="header__email-image-wrapper">
+                  <svg class="header__mail-image" viewBox="0 0 45 45">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </span>
                 <span class="header__email--full">mail@htmlacademy.ru</span>
               </a>
             </div>
@@ -443,13 +442,27 @@
           <p class="feedback__text">Зарегистрируйтесь, <br class="feedback__br-mobile"> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
           <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="feedback__email">E-mail</label>
-            <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email">
+            <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email" required>
             <button class="button-feedback__icon" type="submit" aria-label="Обратная связь"><span class="button-feedback__icon--full">Регистрация</span></button>
           </form>
-          <p class="feedback__text feedback__text--contact">Остались вопросы? Мы с радостью на них ответим!</p>
-          <div class="feedback__contacts contacts">
-            <a class="contacts__telephone feedback__telephone" href="tel:88005558628" aria-label="Позвоните нам!">8 800 555-86-28</a>
-            <a class="feedback__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">mail@htmlacademy.ru</a>
+          <p class="feedback__text feedback__text--contact">Остались вопросы? <br>Мы с радостью на них ответим!</p>
+          <div class="feedback__contacts">
+            <a class="feedback__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
+             <span class="feedback__telephone-image-wrapper">
+                <svg class="feedback__telephone-image" viewBox="0 0 19 17">
+                  <use xlink:href="img/sprite.svg#icon-telephone"></use>
+                </svg>
+              </span>
+              <span class="feedback__telephone--full">8 800 555-86-28</span>
+            </a>
+            <a class="feedback__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
+              <span class="feedback__email-image-wrapper">
+                <svg class="feedback__mail-image" viewBox="0 0 45 45">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </span>
+              <span class="feedback__email--full">mail@htmlacademy.ru</span>
+            </a>
           </div>
         </div>
       </div>
