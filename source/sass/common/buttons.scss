@@ -93,26 +93,52 @@
   font-weight: $font-weight-bold;
   color: $color-blue-screen;
 
+  &:hover .button-business__text,
+  &:focus .button-business__text {
+    opacity: 0.7;
+  }
+
+  &:active .button-business__text {
+    opacity: 0.3;
+  }
+
+  &:hover .button-business__image,
+  &:focus .button-business__image {
+    opacity: 0.7;
+  }
+
+  &:active .button-business__image {
+    opacity: 0.3;
+  }
+
   @include tablet {
     justify-content: start;
     align-items: center;
 
     @include font(20px, 20px, $font-weight-bold);
-
-    &::before {
-      content: "";
-
-      width: 68px;
-      height: 68px;
-      margin-right: 20px;
-
-      background-color: $color-grey-lavender-light;
-      background-image: url("../../img/icon/icon-businessman.svg");
-      background-repeat: no-repeat;
-      background-position: 20px 20px;
-      border-radius: 50%;
-    }
   }
+}
+
+.button-business__image-wrapper {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+    margin-right: 20px;
+
+    background-color: $color-grey-lavender-light;
+    border-radius: 50%;
+  }
+}
+
+.button-business__image {
+  width: 26px;
+  height: 26px;
 }
 
 .button-profile {
@@ -128,10 +154,20 @@
 
   @include font(16px, 24px, $font-weight-bold);
   text-transform: uppercase;
+  color: $color-blue-ocean;
 
   background-color: $color-white-smoky-light;
   border: none;
   border-radius: 0 0 20px 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-white-smoky;
+  }
+
+  &:active .button-profile__text {
+    opacity: 0.3;
+  }
 
   @include tablet {
     padding: 41px 0;
