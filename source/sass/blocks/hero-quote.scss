@@ -2,10 +2,32 @@
 @import "source/sass/common/mixins";
 
 .hero-quote {
+  position: static;
+
   margin: 0;
   padding: 50px 84px 30px 25px;
 
   @include font(16px, 22px, $font-weight-light);
+
+  @include tablet {
+    position: absolute;
+    left: 40px;
+    bottom: 350px;
+
+    padding-left: 30px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 46px;
+    right: -57px;
+    left: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    //padding: 110px 25px 115px 60px;
+  }
 }
 
 .hero-quote__text {
@@ -13,6 +35,10 @@
 
   @include tablet {
     @include font(28px, 33px, $font-weight-light);
+  }
+
+  @include desktop {
+    margin-bottom: 45px;
   }
 }
 
@@ -22,5 +48,17 @@
 
   @include tablet {
     @include font(21px, 25px, $font-weight-bold);
+  }
+}
+
+.hero-quote__br {
+  &--mobile {
+    @media (min-width: 415px) {
+      display: none;
+    }
+
+    @include tablet {
+      display: inline;
+    }
   }
 }

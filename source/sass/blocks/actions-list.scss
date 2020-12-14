@@ -26,6 +26,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 107px;
 
+    margin-left: 0;
+    margin-right: 0;
     //margin-bottom: 123px;
     margin-top: 0;
   }
@@ -47,6 +49,13 @@
     flex-direction: column;
   }
 
+  @include desktop {
+    flex-direction: row;
+
+    margin-bottom: 0;
+    padding: 29px 64px 29px 34px;
+  }
+
   &:nth-child(1) {
     margin-bottom: -10px;
     padding-bottom: 32px;
@@ -65,6 +74,8 @@
 
     @include desktop {
       border-radius: 20px 0 0 20px;
+
+      padding-right: 69px;
     }
   }
 
@@ -84,6 +95,10 @@
 
     @include desktop {
       margin-right: -20px;
+      margin-left: -15px;
+      padding-left: 30px;
+      padding-right: 50px;
+
       border-radius: 20px 0 0 20px;
     }
   }
@@ -105,6 +120,10 @@
     }
 
     @include desktop {
+      margin-right: -35px;
+      padding-right: 51px;
+      padding-left: 30px;
+
       border-radius: 20px 0 0 20px;
     }
   }
@@ -118,6 +137,10 @@
     }
 
     @include desktop {
+      margin-left: 15px;
+      padding-left: 30px;
+      padding-right: 32px;
+
       border-radius: 20px;
     }
   }
@@ -147,6 +170,10 @@
 
     @include tablet {
       @include font(30px, 30px, $font-weight-bold);
+    }
+
+    @include desktop {
+      @include font(24px, 24px, $font-weight-bold);
     }
   }
 }

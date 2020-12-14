@@ -17,7 +17,7 @@
   }
 
   @include desktop {
-    min-height: 640px;
+    min-height: 625px;
     padding-bottom: 0;
 
     background-color: $color-blue-sapphire;
@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0;
+  //padding: 0;
 }
 
 .hero__wrapper {
@@ -95,7 +95,7 @@
 
   @include desktop {
     margin: 0;
-    padding: 100px 60px 100px 70px;
+    padding: 85px 60px 105px 67px;
 
     text-align: left;
   }
@@ -123,8 +123,8 @@
 
   @include desktop {
     position: absolute;
-    top: 0;
-    left: 546px;
+    top: -15px;
+    left: 545px;
 
     width: 431px;
     height: 640px;
@@ -133,39 +133,6 @@
     margin-bottom: 0;
 
     z-index: 0;
-  }
-}
-
-.hero-quote {
-  position: static;
-
-  @include tablet {
-    position: absolute;
-    left: 40px;
-    bottom: 350px;
-
-    padding-left: 30px;
-  }
-
-  @include desktop {
-    position: absolute;
-    top: 0;
-    right: 23px;
-    left: auto;
-
-    padding: 110px 25px 115px 60px;
-  }
-}
-
-.hero-quote__br {
-  &--mobile {
-    @media (min-width: 415px) {
-      display: none;
-    }
-
-    @include tablet {
-      display: inline;
-    }
   }
 }
 

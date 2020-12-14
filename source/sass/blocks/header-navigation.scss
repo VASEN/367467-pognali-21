@@ -60,7 +60,7 @@
   }
 
   @include desktop {
-    margin-right: 35px;
+    margin-right: 14px;
     padding-left: 0;
 
     color: $color-white;
@@ -77,10 +77,10 @@
   }
 
   @include desktop {
-    display: inline-block;
+    display: inline-flex;
     overflow: hidden;
 
-    padding: 0 4px;
+    padding: 0 10px;
 
     @include font(20px, 20px, $font-weight-medium);
     color: $color-white;
