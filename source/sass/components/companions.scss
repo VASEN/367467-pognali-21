@@ -48,7 +48,7 @@
 
     padding-bottom: 135px;
 
-    background-position: 547px 205px, 40px 120px, 193px 442px;
+    background-position: 547px 185px, 60px 120px, 190px 435px;
   }
 }
 
@@ -69,7 +69,7 @@
 
   @include desktop {
     max-width: 428px;
-    padding: 60px 70px;
+    padding: 60px 70px 85px;
   }
 }
 
@@ -120,7 +120,7 @@
     align-items: center;
 
     margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 66px;
   }
 }
 
@@ -129,6 +129,13 @@
 
   @include tablet {
     grid-template-columns: auto auto;
+  }
+
+  @include desktop {
+    justify-content: end;
+
+    grid-template-columns: 285px 285px;
+    grid-column-gap: 60px;
   }
 }
 
@@ -146,8 +153,20 @@
 
 .companions__level {
   position: absolute;
-  top: 17px;
-  left: 17px;
+  top: 20px;
+  left: 22px;
+}
+
+.level__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+
+  transform: rotate(-90deg);
 }
 
 .companions .button-rect {

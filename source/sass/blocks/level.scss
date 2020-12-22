@@ -17,9 +17,31 @@
 }
 
 .level__number {
+  position: relative;
+
   @include font(24px, 24px, $font-weight-bold);
 
-  border-bottom: 2px solid rgba($color-white, 0.3);
+  border-bottom: px solid rgba($color-white, 0.3);
+
+  @include desktop {
+    margin-bottom: 2px;
+    padding-top: 6px;
+
+    border-bottom: none;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 1px;
+      left: -2px;
+
+      width: 30px;
+      height: 1px;
+
+      background-color: rgba($color-white, 0.3);
+    }
+  }
 }
 
 .level__text {

@@ -40,7 +40,7 @@
   }
 
   @include desktop {
-    padding: 107px 72px 165px;
+    padding: 107px 72px 162px;
   }
 }
 
@@ -65,7 +65,7 @@
   }
 
   @include desktop {
-    margin-bottom: 135px;
+    margin-bottom: 132px;
   }
 }
 
@@ -92,9 +92,9 @@
   }
 
   @include desktop {
-    top: 0;
+    top: 5px;
     bottom: auto;
-    right: 25px;
+    right: 0;
 
     width: 200px;
     height: 200px;

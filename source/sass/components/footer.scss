@@ -13,6 +13,10 @@
   @include tablet {
     border-radius: 50px 50px 0 0;
   }
+
+  @include desktop {
+    margin-top: -72px;
+  }
 }
 
 .footer__container {
@@ -30,7 +34,11 @@
   }
 
   @include desktop {
+    align-items: center;
+    justify-content: stretch;
+
     height: 154px;
+    padding-bottom: 43px;
   }
 }
 
@@ -40,6 +48,8 @@
   align-items: center;
 
   padding: 40px 0 38px;
+
+  cursor: pointer;
 
   @include tablet {
     justify-content: start;
@@ -52,9 +62,16 @@
   width: 96px;
   height: 15px;
 
+  cursor: pointer;
+
   @include tablet {
     width: 164px;
     height: 42px;
+  }
+
+  @include desktop {
+    width: 200px;
+    height: 55px;
   }
 }
 
@@ -67,6 +84,11 @@
 
   @include tablet {
     padding: 0;
+  }
+
+  @include desktop {
+    margin-left: 362px;
+    margin-right: auto;
   }
 }
 

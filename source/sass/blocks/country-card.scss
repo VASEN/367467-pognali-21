@@ -73,6 +73,19 @@
 
     border-radius: 10px 0 0 10px;
   }
+
+  @include tablet {
+    padding-top: 30px;
+    padding-left: 26px;
+    padding-bottom: 21px;
+  }
+
+  @include desktop {
+    padding-top: 24px;
+    padding-left: 28px;
+
+    border-radius: 20px;
+  }
 }
 
 .country-card__title {
@@ -81,6 +94,14 @@
 
   @include font(21px, 21px, $font-weight-bold);
   color: $color-black;
+
+  @include tablet {
+    @include font(24px, 24px, $font-weight-bold);
+  }
+
+  @include desktop {
+    margin-bottom: 5px;
+  }
 }
 
 .country-card__promo {
@@ -89,14 +110,22 @@
 
   @include font(16px, 18px, $font-weight-medium);
   color: rgba($color-black-bluish, 0.3);
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-medium);
+  }
 }
 
 .country-card__stats {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 
   @include font(16px, 20px, $font-weight-medium);
   color: rgba($color-blue-sapphire, 0.3);
+
+  @include desktop {
+    @include font(20px, 20px, $font-weight-medium);
+  }
 }
 
 .country-card__stats svg {
@@ -106,4 +135,11 @@
 
   fill: $color-blue-cobalt;
   opacity: 0.1;
+
+  @include desktop {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 8px;
+  }
 }

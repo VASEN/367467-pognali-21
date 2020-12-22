@@ -18,7 +18,12 @@
 
   @include desktop {
     margin-top: -50px;
-    padding-top: 120px;
+    padding-top: 135px;
+
+    background-image: url("../../img/about-bg-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 77% 101%;
+    background-size: auto;
   }
 }
 
@@ -39,10 +44,9 @@
   }
 
   @include desktop {
-    background-image: url("../../img/about-bg-desktop@1x.png"), url("../../img/about-us-bg-rect-tablet@1x.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: top right, top left;
-    background-size: contain, 212px 212px;
+    grid-template-columns: 700px;
+
+    background-image: none;
   }
 }
 
@@ -54,7 +58,11 @@
   }
 
   @include desktop {
-    padding-bottom: 160px;
+    //margin-bottom: 150px;
+    padding-top: 45px;
+    padding-left: 70px;
+    padding-bottom: 163px;
+    padding-right: 0;
   }
 }
 
@@ -85,7 +93,9 @@
   }
 
   @include desktop {
-    max-width: 620px;
+    //max-width: 620px;
+
+    margin-bottom: 42px;
   }
 
   &--bold {
@@ -101,7 +111,7 @@
 
     @include desktop {
       max-width: 425px;
-      margin-bottom: 80px;
+      margin-bottom: 87px;
     }
   }
 }
@@ -112,7 +122,7 @@
   }
 
   @include tablet {
-    display: flex;
+    display: inline-flex;
 
     max-width: 280px;
     min-height: 80px;
@@ -120,5 +130,17 @@
     @include font(24px, 24px, $font-weight-bold);
 
     border-radius: 20px;
+  }
+
+  @include desktop {
+    min-width: 274px;
+    padding-left: 32px;
+    padding-right: 35px;
+
+    &::after {
+      border-left: 9px solid $color-blue-ocean;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
   }
 }

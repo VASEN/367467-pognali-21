@@ -2,12 +2,14 @@
 @import "../common/mixins";
 
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
 }
 
 .copyright__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   @include font(16px, 16px, $font-weight-normal);
   color: $color-black-bluish;
 
@@ -22,6 +24,9 @@
 }
 
 .copyright__logo {
+  width: 27px;
+  height: 34px;
+
   &:hover,
   &:focus {
     opacity: 0.6;

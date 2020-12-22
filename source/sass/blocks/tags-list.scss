@@ -14,6 +14,13 @@
   @include tablet {
     padding-bottom: 25px;
   }
+
+  @include desktop {
+    padding-left: 31px;
+    padding-right: 31px;
+
+    @include font(20px, 23px, $font-weight-normal);
+  }
 }
 
 .tags-list__item {

@@ -91,7 +91,7 @@
 
     @include desktop {
       padding-top: 70px;
-      padding-bottom: 42px;
+      padding-bottom: 44px;
     }
   }
 
@@ -136,7 +136,9 @@
 
   @include desktop {
     grid-template-columns: max-content max-content;
-    justify-content: space-evenly;
+    grid-template-rows: 90px;
+    justify-content: center;
+    grid-column-gap: 112px;
   }
 }
 
@@ -191,6 +193,9 @@
   }
 
   @include desktop {
+    width: 90px;
+    height: 90px;
+
     margin-right: 31px;
   }
 }
@@ -205,5 +210,10 @@
   @include tablet {
     width: 27px;
     height: 27px;
+  }
+
+  @include desktop {
+    width: 36px;
+    height: 36px;
   }
 }
