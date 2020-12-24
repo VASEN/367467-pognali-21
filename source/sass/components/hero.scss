@@ -17,7 +17,7 @@
   }
 
   @include desktop {
-    min-height: 625px;
+    min-height: 593px;
     padding-bottom: 0;
 
     background-color: $color-blue-sapphire;
@@ -33,7 +33,9 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  //padding: 0;
+
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .hero__wrapper {
@@ -52,7 +54,7 @@
   position: relative;
   background-image: url("../../img/hero-bg-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom;
+  //background-position: center bottom;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
@@ -77,10 +79,9 @@
 }
 
 .hero__title {
-
   min-width: 240px;
   margin: 0 auto;
-  padding: 21px 16px 10px;
+  padding: 35px 16px 10px;
 
   @include font(36px, 40px, $font-weight-bold);
   text-align: center;
@@ -88,6 +89,7 @@
   @include tablet {
     max-width: 400px;
     margin: 0 auto;
+    padding-top: 26px;
     padding-bottom: 30px;
 
     @include font(60px, 70px, $font-weight-bold);
@@ -95,7 +97,7 @@
 
   @include desktop {
     margin: 0;
-    padding: 85px 60px 105px 67px;
+    padding: 55px 60px 105px 127px;
 
     text-align: left;
   }
@@ -103,7 +105,7 @@
 
 .hero__bg-wrapper picture {
   margin-left: auto;
-  margin-right: 23px;
+  margin-right: 50px;
   margin-bottom: -5px;
 
   @include tablet {
@@ -123,8 +125,8 @@
 
   @include desktop {
     position: absolute;
-    top: -15px;
-    left: 545px;
+    top: -48px;
+    left: 604px;
 
     width: 431px;
     height: 640px;

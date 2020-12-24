@@ -4,7 +4,7 @@
 .companions {
   position: relative;
 
-  margin-top: -20px;
+  margin-top: -30px;
 
   font-weight: $font-weight-light;
   color: $color-white;
@@ -16,24 +16,24 @@
   @include tablet {
     margin-top: -50px;
 
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 60px 60px;
   }
 }
 
 .companions__container {
-  padding-top: 60px;
+  padding-top: 65px;
   padding-bottom: 30px;
 
   background-image: url("../../img/companions-bg-rect-mobile.png"), url("../../img/rogovaya-bg-companions-mobile.png");
   background-repeat: no-repeat;
-  background-position: 0 60px, 0 300px;
+  background-position: 0 55px, 0 325px;
 
 
   @include tablet {
     @include container($width-tablet, 75px);
 
     padding-top: 120px;
-    padding-bottom: 90px;
+    padding-bottom: 87px;
 
     background-image: url("../../img/smolov-companion-bg-mobile.png"), url("../../img/companions-bg-rect-tablet.png"), url("../../img/rogovaya-bg-companions-tablet.png");
     background-repeat: no-repeat;
@@ -56,14 +56,14 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 35px 25px 55px;
+  padding: 32px 25px 55px;
 
   background-image: url("../../img/smolov-companion-bg-mobile.png");
   background-repeat: no-repeat;
   background-position: top right;
 
   @include tablet {
-    padding: 68px 0 60px;
+    padding: 71px 0 60px;
     background-image: none;
   }
 
@@ -86,7 +86,7 @@
 .companions__text {
   max-width: 275px;
 
-  margin: 0 0 25px;
+  margin: 0 0 21px;
 
   @include tablet {
     max-width: 429px;
@@ -129,6 +129,7 @@
 
   @include tablet {
     grid-template-columns: auto auto;
+    justify-content: space-between;
   }
 
   @include desktop {
@@ -153,8 +154,12 @@
 
 .companions__level {
   position: absolute;
-  top: 20px;
-  left: 22px;
+  top: 18px;
+  left: 20px;
+}
+
+.companions__level .level__number {
+  margin-top: 5px;
 }
 
 .level__circle {
@@ -169,9 +174,32 @@
   transform: rotate(-90deg);
 }
 
+.companions .user-card__wrapper {
+  //margin-right: 46px;
+  @include tablet {
+    margin: 0;
+    padding: 10px 46px 23px;
+  }
+}
+
+.companions .tags-list {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include font(20px, 23px, $font-weight-normal);
+}
+
+.companions .user-card__status {
+  @include tablet {
+    width: 8px;
+    height: 8px;
+    margin-right: 14px;
+  }
+}
+
 .companions .button-rect {
   @include tablet {
-    padding: 29px 33px;
+    padding: 28px 38px 28px 32px;
 
     @include font(24px, 24px, $font-weight-bold);
 

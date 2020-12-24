@@ -24,15 +24,11 @@
   }
 }
 
-.header__container {
-  padding-top: 25px;
-}
-
 .header__menu {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 73px;
+  grid-template-rows: 59px;
   grid-template-areas:
     "logo toggle"
     "menu-nav menu-nav"
@@ -45,7 +41,7 @@
 
   @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 132px;
+    grid-template-rows: 140px;
 
     grid-template-areas:
       "logo toggle user-nav"
@@ -56,7 +52,7 @@
 
   @include desktop {
     display: flex;
-    min-height: 100px;
+    min-height: 160px;
 
     background-color: $color-blue-sapphire;
   }
@@ -101,10 +97,6 @@
     grid-template-areas:
       "user-nav"
       "contacts";
-
-    //@include tablet {
-    //
-    //}
   }
 
   &--opened .header__user-navigation {
@@ -250,7 +242,7 @@
   grid-template-areas: "contacts nav";
 
   min-width: 100%;
-  z-index: 1;
+  z-index: 8;
 
   @include tablet {
     position: static;

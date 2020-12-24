@@ -47,7 +47,7 @@
   justify-content: center;
   align-items: center;
 
-  padding: 40px 0 38px;
+  padding: 36px 0 35px;
 
   cursor: pointer;
 
@@ -131,7 +131,7 @@
 }
 
 .footer__copyright {
-  padding: 13px 0 18px 0;
+  padding: 10px 0 18px 0;
   border-top: 1px solid $color-white-smoky-light;
 
   @include tablet {

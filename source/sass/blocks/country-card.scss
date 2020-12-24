@@ -45,9 +45,13 @@
   z-index: 2;
 
   @media (min-width: 486px) {
-    top: 23px;
+    top: 16px;
     left: auto;
-    right: 152px;
+    right: 150px;
+  }
+
+  @include desktop {
+    top: 22px;
   }
 }
 
@@ -56,7 +60,7 @@
   justify-content: space-between;
 
   max-height: 90px;
-  padding: 26px 24px 24px 24px;
+  padding: 25px 24px 23px 24px;
   box-sizing: border-box;
   z-index: 1;
 
@@ -71,13 +75,13 @@
     flex-direction: column;
     min-height: 140px;
 
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
   }
 
   @include tablet {
     padding-top: 30px;
-    padding-left: 26px;
-    padding-bottom: 21px;
+    padding-left: 30px;
+    padding-bottom: 19px;
   }
 
   @include desktop {
@@ -89,13 +93,15 @@
 }
 
 .country-card__title {
-  margin: 0;
+  margin: 0 0 2px;
   padding: 0;
 
   @include font(21px, 21px, $font-weight-bold);
   color: $color-black;
 
   @include tablet {
+    margin-bottom: 3px;
+
     @include font(24px, 24px, $font-weight-bold);
   }
 
@@ -118,12 +124,16 @@
 
 .country-card__stats {
   display: flex;
-  align-items: center;
+  align-items: start;
+
+  margin-top: 3px;
 
   @include font(16px, 20px, $font-weight-medium);
   color: rgba($color-blue-sapphire, 0.3);
 
-  @include desktop {
+  @include tablet {
+    margin-top: 0;
+
     @include font(20px, 20px, $font-weight-medium);
   }
 }
@@ -135,6 +145,11 @@
 
   fill: $color-blue-cobalt;
   opacity: 0.1;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
 
   @include desktop {
     width: 24px;

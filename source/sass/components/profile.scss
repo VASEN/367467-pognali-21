@@ -4,7 +4,7 @@
 .profile {
   position: relative;
 
-  margin-top: -20px;
+  margin-top: -30px;
 
   z-index: 3;
 
@@ -12,17 +12,17 @@
   color: $color-black-bluish;
 
   background-color: $color-grey-lavender;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 30px 30px;
 
   @include tablet {
     margin-top: -50px;
 
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 60px 60px;
   }
 }
 
 .profile__container {
-  padding-top: 20px;
+  padding-top: 30px;
 
   @include tablet {
     padding-top: 50px;
@@ -35,7 +35,7 @@
 
   @include tablet {
     padding-top: 75px;
-    padding-bottom: 45px;
+    padding-bottom: 60px;
     padding-left: 0;
   }
 
@@ -58,7 +58,7 @@
     justify-content: center;
 
     max-width: 100%;
-    margin-bottom: 73px;
+    margin-bottom: 70px;
     padding: 0;
 
     @include font(45px, 45px, $font-weight-bold);
@@ -85,7 +85,7 @@
 
   @include tablet {
     top: auto;
-    bottom: -100px;
+    bottom: -115px;
     right: 45px;
 
     z-index: 1;
@@ -152,6 +152,12 @@
       min-width: 750px;
       width: auto;
     }
+  }
+}
+
+.profile .profile__price-list {
+  @include tablet {
+    margin-bottom: 32px;
   }
 }
 
