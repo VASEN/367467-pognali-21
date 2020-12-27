@@ -1,20 +1,16 @@
 let header = document.querySelector(".header");
 let headerMenu = header.querySelector(".header__menu");
 let menuToggle = header.querySelector(".header__menu-toggle");
+let headerLogo = header.querySelector(".header__logo-link");
+let headerContacts = header.querySelector(".header__contacts");
+let headerSocial = header.querySelector(".header__social");
 
 menuToggle.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (menuToggle.classList.contains("header__menu-toggle--opened")) {
-    menuToggle.classList.add("header__menu-toggle--closed");
-    menuToggle.classList.remove("header__menu-toggle--opened");
-    header.classList.remove("header--opened");
-    headerMenu.classList.remove("header__menu--opened");
-    headerMenu.classList.add("header__menu--closed");
-  } else {
-    menuToggle.classList.remove("header__menu-toggle--closed");
-    menuToggle.classList.add("header__menu-toggle--opened");
-    header.classList.add("header--opened");
-    headerMenu.classList.add("header__menu--opened");
-    headerMenu.classList.remove("header__menu--closed");
-  }
+  header.classList.toggle("header--opened");
+  headerMenu.classList.toggle("header__menu--opened");
+  headerLogo.classList.toggle("header__logo-link--opened");
+  menuToggle.classList.toggle("header__menu-toggle--opened");
+  headerContacts.classList.toggle("header__contacts--opened");
+  headerSocial.classList.toggle("header__social--opened");
 })

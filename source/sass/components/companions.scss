@@ -4,7 +4,7 @@
 .companions {
   position: relative;
 
-  margin-top: -20px;
+  margin-top: -30px;
 
   font-weight: $font-weight-light;
   color: $color-white;
@@ -12,23 +12,43 @@
   background-color: $color-blue-cobalt;
   border-radius: 0 0 25px 25px;
   z-index: 4;
+
+  @include tablet {
+    margin-top: -50px;
+
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .companions__container {
-  padding-top: 35px;
+  padding-top: 65px;
   padding-bottom: 30px;
+
+  background-image: url("../../img/companions-bg-rect-mobile.png"), url("../../img/rogovaya-bg-companions-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 55px, 0 325px;
+
 
   @include tablet {
     @include container($width-tablet, 75px);
 
-    padding-top: 70px;
-    padding-bottom: 90px;
+    padding-top: 120px;
+    padding-bottom: 87px;
+
+    background-image: url("../../img/smolov-companion-bg-mobile.png"), url("../../img/companions-bg-rect-tablet.png"), url("../../img/rogovaya-bg-companions-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 40px 425px, 60px 70px, calc(100% - 75px) 70px;
   }
 
   @include desktop {
+    @include container($width-desktop, 60px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto min-content;
+
+    padding-bottom: 130px;
+
+    background-position: 547px 185px, 60px 120px, 190px 435px;
   }
 }
 
@@ -36,15 +56,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 35px 25px 50px;
+  padding: 32px 25px 55px;
+
+  background-image: url("../../img/smolov-companion-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top right;
 
   @include tablet {
-    padding: 68px 0 60px;
+    padding: 71px 0 60px;
+    background-image: none;
   }
 
   @include desktop {
     max-width: 428px;
-    padding: 60px 70px;
+    padding: 60px 70px 85px;
   }
 }
 
@@ -61,7 +86,7 @@
 .companions__text {
   max-width: 275px;
 
-  margin: 0 0 25px;
+  margin: 0 0 21px;
 
   @include tablet {
     max-width: 429px;
@@ -95,42 +120,23 @@
     align-items: center;
 
     margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 66px;
   }
 }
 
 .companions__cards-list {
+  justify-content: space-around;
+
   @include tablet {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: auto auto;
     justify-content: space-between;
   }
-}
 
-.companions .user-card {
-  max-width: 270px;
+  @include desktop {
+    justify-content: end;
 
-  @media (min-width: 425px) {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 1fr 1fr 1fr;
-
-    padding-bottom: 0;
-  }
-
-  @include tablet {
-    display: block;
-    max-width: 285px;
-    margin-bottom: 0;
-
-    border-radius: 20px;
-  }
-}
-
-.companions .user-card__wrapper {
-  @include tablet {
-    padding-top: 0;
+    grid-template-columns: 285px 285px;
+    grid-column-gap: 60px;
   }
 }
 
@@ -140,54 +146,7 @@
   }
 }
 
-.companions__photo {
-  @media (min-width: 425px) {
-    grid-row: 1/5;
-  }
-
-  @include tablet {
-    width: 285px;
-    height: 285px;
-  }
-}
-
-.companions .user-card__visited-countries {
-  @media (min-width: 425px) {
-    order: 2;
-
-    top: auto;
-  }
-
-  @include tablet {
-    top: -20px;
-  }
-}
-
-.companions .user-card__country-flag {
-  object-fit: contain;
-}
-
-.companions .tags-list {
-  @media (min-width: 425px) {
-    order: 3;
-    align-items: center;
-    padding: 0;
-  }
-
-  @include tablet {
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-bottom: 25px;
-
-    @include font(20px, 23px, $font-weight-normal);
-  }
-}
-
 .companions .travel-list {
-  @media (min-width: 425px) {
-    order: 4;
-  }
-
   @include tablet {
     margin-bottom: 25px;
   }
@@ -195,13 +154,52 @@
 
 .companions__level {
   position: absolute;
-  top: 17px;
-  left: 17px;
+  top: 18px;
+  left: 20px;
+}
+
+.companions__level .level__number {
+  margin-top: 5px;
+}
+
+.level__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+
+  transform: rotate(-90deg);
+}
+
+.companions .user-card__wrapper {
+  //margin-right: 46px;
+  @include tablet {
+    margin: 0;
+    padding: 10px 46px 23px;
+  }
+}
+
+.companions .tags-list {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include font(20px, 23px, $font-weight-normal);
+}
+
+.companions .user-card__status {
+  @include tablet {
+    width: 8px;
+    height: 8px;
+    margin-right: 14px;
+  }
 }
 
 .companions .button-rect {
   @include tablet {
-    padding: 29px 33px;
+    padding: 28px 38px 28px 32px;
 
     @include font(24px, 24px, $font-weight-bold);
 

@@ -2,7 +2,9 @@
 @import "../common/mixins";
 
 .hero {
+  position: relative;
   padding-bottom: 39px;
+  z-index: 7;
 
   color: $color-white;
 
@@ -10,6 +12,20 @@
 
   @include tablet {
     padding-bottom: 95px;
+
+    background-color: $color-cobalt-blue;
+  }
+
+  @include desktop {
+    min-height: 593px;
+    padding-bottom: 0;
+
+    background-color: $color-blue-sapphire;
+    background-image: url("../../img/hero-bg-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position-y: -110px;
+    background-size: cover;
+    border-radius: 0 0 50px 50px;
   }
 }
 
@@ -18,15 +34,12 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  @include desktop {
-    padding-bottom: 125px;
-  }
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .hero__wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
 
   @include desktop {
     flex-direction: row;
@@ -34,9 +47,41 @@
   }
 }
 
+.hero__bg-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  background-image: url("../../img/hero-bg-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  //background-position: center bottom;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/hero-bg-mobile@2x.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../../img/hero-bg-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 200px;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/hero-bg-tablet@2x.jpg");
+    }
+  }
+
+  @include desktop {
+    //background-image: url("../../img/hero-bg-desktop@1x.jpg");
+    background-image: none;
+  }
+}
+
 .hero__title {
-  margin: 0;
-  padding: 21px 16px 10px;
+  min-width: 240px;
+  margin: 0 auto;
+  padding: 35px 16px 10px;
 
   @include font(36px, 40px, $font-weight-bold);
   text-align: center;
@@ -44,6 +89,7 @@
   @include tablet {
     max-width: 400px;
     margin: 0 auto;
+    padding-top: 26px;
     padding-bottom: 30px;
 
     @include font(60px, 70px, $font-weight-bold);
@@ -51,9 +97,19 @@
 
   @include desktop {
     margin: 0;
-    padding: 100px 60px 100px 70px;
+    padding: 55px 60px 105px 127px;
 
     text-align: left;
+  }
+}
+
+.hero__bg-wrapper picture {
+  margin-left: auto;
+  margin-right: 50px;
+  margin-bottom: -5px;
+
+  @include tablet {
+    margin-right: 110px;
   }
 }
 
@@ -63,60 +119,22 @@
 
     width: 372px;
     height: 451px;
-    padding-right: 70px;
+    margin-left: 245px;
+    margin-bottom: 140px;
   }
 
   @include desktop {
     position: absolute;
-    left: 546px;
+    top: -48px;
+    left: 604px;
 
     width: 431px;
     height: 640px;
     padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
 
     z-index: 0;
-  }
-}
-
-.hero__contacts {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.hero__phone {
-  &::before {
-    width: 40px;
-    height: 40px;
-    margin-right: 0;
-
-    background-color: $color-orange;
-    border-radius: 20px;
-  }
-}
-
-.hero__email {
-  &::before {
-    width: 40px;
-    height: 40px;
-    margin-right: 0;
-
-    background-color: $color-yellow-saffron;
-    border-radius: 20px;
-  }
-}
-
-.hero-quote {
-  @include tablet {
-    position: absolute;
-    bottom: 210px;
-
-    padding-left: 30px;
-  }
-
-  @include desktop {
-    position: static;
-
-    padding: 110px 25px 115px 60px;
   }
 }
 

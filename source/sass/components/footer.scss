@@ -4,11 +4,19 @@
 .footer {
   position: relative;
 
-  margin-top: -20px;
+  margin-top: -25px;
   z-index: 1;
 
   background-color: $color-white;
   border-radius: 25px 25px 0 0;
+
+  @include tablet {
+    border-radius: 50px 50px 0 0;
+  }
+
+  @include desktop {
+    margin-top: -72px;
+  }
 }
 
 .footer__container {
@@ -21,11 +29,16 @@
     justify-content: space-between;
     align-items: center;
 
-    height: 140px;
+    padding-top: 46px;
+    padding-bottom: 32px;
   }
 
   @include desktop {
+    align-items: center;
+    justify-content: stretch;
+
     height: 154px;
+    padding-bottom: 43px;
   }
 }
 
@@ -34,7 +47,9 @@
   justify-content: center;
   align-items: center;
 
-  padding: 40px 0 20px;
+  padding: 36px 0 35px;
+
+  cursor: pointer;
 
   @include tablet {
     justify-content: start;
@@ -43,18 +58,47 @@
   }
 }
 
+.footer__logo-image {
+  width: 96px;
+  height: 15px;
+
+  cursor: pointer;
+
+  @include tablet {
+    width: 164px;
+    height: 42px;
+  }
+
+  @include desktop {
+    width: 200px;
+    height: 55px;
+  }
+}
+
 .footer__social {
-  padding: 20px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding-bottom: 37px;
 
   @include tablet {
     padding: 0;
   }
+
+  @include desktop {
+    margin-left: 362px;
+    margin-right: auto;
+  }
 }
 
-.footer__social .social__link {
+.footer__social-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 45px;
   height: 45px;
-  margin-right: 0;
 
   background-color: $color-yellow-sunrise;
   border-radius: 50%;
@@ -63,10 +107,31 @@
     width: 62px;
     height: 62px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-saffron;
+  }
+
+  &:active .footer__social-image {
+    opacity: 0.3;
+  }
+}
+
+.footer__social-image {
+  width: 23px;
+  height: 21px;
+
+  fill: $color-blue-cobalt;
+
+  @include tablet {
+    width: 28px;
+    height: 26px;
+  }
 }
 
 .footer__copyright {
-  padding: 13px 0 18px 0;
+  padding: 10px 0 18px 0;
   border-top: 1px solid $color-white-smoky-light;
 
   @include tablet {

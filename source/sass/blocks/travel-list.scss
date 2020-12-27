@@ -11,10 +11,74 @@
   line-height: 10px;
 }
 
+.travel-list__image {
+  width: 24px;
+  height: 24px;
+
+  opacity: 0.15;
+
+  &--checked {
+    opacity: 1;
+  }
+}
+
 .travel-list__item {
+  position: relative;
+  display: inline-block;
+
   margin-right: 9px;
 
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: attr(data-hover);
+      position: absolute;
+      top: 35px;
+      left: -90px;
+
+      width: 180px;
+
+      padding: 18px 20px;
+      z-index: 2;
+
+      @include font(20px, 20px, $font-weight-normal);
+      text-align: center;
+
+      background-color: $color-blue-gentian;
+      border-radius: 4px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 128%;
+      left: 25%;
+
+      width: 10px;
+      height: 10px;
+
+      background-color: $color-blue-gentian;
+
+
+      transform: rotate(45deg);
+    }
+  }
 }
+
+//.travel-list__item-tooltip {
+//  position: absolute;
+//  left: -50%;
+//  width: 120px;
+//
+//  padding: 18px 20px;
+//  z-index: 2;
+//
+//  @include font(20px, 20px, $font-weight-normal);
+//
+//  background-color: $color-blue-gentian;
+//  border-radius: 4px;
+//}

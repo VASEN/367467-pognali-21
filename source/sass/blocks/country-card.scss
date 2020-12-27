@@ -3,13 +3,37 @@
 
 .country-card {
   position: relative;
+  display: grid;
+  grid-template-rows: 100px;
 
   max-height: 190px;
-  margin-bottom: 10px;
   box-sizing: border-box;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 486px) {
+    grid-template-columns: 1fr 185px;
+    grid-template-rows: 140px;
+  }
+
+  @include desktop {
+    min-width: 560px;
+  }
+}
+
+.country-card__photo {
+  width: 100%;
+
+  border-radius: 10px 10px 0 0;
+
+  @media (min-width: 485px) {
+    order: 1;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+
+    border-radius: 0 10px 10px 0;
   }
 }
 
@@ -18,31 +42,72 @@
   top: 86px;
   left: 25px;
 
-  z-index: 1;
+  z-index: 2;
+
+  @media (min-width: 486px) {
+    top: 16px;
+    left: auto;
+    right: 150px;
+  }
+
+  @include desktop {
+    top: 22px;
+  }
 }
 
 .country-card__wrapper {
-  position: relative;
-  top: -18px;
-
   display: flex;
   justify-content: space-between;
 
-  max-width: 270px;
   max-height: 90px;
-  padding: 26px 24px 24px 24px;
+  padding: 25px 24px 23px 24px;
   box-sizing: border-box;
+  z-index: 1;
 
   background-color: $color-white;
   border-radius: 10px;
+
+  @media (min-width: 486px) {
+    order: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    flex-direction: column;
+    min-height: 140px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  @include tablet {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 19px;
+  }
+
+  @include desktop {
+    padding-top: 24px;
+    padding-left: 28px;
+
+    border-radius: 20px;
+  }
 }
 
 .country-card__title {
-  margin: 0;
+  margin: 0 0 2px;
   padding: 0;
 
   @include font(21px, 21px, $font-weight-bold);
   color: $color-black;
+
+  @include tablet {
+    margin-bottom: 3px;
+
+    @include font(24px, 24px, $font-weight-bold);
+  }
+
+  @include desktop {
+    margin-bottom: 5px;
+  }
 }
 
 .country-card__promo {
@@ -51,22 +116,45 @@
 
   @include font(16px, 18px, $font-weight-medium);
   color: rgba($color-black-bluish, 0.3);
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-medium);
+  }
 }
 
 .country-card__stats {
   display: flex;
-  align-items: center;
+  align-items: start;
+
+  margin-top: 3px;
 
   @include font(16px, 20px, $font-weight-medium);
   color: rgba($color-blue-sapphire, 0.3);
 
-  &::before {
-    content: "";
+  @include tablet {
+    margin-top: 0;
 
-    width: 14px;
-    height: 14px;
-    margin-right: 5px;
-    // Заглушка
-    background-color: tomato;
+    @include font(20px, 20px, $font-weight-medium);
+  }
+}
+
+.country-card__stats svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+
+  fill: $color-blue-cobalt;
+  opacity: 0.1;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include desktop {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 8px;
   }
 }
