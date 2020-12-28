@@ -9,7 +9,7 @@
 }
 
 .user-profile__container {
-  padding-top: 40px;
+  padding-top: 45px;
   padding-bottom: 55px;
 
   @include desktop {
@@ -46,7 +46,8 @@
   }
 }
 
-.user-profile .level {
+.user-profile__level {
+  position: relative;
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -82,10 +83,25 @@
   }
 }
 
-.user-profile__photo {
-  margin: 0 auto;
-  object-fit: contain;
+.level__circle--form {
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+
+  transform: rotate(-90deg);
+}
+
+.user-profile__card picture {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.user-profile__photo {
   border-radius: 50%;
 
   @include tablet {
@@ -114,7 +130,9 @@
 
   position: relative;
   width: 100%;
-  padding: 25px 26px;
+  margin-top: 12px;
+  padding: 27px 25px 20px;
+
   box-sizing: border-box;
 
   border: 1px solid $color-telegray-light;
@@ -126,6 +144,9 @@
 }
 
 .user-profile__travel-wrapper {
+  margin-top: 4px;
+  padding: 15px;
+
   @include tablet {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -162,6 +183,7 @@
 
 .user-profile__tags-editor {
   width: 100%;
+  min-height: 35px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -175,8 +197,6 @@
   border: none;
 
   @include tablet {
-    //min-height: 20px;
-
     @include font(20px, 22px, $font-weight-normal);
   }
 }

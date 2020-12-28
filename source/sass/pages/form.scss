@@ -4,10 +4,6 @@
 .form-page .header {
   background-color: $color-cobalt-blue;
 
-  &--closed {
-    background-color: $color-cobalt-blue;
-  }
-
   &--opened {
     background-color: $color-white;
   }
@@ -16,29 +12,17 @@
 .form-page .header__menu {
   background-color: $color-cobalt-blue;
 
-  &--closed {
-    background-color: $color-cobalt-blue;
-  }
-
   &--opened {
     background-color: $color-white;
   }
 
-  &--closed .header__user-navigation {
-    display: none;
-
-    @include tablet {
-      display: block;
-    }
+  &--opened .header__menu-items-wrapper {
+    display: grid;
   }
+}
 
-  &--closed .header__contacts {
-    display: none;
-
-    @include desktop {
-      display: flex;
-    }
-  }
+.form-page .header__menu-items-wrapper {
+  display: none;
 }
 
 .form-page .footer {
