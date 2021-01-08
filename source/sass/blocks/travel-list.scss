@@ -15,10 +15,10 @@
   width: 24px;
   height: 24px;
 
-  opacity: 0.15;
+  fill: $color-grey-light;
 
   &--checked {
-    opacity: 1;
+    fill: $color-blue-ocean;
   }
 }
 
@@ -68,17 +68,3 @@
     }
   }
 }
-
-//.travel-list__item-tooltip {
-//  position: absolute;
-//  left: -50%;
-//  width: 120px;
-//
-//  padding: 18px 20px;
-//  z-index: 2;
-//
-//  @include font(20px, 20px, $font-weight-normal);
-//
-//  background-color: $color-blue-gentian;
-//  border-radius: 4px;
-//}

@@ -4,7 +4,7 @@
 .route {
   @include tablet {
     position: relative;
-    padding-top: 40px;
+    padding-top: 42px;
 
     border-top: 1px solid $color-telegray-light;
 
@@ -45,7 +45,7 @@
   &::before {
     content: "";
     position: absolute;
-    right: 50px;
+    right: 48px;
 
     width: 8px;
     height: 8px;
@@ -60,12 +60,12 @@
 
     position: absolute;
     top: 48px;
-    right: 50px;
+    right: 48px;
 
     width: 8px;
     height: 10px;
 
-    background-color: tomato;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.65 10.35c.2.2.5.2.7 0l3.19-3.18a.5.5 0 10-.71-.7L4 9.28 1.17 6.46a.5.5 0 10-.7.71l3.18 3.18zM3.5 0v10h1V0h-1z' fill='%23CBCED9'/%3E%3C/svg%3E%0A");
   }
 
   @include tablet {
@@ -122,6 +122,16 @@
   }
 
   &--active .button-delete {
+    //display: none;
+  }
+
+  &--active .button-close {
+    position: relative;
+
+    display: block;
+  }
+
+  &--active .route-module__arrow-down {
     display: none;
   }
 
@@ -204,12 +214,17 @@
   }
 }
 
-.route-module__wrapper label {
-  margin-left: 10px;
+.route-module__arrow-down {
   width: 11px;
   height: 8px;
+  margin-left: 10px;
 
-  background-color: tomato;
+  opacity: 0.3;
+
+  @include tablet {
+    width: 22px;
+    height: 10px;
+  }
 }
 
 .route-module__wrapper--add {
@@ -275,6 +290,7 @@
 
   @include tablet {
     @include font(20px, 20px, $font-weight-medium);
+    letter-spacing: 0.1em;
   }
 }
 
@@ -284,7 +300,7 @@
 
   display: inline-block;
   height: 42px;
-  padding: 9px;
+  padding: 8px;
   box-sizing: border-box;
 
   border: 1px solid $color-telegray-light;
@@ -304,6 +320,9 @@
 }
 
 .route__country-flag {
+  width: 35px;
+  height: 24px;
+
   @include tablet {
     width: 70px;
     height: 47px;

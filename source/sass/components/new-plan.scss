@@ -7,6 +7,11 @@
 
   background-color: $color-lightgrey;
   border-radius: 25px 25px 0 0;
+
+  @include desktop {
+    margin-top: -60px;
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .new-plan__container {
@@ -18,8 +23,10 @@
   }
 
   @include desktop {
+    margin-top: -60px;
     padding-right: 60px;
     padding-left: 60px;
+    padding-bottom: 145px;
   }
 }
 
@@ -31,8 +38,11 @@
   padding-right: 20px;
 
   @include tablet {
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-right: 0;
+  }
+
+  @include desktop {
+    padding-left: 68px;
   }
 }
 
@@ -48,6 +58,10 @@
     padding-bottom: 55px;
 
     @include font(36px, 36px, $font-weight-bold);
+  }
+
+  @include desktop {
+    padding-top: 58px;
   }
 }
 

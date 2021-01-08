@@ -13,32 +13,6 @@
   }
 }
 
-.calendar__day {
-  padding: 8px 8px 5px;
-  box-sizing: border-box;
-
-  color: rgba($color-black-bluish, 0.3);
-  text-align: center;
-
-  border: 1px solid $color-grey-light;
-
-  @include tablet {
-    padding: 25px;
-    min-height: 70px;
-  }
-
-  @include desktop {
-    //min-width: 144px;
-    height: 70px;
-    min-width: 138px;
-    padding: 15px 15px;
-    box-sizing: border-box;
-
-    text-align: left;
-    vertical-align: top;
-  }
-}
-
 .calendar__title {
   text-align: center;
   color: $color-black-bluish;
@@ -53,7 +27,7 @@
 }
 
 .calendar__title-day {
-  padding: 0 0 10px;
+  padding: 0 0 7px;
 
   &--holiday {
     color: $color-orange-hotred;
@@ -68,26 +42,116 @@
   }
 }
 
-.day__start-month {
-  display: none;
+.calendar__day {
+  min-width: 31px;
+  height: 31px;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border: 1px solid $color-grey-light;
+
+  &--start-month {
+    display: none;
+
+    @include desktop {
+      display: inline;
+    }
+  }
+
+  &--start-trip,
+  &--end-trip {
+    display: none;
+
+    @include desktop {
+      display: inline;
+
+      margin-top: 5px;
+    }
+  }
+
+  @include tablet {
+    min-height: 70px;
+  }
 
   @include desktop {
-    display: inline;
+    height: 72px;
+    min-width: 138px;
+    box-sizing: border-box;
+
+    text-align: left;
+    vertical-align: top;
   }
 }
 
-.calendar__day--start,
-.calendar__day--end {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+.calendar__day-button {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-.calendar__day--start span,
-.calendar__day--end span {
-  display: none;
+  font: inherit;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &--past {
+    color: rgba($color-black-bluish, 0.3);
+  }
+
+  &--available {
+    color: $color-blue-ocean;
+
+    background-color: $color-white-smoky;
+
+    &:hover {
+      color: $color-white;
+
+      background-color: $color-blue-ocean;
+      border: 2px solid $color-red-scarlett;
+
+      @include tablet {
+        border: 4px solid $color-red-scarlett;
+      }
+    }
+  }
+
+  &--selected {
+    color: $color-white;
+
+    background-color: $color-blue-ocean;
+
+    @include desktop {
+      flex-direction: column;
+    }
+
+    &:hover {
+      color: $color-white;
+
+      background-color: $color-blue-ocean;
+      border: 2px solid $color-red-scarlett;
+
+      @include tablet {
+        border: 4px solid $color-red-scarlett;
+      }
+    }
+  }
+
+  @include tablet {
+    min-height: 69px;
+  }
 
   @include desktop {
-    display: inline;
+    display: flex;
+
+    padding-left: 15px;
+    padding-top: 15px;
+
+    @include font(18px, 18px, $font-weight-normal);
   }
 }

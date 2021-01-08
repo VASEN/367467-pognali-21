@@ -6,15 +6,25 @@
   margin-bottom: -20px;
 
   background-color: $color-white-smoky;
+
+  @include tablet {
+    margin-top: -60px;
+    margin-bottom: -60px;
+  }
 }
 
 .user-profile__container {
   padding-top: 45px;
   padding-bottom: 55px;
 
+  @include tablet {
+    padding-top: 125px;
+    padding-bottom: 70px;
+  }
+
   @include desktop {
-    padding-top: 95px;
-    padding-bottom: 75px;
+    padding-top: 128px;
+    padding-bottom: 120px;
   }
 }
 
@@ -27,6 +37,11 @@
     padding-left: 35px;
     padding-right: 35px;
   }
+
+  @include desktop {
+    padding-left: 65px;
+    padding-right: 0;
+  }
 }
 
 .user-profile__card {
@@ -36,12 +51,13 @@
   align-items: center;
 
   @include tablet {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 94px 1fr 94px;
     grid-column-gap: 60px;
+    grid-row-gap: 45px;
   }
 
   @include desktop {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-column-gap: 140px;
   }
 }
@@ -55,10 +71,15 @@
   background-color: transparent;
   border-radius: 50px;
 
+  @include tablet {
+    width: 94px;
+    height: 94px;
+  }
+
   @include desktop {
     position: absolute;
-    top: -200px;
-    right: 230px;
+    top: -210px;
+    right: 330px;
 
     z-index: 2;
   }
@@ -70,6 +91,10 @@
 
   @include desktop {
     color: $color-white;
+
+    &::after {
+      width: 45px;
+    }
   }
 }
 
@@ -93,6 +118,11 @@
   z-index: 1;
 
   transform: rotate(-90deg);
+
+  @include tablet {
+    width: 94px;
+    height: 94px;
+  }
 }
 
 .user-profile__card picture {
@@ -105,13 +135,16 @@
   border-radius: 50%;
 
   @include tablet {
+    width: 94px;
+    height: 94px;
+
     border-radius: 7px;
   }
 
   @include desktop {
     position: absolute;
-    top: -265px;
-    right: 0;
+    top: -255px;
+    right: 95px;
 
     width: 190px;
     height: 190px;
@@ -131,12 +164,10 @@
   position: relative;
   width: 100%;
   margin-top: 12px;
-  padding: 27px 25px 20px;
 
-  box-sizing: border-box;
-
-  border: 1px solid $color-telegray-light;
-  border-radius: 10px;
+  @include tablet {
+    margin-top: 8px;
+  }
 
   @include desktop {
     grid-column: auto;
@@ -144,12 +175,25 @@
 }
 
 .user-profile__travel-wrapper {
-  margin-top: 4px;
-  padding: 15px;
+  margin-top: 0;
+  padding: 15px 25px 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid $color-telegray-light;
+  border-radius: 10px;
+
 
   @include tablet {
     grid-column: 2/3;
     grid-row: 1/2;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @include desktop {
+    min-width: 384px;
   }
 }
 
@@ -178,15 +222,30 @@
     bottom: -10px;
 
     @include font(20px, 20px, $font-weight-medium);
+    letter-spacing: 0.1em;
+  }
+}
+
+.user-profile__tags-legend {
+  @include tablet {
+    bottom: -3px;
+  }
+
+  @include desktop {
+    margin-left: 20px;
   }
 }
 
 .user-profile__tags-editor {
   width: 100%;
-  min-height: 35px;
+  min-height: 89px;
   margin: 0;
-  padding: 0;
+  padding: 27px 25px 20px;
+
   box-sizing: border-box;
+
+  border: 1px solid $color-telegray-light;
+  border-radius: 10px;
 
   font: inherit;
 
@@ -194,18 +253,82 @@
   color: rgba($color-black-bluish, 0.6);
 
   background-color: transparent;
-  border: none;
+
+  &:hover {
+    border-color: $color-grey-agate;
+  }
+
+  &:focus {
+    color: $color-black-bluish;
+
+    border-color: $color-blue-sapphire;
+  }
 
   @include tablet {
+    padding: 35px 40px 35px;
+
     @include font(20px, 22px, $font-weight-normal);
   }
 }
 
 .user-profile__travel-list .travel-list__item {
-  width: 32px;
-  height: 32px;
   margin-right: 0;
 
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.user-profile__travel-list .travel-list__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 32px;
+  min-height: 32px;
+  margin: 0;
+  box-sizing: border-box;
+
   background-color: $color-white;
-  border-radius: 16px;
+  border: none;
+  border-radius: 50%;
+
+  @include tablet {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  &:hover .travel-list__image,
+  &:focus .travel-list__image {
+    fill: $color-agate-grey;
+
+    &--checked {
+      fill: $color-blue-ocean;
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    background-color: $color-grey-lavender-light;
+  }
+
+  &:active .travel-list__image {
+    fill: $color-blue-ocean;
+    opacity: 0.1;
+
+    &--checked {
+      opacity: 0.3;
+    }
+  }
+}
+
+.user-profile__travel-list .travel-list__image {
+  width: 17px;
+  height: 16px;
+
+  @include tablet {
+    width: 23px;
+    height: 23px;
+  }
 }

@@ -17,7 +17,7 @@
     flex-wrap: wrap;
 
     padding-right: 45px;
-    padding-left: 190px;
+    padding-left: 200px;
     list-style: disc;
 
     @include font(20px, 24px, $font-weight-normal);
@@ -29,10 +29,11 @@
     width: auto;
     height: auto;
     margin-right: 0;
-    padding-left: 35px;
-    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-bottom: 20px;
 
     text-transform: uppercase;
+    letter-spacing: 0.1em;
 
     background-color: transparent;
     border-radius: 0;
@@ -43,6 +44,10 @@
 
     &::marker {
       color: $color-blue-ocean;
+
+      @include desktop {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -57,5 +62,12 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include tablet {
+    width: 6px;
+    height: 6px;
+
+    margin-right: 29px;
   }
 }

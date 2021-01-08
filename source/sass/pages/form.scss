@@ -1,6 +1,10 @@
 @import "source/sass/common/variables";
 @import "source/sass/common/mixins";
 
+.form-page {
+  background-color: $color-lightgrey;
+}
+
 .form-page .header {
   background-color: $color-cobalt-blue;
 
@@ -17,12 +21,57 @@
   }
 
   &--opened .header__menu-items-wrapper {
+    display: contents;
+  }
+
+  @include desktop {
     display: grid;
+    grid-template-areas: none;
+    grid-template-columns: max-content auto max-content;
+    grid-template-rows: 158px;
+
+    min-height: auto;
+  }
+}
+
+.form-page .header__logo-link {
+  @include desktop {
+    grid-area: unset;
   }
 }
 
 .form-page .header__menu-items-wrapper {
   display: none;
+
+  @include tablet {
+    order: 2;
+    display: grid;
+  }
+}
+
+.form-page .header-navigation {
+  @include desktop {
+    order: 1;
+    grid-area: unset;
+  }
+}
+
+.form-page .page__title {
+  @include desktop {
+    padding-top: 19px;
+  }
+}
+
+.form-page__main {
+  margin-bottom: 23px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 
 .form-page .footer {

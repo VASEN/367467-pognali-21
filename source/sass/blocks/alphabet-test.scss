@@ -44,11 +44,15 @@
 
 .alphabet-test__title {
   margin: 0;
+
+  @include tablet {
+    min-width: 53px;
+  }
 }
 
 .alphabet-test__button-letter {
   min-width: 100%;
-  min-height: 44px;
+  min-height: 41px;
   margin: 0;
   padding: 0;
 
@@ -62,7 +66,9 @@
 
   @include tablet {
     min-width: 100%;
-    min-height: 70px;
+    min-height: 69px;
+
+    @include font(20px, 20px, $font-weight-medium);
   }
 
   @include desktop {
@@ -104,11 +110,21 @@
 
 .alphabet-test__country-list {
   @include reset-list;
-  padding: 20px;
+  padding: 17px 20px 20px 12px;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 17px;
+  }
 }
 
 .alphabet-test__country-item {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+
+  @include tablet {
+    margin-bottom: 7px;
+  }
 }
 
 .alphabet-test__button-country {
@@ -118,4 +134,9 @@
 
   background-color: transparent;
   border: none;
+
+  @include tablet {
+    @include font(20px, 20px, $font-weight-normal);
+    text-align: left;
+  }
 }

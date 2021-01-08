@@ -140,6 +140,10 @@
   }
 }
 
+.companions__user-card .user-card__wrapper {
+  padding-top: 8px;
+}
+
 .companions .user-card__user {
   @include tablet {
     @include font(24px, 22px, $font-weight-bold);
@@ -186,7 +190,7 @@
   padding-left: 30px;
   padding-right: 30px;
 
-  @include font(20px, 23px, $font-weight-normal);
+  @include font(16px, 18px, $font-weight-normal);
 }
 
 .companions .user-card__status {
@@ -194,6 +198,9 @@
     width: 8px;
     height: 8px;
     margin-right: 14px;
+
+    @include font(20px, 23px, $font-weight-normal);
+
   }
 }
 

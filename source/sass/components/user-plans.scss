@@ -8,21 +8,29 @@
 
   background-color: $color-lavender;
   border-radius: 25px 25px 0 0;
+
+  @include tablet {
+    border-radius: 30px 30px 0 0;
+  }
+
+  @include desktop {
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .user-plans__container {
-  padding-top: 28px;
+  padding-top: 25px;
   padding-bottom: 50px;
 
   @include tablet {
     @include container($width-tablet, 75px);
 
-    padding-top: 60px;
+    padding-top: 57px;
     padding-bottom: 95px;
   }
 
   @include desktop {
-    padding: 55px 58px 120px 125px;
+    padding: 54px 58px 120px 125px;
   }
 }
 
@@ -35,6 +43,10 @@
     margin-bottom: 48px;
 
     @include font(36px, 36px, $font-weight-bold);
+  }
+
+  @include desktop {
+    padding-left: 5px;
   }
 }
 
