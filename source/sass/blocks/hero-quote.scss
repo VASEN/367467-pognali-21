@@ -38,9 +38,6 @@
 
     @include font(28px, 33px, $font-weight-light);
   }
-
-  @include desktop {
-  }
 }
 
 .hero-quote__author {

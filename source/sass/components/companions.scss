@@ -179,7 +179,6 @@
 }
 
 .companions .user-card__wrapper {
-  //margin-right: 46px;
   @include tablet {
     margin: 0;
     padding: 10px 46px 23px;
@@ -200,7 +199,6 @@
     margin-right: 14px;
 
     @include font(20px, 23px, $font-weight-normal);
-
   }
 }
 
