@@ -2,7 +2,7 @@
 @import "source/sass/common/mixins";
 
 .sort__container {
-  padding: 20px 0;
+  padding: 20px 0 28px;
 
   @include desktop {
     min-width: auto;
@@ -11,7 +11,7 @@
 }
 
 .sort__wrapper {
-  padding: 25px;
+  padding: 28px 25px 25px;
 
   background-color: $color-yellow-sunrise;
   border-radius: 20px;
@@ -26,6 +26,8 @@
 }
 
 .sort__title {
+  margin-bottom: 22px;
+
   @include font(22px, 22px, $font-weight-bold);
   color: $color-blue-ocean;
 
@@ -110,6 +112,17 @@
 .sort__area {
   border-top: 1px solid $color-yellow-saffron-light;
 
+  &--show .sort__rectangle {
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid $color-blue-cobalt;
+    border-right: 5px solid transparent;
+    border-top: none;
+  }
+
+  &--show .button-sort-toggle {
+    padding-bottom: 13px;
+  }
+
   &--show .sort__list {
     display: block;
   }
@@ -170,10 +183,10 @@
 }
 
 .sort__item {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   &:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 
     @include tablet {
       margin-bottom: 0;
@@ -191,9 +204,9 @@
 
 .sort__item label {
   display: flex;
-  align-items: center;
+  align-items: end;
 
-  @include font(20px, 20px, $font-weight-normal);
+  @include font(15px, 20px, $font-weight-normal);
 
   &::before {
     content: "";
@@ -202,12 +215,19 @@
     height: 18px;
     margin-right: 10px;
 
-    background-color: tomato;
+    background-color: $color-white;
+    border-radius: 4px;
 
     @include tablet {
       width: 24px;
       height: 24px;
     }
+  }
+}
+
+.sort__item-input:checked + .sort__item-box {
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 17' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.39 14.18L4 10.5V9c0 .04 0-.04 0 0V7.5l3.38 3.26c.11.12.3.12.42 0L15 3v3.5l-6.2 6.62h.01l-1 1.06a.29.29 0 01-.42 0z' fill='%23161C35'/%3E%3C/svg%3E%0A");
   }
 }
 
@@ -217,14 +237,18 @@
   padding-bottom: 20px;
 }
 
-.sort .travel-list__item {
+.sort-travel-list__item {
+  margin-right: 1px;
+
   @include tablet {
     margin-right: 0;
   }
 }
 
-.travel-list__item label {
-  display: block;
+.sort-travel-list__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 32px;
   height: 32px;
@@ -238,7 +262,20 @@
   }
 }
 
+.sort-travel-list__image {
+  width: 16px;
+  height: 16px;
+
+  opacity: 0.15;
+}
+
+.sort-travel-list__input:checked + .sort-travel-list__label .sort-travel-list__image{
+  opacity: 1;
+}
+
 .sort .button-round {
+  align-items: center;
+
   @include font(17px, 17px, $font-weight-bold);
 
   background-color: $color-white;
@@ -254,6 +291,10 @@
 }
 
 .sort__rectangle {
+  border-left: 5px solid transparent;
+  border-top: 5px solid $color-blue-cobalt;
+  border-right: 5px solid transparent;
+
   @include tablet {
     display: none;
   }

@@ -21,7 +21,12 @@
   }
 
   &--opened .header__menu-items-wrapper {
-    display: contents;
+    display: block;
+    grid-area: items-wr;
+
+    @include tablet {
+      display: contents;
+    }
   }
 
   @include desktop {

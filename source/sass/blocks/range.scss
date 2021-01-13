@@ -2,7 +2,7 @@
 @import "source/sass/common/mixins";
 
 .level-range__range-wrapper {
-  padding: 25px 0;
+  padding: 23px 0;
 }
 
 .level-range__range {
@@ -14,8 +14,9 @@
 
 .level-range__range--current {
   position: relative;
-  width: 138px;
+  width: 132px;
   height: 2px;
+  margin-left: 78px;
 
   background-color: $color-blue-ocean;
 }
@@ -33,7 +34,7 @@
 .level-range__range--min {
   position: absolute;
   top: -4px;
-  left: 0;
+  left: -10px;
   width: 10px;
   height: 10px;
 
@@ -44,7 +45,7 @@
 .level-range__range--max {
   position: absolute;
   top: -4px;
-  right: 0;
+  right: -10px;
   width: 10px;
   height: 10px;
 
@@ -59,8 +60,6 @@
 }
 
 .level-range__wrapper {
-  //position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,6 +69,7 @@
   display: block;
 
   margin: 0;
+  padding: 5px 0;
 }
 
 .level-range__element > input[type="number"] {

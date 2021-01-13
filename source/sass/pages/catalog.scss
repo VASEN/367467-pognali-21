@@ -1,12 +1,12 @@
 @import "source/sass/common/variables";
 @import "source/sass/common/mixins";
 
+.catalog-page {
+  background-color: $color-lightgrey;
+}
+
 .catalog-page .header {
   background-color: $color-cobalt-blue;
-
-  &--closed {
-    background-color: $color-cobalt-blue;
-  }
 
   &--opened {
     background-color: $color-white;
@@ -16,28 +16,61 @@
 .catalog-page .header__menu {
   background-color: $color-cobalt-blue;
 
-  &--closed {
-    background-color: $color-cobalt-blue;
-  }
-
   &--opened {
     background-color: $color-white;
   }
 
-  &--closed .header__user-navigation {
-    display: none;
+  &--opened .header__menu-items-wrapper {
+    display: block;
+    grid-area: items-wr;
 
     @include tablet {
-      display: block;
+      display: contents;
     }
   }
 
-  &--closed .header__contacts {
-    display: none;
+  //&--closed .header__user-navigation {
+  //  display: none;
+  //
+  //  @include tablet {
+  //    display: block;
+  //  }
+  //}
+  //
+  //&--closed .header__contacts {
+  //  display: none;
+  //
+  //  @include desktop {
+  //    display: flex;
+  //  }
+  //}
+}
 
-    @include desktop {
-      display: flex;
-    }
+.catalog-page .header__logo-link {
+  @include desktop {
+    grid-area: unset;
+  }
+}
+
+.catalog-page .header__menu-items-wrapper {
+  display: none;
+
+  @include tablet {
+    order: 2;
+    display: grid;
+  }
+}
+
+.catalog-page .header-navigation {
+  @include desktop {
+    order: 1;
+    grid-area: unset;
+  }
+}
+
+.form-page .page__title {
+  @include desktop {
+    padding-top: 19px;
   }
 }
 
