@@ -80,12 +80,6 @@
   }
 }
 
-.catalog-page__pagination {
-  @include desktop {
-    order: 2;
-  }
-}
-
 .catalog-page .footer {
   position: relative;
 

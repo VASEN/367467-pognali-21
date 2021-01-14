@@ -2,14 +2,19 @@
 @import "source/sass/common/mixins";
 
 .pagination {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @include tablet {
-    padding: 25px;
+    grid-template-columns: auto 35px 35px;
+    padding: 28px 25px 25px 28px;
 
     background-color: $color-white;
     border-radius: 20px;
+  }
+
+  @include desktop {
+    order: 2;
   }
 }
 
@@ -46,4 +51,10 @@
 .pagination__prev-button,
 .pagination__next-button {
   min-width: auto;
+}
+
+.pagination__prev-button {
+  box-sizing: border-box;
+
+  border-right: 1px solid $color-white-smoky;
 }

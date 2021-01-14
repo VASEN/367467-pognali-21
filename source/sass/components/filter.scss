@@ -19,6 +19,10 @@
     }
   }
 
+  @include tablet {
+    border-radius: 0 0 60px 60px;
+  }
+
   @include desktop {
     background-color: $color-white-smoky;
   }
