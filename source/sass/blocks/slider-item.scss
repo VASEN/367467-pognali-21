@@ -3,7 +3,7 @@
 
 .slider-item {
   margin-bottom: 10px;
-  padding: 25px;
+  padding: 25px 25px 22px;
 
   background-color: $color-white;
   border-radius: 10px;
@@ -15,11 +15,49 @@
   @include tablet {
     margin-bottom: 40px;
     padding: 50px 40px 55px;
+
+    border-radius: 25px;
   }
 
   @include desktop {
     margin-bottom: 45px;
     padding: 100px 160px 105px;
+
+    border-radius: 60px;
+  }
+}
+
+.step-two {
+  padding-top: 22px;
+  padding-bottom: 10px;
+
+  @include tablet {
+    margin-bottom: 50px;
+    padding: 45px 42px 52px;
+  }
+
+  @include desktop {
+    margin-bottom: 45px;
+    padding: 100px 160px 105px;
+
+    border-radius: 60px;
+  }
+}
+
+.step-three {
+  padding-top: 24px;
+  padding-bottom: 10px;
+
+  @include tablet {
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
+
+  @include desktop {
+    margin-bottom: 45px;
+    padding: 100px 160px 105px;
+
+    border-radius: 60px;
   }
 }
 
@@ -39,9 +77,13 @@
 .slider-item__step-three-wrapper {
   @include tablet {
     margin-bottom: 25px;
-    padding-bottom: 55px;
 
     border-bottom: 1px solid $color-grey-platinum;
+  }
+
+  @include desktop {
+    margin-bottom: 73px;
+    padding-bottom: 55px;
   }
 }
 
@@ -75,7 +117,7 @@
   color: $color-black-bluish;
 
   @include tablet {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
 
     @include font(20px, 24px, $font-weight-normal);
   }
@@ -89,10 +131,14 @@
 }
 
 .slider-item .month-module {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   @include tablet {
     margin-bottom: 45px;
+  }
+
+  @include desktop {
+    margin-bottom: 55px;
   }
 }
 
@@ -101,16 +147,28 @@
   flex-wrap: wrap;
   flex-direction: column;
 
+  @include tablet {
+    margin-bottom: 35px;
+  }
+
   @include desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 15px;
 
-    padding-bottom: 30px;
+    //padding-bottom: 30px;
     padding-top: 30px;
 
     border-top: 1px solid $color-grey-platinum;
+  }
+}
+
+.slider-item .button-module {
+  letter-spacing: 0.09em;
+
+  @include desktop {
+    letter-spacing: 0;
   }
 }
 
@@ -123,15 +181,6 @@
 .slider-item .up-down-button-duration {
   @include tablet {
     order: 2;
-  }
-}
-
-.month-module__wrapper {
-  margin-bottom: 22px;
-
-  @include desktop {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -148,13 +197,13 @@
 
 .slider-item__next-step {
   justify-content: center;
-  padding: 7px;
+  padding: 7px 7px 5px;
 
   @include font(17px, 30px, $font-weight-bold);
 
   text-transform: uppercase;
 
-  border-radius: 50px;
+  border-radius: 20px;
 
   &::after {
     display: none;
@@ -209,7 +258,7 @@
 }
 
 .step-tree__button-round {
-  margin: 0 0 17px;
+  margin: 0 0 10px;
 
   @include tablet {
     margin: 0;

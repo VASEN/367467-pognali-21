@@ -21,7 +21,7 @@
 
   @include font(24px, 24px, $font-weight-bold);
 
-  border-bottom: px solid rgba($color-white, 0.3);
+  border-bottom: 1px solid rgba($color-white, 0.3);
 
   @include desktop {
     margin-bottom: 2px;

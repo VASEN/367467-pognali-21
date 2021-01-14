@@ -24,32 +24,6 @@
   @include font(24px, 24px, $font-weight-bold);
 }
 
-.page__title-wrapper {
-  position: relative;
-
-  min-width: 320px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  z-index: 2;
-
-  background-color: $color-cobalt-blue;
-  border-radius: 0 0 25px 25px;
-
-  @include tablet {
-    padding: 90px 0 0;
-  }
-}
-
-.page__title-wrapper .container {
-  @include tablet {
-    @include container($width-tablet, 75px);
-  }
-
-  @include desktop {
-    @include container($width-desktop, 125px);
-  }
-}
-
 .page__title {
   position: relative;
   display: inline-flex;
