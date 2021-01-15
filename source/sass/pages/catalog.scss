@@ -29,21 +29,14 @@
     }
   }
 
-  //&--closed .header__user-navigation {
-  //  display: none;
-  //
-  //  @include tablet {
-  //    display: block;
-  //  }
-  //}
-  //
-  //&--closed .header__contacts {
-  //  display: none;
-  //
-  //  @include desktop {
-  //    display: flex;
-  //  }
-  //}
+  @include desktop {
+    display: grid;
+    grid-template-areas: none;
+    grid-template-columns: max-content auto max-content;
+    grid-template-rows: 158px;
+
+    min-height: auto;
+  }
 }
 
 .catalog-page .header__logo-link {

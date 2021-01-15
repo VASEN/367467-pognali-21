@@ -750,6 +750,8 @@
   border: none;
   border-radius: 50%;
 
+  cursor: pointer;
+
   &::before,
   &::after {
     content: "";
@@ -760,7 +762,9 @@
     width: 11px;
     height: 1px;
 
-    background-color: $color-grey-agate;
+    background-color: $color-black;
+
+    opacity: 0.1;
   }
 
   &::before {
@@ -769,6 +773,21 @@
 
   &::after {
     transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.05;
+    }
   }
 
   @include tablet {
@@ -798,6 +817,8 @@
   background-color: transparent;
   border: none;
 
+  cursor: pointer;
+
   &::before,
   &::after {
     content: "";
@@ -809,6 +830,8 @@
     height: 1px;
 
     background-color: $color-white;
+
+    opacity: 0.3;
   }
 
   &::before {
@@ -817,6 +840,21 @@
 
   &::after {
     transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.1;
+    }
   }
 
   @include tablet {

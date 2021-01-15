@@ -7,6 +7,10 @@
   @include tablet {
     padding-bottom: 85px;
   }
+
+  @include desktop {
+    padding-bottom: 150px;
+  }
 }
 
 .travellers__container {
@@ -46,7 +50,7 @@
 
   @include desktop {
     grid-template-columns: auto min-content 1fr 1fr auto 45px;
-    grid-template-rows: 45px auto auto auto 45px;
+    grid-template-rows: 45px max-content auto 60px 45px;
     grid-template-areas:
       "foto . . . ."
       "foto user user to-visit to-visit"
@@ -54,6 +58,7 @@
       "foto button like transport level"
       "foto . . . .";
 
+    margin-bottom: 22px;
     padding: 0;
   }
 }
@@ -67,6 +72,14 @@
     width: 190px;
     height: 190px;
     margin: 0 30px 0 35px;
+  }
+
+  @include desktop {
+    grid-area: foto;
+
+    width: 285px;
+    height: 285px;
+    margin-left: 0;
   }
 }
 
@@ -96,7 +109,8 @@
     //grid-row: 1/4;
     grid-area: foto;
 
-    min-width: 285px;
+    width: 285px;
+    height: 285px;
 
     border-radius: 20px 0 0 20px;
   }
@@ -125,12 +139,32 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px 12px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: $color-grey-lavender-light;
+  }
+
+  &:active {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6 4.66l.67-1.4c.17-.35.46-.86.86-1.26.4-.4.89-.67 1.47-.67a2.28 2.28 0 012.25 2.3c0 .95-.42 1.63-1.4 2.65-.25.27-.54.55-.86.86-.83.82-1.87 1.84-2.99 3.2a40.57 40.57 0 00-2.99-3.2l-.86-.86C1.17 5.26.75 4.58.75 3.63c0-1.26 1-2.3 2.25-2.3.58 0 1.06.27 1.47.67.4.4.7.9.86 1.26L6 4.66zm.3 6.54a.39.39 0 01-.3.14.37.37 0 01-.3-.14 37.64 37.64 0 00-3.18-3.45C.98 6.22 0 5.25 0 3.63 0 1.93 1.34.54 3 .54c1.2 0 2.04.83 2.55 1.58.2.29.35.57.45.78.13-.27.28-.53.45-.78C6.96 1.37 7.8.54 9 .54c1.66 0 3 1.38 3 3.09 0 1.63-.97 2.59-2.52 4.12-.9.88-1.99 1.95-3.19 3.45z' opacity='0.3' fill='%23192144'/%3E%3C/svg%3E");
+  }
 
   &--active {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.26.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 6.87.19 6 .19 3.48a3.04 3.04 0 013.07-3z' fill='%23F02323'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 12px 12px;
+    background-color: $color-pink-linen;
+
+    &:hover,
+    &:focus {
+      background-color: $color-pale-pink;
+    }
+
+    &:active {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.26.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 6.87.19 6 .19 3.48a3.04 3.04 0 013.07-3z' opacity='0.3' fill='%23F02323'/%3E%3C/svg%3E%0A");
+    }
   }
 
   @include tablet {
@@ -156,6 +190,17 @@
   grid-column: 2/-1;
   align-items: baseline;
 
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     grid-column: 2/4;
 
@@ -168,6 +213,8 @@
 
   @include desktop {
     grid-area: user;
+
+    margin-bottom: 0;
   }
 }
 
@@ -176,6 +223,7 @@
   flex-direction: column;
 
   @include font(20px, 20px, $font-weight-bold);
+  color: $color-blue-ocean;
 
   @include tablet {
     flex-direction: row;
@@ -217,10 +265,12 @@
 
   @include desktop {
     grid-area: tags;
+    align-self: center;
+
     margin: 0;
-    padding-left: 25px;
-    padding-bottom: 45px;
-    padding-right: 100px;
+    padding-left: 32px;
+    //padding-bottom: 40px;
+    padding-right: 60px;
   }
 }
 
@@ -244,6 +294,8 @@
 
   @include desktop {
     grid-area: to-visit;
+
+    margin-top: 0;
     padding: 0;
 
     border: none;
@@ -264,6 +316,13 @@
   @include tablet {
     display: flex;
   }
+
+  @include desktop {
+    flex-direction: column;
+
+    padding-left: 10px;
+    padding-top: 5px;
+  }
 }
 
 .travellers__user-card .user-card__country-card {
@@ -281,7 +340,8 @@
   }
 
   @include desktop {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    margin-right: 0;
 
     &:last-child {
       margin-bottom: 0;
@@ -306,6 +366,10 @@
     margin-left: 12px;
 
     @include font(20px, 20px, $font-weight-bold);
+  }
+
+  @include desktop {
+    margin-left: 15px;
   }
 }
 
@@ -455,6 +519,17 @@
   margin: 0 auto;
   padding: 0;
 
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-orange;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
+
   @include tablet {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -471,7 +546,7 @@
 
   @include desktop {
     grid-area: button;
-    margin-left: 20px;
+    margin-left: 25px;
   }
 }
 
@@ -481,11 +556,27 @@
 
   margin-bottom: 20px;
 
+  cursor: pointer;
+
+  &:hover .cross,
+  &:focus .cross {
+    opacity: 0.6;
+  }
+
+  &:active .cross {
+    opacity: 0.3;
+  }
+
   @include tablet {
-    margin-top: 45px;
-    margin-bottom: 50px;
+    width: unset;
+    margin: 45px auto 50px;
 
     @include font(20px, 20px, $font-weight-bold);
+  }
+
+  @include desktop {
+    width: unset;
+    margin: 65px auto;
   }
 }
 

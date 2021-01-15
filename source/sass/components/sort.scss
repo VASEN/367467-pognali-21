@@ -27,6 +27,7 @@
 
   @include desktop {
     padding: 45px;
+    padding-left: 48px;
   }
 }
 
@@ -41,6 +42,10 @@
 
     @include font(30px, 30px, $font-weight-bold);
   }
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
 }
 
 .sort__area-wrapper {
@@ -54,6 +59,7 @@
   }
 
   @include desktop {
+    margin-bottom: 12px;
     padding-top: 0;
     padding-bottom: 0;
 
@@ -119,6 +125,12 @@
 .sort__area {
   border-top: 1px solid $color-yellow-saffron-light;
 
+  &--show {
+    @include desktop {
+      padding-bottom: 18px;
+    }
+  }
+
   &--show .sort__rectangle {
     border-left: 5px solid transparent;
     border-bottom: 5px solid $color-blue-cobalt;
@@ -128,10 +140,20 @@
 
   &--show .button-sort-toggle {
     padding-bottom: 13px;
+
+    @include desktop {
+      padding-bottom: 20px;
+    }
   }
 
   &--show .sort__list {
     display: grid;
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &--show .sort__travel-list {
@@ -139,6 +161,11 @@
 
     @include desktop {
       justify-content: center;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: start;
     }
   }
 
@@ -180,6 +207,17 @@
 }
 
 .sort__area-toggle {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -188,6 +226,8 @@
   }
 
   @include desktop {
+    padding-bottom: 5px;
+
     @include font(20px, 22px, $font-weight-medium);
   }
 }
@@ -221,6 +261,17 @@
 
   @include font(15px, 20px, $font-weight-normal);
 
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::before {
     content: "";
 
@@ -234,6 +285,10 @@
     @include tablet {
       width: 24px;
       height: 24px;
+    }
+
+    @include desktop {
+      margin-right: 13px;
     }
   }
 
@@ -304,12 +359,18 @@
   opacity: 1;
 }
 
-.sort .button-round {
+.sort__button {
   align-items: center;
 
   @include font(17px, 17px, $font-weight-bold);
 
   background-color: $color-white;
+
+  cursor: pointer;
+
+  &:active {
+    background-color: $color-yellow-saffron-light;
+  }
 
   @include tablet {
     max-width: none;
@@ -319,6 +380,10 @@
 
     @include font(20px, 20px, $font-weight-bold);
   }
+}
+
+.sort__button span {
+  opacity: 0.3;
 }
 
 .sort__rectangle {

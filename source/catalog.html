@@ -476,7 +476,10 @@
               </dd>
             </dl>
           </div>
-          <button class="filter__close-button button-X" type="button"><span class="cross"></span>Свернуть</button>
+          <button class="filter__close-button button-X" type="button">
+            <span class="cross"></span>
+            <span>Свернуть</span>
+          </button>
         </div>
       </div>
     </section>
@@ -582,12 +585,12 @@
                       <div class="level-range__wrapper">
                         <div class="level-range__element">
                           <label class="visually-hidden" for="min-level">Минимальный уровень:</label>
-                          <input type="number" name="min-level" value="30" id="min-level" min="30">
+                          <input class="level-range__element--min" type="number" name="min-level" value="30" id="min-level" min="30">
                         </div>
-                        <span class="level-range__border">-</span>
+                        <span class="level-range__border"></span>
                         <div class="level-range__element">
                           <label class="visually-hidden" for="max-level">Максимальный уровень:</label>
-                          <input type="number" name="max-level" value="100" id="max-level" max="100">
+                          <input class="level-range__element--max" type="number" name="max-level" value="100" id="max-level" max="100">
                         </div>
                       </div>
                     </div>
@@ -601,7 +604,9 @@
                     </div>
                   </div>
                 </div>
-                <button class="sort__button button-round" type="submit">Показать</button>
+                <button class="sort__button button-round" type="submit">
+                  <span>Показать</span>
+                </button>
               </form>
             </div>
           </div>
@@ -703,7 +708,7 @@
                     </svg>
                   </div>
                 </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
             <li class="cards__item user-card travellers__user-card">
               <picture>
@@ -792,7 +797,7 @@
                     </svg>
                   </div>
               </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
             <li class="cards__item user-card travellers__user-card">
               <picture>
@@ -885,7 +890,7 @@
                     </svg>
                   </div>
                 </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
             <li class="cards__item user-card travellers__user-card">
               <picture>
@@ -971,7 +976,7 @@
                     </svg>
                   </div>
                 </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
           </ul>
           <button class="button travellers__button" type="button"><span class="cross"></span>Показать еще</button>

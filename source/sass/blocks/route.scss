@@ -187,6 +187,12 @@
   border: 1px solid $color-telegray-light;
   border-radius: 4px;
 
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $color-manatee;
+  }
+
   @include tablet {
     grid-column: 1/2;
 
@@ -240,7 +246,21 @@
 
   background-color: transparent;
 
-  &::before {
+  opacity: 0.2;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -249,20 +269,24 @@
     width: 2px;
     height: 14px;
 
-    background-color: $color-blue-pale;
+    background-color: $color-black;
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 0;
-
-    width: 14px;
-    height: 2px;
-
-    background-color: $color-blue-pale;
+    transform: rotate(90deg);
   }
+
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  top: 6px;
+  //  left: 0;
+  //
+  //  width: 14px;
+  //  height: 2px;
+  //
+  //  background-color: $color-blue-pale;
+  //}
 }
 
 .route-module__input {

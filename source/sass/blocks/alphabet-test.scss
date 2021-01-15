@@ -64,6 +64,17 @@
   border: 1px solid $color-telegray-light;
   border-collapse: collapse;
 
+  &:hover,
+  &:focus {
+    border: 1px solid $color-manatee;
+  }
+
+  &:active {
+    color: $color-white;
+
+    background-color: $color-blue-ocean;
+  }
+
   @include tablet {
     min-width: 100%;
     min-height: 69px;
@@ -134,6 +145,15 @@
 
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    color: $color-blue-ocean;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include tablet {
     @include font(20px, 20px, $font-weight-normal);
