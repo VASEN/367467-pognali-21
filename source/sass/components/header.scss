@@ -43,6 +43,16 @@
     }
   }
 
+  &--scrolled .header__menu {
+    &--opened .header__menu-items-wrapper {
+      display: block;
+
+      @include tablet {
+        display: contents;
+      }
+    }
+  }
+
   &--scrolled .header__logo-image {
     display: none;
 
@@ -398,6 +408,8 @@
     display: none;
 
     &--opened {
+      display: block;
+
       width: 18px;
       height: 18px;
       fill: $color-yellow-sunrise;
@@ -493,6 +505,10 @@
   height: 18px;
 
   fill: $color-blue-sapphire;
+
+  &--opened {
+    display: none;
+  }
 
   @include desktop {
     width: 18px;
