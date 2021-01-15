@@ -2,10 +2,14 @@
 @import "../common/mixins";
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+
   color: $color-white;
 
   background-color: $color-blue-sapphire;
+
+  z-index: 20;
 
   @include tablet {
     background-color: $color-cobalt-blue;
@@ -21,6 +25,40 @@
     @include desktop {
       background-color: $color-blue-cobalt;
     }
+  }
+
+  &--scrolled {
+    background-color: $color-white;
+  }
+
+  &--scrolled .header__menu {
+    background-color: $color-white;
+  }
+
+  &--scrolled .header__menu-items-wrapper {
+    display: none;
+
+    @include tablet {
+      display: contents;
+    }
+  }
+
+  &--scrolled .header__logo-image {
+    display: none;
+
+    &--blue {
+      display: block;
+    }
+  }
+
+  &--scrolled .header-navigation {
+    &::before {
+      background-color: $color-blue-cobalt;
+    }
+  }
+
+  &--scrolled .header-navigation__link {
+    color: $color-blue-cobalt;
   }
 }
 
