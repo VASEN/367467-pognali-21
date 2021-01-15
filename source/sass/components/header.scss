@@ -33,6 +33,14 @@
 
   &--scrolled .header__menu {
     background-color: $color-white;
+
+    &--opened .header__menu-items-wrapper {
+      display: block;
+
+      @include tablet {
+        display: contents;
+      }
+    }
   }
 
   &--scrolled .header__menu-items-wrapper {
@@ -40,16 +48,6 @@
 
     @include tablet {
       display: contents;
-    }
-  }
-
-  &--scrolled .header__menu {
-    &--opened .header__menu-items-wrapper {
-      display: block;
-
-      @include tablet {
-        display: contents;
-      }
     }
   }
 
