@@ -102,23 +102,16 @@
   }
 }
 
-.hero__bg-wrapper picture {
+.hero__image {
   margin-left: auto;
   margin-right: 50px;
-  margin-bottom: -5px;
 
-  @include tablet {
-    margin-right: 110px;
-  }
-}
-
-.hero__image {
   @include tablet {
     align-self: end;
 
     width: 372px;
     height: 451px;
-    margin-left: 245px;
+    margin-right: 110px;
     margin-bottom: 140px;
   }
 

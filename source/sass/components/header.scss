@@ -32,9 +32,6 @@
   }
 
   &--scrolled .header__menu {
-    height: 90px;
-    padding-top: 0;
-
     background-color: $color-white;
 
     &--opened .header__menu-items-wrapper {
@@ -47,6 +44,7 @@
 
     @include desktop {
       height: 90px;
+      padding-top: 0;
     }
   }
 
@@ -192,6 +190,8 @@
 }
 
 .header__logo-image {
+  display: block;
+
   width: 96px;
   height: 15px;
 
