@@ -384,10 +384,19 @@
   }
 }
 
+.button-module label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .button-module__caption {
+  display: flex;
+  flex-wrap: wrap;
+
   margin-left: auto;
 
   color: rgba($color-blue-ocean, 0.3);
+  word-break: break-word;
 
   @include desktop {
     order: 2;

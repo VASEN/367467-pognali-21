@@ -9,7 +9,7 @@
 
   @include tablet {
     margin-top: -60px;
-    //margin-bottom: -60px;
+    margin-bottom: -60px;
   }
 }
 
@@ -19,12 +19,12 @@
 
   @include tablet {
     padding-top: 125px;
-    padding-bottom: 75px;
+    padding-bottom: 135px;
   }
 
   @include desktop {
     padding-top: 128px;
-    padding-bottom: 75px;
+    padding-bottom: 135px;
   }
 }
 
@@ -57,7 +57,7 @@
   }
 
   @include desktop {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 385px;
     grid-column-gap: 140px;
   }
 }

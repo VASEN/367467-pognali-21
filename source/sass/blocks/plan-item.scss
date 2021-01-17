@@ -18,16 +18,15 @@
 
   @include tablet {
     display: grid;
-    grid-template-columns: auto min-content;
-    grid-template-rows: 1fr auto;
-    grid-column-gap: 35px;
+    grid-template-columns: 1fr 190px;
+    grid-template-rows: 100px auto;
 
     padding: 0;
   }
 
   @include desktop {
-    grid-template-columns: 1fr 400px 250px;
-    grid-template-rows: 100px;
+    grid-template-columns: 625px auto 250px;
+    grid-template-rows: auto;
     grid-column-gap: 0;
     align-items: center;
   }
@@ -47,7 +46,8 @@
     justify-content: space-between;
 
     margin-bottom: 0;
-    padding: 40px 32px 34px 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     border-bottom: 1px solid rgba($color-telegray-light, 0.3);
   }
@@ -101,15 +101,20 @@
   color: $color-blue-ocean;
 
   @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
     flex-direction: row;
     justify-content: space-between;
 
     margin-bottom: 0;
-    padding: 20px 20px 14px 40px;
+    padding-left: 40px;
+    padding-right: 20px;
   }
 
   @include desktop {
-    padding: 0 20px;
+    padding: 0 20px 0 0;
   }
 }
 
@@ -134,17 +139,19 @@
   }
 
   @include desktop {
-    //margin-right: 30px;
   }
 }
 
 .plan-item__change {
   display: inline-flex;
+  flex-wrap: wrap;
+
   width: fit-content;
 
   @include font(14px, 14px, $font-weight-medium);
   text-transform: uppercase;
   color: rgba($color-black, 0.3);
+  word-break: break-word;
 
   &:hover,
   &:focus {
@@ -156,14 +163,18 @@
   }
 
   @include tablet {
-    align-self: center;
-    padding: 20px 40px 14px 20px;
+    align-items: center;
+
+    min-height: 55px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     @include font(20px, 20px, $font-weight-medium);
     letter-spacing: 0.1em;
   }
 
   @include desktop {
+    min-height: 100px;
     margin-left: auto;
     padding: 0 40px;
   }
