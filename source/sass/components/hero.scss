@@ -17,7 +17,7 @@
   }
 
   @include desktop {
-    min-height: 593px;
+    min-height: 640px;
     padding-bottom: 0;
 
     background-color: $color-blue-sapphire;
@@ -96,7 +96,7 @@
 
   @include desktop {
     margin: 0;
-    padding: 55px 60px 105px 127px;
+    padding: 105px 60px 105px 127px;
 
     text-align: left;
   }
@@ -124,7 +124,7 @@
 
   @include desktop {
     position: absolute;
-    top: -48px;
+    top: 7px;
     left: 604px;
 
     width: 431px;

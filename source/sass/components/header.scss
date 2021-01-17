@@ -32,6 +32,9 @@
   }
 
   &--scrolled .header__menu {
+    height: 90px;
+    padding-top: 0;
+
     background-color: $color-white;
 
     &--opened .header__menu-items-wrapper {
@@ -40,6 +43,10 @@
       @include tablet {
         display: contents;
       }
+    }
+
+    @include desktop {
+      height: 90px;
     }
   }
 
@@ -99,7 +106,8 @@
   @include desktop {
     display: flex;
 
-    height: 160px;
+    height: unset;
+    padding-top: 45px;
 
     background-color: $color-blue-sapphire;
   }
