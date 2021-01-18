@@ -8,37 +8,87 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body catalog-page__body">
-  <header class="page__header header">
+  <header class="header">
     <div class="container header__container ">
-      <div class="header__menu header__menu--closed">
-        <a class="header__logo-link logo-link" href="index.html">
-          <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
+      <div class="header__menu">
+        <a class="header__logo-link" href="index.html">
+          <picture class="header__logo-image">
+            <source media="(min-width: 1439px)" srcset="img/logo-desktop-white@2x.png">
+            <source media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.png">
+            <img src="img/logo-mobile-white@2x.png" alt="Логотип туристического сервиса Погнали">
+          </picture>
+          <picture class="header__logo-image--blue">
+            <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
+            <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
+            <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
+          </picture>
         </a>
-        <button class="header__menu-toggle header__menu-toggle--closed" type="button" aria-label="Открыть меню"></button>
+        <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
         <nav class="header__navigation header-navigation">
           <ul class="header-navigation__list">
             <li class="header-navigation__item">
-              <a class="header-navigation__link" href="#about-us">О сервисе</a>
+              <a class="header-navigation__link" href="#about-us" data-hover="О сервисе">
+                <span data-hover="О&nbsp;сервисе">
+                  О сервисе
+                </span>
+              </a>
             </li>
             <li class="header-navigation__item">
-              <a class="header-navigation__link" href="#">Направления</a>
+              <a class="header-navigation__link" data-hover="Направления">
+                <span data-hover="Направления">
+                  Направления
+                </span>
+              </a>
             </li>
             <li class="header-navigation__item">
-              <a class="header-navigation__link" href="catalog.html">Попутчики</a>
+              <a class="header-navigation__link" href="#companions" >
+                <span data-hover="Попутчики">Попутчики</span>
+              </a>
             </li>
           </ul>
         </nav>
-        <div class="header__user-navigation">
-          <a class="button-round" href="#">Авторизация</a>
+        <div class="header__menu-items-wrapper">
+          <div class="header__user-navigation">
+            <a class="button-round header__user-navigation-button" href="#"><span>Авторизация</span></a>
+          </div>
+          <div class="header__contacts">
+            <a class="header__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
+                <span class="header__telephone-image-wrapper">
+                  <svg class="header__telephone-image" viewBox="0 0 18 18">
+                    <use xlink:href="img/sprite.svg#icon-call"></use>
+                  </svg>
+                  <svg class="header__telephone-image--opened" viewBox="0 0 19 17">
+                    <use xlink:href="img/sprite.svg#icon-telephone"></use>
+                  </svg>
+                </span>
+              <span class="header__telephone--full">8 800 555-86-28</span>
+            </a>
+            <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
+              <span class="header__email-image-wrapper">
+                <svg class="header__mail-image" viewBox="0 0 45 45">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </span>
+              <span class="header__email--full">mail@htmlacademy.ru</span>
+            </a>
+          </div>
         </div>
-        <div class="header__contacts contacts">
-          <a class="header__telephone contacts__telephone" href="tel:88005558628" aria-label="Позвоните нам!"><span class="header__telephone--full">8 800 555-86-28</span></a>
-          <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!"><span class="header__email--full">mail@htmlacademy.ru</span></a>
-        </div>
-        <div class="header__social social">
-          <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
-          <a class="social__link social__link--vk" aria-label="Погнали Вконтакте" href="#"></a>
-          <a class="social__link social__link--insta" aria-label="Погнали в Instagram" href="#"></a>
+        <div class="header__social">
+          <a class="header__social-link header__social-link--fb" aria-label="Погнали в Facebook" href="#">
+            <svg viewBox="0 0 14 28">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+          <a class="header__social-link header__social-link--vk" aria-label="Погнали Вконтакте" href="#">
+            <svg viewBox="0 0 31 16">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
+          <a class="header__social-link header__social-link--insta" aria-label="Погнали в Instagram" href="#">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="img/sprite.svg#icon-inst"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -47,6 +97,9 @@
     <div class="page__title-wrapper">
       <div class="container">
         <h1 class="page__title">Попутчики</h1>
+        <a class="page__title-link" href="index.html">
+          На главную
+        </a>
       </div>
     </div>
     <section class="catalog-page__filter filter">
@@ -68,15 +121,15 @@
             </li>
           </ul>
           <button class="filter__toggle" type="button" aria-label="Показать все">
-            <div class="filter__toggle-wrapper filter__toggle-wrapper--closed">
+            <span class="filter__toggle-wrapper filter__toggle-wrapper--closed">
               <span class="filter__toggle-text">Показать все</span>
               <span class="filter__toggle-icon">
               </span>
-            </div>
-            <div class="filter__toggle-wrapper filter__toggle-wrapper--opened">
+            </span>
+            <span class="filter__toggle-wrapper filter__toggle-wrapper--opened">
               <span class="filter__toggle-text">Свернуть</span>
               <span class="filter__toggle-icon"></span>
-            </div>
+            </span>
           </button>
         </div>
         <div class="filter__content-wrapper filter__content-wrapper--closed">
@@ -423,7 +476,10 @@
               </dd>
             </dl>
           </div>
-          <button class="filter__close-button button-X" type="button"><span class="cross"></span>Свернуть</button>
+          <button class="filter__close-button button-X" type="button">
+            <span class="cross"></span>
+            <span>Свернуть</span>
+          </button>
         </div>
       </div>
     </section>
@@ -439,33 +495,33 @@
                     <button class="button-sort-toggle sort__area-toggle" type="button">Хобби <span class="rectangle sort__rectangle"></span></button>
                     <ul class="sort__list">
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="hard-rock" id="hobby__gym" checked>
-                        <label for="hobby__gym">Спортзал</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="hard-rock" id="hobby__gym" checked>
+                        <label class="sort__item-box" for="hobby__gym">Спортзал</label>
                       </li>
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="russian-rap" id="hobby__shisha" checked>
-                        <label for="hobby__shisha">Кальян</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="russian-rap" id="hobby__shisha" checked>
+                        <label class="sort__item-box" for="hobby__shisha">Кальян</label>
                       </li>
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="evrodance" id="hobby__sofa" >
-                        <label for="hobby__sofa">Диван</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="evrodance" id="hobby__sofa" >
+                        <label class="sort__item-box" for="hobby__sofa">Диван</label>
                       </li>
                     </ul>
                   </div>
-                  <div class="sort__area">
+                  <div class="sort__area sort__area--show">
                     <button class="button-sort-toggle sort__area-toggle" type="button">музыка <span class="rectangle sort__rectangle"></span></button>
                     <ul class="sort__list">
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="hard-rock" id="music__hard-rock" checked>
-                        <label for="music__hard-rock">Тяжелый рок</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="hard-rock" id="music__hard-rock" checked>
+                        <label class="sort__item-box" for="music__hard-rock">Тяжелый рок</label>
                       </li>
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="russian-rap" id="music__russian-rap" checked>
-                        <label for="music__hard-rock">Русский рэп</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="russian-rap" id="music__russian-rap" checked>
+                        <label class="sort__item-box" for="music__russian-rap">Русский рэп</label>
                       </li>
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="evrodance" id="music__evrodance" >
-                        <label for="music__hard-rock">Евроденс</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="evrodance" id="music__evrodance" >
+                        <label class="sort__item-box" for="music__evrodance">Евроденс</label>
                       </li>
                     </ul>
                   </div>
@@ -473,52 +529,68 @@
                     <button class="button-sort-toggle sort__area-toggle" type="button">еда<span class="rectangle sort__rectangle"></span></button>
                     <ul class="sort__list">
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="hard-rock" id="food__meat" checked>
-                        <label for="food__meat">Мясоед</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="meat" id="food__meat" checked>
+                        <label class="sort__item-box" for="food__meat">Мясоед</label>
                       </li>
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="russian-rap" id="food__pp" checked>
-                        <label for="food__pp">Сидит на ПП</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="russian-rap" id="food__pp" checked>
+                        <label class="sort__item-box" for="food__pp">Сидит на ПП</label>
                       </li>
                       <li class="sort__item">
-                        <input class="visually-hidden" type="checkbox" name="evrodance" id="food__vegan" >
-                        <label for="food__vegan">Веган</label>
+                        <input class="visually-hidden sort__item-input" type="checkbox" name="evrodance" id="food__vegan" >
+                        <label class="sort__item-box" for="food__vegan">Веган-сыроед</label>
                       </li>
                     </ul>
                   </div>
-                  <div class="sort__area">
+                  <div class="sort__area sort__area-travel sort__area--show">
                     <button class="button-sort-toggle sort__area-toggle" type="button">транспорт<span class="rectangle sort__rectangle"></span></button>
-                    <ul class="sort__travel-list travel-list sort__list">
-                      <li class="travel-list__item">
-                        <label for="travel-by-plane" title="Самолетом"></label>
-                        <input class="visually-hidden" type="checkbox" name="plane" id="travel-by-plane" checked>
+                    <ul class="sort__travel-list sort-travel-list sort__list">
+                      <li class="sort-travel-list__item">
+                        <input class="visually-hidden sort-travel-list__input" type="checkbox" name="plane" id="travel-by-plane" checked>
+                        <label class="sort-travel-list__label" for="travel-by-plane" title="Самолетом">
+                          <svg class="sort-travel-list__image">
+                            <use xlink:href="img/sprite.svg#icon-plane"></use>
+                          </svg>
+                        </label>
                       </li>
-                      <li class="travel-list__item">
-                        <label for="travel-by-bus" title="На автобусе"></label>
-                        <input class="visually-hidden" type="checkbox" name="bus" id="travel-by-bus" checked>
+                      <li class="sort-travel-list__item">
+                        <input class="visually-hidden sort-travel-list__input" type="checkbox" name="bus" id="travel-by-bus" checked>
+                        <label class="sort-travel-list__label" for="travel-by-bus" title="На автобусе">
+                          <svg class="sort-travel-list__image">
+                            <use xlink:href="img/sprite.svg#icon-bus"></use>
+                          </svg>
+                        </label>
                       </li>
-                      <li class="travel-list__item">
-                        <label for="travel-by-cycle" title="На велосипеде"></label>
-                        <input class="visually-hidden" type="checkbox" name="cycle" id="travel-by-cycle">
+                      <li class="sort-travel-list__item">
+                        <input class="visually-hidden sort-travel-list__input" type="checkbox" name="cycle" id="travel-by-cycle">
+                        <label class="sort-travel-list__label" for="travel-by-cycle" title="На велосипеде">
+                          <svg class="sort-travel-list__image">
+                            <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                          </svg>
+                        </label>
                       </li>
-                      <li class="travel-list__item">
-                        <label for="travel-walk" title="Пешком"></label>
-                        <input class="visually-hidden" type="checkbox" name="walk" id="travel-walk" checked>
+                      <li class="sort-travel-list__item">
+                        <input class="visually-hidden sort-travel-list__input" type="checkbox" name="walk" id="travel-walk" checked>
+                        <label class="sort-travel-list__label" for="travel-walk" title="Пешком">
+                          <svg class="sort-travel-list__image">
+                            <use xlink:href="img/sprite.svg#icon-run"></use>
+                          </svg>
+                        </label>
                       </li>
                     </ul>
                   </div>
-                  <div class="sort__area sort__area-range">
+                  <div class="sort__area sort__area-range sort__area--show">
                     <button class="button-sort-toggle sort__area-toggle" type="button">Левел<span class="rectangle sort__rectangle"></span></button>
                     <div class="sort__level-range level-range">
                       <div class="level-range__wrapper">
                         <div class="level-range__element">
                           <label class="visually-hidden" for="min-level">Минимальный уровень:</label>
-                          <input type="number" name="min-level" value="30" id="min-level" min="30">
+                          <input class="level-range__element--min" type="number" name="min-level" value="30" id="min-level" min="30">
                         </div>
-                        <span class="level-range__border">-</span>
+                        <span class="level-range__border"></span>
                         <div class="level-range__element">
                           <label class="visually-hidden" for="max-level">Максимальный уровень:</label>
-                          <input type="number" name="max-level" value="100" id="max-level" max="100">
+                          <input class="level-range__element--max" type="number" name="max-level" value="100" id="max-level" max="100">
                         </div>
                       </div>
                     </div>
@@ -532,7 +604,9 @@
                     </div>
                   </div>
                 </div>
-                <button class="sort__button button-round" type="submit">Показать</button>
+                <button class="sort__button button-round" type="submit">
+                  <span>Показать</span>
+                </button>
               </form>
             </div>
           </div>
@@ -541,14 +615,18 @@
         <div class="travellers__cards cards">
           <ul class="cards__list travellers__cards-list">
             <li class="cards__item user-card travellers__user-card">
-                <img class="user-card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
+              <picture class="user-card__photo">
+                <source srcset="img/firsova-size-285@2x.png" media="(min-width: 1440px)">
+                <source srcset="img/firsova-size-190@2x.png" media="(min-width: 768px)">
+                <img src="img/firsova-size-70@2x.png" alt="Таня Фирсова">
+              </picture>
                 <div class="user-card__like-wrapper">
                   <button class="user-card__button-like user-card__button-like--active" type="button" aria-label="like"></button>
                   <span class="user-card__followers">1,5 М</span>
                 </div>
                 <div class="user-card__user-wrapper travellers__user-wrapper">
                   <h3 class="user-card__user travellers__user">
-                    <span class="user-card__user-name">Таня</span>
+                    <span class="user-card__user-name">Таня&nbsp;</span>
                     <span class="user-card__user-lastname">Фирсова</span>
                   </h3>
                   <span class="user-card__status user-card__status--offline"></span>
@@ -577,54 +655,74 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Шри Ланки">
+                    <img class="user-card__country-card-image" src="img/srilanka-size-S@2x.png" alt="Флаг Шри Ланки">
                     <span class="user-card__country-card-title">Шри Ланка</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Таиланда">
+                    <img class="user-card__country-card-image" src="img/thailand-size-S@2x.png" alt="Флаг Таиланда">
                     <span class="user-card__country-card-title">Таиланд</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Сейшел">
+                    <img class="user-card__country-card-image" src="img/seychelles-size-S@2x.png" alt="Флаг Сейшел">
                     <span class="user-card__country-card-title">Сейшелы</span>
                   </li>
                 </ul>
               </div>
-                <div class="user-card__fieldset travellers__fieldset-transport">
+              <div class="user-card__fieldset travellers__fieldset-transport">
                   <h3 class="user-card__legend">транспорт:</h3>
                   <ul class="user-card__travel-list travel-list travellers__travel-list">
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--plane travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Самолетом">
+                      <svg class="travel-list__image travel-list__image--checked">
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--bus" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На автобусе">
+                      <svg class="travel-list__image">
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--circle" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На велосипеде">
+                      <svg class="travel-list__image">
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--walk" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Пешком">
+                      <svg class="travel-list__image">
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
+                      </svg>
                     </li>
                   </ul>
                 </div>
-                <div class="user-card__fieldset travellers__fieldset-level">
+              <div class="user-card__fieldset travellers__fieldset-level">
                   <h3 class="user-card__legend">левел:</h3>
                   <div class="level travellers__level">
                     <span class="level__number travellers__level-number">99</span>
                     <span class="level__text travellers__level-text">level</span>
+                    <svg class="travellers__level-circle" viewBox="0 0 50 50">
+                      <circle r="23" cx="25" cy="25"
+                              fill="none" stroke-width="3"
+                              stroke="#FF8D30"
+                              stroke-dasharray="139.4 144.4"
+                              stroke-linecap="round">
+                      </circle>
+                    </svg>
                   </div>
                 </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
             <li class="cards__item user-card travellers__user-card">
-              <img class="user-card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
+              <picture class="user-card__photo">
+                <source srcset="img/demin-size-285@2x.png" media="(min-width: 1440px)">
+                <source srcset="img/demin-size-190@2x.png" media="(min-width: 768px)">
+                <img src="img/demin-size-100@2x.png" alt="Петя Демин">
+              </picture>
               <div class="user-card__like-wrapper">
                 <button class="user-card__button-like" type="button" aria-label="like"></button>
                 <span class="user-card__followers">1500</span>
               </div>
               <div class="user-card__user-wrapper travellers__user-wrapper">
                   <h3 class="user-card__user travellers__user">
-                    <span class="user-card__user-name">Петя</span>
+                    <span class="user-card__user-name">Петя&nbsp;</span>
                     <span class="user-card__user-lastname">Демин</span>
                   </h3>
                   <span class="user-card__status user-card__status--online"></span>
@@ -650,50 +748,70 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Бельгии>">
+                    <img class="user-card__country-card-image" src="img/belgium-size-S@2x.png" alt="Флаг Бельгии>">
                     <span class="user-card__country-card-title">Бельгия</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Чехии">
+                    <img class="user-card__country-card-image" src="img/czech-size-S@2x.png" alt="Флаг Чехии">
                     <span class="user-card__country-card-title">Чехия</span>
                   </li>
                 </ul>
               </div>
               <div class="user-card__fieldset travellers__fieldset-transport">
-                  <h3 class="user-card__legend">транспорт:</h3>
-                  <ul class="user-card__travel-list travel-list travellers__travel-list">
-                    <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--plane travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Самолетом">
-                    </li>
-                    <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--bus travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На автобусе">
-                    </li>
-                    <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--circle" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На велосипеде">
-                    </li>
-                    <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--walk travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Пешком">
-                    </li>
-                  </ul>
-            </div>
+                <h3 class="user-card__legend">транспорт:</h3>
+                <ul class="user-card__travel-list travel-list travellers__travel-list">
+                  <li class="travel-list__item travellers__travel-list-item">
+                    <svg class="travel-list__image travel-list__image--checked">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
+                  </li>
+                  <li class="travel-list__item travellers__travel-list-item">
+                    <svg class="travel-list__image travel-list__image--checked">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
+                  </li>
+                  <li class="travel-list__item travellers__travel-list-item">
+                    <svg class="travel-list__image">
+                      <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="travel-list__item travellers__travel-list-item">
+                    <svg class="travel-list__image travel-list__image--checked">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
               <div class="user-card__fieldset travellers__fieldset-level">
                   <h3 class="user-card__legend">левел:</h3>
                   <div class="level travellers__level">
                     <span class="level__number travellers__level-number">80</span>
                     <span class="level__text travellers__level-text">level</span>
+                    <svg class="travellers__level-circle" viewBox="0 0 50 50">
+                      <circle r="23" cx="25" cy="25"
+                              fill="none" stroke-width="3"
+                              stroke="#FF8D30"
+                              stroke-dasharray="123.6 144.4"
+                              stroke-linecap="round">
+                      </circle>
+                    </svg>
                   </div>
               </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
             <li class="cards__item user-card travellers__user-card">
-              <img class="user-card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
+              <picture class="user-card__photo">
+                <source srcset="img/smolov-size-285@2x.png" media="(min-width: 1440px)">
+                <source srcset="img/smolov-size-190@2x.png" media="(min-width: 768px)">
+                <img src="img/smolov-size-70@2x.png" alt="Марк Смолов">
+              </picture>
               <div class="user-card__like-wrapper">
                   <button class="user-card__button-like" type="button" aria-label="like"></button>
                   <span class="user-card__followers">170</span>
                 </div>
               <div class="user-card__user-wrapper travellers__user-wrapper">
                   <h3 class="user-card__user travellers__user">
-                    <span class="user-card__user-name">Марк</span>
+                    <span class="user-card__user-name">Марк&nbsp;</span>
                     <span class="user-card__user-lastname">Смолов</span>
                   </h3>
                   <span class="user-card__status user-card__status--offline"></span>
@@ -719,15 +837,15 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг США>">
+                    <img class="user-card__country-card-image" src="img/USA-size-L@1x.png" alt="Флаг США>">
                     <span class="user-card__country-card-title">США</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Австралия">
+                    <img class="user-card__country-card-image" src="img/australia-size-L@1x.png" alt="Флаг Австралия">
                     <span class="user-card__country-card-title">Австралия</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Доминика">
+                    <img class="user-card__country-card-image" src="img/dominica-size-L@1x.png" alt="Флаг Доминика">
                     <span class="user-card__country-card-title">Доминика</span>
                   </li>
                 </ul>
@@ -736,16 +854,24 @@
                   <h3 class="user-card__legend">транспорт:</h3>
                   <ul class="user-card__travel-list travel-list travellers__travel-list">
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--plane travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Самолетом">
+                      <svg class="travel-list__image travel-list__image--checked">
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--bus" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На автобусе">
+                      <svg class="travel-list__image">
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--circle travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На велосипеде">
+                      <svg class="travel-list__image travel-list__image--checked">
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--walk" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Пешком">
+                      <svg class="travel-list__image">
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
+                      </svg>
                     </li>
                   </ul>
                 </div>
@@ -754,19 +880,31 @@
                   <div class="level travellers__level">
                     <span class="level__number travellers__level-number">25</span>
                     <span class="level__text travellers__level-text">level</span>
+                    <svg class="travellers__level-circle" viewBox="0 0 50 50">
+                      <circle r="23" cx="25" cy="25"
+                              fill="none" stroke-width="3"
+                              stroke="#FF8D30"
+                              stroke-dasharray="36 144.4"
+                              stroke-linecap="round">
+                      </circle>
+                    </svg>
                   </div>
                 </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
             <li class="cards__item user-card travellers__user-card">
-              <img class="user-card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
+              <picture class="user-card__photo">
+                <source srcset="img/rogovaya-size-285@2x.png" media="(min-width: 1440px)">
+                <source srcset="img/rogovaya-size-190@2x.png" media="(min-width: 768px)">
+                <img src="img/rogovaya-size-70@2x.png" alt="Лариса Роговая">
+              </picture>
               <div class="user-card__like-wrapper">
                   <button class="user-card__button-like" type="button" aria-label="like"></button>
                   <span class="user-card__followers">23</span>
                 </div>
               <div class="user-card__user-wrapper travellers__user-wrapper">
                   <h3 class="user-card__user travellers__user">
-                    <span class="user-card__user-name">Лариса</span>
+                    <span class="user-card__user-name">Лариса&nbsp;</span>
                     <span class="user-card__user-lastname">Роговая</span>
                   </h3>
                   <span class="user-card__status user-card__status--online"></span>
@@ -789,11 +927,11 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Великобритании>">
+                    <img class="user-card__country-card-image" src="img/UK-size-L@1x.png" alt="Флаг Великобритании>">
                     <span class="user-card__country-card-title">Великобритания</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Германии">
+                    <img class="user-card__country-card-image" src="img/germany-size-L@1x.png" alt="Флаг Германии">
                     <span class="user-card__country-card-title">Германия</span>
                   </li>
                 </ul>
@@ -802,16 +940,24 @@
                   <h3 class="user-card__legend">транспорт:</h3>
                   <ul class="user-card__travel-list travel-list travellers__travel-list">
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--plane travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Самолетом">
+                      <svg class="travel-list__image travel-list__image--checked">
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--bus travel-list__image--checked" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На автобусе">
+                      <svg class="travel-list__image travel-list__image--checked">
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--circle" src="https://via.placeholder.com/23x23" width="23" height="23" alt="На велосипеде">
+                      <svg class="travel-list__image">
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                      </svg>
                     </li>
                     <li class="travel-list__item travellers__travel-list-item">
-                      <img class="travel-list__image travel-list__image--walk" src="https://via.placeholder.com/23x23" width="23" height="23" alt="Пешком">
+                      <svg class="travel-list__image">
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
+                      </svg>
                     </li>
                   </ul>
                 </div>
@@ -820,14 +966,22 @@
                   <div class="level travellers__level">
                     <span class="level__number travellers__level-number">50</span>
                     <span class="level__text travellers__level-text">level</span>
+                    <svg class="travellers__level-circle" viewBox="0 0 50 50">
+                      <circle r="23" cx="25" cy="25"
+                              fill="none" stroke-width="3"
+                              stroke="#FF8D30"
+                              stroke-dasharray="72.2 144.4"
+                              stroke-linecap="round">
+                      </circle>
+                    </svg>
                   </div>
                 </div>
-              <button class="travellers__button-round button-round" type="button">Позвать!</button>
+              <button class="travellers__button-round button-round" type="button"><span>Позвать!</span></button>
             </li>
           </ul>
           <button class="button travellers__button" type="button"><span class="cross"></span>Показать еще</button>
         </div>
-        <div class="catalog-page__pagination pagination">
+        <div class="pagination">
           <ul class="pagination__list">
             <li class="pagination__item"><a class="pagination__link pagination__link--current" href="">1</a></li>
             <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
@@ -837,23 +991,49 @@
           <a class="pagination__prev-button button-prev" href="#" aria-label="Предыдущая страница"></a>
           <a class="pagination__next-button button-next" href="#" aria-label="Следующая страница"></a>
         </div>
-      </div>`
+      </div>
     </section>
   </main>
   <footer class="page__footer footer">
     <div class="container footer__container">
-      <a class="footer__logo-link logo-link" href="index.html">
-        <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип туристического сервиса Погнали">
+      <a class="footer__logo-link" href="index.html">
+        <picture class="footer__logo-image">
+          <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
+          <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
+          <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
+        </picture>
       </a>
-      <div class="footer__social social">
-        <a class="social__link social__link--fb" aria-label="Погнали в Facebook" href="#"></a>
-        <a class="social__link social__link--vk" aria-label="Погнали Вконтакте" href="#"></a>
-        <a class="social__link social__link--insta" aria-label="Погнали в Instagram" href="#"></a>
+      <div class="footer__social">
+        <a class="footer__social-link footer__social-link--fb" aria-label="Погнали в Facebook" href="#">
+          <span class="footer__social-image-wrapper">
+            <svg class="footer__social-image" viewBox="0 0 14 28">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="footer__social-link footer__social-link--vk" aria-label="Погнали Вконтакте" href="#">
+          <span class="footer__social-image-wrapper">
+            <svg class="footer__social-image" viewBox="0 0 31 16">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="footer__social-link footer__social-link--insta" aria-label="Погнали в Instagram" href="#">
+          <span class="footer__social-image-wrapper">
+            <svg class="footer__social-image" viewBox="0 0 24 24">
+              <use xlink:href="img/sprite.svg#icon-inst"></use>
+            </svg>
+          </span>
+        </a>
       </div>
       <div class="footer__copyright copyright">
-        <a class="copyright__title" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="source/img/htmlacademy.svg" width="27" height="33" alt="HTMLAcademy">
+        <a class="copyright__title" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>Разработано</span>
+        </a>
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="copyright__logo" viewBox="0 0 60 60">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>

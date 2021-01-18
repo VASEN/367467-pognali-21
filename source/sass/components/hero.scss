@@ -17,7 +17,7 @@
   }
 
   @include desktop {
-    min-height: 593px;
+    min-height: 640px;
     padding-bottom: 0;
 
     background-color: $color-blue-sapphire;
@@ -73,7 +73,6 @@
   }
 
   @include desktop {
-    //background-image: url("../../img/hero-bg-desktop@1x.jpg");
     background-image: none;
   }
 }
@@ -97,35 +96,28 @@
 
   @include desktop {
     margin: 0;
-    padding: 55px 60px 105px 127px;
+    padding: 105px 60px 105px 127px;
 
     text-align: left;
   }
 }
 
-.hero__bg-wrapper picture {
+.hero__image {
   margin-left: auto;
   margin-right: 50px;
-  margin-bottom: -5px;
 
-  @include tablet {
-    margin-right: 110px;
-  }
-}
-
-.hero__image {
   @include tablet {
     align-self: end;
 
     width: 372px;
     height: 451px;
-    margin-left: 245px;
+    margin-right: 110px;
     margin-bottom: 140px;
   }
 
   @include desktop {
     position: absolute;
-    top: -48px;
+    top: 7px;
     left: 604px;
 
     width: 431px;

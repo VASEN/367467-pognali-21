@@ -172,6 +172,11 @@
   }
 }
 
+//.slider-item .slider-item__module label {
+//  overflow: hidden;
+//  text-overflow: ellipsis;
+//}
+
 .slider-item .checkbox-module {
   @include tablet {
     order: 1;
@@ -237,6 +242,15 @@
 }
 
 .slider-item__prev-step {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     width: auto;
     justify-content: end;

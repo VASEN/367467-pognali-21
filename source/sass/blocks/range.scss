@@ -2,7 +2,7 @@
 @import "source/sass/common/mixins";
 
 .level-range__range-wrapper {
-  padding: 25px 0;
+  padding: 23px 0;
 }
 
 .level-range__range {
@@ -10,14 +10,25 @@
   height: 2px;
 
   background-color: rgba($color-blue-ocean, 0.2);
+
+  @include desktop {
+    height: 3px;
+  }
 }
 
 .level-range__range--current {
   position: relative;
-  width: 138px;
+  width: 132px;
   height: 2px;
+  margin-left: 78px;
 
   background-color: $color-blue-ocean;
+
+  @include desktop {
+    width: 100px;
+    height: 3px;
+    margin-left: 75px;
+  }
 }
 
 .level-range__range--min,
@@ -30,37 +41,53 @@
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+.level-range__range--min:focus,
+.level-range__range--max:focus,
+.level-range__range--min:hover,
+.level-range__range--max:hover {
+  top: -8px;
+
+  width: 19px;
+  height: 19px;
+}
+
 .level-range__range--min {
   position: absolute;
   top: -4px;
-  left: 0;
+  left: -5px;
   width: 10px;
   height: 10px;
 
   background-color: $color-blue-ocean;
   border-radius: 50%;
+
+  @include desktop {
+    left: -13px;
+
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .level-range__range--max {
   position: absolute;
   top: -4px;
-  right: 0;
+  right: -5px;
   width: 10px;
   height: 10px;
 
   background-color: $color-blue-ocean;
   border-radius: 50%;
-}
 
-.level-range {
-  background-color: $color-white;
-  border: 1px solid $color-telegray-light;
-  border-radius: 4px;
+  @include desktop {
+    right: -13px;
+
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .level-range__wrapper {
-  //position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,10 +97,60 @@
   display: block;
 
   margin: 0;
+  box-sizing: border-box;
+
+  border: 1px solid $color-telegray-light;
+
+  &:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+  }
+
+  &:hover {
+    border-color: $color-manatee;
+  }
+
+  &:hover + .level-range__border {
+    &::before {
+      background-color: $color-manatee;
+    }
+  }
+
+  &:focus {
+    border-color: $color-blue-sapphire;
+  }
+
+  &:focus + .level-range__border {
+    &::before {
+      background-color: $color-blue-sapphire;
+    }
+  }
+
+  &--min {
+    border-radius: 4px 0 0 4px;
+
+    cursor: pointer;
+  }
+
+  &--max {
+    border-radius: 0 4px 4px 0;
+
+    cursor: pointer;
+  }
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .level-range__element > input[type="number"] {
   width: 100%;
+  height: 35px;
   margin: 0;
   padding-bottom: 0;
   box-sizing: border-box;
@@ -89,5 +166,42 @@
     min-height: 46px;
 
     @include font(20px, 20px, $font-weight-medium);
+  }
+}
+
+.level-range__border {
+  position: relative;
+
+  display: inline-block;
+  height: 35px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    height: 100%;
+    width: 1px;
+
+    background-color: $color-telegray-light;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: -10px;
+
+    height: 1px;
+    width: 20px;
+
+    background-color: $color-telegray-light;
+
+    box-shadow: 0 0 0 7px $color-white;
+  }
+
+  @include tablet {
+    height: 45px;
   }
 }

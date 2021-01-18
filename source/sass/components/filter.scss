@@ -19,7 +19,19 @@
     }
   }
 
+  &--opened .filter__toggle {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    border-radius: 0 0 60px 60px;
+  }
+
   @include desktop {
+    margin-top: -60px;
+
     background-color: $color-white-smoky;
   }
 }
@@ -27,6 +39,10 @@
 .filter__container {
   @include tablet {
     @include container($width-tablet, 70px);
+  }
+
+  @include desktop {
+    @include container($width-desktop, 60px);
   }
 }
 
@@ -36,7 +52,7 @@
   grid-template-rows: 50px auto;
   align-items: center;
 
-  padding-top: 20px;
+  padding-top: 25px;
 
   @include tablet {
     grid-template-columns: auto auto;
@@ -45,6 +61,9 @@
 
   @include desktop {
     grid-template-columns: max-content auto 284px;
+    grid-template-rows: 140px;
+
+    padding-top: 60px;
   }
 }
 
@@ -65,7 +84,16 @@
     height: 10px;
     margin-right: 11px;
 
-    background-color: tomato;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23192144' d='M7.17 0H15v2H7.17zM7.17 8H15v2H7.17zM0 4h7.83v2H0zM3.91 0h1.96v2H3.91zM3.91 8h1.96v2H3.91zM9.13 4h1.96v2H9.13zM0 0h2.61v2H0zM0 8h2.61v2H0zM12.39 4H15v2h-2.61z'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include desktop {
+      width: 23px;
+      height: 18px;
+      margin-right: 22px;
+      margin-left: 20px;
+    }
   }
 
   @include tablet {
@@ -103,6 +131,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include desktop {
     margin-left: auto;
@@ -200,6 +237,10 @@
   @include tablet {
     padding-bottom: 80px;
   }
+
+  @include desktop {
+    padding-bottom: 155px;
+  }
 }
 
 .filter__content {
@@ -228,6 +269,7 @@
 
   @include desktop {
     margin-left: 30px;
+    padding: 0;
   }
 }
 
@@ -254,6 +296,10 @@
       margin-right: 0;
     }
   }
+
+  @include desktop {
+    margin-right: 32px;
+  }
 }
 
 .filter__continent-link {
@@ -265,12 +311,21 @@
     color: $color-blue-cobalt;
   }
 
+  &:hover,
+  &:focus {
+    color: rgba($color-blue-cobalt, 0.6);
+  }
+
+  &:active {
+    color: $color-blue-cobalt;
+  }
+
   @include tablet {
     @include font(20px, 20px, $font-weight-bold);
   }
 }
 
-.filter .filter__alphabet {
+.filter__alphabet {
   display: grid;
 
   @include tablet {
@@ -289,14 +344,18 @@
   @include desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 0;
-    grid-row-gap: 35px;
+    grid-column-gap: 0;
+    grid-row-gap: 32px;
+
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 15px;
 
     background-color: $color-white-smoky;
   }
 }
 
-.filter .alphabet-test__title {
+.filter__alphabet .alphabet-test__title {
   @include desktop {
     &:nth-of-type(n) {
       order: 0;
@@ -320,7 +379,7 @@
   }
 }
 
-.filter .alphabet-test__button-letter {
+.filter__alphabet .alphabet-test__button-letter {
   @include tablet {
     min-width: 44px;
     min-height: auto;
@@ -330,7 +389,7 @@
   }
 }
 
-.filter .alphabet-test__countries--current {
+.filter__alphabet .alphabet-test__countries--current {
   background-color: $color-grey-lavender-light;
   border: none;
 
@@ -348,7 +407,7 @@
   }
 }
 
-.filter .alphabet-test__countries {
+.filter__alphabet .alphabet-test__countries {
   @include desktop {
     display: block;
     align-self: start;
@@ -376,22 +435,43 @@
   }
 }
 
-.filter .alphabet-test__country-list {
+.filter__alphabet .alphabet-test__country-list {
   padding-left: 0;
 
   @include tablet {
-    padding: 0;
+    padding: 0 0 0 3px;
   }
 }
 
-.filter .alphabet-test__button-country {
+.filter__alphabet .alphabet-test__country-item {
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.filter__alphabet .alphabet-test__button-country {
   @include tablet {
     @include font(20px, 30px, $font-weight-normal);
+  }
+
+  @include desktop {
+    padding: 0;
   }
 }
 
 .filter__close-button {
   color: $color-blue-cobalt;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-periwinkle-crayola;
+  }
+
+  &:active span {
+    opacity: 0.6;
+  }
 
   @include tablet {
     min-height: 100px;

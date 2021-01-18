@@ -2,7 +2,15 @@
 @import "source/sass/common/mixins";
 
 .travellers {
-  padding-bottom: 46px;
+  padding-bottom: 50px;
+
+  @include tablet {
+    padding-bottom: 85px;
+  }
+
+  @include desktop {
+    padding-bottom: 150px;
+  }
 }
 
 .travellers__container {
@@ -14,7 +22,7 @@
 }
 
 .travellers__cards-list {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .travellers .travellers__user-card {
@@ -23,20 +31,26 @@
   grid-template-rows: auto;
 
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 23px;
 
   border-radius: 20px;
 
   @include tablet {
     grid-template-columns: auto 150px auto auto;
     grid-template-rows: auto auto 60px auto;
+    grid-column-gap: 0;
 
-    padding: 35px 25px 25px 35px;
+    margin-bottom: 29px;
+    padding: 35px 25px 15px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @include desktop {
     grid-template-columns: auto min-content 1fr 1fr auto 45px;
-    grid-template-rows: 45px auto auto auto 45px;
+    grid-template-rows: 45px max-content auto 60px 45px;
     grid-template-areas:
       "foto . . . ."
       "foto user user to-visit to-visit"
@@ -44,45 +58,51 @@
       "foto button like transport level"
       "foto . . . .";
 
+    margin-bottom: 22px;
     padding: 0;
   }
 }
 
-.travellers .user-card__photo {
+.travellers__user-card .user-card__photo {
   grid-column: 1/2;
 
+  width: 70px;
+  height: 70px;
   margin-left: 18px;
   margin-right: 16px;
-  margin-bottom: 13px;
 
   border-radius: 50%;
+  object-fit: contain;
 
   @include tablet {
     grid-row: 1/4;
 
-    min-width: 190px;
-    margin: 0 30px 0 0;
+    width: 190px;
+    height: 190px;
+    margin: 0 30px 0 35px;
 
     border-radius: 19px;
   }
 
   @include desktop {
-    //grid-row: 1/4;
     grid-area: foto;
 
-    min-width: 285px;
+    width: 285px;
+    height: 285px;
+    margin-left: 0;
 
     border-radius: 20px 0 0 20px;
   }
 }
 
-.travellers .user-card__like-wrapper {
+.travellers__user-card .user-card__like-wrapper {
   display: flex;
   align-items: center;
   align-self: start;
 
   @include tablet {
     position: static;
+    align-self: center;
 
     grid-column: 3/4;
     grid-row: 3/4;
@@ -93,14 +113,48 @@
   }
 }
 
-.travellers .user-card__button-like {
+.travellers__user-card .user-card__button-like {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6 4.66l.67-1.4c.17-.35.46-.86.86-1.26.4-.4.89-.67 1.47-.67a2.28 2.28 0 012.25 2.3c0 .95-.42 1.63-1.4 2.65-.25.27-.54.55-.86.86-.83.82-1.87 1.84-2.99 3.2a40.57 40.57 0 00-2.99-3.2l-.86-.86C1.17 5.26.75 4.58.75 3.63c0-1.26 1-2.3 2.25-2.3.58 0 1.06.27 1.47.67.4.4.7.9.86 1.26L6 4.66zm.3 6.54a.39.39 0 01-.3.14.37.37 0 01-.3-.14 37.64 37.64 0 00-3.18-3.45C.98 6.22 0 5.25 0 3.63 0 1.93 1.34.54 3 .54c1.2 0 2.04.83 2.55 1.58.2.29.35.57.45.78.13-.27.28-.53.45-.78C6.96 1.37 7.8.54 9 .54c1.66 0 3 1.38 3 3.09 0 1.63-.97 2.59-2.52 4.12-.9.88-1.99 1.95-3.19 3.45z' fill='%23192144'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: $color-grey-lavender-light;
+  }
+
+  &:active {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6 4.66l.67-1.4c.17-.35.46-.86.86-1.26.4-.4.89-.67 1.47-.67a2.28 2.28 0 012.25 2.3c0 .95-.42 1.63-1.4 2.65-.25.27-.54.55-.86.86-.83.82-1.87 1.84-2.99 3.2a40.57 40.57 0 00-2.99-3.2l-.86-.86C1.17 5.26.75 4.58.75 3.63c0-1.26 1-2.3 2.25-2.3.58 0 1.06.27 1.47.67.4.4.7.9.86 1.26L6 4.66zm.3 6.54a.39.39 0 01-.3.14.37.37 0 01-.3-.14 37.64 37.64 0 00-3.18-3.45C.98 6.22 0 5.25 0 3.63 0 1.93 1.34.54 3 .54c1.2 0 2.04.83 2.55 1.58.2.29.35.57.45.78.13-.27.28-.53.45-.78C6.96 1.37 7.8.54 9 .54c1.66 0 3 1.38 3 3.09 0 1.63-.97 2.59-2.52 4.12-.9.88-1.99 1.95-3.19 3.45z' opacity='0.3' fill='%23192144'/%3E%3C/svg%3E");
+  }
+
+  &--active {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.26.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 6.87.19 6 .19 3.48a3.04 3.04 0 013.07-3z' fill='%23F02323'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 12px;
+    background-color: $color-pink-linen;
+
+    &:hover,
+    &:focus {
+      background-color: $color-pale-pink;
+    }
+
+    &:active {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.26.47c1.69 0 3.06 1.35 3.06 3.01a3.04 3.04 0 013.06-3c1.7 0 3.07 1.34 3.07 3 0 2.5-2.48 3.4-5.83 7.38a.4.4 0 01-.6 0C2.67 6.87.19 6 .19 3.48a3.04 3.04 0 013.07-3z' opacity='0.3' fill='%23F02323'/%3E%3C/svg%3E%0A");
+    }
+  }
+
   @include tablet {
     width: 50px;
     height: 50px;
+
+    background-size: 20px 20px;
   }
 }
 
-.travellers .user-card__followers {
+.travellers__user-card .user-card__followers {
   margin-left: 5px;
 
   @include font(14px, 16px, $font-weight-bold);
@@ -111,9 +165,20 @@
   }
 }
 
-.travellers .travellers__user-wrapper {
+.travellers__user-wrapper {
   grid-column: 2/-1;
   align-items: baseline;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include tablet {
     grid-column: 2/4;
@@ -122,19 +187,22 @@
     align-items: center;
 
     margin-bottom: 20px;
+    padding-left: 3px;
   }
 
   @include desktop {
     grid-area: user;
-    //margin-top: 45px;
+
+    margin-bottom: 0;
   }
 }
 
-.travellers .travellers__user {
+.travellers__user {
   display: flex;
   flex-direction: column;
 
   @include font(20px, 20px, $font-weight-bold);
+  color: $color-blue-ocean;
 
   @include tablet {
     flex-direction: row;
@@ -149,16 +217,20 @@
   }
 }
 
-.travellers .user-card__status {
+.travellers__user-card .user-card__status {
   margin-right: 22px;
+
+  @include tablet {
+    width: 8px;
+    height: 8px;
+  }
 }
 
-.travellers .travellers__tags-list {
+.travellers__tags-list {
   grid-column: 1/-1;
   justify-content: start;
 
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 15px 25px 19px;
 
   @include tablet {
     grid-column: 2/4;
@@ -166,16 +238,18 @@
     align-items: center;
 
     margin-right: 115px;
-    margin-bottom: 45px;
-    padding: 0;
+    margin-bottom: 38px;
+    padding: 0 0 0 6px;
   }
 
   @include desktop {
     grid-area: tags;
+    align-self: center;
+
     margin: 0;
-    padding-left: 25px;
-    padding-bottom: 45px;
-    padding-right: 100px;
+    padding-left: 32px;
+    //padding-bottom: 40px;
+    padding-right: 60px;
   }
 }
 
@@ -188,12 +262,19 @@
 .travellers .travellers__fieldset-tovisit {
   grid-column: 1/-1;
 
+  padding-bottom: 14px;
+
   @include tablet {
     grid-column: 1/-1;
+
+    margin-top: 25px;
+    padding-left: 35px;
   }
 
   @include desktop {
     grid-area: to-visit;
+
+    margin-top: 0;
     padding: 0;
 
     border: none;
@@ -201,25 +282,36 @@
 }
 
 .travellers__fieldset-tovisit .user-card__legend {
+  @include tablet {
+    left: 75px;
+  }
+
   @include desktop {
     display: none;
   }
 }
 
-.travellers .user-card__to-visit {
+.travellers__user-card .user-card__to-visit {
   @include tablet {
     display: flex;
   }
 
-  @include tablet {
+  @include desktop {
     flex-direction: column;
+
+    padding-left: 10px;
+    padding-top: 5px;
   }
 }
 
-.travellers .user-card__country-card {
+.travellers__user-card .user-card__country-card {
   @include tablet {
+    align-items: flex-end;
+
     margin-right: 25px;
     margin-bottom: 0;
+
+    @include font(20px, 20px, $font-weight-medium);
 
     &:last-child {
       margin-right: 0;
@@ -227,7 +319,8 @@
   }
 
   @include desktop {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    margin-right: 0;
 
     &:last-child {
       margin-bottom: 0;
@@ -235,16 +328,34 @@
   }
 }
 
-.travellers .user-card__country-card-title {
-  color: $color-blue-ocean;
+.travellers__user-card .user-card__country-card-image {
+  width: 26px;
+  height: 18px;
 
   @include tablet {
-    @include font(20px, 20px, $font-weight-bold);
+    width: 35px;
+    height: 24px;
   }
 }
 
-.travellers .travellers__fieldset-transport {
+.travellers__user-card .user-card__country-card-title {
+  color: $color-blue-ocean;
+
+  @include tablet {
+    margin-left: 12px;
+
+    @include font(20px, 20px, $font-weight-bold);
+  }
+
+  @include desktop {
+    margin-left: 15px;
+  }
+}
+
+.travellers__user-card .travellers__fieldset-transport {
   grid-column: 1/3;
+
+  padding-top: 23px;
 
   @include tablet {
     grid-column: 4/5;
@@ -262,11 +373,16 @@
 }
 
 .travellers__fieldset-transport .user-card__legend {
-  display: none;
+  @include tablet {
+    display: none;
+  }
 }
 
-.travellers .travellers__travel-list {
+.travellers__user-card .travellers__travel-list {
   justify-content: start;
+
+  padding-left: 0;
+  padding-right: 0;
 
   @include tablet {
     flex-direction: column;
@@ -277,7 +393,7 @@
   }
 }
 
-.travellers .travellers__travel-list-item {
+.travellers__user-card .travellers__travel-list-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -285,17 +401,37 @@
 
   width: 32px;
   height: 32px;
-  margin: 0;
+  margin: 0 1px 0 0;
 
   background-color: $color-white-smoky;
   border-radius: 50%;
+
+  &::before,
+  &::after {
+    content: unset;
+  }
+
+  @include tablet {
+
+    background-color: transparent;
+  }
+}
+
+.travellers__user-card .travel-list__image {
+  width: 16px;
+  height: 16px;
+
+  @include tablet {
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .travellers .travellers__fieldset-level {
   grid-column: 3/-1;
 
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top: 18px;
+  padding-bottom: 13px;
 
   @include tablet {
     grid-column: 4/5;
@@ -309,8 +445,6 @@
 
   @include desktop {
     grid-area: level;
-    //grid-column: 5/6;
-    //grid-row: 3/4;
   }
 }
 
@@ -328,6 +462,9 @@
 
   @include tablet {
     align-items: center;
+
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -347,18 +484,44 @@
   }
 }
 
+.travellers__level-circle {
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+
+  transform: rotate(-90deg);
+
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .travellers__button-round {
   grid-column: 1/-1;
+  align-items: center;
 
-  width: auto;
-  margin-left: 20px;
-  margin-right: 20px;
+  min-width: 230px;
+  margin: 0 auto;
+  padding: 0;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-orange;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
 
   @include tablet {
     grid-column: 2/3;
     grid-row: 3/4;
     align-items: center;
-    align-self: start;
+    align-self: center;
 
     min-width: 150px;
     min-height: 50px;
@@ -370,7 +533,7 @@
 
   @include desktop {
     grid-area: button;
-    margin-left: 20px;
+    margin-left: 25px;
   }
 }
 
@@ -378,14 +541,29 @@
   display: flex;
   align-items: center;
 
-  margin-top: 20px;
   margin-bottom: 20px;
 
+  cursor: pointer;
+
+  &:hover .cross,
+  &:focus .cross {
+    opacity: 0.6;
+  }
+
+  &:active .cross {
+    opacity: 0.3;
+  }
+
   @include tablet {
-    margin-top: 45px;
-    margin-bottom: 50px;
+    width: unset;
+    margin: 45px auto 50px;
 
     @include font(20px, 20px, $font-weight-bold);
+  }
+
+  @include desktop {
+    width: unset;
+    margin: 65px auto;
   }
 }
 
@@ -397,6 +575,7 @@
   @include tablet {
     width: 24px;
     height: 24px;
+    margin-right: 25px;
 
     &::before,
     &::after {

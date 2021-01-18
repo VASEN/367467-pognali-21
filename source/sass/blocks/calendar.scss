@@ -118,6 +118,11 @@
       @include tablet {
         border: 4px solid $color-red-scarlett;
       }
+
+      @include desktop {
+        padding-left: 11px;
+        padding-top: 11px;
+      }
     }
   }
 
@@ -139,6 +144,11 @@
       @include tablet {
         border: 4px solid $color-red-scarlett;
       }
+
+      @include desktop {
+        padding-left: 11px;
+        padding-top: 11px;
+      }
     }
   }
 
@@ -149,6 +159,7 @@
   @include desktop {
     display: flex;
 
+    min-height: 71px;
     padding-left: 15px;
     padding-top: 15px;
 

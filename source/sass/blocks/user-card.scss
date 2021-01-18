@@ -169,6 +169,8 @@
   border-radius: 50%;
   border: none;
 
+  cursor: pointer;
+
   &--active {
     background-color: $color-pink-linen;
   }

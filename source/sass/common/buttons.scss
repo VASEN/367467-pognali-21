@@ -384,10 +384,19 @@
   }
 }
 
+.button-module label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .button-module__caption {
+  display: flex;
+  flex-wrap: wrap;
+
   margin-left: auto;
 
   color: rgba($color-blue-ocean, 0.3);
+  word-break: break-word;
 
   @include desktop {
     order: 2;
@@ -750,6 +759,8 @@
   border: none;
   border-radius: 50%;
 
+  cursor: pointer;
+
   &::before,
   &::after {
     content: "";
@@ -760,7 +771,9 @@
     width: 11px;
     height: 1px;
 
-    background-color: $color-grey-agate;
+    background-color: $color-black;
+
+    opacity: 0.1;
   }
 
   &::before {
@@ -769,6 +782,21 @@
 
   &::after {
     transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.05;
+    }
   }
 
   @include tablet {
@@ -798,6 +826,8 @@
   background-color: transparent;
   border: none;
 
+  cursor: pointer;
+
   &::before,
   &::after {
     content: "";
@@ -809,6 +839,8 @@
     height: 1px;
 
     background-color: $color-white;
+
+    opacity: 0.3;
   }
 
   &::before {
@@ -817,6 +849,21 @@
 
   &::after {
     transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.1;
+    }
   }
 
   @include tablet {
@@ -848,28 +895,7 @@
   border-radius: 20px;
 }
 
-.button-prev {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-width: 134px;
-  min-height: 50px;
-
-  background-color: $color-white;
-  border-radius: 20px 0 0 20px;
-  box-sizing: border-box;
-
-  &::before {
-    content: "";
-
-    width: 20px;
-    height: 20px;
-
-    background-color: tomato;
-  }
-}
-
+.button-prev,
 .button-next {
   display: flex;
   justify-content: center;
@@ -879,15 +905,30 @@
   min-height: 50px;
 
   background-color: $color-white;
-  border-radius: 0 20px 20px 0;
+  box-sizing: border-box;
 
   &::before {
     content: "";
+  }
+}
 
-    width: 20px;
-    height: 20px;
+.button-prev {
+  border-radius: 20px 0 0 20px;
 
-    background-color: tomato;
+  &::before {
+    border-right: 9px solid $color-blue-ocean;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+}
+
+.button-next {
+  border-radius: 0 20px 20px 0;
+
+  &::before {
+    border-left: 9px solid $color-blue-ocean;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
   }
 }
 
@@ -897,7 +938,7 @@
   align-items: center;
 
   width: 100%;
-  padding: 12px 0;
+  padding: 12px 0 10px;
 
   font: inherit;
 

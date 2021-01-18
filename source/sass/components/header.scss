@@ -2,10 +2,14 @@
 @import "../common/mixins";
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+
   color: $color-white;
 
   background-color: $color-blue-sapphire;
+
+  z-index: 20;
 
   @include tablet {
     background-color: $color-cobalt-blue;
@@ -21,6 +25,53 @@
     @include desktop {
       background-color: $color-blue-cobalt;
     }
+  }
+
+  &--scrolled {
+    background-color: $color-white;
+  }
+
+  &--scrolled .header__menu {
+    background-color: $color-white;
+
+    &--opened .header__menu-items-wrapper {
+      display: block;
+
+      @include tablet {
+        display: contents;
+      }
+    }
+
+    @include desktop {
+      height: 90px;
+      padding-top: 0;
+    }
+  }
+
+  &--scrolled .header__menu-items-wrapper {
+    display: none;
+
+    @include tablet {
+      display: contents;
+    }
+  }
+
+  &--scrolled .header__logo-image {
+    display: none;
+
+    &--blue {
+      display: block;
+    }
+  }
+
+  &--scrolled .header-navigation {
+    &::before {
+      background-color: $color-blue-cobalt;
+    }
+  }
+
+  &--scrolled .header-navigation__link {
+    color: $color-blue-cobalt;
   }
 }
 
@@ -52,7 +103,9 @@
 
   @include desktop {
     display: flex;
-    min-height: 160px;
+
+    height: unset;
+    padding-top: 45px;
 
     background-color: $color-blue-sapphire;
   }
@@ -137,6 +190,8 @@
 }
 
 .header__logo-image {
+  display: block;
+
   width: 96px;
   height: 15px;
 
@@ -359,6 +414,8 @@
     display: none;
 
     &--opened {
+      display: block;
+
       width: 18px;
       height: 18px;
       fill: $color-yellow-sunrise;
@@ -454,6 +511,10 @@
   height: 18px;
 
   fill: $color-blue-sapphire;
+
+  &--opened {
+    display: none;
+  }
 
   @include desktop {
     width: 18px;

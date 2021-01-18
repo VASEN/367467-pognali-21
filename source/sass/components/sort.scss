@@ -2,7 +2,12 @@
 @import "source/sass/common/mixins";
 
 .sort__container {
-  padding: 20px 0;
+  padding: 20px 0 28px;
+
+  @include tablet {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
 
   @include desktop {
     min-width: auto;
@@ -11,7 +16,7 @@
 }
 
 .sort__wrapper {
-  padding: 25px;
+  padding: 28px 25px 25px;
 
   background-color: $color-yellow-sunrise;
   border-radius: 20px;
@@ -22,15 +27,24 @@
 
   @include desktop {
     padding: 45px;
+    padding-left: 48px;
   }
 }
 
 .sort__title {
+  margin-bottom: 22px;
+
   @include font(22px, 22px, $font-weight-bold);
   color: $color-blue-ocean;
 
   @include tablet {
+    margin-bottom: 38px;
+
     @include font(30px, 30px, $font-weight-bold);
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
   }
 }
 
@@ -45,6 +59,7 @@
   }
 
   @include desktop {
+    margin-bottom: 12px;
     padding-top: 0;
     padding-bottom: 0;
 
@@ -110,8 +125,35 @@
 .sort__area {
   border-top: 1px solid $color-yellow-saffron-light;
 
+  &--show {
+    @include desktop {
+      padding-bottom: 18px;
+    }
+  }
+
+  &--show .sort__rectangle {
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid $color-blue-cobalt;
+    border-right: 5px solid transparent;
+    border-top: none;
+  }
+
+  &--show .button-sort-toggle {
+    padding-bottom: 13px;
+
+    @include desktop {
+      padding-bottom: 20px;
+    }
+  }
+
   &--show .sort__list {
-    display: block;
+    display: grid;
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &--show .sort__travel-list {
@@ -119,6 +161,11 @@
 
     @include desktop {
       justify-content: center;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: start;
     }
   }
 
@@ -129,7 +176,7 @@
 
   @include tablet {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 125px 3fr;
     align-items: center;
 
     border: none;
@@ -140,9 +187,16 @@
   }
 }
 
+.sort__area-travel {
+  @include tablet {
+    grid-template-rows: 70px;
+  }
+}
+
 .sort__area-range {
   @include tablet {
     grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 45px;
   }
 }
 
@@ -153,6 +207,17 @@
 }
 
 .sort__area-toggle {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -161,6 +226,8 @@
   }
 
   @include desktop {
+    padding-bottom: 5px;
+
     @include font(20px, 22px, $font-weight-medium);
   }
 }
@@ -170,10 +237,10 @@
 }
 
 .sort__item {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   &:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 
     @include tablet {
       margin-bottom: 0;
@@ -189,11 +256,21 @@
   }
 }
 
-.sort__item label {
+.sort__item-box {
   display: flex;
-  align-items: center;
 
-  @include font(20px, 20px, $font-weight-normal);
+  @include font(15px, 20px, $font-weight-normal);
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     content: "";
@@ -202,12 +279,32 @@
     height: 18px;
     margin-right: 10px;
 
-    background-color: tomato;
+    background-color: $color-white;
+    border-radius: 4px;
 
     @include tablet {
       width: 24px;
       height: 24px;
     }
+
+    @include desktop {
+      margin-right: 13px;
+    }
+  }
+
+  @include tablet {
+    align-items: flex-end;
+
+    @include font(20px, 20px, $font-weight-normal);
+  }
+}
+
+.sort__item-input:checked + .sort__item-box {
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 17' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.39 14.18L4 10.5V9c0 .04 0-.04 0 0V7.5l3.38 3.26c.11.12.3.12.42 0L15 3v3.5l-6.2 6.62h.01l-1 1.06a.29.29 0 01-.42 0z' fill='%23161C35'/%3E%3C/svg%3E%0A");
+    background-size: 18px 17px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -215,16 +312,24 @@
   justify-content: start;
 
   padding-bottom: 20px;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
 }
 
-.sort .travel-list__item {
+.sort-travel-list__item {
+  margin-right: 1px;
+
   @include tablet {
     margin-right: 0;
   }
 }
 
-.travel-list__item label {
-  display: block;
+.sort-travel-list__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 32px;
   height: 32px;
@@ -238,10 +343,34 @@
   }
 }
 
-.sort .button-round {
+.sort-travel-list__image {
+  width: 16px;
+  height: 16px;
+
+  opacity: 0.15;
+
+  @include tablet {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.sort-travel-list__input:checked + .sort-travel-list__label .sort-travel-list__image {
+  opacity: 1;
+}
+
+.sort__button {
+  align-items: center;
+
   @include font(17px, 17px, $font-weight-bold);
 
   background-color: $color-white;
+
+  cursor: pointer;
+
+  &:active {
+    background-color: $color-yellow-saffron-light;
+  }
 
   @include tablet {
     max-width: none;
@@ -253,7 +382,15 @@
   }
 }
 
+.sort__button span {
+  opacity: 0.3;
+}
+
 .sort__rectangle {
+  border-left: 5px solid transparent;
+  border-top: 5px solid $color-blue-cobalt;
+  border-right: 5px solid transparent;
+
   @include tablet {
     display: none;
   }

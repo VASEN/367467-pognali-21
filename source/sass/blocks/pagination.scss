@@ -2,14 +2,21 @@
 @import "source/sass/common/mixins";
 
 .pagination {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @include tablet {
-    padding: 25px;
+    grid-template-columns: auto 35px 35px;
+    padding: 28px 25px 25px 28px;
 
     background-color: $color-white;
     border-radius: 20px;
+  }
+
+  @include desktop {
+    order: 2;
+
+    grid-template-columns: auto 45px 45px;
   }
 }
 
@@ -38,12 +45,51 @@
 
   border-radius: 50%;
 
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: $color-yellow-sunrise;
+
+    opacity: 1;
+  }
+
   &--current {
     background-color: $color-yellow-sunrise;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
   }
 }
 
 .pagination__prev-button,
 .pagination__next-button {
   min-width: auto;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.pagination__prev-button {
+  box-sizing: border-box;
+
+  border-right: 1px solid $color-white-smoky;
+
+  @include tablet {
+    border-right: none;
+  }
 }
