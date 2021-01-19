@@ -37,6 +37,8 @@
 }
 
 .country-plan__title {
+  position: relative;
+
   display: inline;
   margin: 0;
 
@@ -48,6 +50,8 @@
 
   @include tablet {
     @include font(30px, 30px, $font-weight-bold);
+
+    text-overflow: ellipsis;
   }
 }
 
