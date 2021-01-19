@@ -102,6 +102,11 @@
   }
 }
 
+.feedback__auth-link {
+  font: inherit;
+  color: $color-white;
+}
+
 .feedback__link {
   text-decoration: underline;
   color: $color-yellow-sunrise;

@@ -171,29 +171,24 @@
             <li class="cards__item country-card">
               <picture class="country-card__photo">
                 <source media="(min-width: 486px)" srcset="img/thailand-desktop@1x.png">
-                <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Фотография Таиланда">
+                <img src="img/thailand-mobile@2x.png" alt="Фотография Таиланда">
               </picture>
               <picture class="country-card__flag">
                 <source media="(min-width: 486px)" srcset="img/thailand-size-L@1x.png">
-                <img src="img/thailand-size-S@1x.png"  alt="Флаг Таиланда">
+                <img src="img/thailand-size-S@1x.png" alt="Флаг Таиланда">
               </picture>
               <div class="country-card__wrapper">
                 <div class="country-card__wrapper-text">
                   <h3 class="country-card__title">Таиланд</h3>
                   <p class="country-card__promo">Джунгли зовут!</p>
                 </div>
-                <span class="country-card__stats">
-                  <svg viewBox="0 0 14 14">
-                    <use xlink:href="img/sprite.svg#icon-user"></use>
-                  </svg>
-                  18321
-                </span>
+                <span class="country-card__stats">18321</span>
               </div>
             </li>
             <li class="cards__item country-card">
               <picture class="country-card__photo">
                 <source media="(min-width: 486px)" srcset="img/france-desktop@1x.png">
-                <img src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Фотография Франции">
+                <img src="img/france-mobile@2x.png" alt="Фотография Франции">
               </picture>
               <picture class="country-card__flag">
                 <source media="(min-width: 486px)" srcset="img/france-size-L@1x.png">
@@ -204,18 +199,13 @@
                   <h3 class="country-card__title">Франция</h3>
                   <p class="country-card__promo">Трэ бьен, манифик!</p>
                 </div>
-                <span class="country-card__stats">
-                  <svg viewBox="0 0 14 14">
-                    <use xlink:href="img/sprite.svg#icon-user"></use>
-                  </svg>
-                  12518
-                </span>
+                <span class="country-card__stats">12518</span>
               </div>
             </li>
             <li class="cards__item country-card">
               <picture class="country-card__photo">
                 <source media="(min-width: 486px)" srcset="img/czech-desktop@1x.png">
-                <img src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Фотография Чехии">
+                <img src="img/czech-mobile@2x.png" alt="Фотография Чехии">
               </picture>
               <picture class="country-card__flag">
                 <source media="(min-width: 486px)" srcset="img/czech-size-L@1x.png">
@@ -226,12 +216,7 @@
                   <h3 class="country-card__title">Чехия</h3>
                   <p class="country-card__promo">Закоулки старой Европы</p>
                 </div>
-                <span class="country-card__stats">
-                  <svg viewBox="0 0 14 14">
-                    <use xlink:href="img/sprite.svg#icon-user"></use>
-                  </svg>
-                  5236
-                </span>
+                <span class="country-card__stats">5236</span>
               </div>
             </li>
           </ul>
@@ -471,7 +456,11 @@
       <div class="container feedback__container">
         <div class="feedback__wrapper">
           <h2 class="feedback__title title">Заинтересовались?</h2>
-          <p class="feedback__text">Зарегистрируйтесь, <br class="feedback__br-mobile"> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
+          <p class="feedback__text">
+            <a class="feedback__auth-link" href="#">
+              Зарегистрируйтесь,
+            </a>
+            <br class="feedback__br-mobile"> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
           <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="feedback__email">E-mail</label>
             <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email" required>
