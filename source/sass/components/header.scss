@@ -531,7 +531,7 @@
     grid-column: 1/-1;
 
     display: flex;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 
     @include desktop {
       display: none;
