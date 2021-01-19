@@ -5,28 +5,22 @@
   position: static;
 
   margin: 0;
-  padding: 44px 84px 30px 50px;
+  padding: 40px 84px 30px 50px;
 
   @include font(16px, 22px, $font-weight-light);
 
   @include tablet {
-    position: absolute;
-    left: 40px;
-    bottom: 350px;
-
-    padding-top: 0;
-    padding-left: 35px;
-    padding-bottom: 0;
+    margin-right: -20px;
+    padding: 53px 0 0 73px;
   }
 
   @include desktop {
-    position: absolute;
-    top: 115px;
-    right: 4px;
-    left: auto;
-
     display: flex;
     flex-direction: column;
+
+    padding-top: 115px;
+    padding-left: 60px;
+    padding-right: 85px;
   }
 }
 
