@@ -98,6 +98,8 @@
 }
 
 .user-card__status {
+  flex-shrink: 0;
+
   width: 6px;
   height: 6px;
   margin-right: 10px;
