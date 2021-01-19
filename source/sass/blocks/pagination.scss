@@ -25,6 +25,7 @@
 
   @include tablet {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     @include reset-list;
