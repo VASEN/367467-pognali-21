@@ -35,7 +35,6 @@
 .actions-list__item {
   flex-grow: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
   padding: 22px 21px 31px 24px;
@@ -43,6 +42,8 @@
   z-index: 1;
 
   @include font(18px, 18px, $font-weight-bold);
+
+  overflow: hidden;
 
   @include tablet {
     flex-direction: column;
@@ -150,18 +151,22 @@
 }
 
 .actions-list__text {
-  max-width: 150px;
   margin: 0;
 
   color: $color-blue-sapphire;
 
-  @include tablet {
-    display: flex;
+  overflow: hidden;
+  word-break: break-word;
+  text-overflow: ellipsis;
 
-    max-width: 195px;
+  @include tablet {
+    display: block;
+
     margin-bottom: 9px;
 
     @include font(24px, 24px, $font-weight-bold);
+
+    word-break: unset;
   }
 }
 
