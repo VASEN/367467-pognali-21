@@ -1,9 +1,8 @@
-let filter = document.querySelector(".filter");
-
-let filterToggle = filter.querySelector(".filter__toggle");
-let filterContinentList = filter.querySelector(".filter__continent-list");
-let filterContent = filter.querySelector(".filter__content-wrapper");
-let filterClose = filter.querySelector(".filter__close-button");
+var filter = document.querySelector(".filter");
+var filterToggle = filter.querySelector(".filter__toggle");
+var filterContinentList = filter.querySelector(".filter__continent-list");
+var filterContent = filter.querySelector(".filter__content-wrapper");
+var filterClose = filter.querySelector(".filter__close-button");
 
 filterToggle.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -17,7 +16,7 @@ filterToggle.addEventListener("click", function (evt) {
   } else {
     filterContent.classList.add("filter__content-wrapper--closed");
   }
-})
+});
 
 filterClose.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -31,4 +30,4 @@ filterClose.addEventListener("click", function (evt) {
   } else {
     filterContent.classList.add("filter__content-wrapper--closed");
   }
-})
+});

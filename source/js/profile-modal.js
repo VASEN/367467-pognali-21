@@ -1,8 +1,8 @@
-let profile = document.querySelector(".profile");
+var profile = document.querySelector(".profile");
 
-let profileModalOpen = profile.querySelector(".button-business");
-let profileModal = profile.querySelector(".profile__modal");
-let profileModalClose = profileModal.querySelector(".button-profile");
+var profileModalOpen = profile.querySelector(".button-business");
+var profileModal = profile.querySelector(".profile__modal");
+var profileModalClose = profileModal.querySelector(".button-profile");
 
 profileModalOpen.addEventListener("click", function (evt) {
   evt.preventDefault();

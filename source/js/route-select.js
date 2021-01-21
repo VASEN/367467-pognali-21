@@ -1,5 +1,5 @@
-let routeSelect = document.querySelector(".route-module__select");
-let alphabet = document.querySelector(".alphabet");
+var routeSelect = document.querySelector(".route-module__select");
+var alphabet = document.querySelector(".alphabet");
 
 routeSelect.addEventListener("click", function (evt) {
   evt.preventDefault();
