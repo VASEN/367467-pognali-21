@@ -6,7 +6,7 @@
   display: grid;
   grid-template-rows: 100px;
 
-  max-height: 190px;
+  min-height: 190px;
   box-sizing: border-box;
 
   &:last-child {
@@ -16,6 +16,8 @@
   @media (min-width: 486px) {
     grid-template-columns: 1fr 185px;
     grid-template-rows: 140px;
+
+    min-height: 140px;
   }
 
   @include desktop {
@@ -56,10 +58,10 @@
 }
 
 .country-card__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 65px;
 
-  max-height: 90px;
+  min-height: 90px;
   padding: 25px 24px 23px 24px;
   box-sizing: border-box;
   z-index: 1;
@@ -69,11 +71,13 @@
 
   @media (min-width: 486px) {
     order: 0;
+
+    grid-template-columns: auto;
     grid-column: 1/2;
     grid-row: 1/2;
 
-    flex-direction: column;
     min-height: 140px;
+    padding-right: 35px;
 
     border-radius: 20px 0 0 20px;
   }
@@ -88,8 +92,13 @@
     padding-top: 24px;
     padding-left: 28px;
 
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
   }
+}
+
+.country-card__wrapper-text {
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .country-card__title {
@@ -98,6 +107,9 @@
 
   @include font(21px, 21px, $font-weight-bold);
   color: $color-black;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @include tablet {
     margin-bottom: 3px;
@@ -117,6 +129,9 @@
   @include font(16px, 18px, $font-weight-medium);
   color: rgba($color-black-bluish, 0.3);
 
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   @include tablet {
     @include font(20px, 20px, $font-weight-medium);
   }
@@ -124,37 +139,50 @@
 
 .country-card__stats {
   display: flex;
-  align-items: start;
 
+  min-width: 60px;
   margin-top: 3px;
 
   @include font(16px, 20px, $font-weight-medium);
   color: rgba($color-blue-sapphire, 0.3);
 
+  word-break: break-word;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.38 3.93A2.7 2.7 0 007 6.69a2.7 2.7 0 002.63-2.76A2.7 2.7 0 007 1.17a2.7 2.7 0 00-2.63 2.76zm7.29 8.9h.58v-.61a4.2 4.2 0 00-4.08-4.3H5.83a4.2 4.2 0 00-4.08 4.3v.61h9.92z' fill='%23192144' opacity='0.1'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 14px;
+
+    @media (min-width: 486px) {
+      width: 24px;
+      height: 24px;
+
+      background-size: 24px 24px;
+    }
+
+    @include desktop {
+      width: 24px;
+      height: 24px;
+
+      margin-right: 8px;
+    }
+  }
+
   @include tablet {
+    align-items: center;
+
     margin-top: 0;
 
     @include font(20px, 20px, $font-weight-medium);
-  }
-}
-
-.country-card__stats svg {
-  width: 14px;
-  height: 14px;
-  margin-right: 5px;
-
-  fill: $color-blue-cobalt;
-  opacity: 0.1;
-
-  @include tablet {
-    width: 24px;
-    height: 24px;
-  }
-
-  @include desktop {
-    width: 24px;
-    height: 24px;
-
-    margin-right: 8px;
   }
 }

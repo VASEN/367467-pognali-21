@@ -1,4 +1,4 @@
-let headerTop = document.querySelector(".header");
+var headerTop = document.querySelector(".header");
 
 window.addEventListener("scroll", function (evt ) {
   evt.preventDefault();

@@ -1,9 +1,9 @@
-let header = document.querySelector(".header");
-let headerMenu = header.querySelector(".header__menu");
-let menuToggle = header.querySelector(".header__menu-toggle");
-let headerLogo = header.querySelector(".header__logo-link");
-let headerContacts = header.querySelector(".header__contacts");
-let headerSocial = header.querySelector(".header__social");
+var header = document.querySelector(".header");
+var headerMenu = header.querySelector(".header__menu");
+var menuToggle = header.querySelector(".header__menu-toggle");
+var headerLogo = header.querySelector(".header__logo-link");
+var headerContacts = header.querySelector(".header__contacts");
+var headerSocial = header.querySelector(".header__social");
 
 menuToggle.addEventListener("click", function (evt) {
   evt.preventDefault();

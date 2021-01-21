@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="header">
@@ -13,11 +13,17 @@
       <div class="header__menu">
         <a class="header__logo-link">
           <picture class="header__logo-image">
+            <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-tablet-white@2x.webp">
+            <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.webp">
+            <source type="image/webp"srcset="img/logo-mobile-white@2x.webp">
             <source media="(min-width: 1439px)" srcset="img/logo-desktop-white@2x.png">
             <source media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.png">
             <img src="img/logo-mobile-white@2x.png" alt="Логотип туристического сервиса Погнали">
           </picture>
           <picture class="header__logo-image--blue">
+            <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.webp">
+            <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.webp">
+            <source type="image/webp"srcset="img/logo-mobile-blue@2x.webp">
             <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
             <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
             <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
@@ -101,38 +107,63 @@
           <div class="hero__bg-wrapper">
             <p class="hero__title">В путешествие <br>с крутыми <br>попутчиками!</p>
             <picture class="hero__image">
+              <source type="image/webp" media="(min-width: 1439px)" srcset="img/hero-desktop@1x.webp">
+              <source type="image/webp" media="(min-width: 767px)" srcset="img/hero-tablet@1x.webp">
+              <source type="image/webp"srcset="img/hero-mobile@1x.webp">
               <source media="(min-width: 1440px)" srcset="img/hero-desktop@1x.png">
               <source media="(min-width: 768px)" srcset="img/hero-tablet@1x.png">
               <img src="img/hero-mobile@1x.png" alt="Путешественник с чемоданом">
             </picture>
+            <div class="hero__quote-wrapper">
+              <blockquote class="hero__quote hero-quote">
+                <p class="hero-quote__text">
+                  «Лучшее приложение,<br class="hero-quote__br--mobile">
+                  что я видел в жизни!»
+                </p>
+                <cite class="hero-quote__author">Мурат Эльтазин<br>главный редактор<br class="hero-quote__br--mobile">газеты «гаджетлайф»</cite>
+              </blockquote>
+            </div>
           </div>
-          <blockquote class="hero__quote hero-quote">
-            <p class="hero-quote__text">
-              «Лучшее приложение,<br class="hero-quote__br--mobile">
-              что я видел в жизни!»
-            </p>
-            <cite class="hero-quote__author">
-              Мурат Эльтазин<br>
-              главный редактор<br class="hero-quote__br--mobile">
-              газеты «гаджетлайф»
-            </cite>
-          </blockquote>
         </div>
+        <div class="hero__menu-auth-wrapper">
+          <div class="header__user-navigation">
+            <a class="button-round header__user-navigation-button" href="#"><span>Авторизация</span></a>
+          </div>
+          <div class="header__contacts">
+            <a class="header__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
+              <span class="header__telephone-image-wrapper">
+                <svg class="header__telephone-image" viewBox="0 0 18 18">
+                  <use xlink:href="img/sprite.svg#icon-call"></use>
+                </svg>
+              </span>
+              <span class="header__telephone--full">8 800 555-86-28</span>
+            </a>
+            <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
+                <span class="header__email-image-wrapper">
+                  <svg class="header__mail-image" viewBox="0 0 45 45">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </span>
+              <span class="header__email--full">mail@htmlacademy.ru</span>
+            </a>
+          </div>
+        </div>
+
         <ol class="hero__actions actions-list">
           <li class="actions-list__item">
-            <p class="actions-list__text">Выберите направление</p>
+            <p class="actions-list__text">Выберите<br>направление</p>
             <span class="actions-list__number"></span>
           </li>
           <li class="actions-list__item">
-            <p class="actions-list__text">Изучите идеи путешественников</p>
+            <p class="actions-list__text">Изучите идеи<br>путешественников</p>
             <span class="actions-list__number"></span>
           </li>
           <li class="actions-list__item">
-            <p class="actions-list__text">Находите тех, кто похож на вас</p>
+            <p class="actions-list__text">Находите тех,<br>кто похож на вас</p>
             <span class="actions-list__number"></span>
           </li>
           <li class="actions-list__item">
-            <p class="actions-list__text">Путешествуйте вместе!</p>
+            <p class="actions-list__text">Путешествуйте<br>вместе!</p>
             <span class="actions-list__number"></span>
           </li>
         </ol>
@@ -170,32 +201,35 @@
           <ul class="cards__list">
             <li class="cards__item country-card">
               <picture class="country-card__photo">
+                <source type="image/webp" media="(min-width: 486px)" srcset="img/thailand-desktop@1x.webp">
+                <source type="image/webp"srcset="img/thailand-mobile@2x.webp">
                 <source media="(min-width: 486px)" srcset="img/thailand-desktop@1x.png">
-                <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Фотография Таиланда">
+                <img src="img/thailand-mobile@2x.png" alt="Фотография Таиланда">
               </picture>
               <picture class="country-card__flag">
+                <source type="image/webp" media="(min-width: 486px)" srcset="img/thailand-size-L@1x.webp">
+                <source type="image/webp"srcset="img/thailand-size-S@1x.webp">
                 <source media="(min-width: 486px)" srcset="img/thailand-size-L@1x.png">
-                <img src="img/thailand-size-S@1x.png"  alt="Флаг Таиланда">
+                <img src="img/thailand-size-S@1x.png" alt="Флаг Таиланда">
               </picture>
               <div class="country-card__wrapper">
                 <div class="country-card__wrapper-text">
                   <h3 class="country-card__title">Таиланд</h3>
                   <p class="country-card__promo">Джунгли зовут!</p>
                 </div>
-                <span class="country-card__stats">
-                  <svg viewBox="0 0 14 14">
-                    <use xlink:href="img/sprite.svg#icon-user"></use>
-                  </svg>
-                  18321
-                </span>
+                <span class="country-card__stats">18321</span>
               </div>
             </li>
             <li class="cards__item country-card">
               <picture class="country-card__photo">
+                <source type="image/webp" media="(min-width: 486px)" srcset="img/france-desktop@1x.webp">
+                <source type="image/webp"srcset="img/france-mobile@2x.webp">
                 <source media="(min-width: 486px)" srcset="img/france-desktop@1x.png">
-                <img src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Фотография Франции">
+                <img src="img/france-mobile@2x.png" alt="Фотография Франции">
               </picture>
               <picture class="country-card__flag">
+                <source type="image/webp" media="(min-width: 486px)" srcset="img/france-size-L@1x.webp">
+                <source type="image/webp"srcset="img/france-size-S@1x.webp">
                 <source media="(min-width: 486px)" srcset="img/france-size-L@1x.png">
                 <img src="img/france-size-S@1x.png"  alt="Флаг Франции">
               </picture>
@@ -204,20 +238,19 @@
                   <h3 class="country-card__title">Франция</h3>
                   <p class="country-card__promo">Трэ бьен, манифик!</p>
                 </div>
-                <span class="country-card__stats">
-                  <svg viewBox="0 0 14 14">
-                    <use xlink:href="img/sprite.svg#icon-user"></use>
-                  </svg>
-                  12518
-                </span>
+                <span class="country-card__stats">12518</span>
               </div>
             </li>
             <li class="cards__item country-card">
               <picture class="country-card__photo">
+                <source type="image/webp" media="(min-width: 486px)" srcset="img/czech-desktop@1x.webp">
+                <source type="image/webp"srcset="img/czech-mobile@2x.webp">
                 <source media="(min-width: 486px)" srcset="img/czech-desktop@1x.png">
-                <img src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Фотография Чехии">
+                <img src="img/czech-mobile@2x.png" alt="Фотография Чехии">
               </picture>
               <picture class="country-card__flag">
+                <source type="image/webp" media="(min-width: 486px)" srcset="img/czech-size-L@1x.webp">
+                <source type="image/webp"srcset="img/czech-size-S@1x.webp">
                 <source media="(min-width: 486px)" srcset="img/czech-size-L@1x.png">
                 <img src="img/czech-size-S@1x.png"  alt="Флаг Чехии">
               </picture>
@@ -226,12 +259,7 @@
                   <h3 class="country-card__title">Чехия</h3>
                   <p class="country-card__promo">Закоулки старой Европы</p>
                 </div>
-                <span class="country-card__stats">
-                  <svg viewBox="0 0 14 14">
-                    <use xlink:href="img/sprite.svg#icon-user"></use>
-                  </svg>
-                  5236
-                </span>
+                <span class="country-card__stats">5236</span>
               </div>
             </li>
           </ul>
@@ -267,16 +295,29 @@
                 <span class="level__number">99</span>
                 <span class="level__text">level</span>
               </div>
-              <img class="user-card__photo companions__photo" src="img/firsova-index-size-285@1x.png" alt="Таня Фирсова">
+              <picture class="user-card__photo companions__photo">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet-size-285@1x.webp">
+                <source type="image/webp" srcset="img/firsova-index-size-285@1x.webp">
+                <img src="img/firsova-index-size-285@1x.png" alt="Таня Фирсова">
+              </picture>
               <div class="user-card__visited-countries">
                 <a class="user-card__country-link" href="#" data-hover="Шри Ланка">
-                  <img class="user-card__country-flag" src="img/srilanka-size-S@1x.png" alt="Флаг Шри Ланки">
+                  <picture class="user-card__country-flag">
+                    <source type="image/webp" srcset="img/srilanka-size-S@1x.webp">
+                    <img src="img/srilanka-size-S@1x.png" alt="Флаг Шри Ланки">
+                  </picture>
                 </a>
                 <a class="user-card__country-link" href="#" data-hover="Таиланд">
-                  <img class="user-card__country-flag" src="img/thailand-size-S@1x.png" alt="Флаг Таиланда">
+                  <picture class="user-card__country-flag">
+                    <source type="image/webp" srcset="img/thailand-size-S@1x.webp">
+                    <img src="img/thailand-size-S@1x.png" alt="Флаг Таиланда">
+                  </picture>
                 </a>
                 <a class="user-card__country-link" href="#" data-hover="Сейшелы">
-                  <img class="user-card__country-flag" src="img/seychelles-size-S@1x.png" width="35" height="25" alt="Флаг Сейшел">
+                  <picture class="user-card__country-flag">
+                    <source type="image/webp" srcset="img/seychelles-size-S@1x.webp">
+                    <img src="img/seychelles-size-S@1x.png" width="35" height="25" alt="Флаг Сейшел">
+                  </picture>
                 </a>
               </div>
               <a class="user-card__wrapper" href="#">
@@ -339,13 +380,23 @@
                 <span class="level__number">80</span>
                 <span class="level__text">level</span>
               </div>
-              <img class="user-card__photo companions__photo" src="img/demin-index-size-285@1x.png" alt="Петя Демин">
+              <picture class="user-card__photo companions__photo">
+                <source type="image/webp" srcset="img/demin-tablet-size-285@1x.webp">
+                <source type="image/webp" srcset="img/demin-index-size-285@1x.webp">
+                <img src="img/demin-index-size-285@1x.png" alt="Петя Демин">
+              </picture>
               <div class="user-card__visited-countries">
                 <a class="user-card__country-link" href="#" data-hover="Бельгия">
-                  <img class="user-card__country-flag" src="img/belgium-size-S@1x.png" alt="Флаг Бельгии">
+                  <picture class="user-card__country-flag">
+                    <source type="image/webp" srcset="img/belgium-size-S@1x.webp">
+                    <img src="img/belgium-size-S@1x.png" alt="Флаг Бельгии">
+                  </picture>
                 </a>
                 <a class="user-card__country-link" href="#" data-hover="Чехия">
-                  <img class="user-card__country-flag" src="img/czech-size-S@1x.png" alt="Флаг Чехии">
+                  <picture class="user-card__country-flag">
+                    <source type="image/webp" srcset="img/czech-size-S@1x.webp">
+                    <img src="img/czech-size-S@1x.png" alt="Флаг Чехии">
+                  </picture>
                 </a>
               </div>
               <a class="user-card__wrapper" href="#">
@@ -405,6 +456,8 @@
           <h2 class="profile__title title">Добавьте <br>свой <br>профиль</h2>
           <div class="price-list__wrapper">
             <picture class="profile__wrapper-logo">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/profile-logo-size-L@1x.webp">
+              <source type="image/webp" srcset="img/profile-logo-size-S@1x.webp">
               <source media="(min-width: 1440px)" srcset="img/profile-logo-size-L@1x.png">
               <img src="img/profile-logo-size-S@1x.png" alt="Прайс лист в рублях">
             </picture>
@@ -471,7 +524,11 @@
       <div class="container feedback__container">
         <div class="feedback__wrapper">
           <h2 class="feedback__title title">Заинтересовались?</h2>
-          <p class="feedback__text">Зарегистрируйтесь, <br class="feedback__br-mobile"> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
+          <p class="feedback__text">
+            <a class="feedback__auth-link" href="#">
+              Зарегистрируйтесь,
+            </a>
+            <br class="feedback__br-mobile"> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
           <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="feedback__email">E-mail</label>
             <input class="button-feedback" type="email" placeholder="E-mail" id="feedback__email" required>
@@ -521,6 +578,9 @@
     </section>
     <section class="map__image">
       <picture class="map__image--static">
+        <source type="image/webp" media="(min-width: 1439px)" srcset="img/map-bg-size-L@1x.webp 1x, img/map-bg-size-L@2x.webp">
+        <source type="image/webp" media="(min-width: 767px)" srcset="img/map-bg-size-M@1x.webp 1x, img/map-bg-size-M@2x.webp">
+        <source type="image/webp" srcset="img/map-bg-size-S@1x.webp 1x, img/map-bg-size-S@2x.webp">
         <source media="(min-width: 1439px)" srcset="img/map-bg-size-L@1x.jpg 1x, img/map-bg-size-L@2x.jpg 2x">
         <source media="(min-width: 767px)" srcset="img/map-bg-size-M@1x.jpg 1x, img/map-bg-size-M@2x.jpg 2x">
         <img src="img/map-bg-size-S@1x.jpg" srcset="img/map-bg-size-S@2x.jpg 2x" alt="ул. Большая Конюшенная, 19/8">
@@ -532,6 +592,9 @@
     <div class="container footer__container">
       <a class="footer__logo-link">
         <picture class="footer__logo-image">
+          <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.webp">
+          <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.webp">
+          <source type="image/webp"srcset="img/logo-mobile-blue@2x.webp">
           <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
           <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
           <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
@@ -561,10 +624,8 @@
         </a>
       </div>
       <div class="footer__copyright copyright">
-        <a class="copyright__title" href="https://htmlacademy.ru/intensive/adaptive">
-          <span>Разработано</span>
-        </a>
-        <a href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" >
+          <span class="copyright__title">Разработано</span>
           <svg class="copyright__logo" viewBox="0 0 60 60">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
@@ -572,8 +633,8 @@
       </div>
     </div>
   </footer>
-<script src="js/header-open.js"></script>
-<script src="js/header-scrolling.js"></script>
-<script src="js/profile-modal.js"></script>
+<script src="js/header-open.min.js"></script>
+<script src="js/header-scrolling.min.js"></script>
+<script src="js/profile-modal.min.js"></script>
 </body>
 </html>

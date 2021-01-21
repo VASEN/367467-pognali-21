@@ -201,12 +201,19 @@
   display: flex;
   flex-direction: column;
 
+  max-width: 144px;
+
   @include font(20px, 20px, $font-weight-bold);
   color: $color-blue-ocean;
 
+  white-space: nowrap;
+  overflow: hidden;
+
   @include tablet {
+    flex-wrap: wrap;
     flex-direction: row;
 
+    max-width: 280px;
     margin-right: 22px;
 
     @include font(30px, 30px, $font-weight-bold);
@@ -215,6 +222,14 @@
   @include desktop {
     order: 1;
   }
+}
+
+.travellers__user .user-card__user-name,
+.travellers__user .user-card__user-lastname {
+  display: block;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .travellers__user-card .user-card__status {
@@ -254,6 +269,8 @@
 }
 
 .travellers .tags-list__item {
+  word-break: break-word;
+
   @include tablet {
     @include font(20px, 23px, $font-weight-normal);
   }
@@ -294,6 +311,7 @@
 .travellers__user-card .user-card__to-visit {
   @include tablet {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @include desktop {
@@ -306,7 +324,7 @@
 
 .travellers__user-card .user-card__country-card {
   @include tablet {
-    align-items: flex-end;
+    align-items: center;
 
     margin-right: 25px;
     margin-bottom: 0;
@@ -340,6 +358,8 @@
 
 .travellers__user-card .user-card__country-card-title {
   color: $color-blue-ocean;
+
+  word-break: break-word;
 
   @include tablet {
     margin-left: 12px;
