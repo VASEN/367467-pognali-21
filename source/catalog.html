@@ -13,11 +13,17 @@
       <div class="header__menu">
         <a class="header__logo-link" href="index.html">
           <picture class="header__logo-image">
+            <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-tablet-white@2x.webp">
+            <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.webp">
+            <source type="image/webp"srcset="img/logo-mobile-white@2x.webp">
             <source media="(min-width: 1439px)" srcset="img/logo-desktop-white@2x.png">
             <source media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.png">
             <img src="img/logo-mobile-white@2x.png" alt="Логотип туристического сервиса Погнали">
           </picture>
           <picture class="header__logo-image--blue">
+            <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.webp">
+            <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.webp">
+            <source type="image/webp"srcset="img/logo-mobile-blue@2x.webp">
             <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
             <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
             <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
@@ -616,6 +622,9 @@
           <ul class="cards__list travellers__cards-list">
             <li class="cards__item user-card travellers__user-card">
               <picture class="user-card__photo">
+                <source type="image/webp" srcset="img/firsova-size-285@2x.webp" media="(min-width: 1440px)">
+                <source type="image/webp" srcset="img/firsova-size-190@2x.webp" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/firsova-size-70@2x.webp">
                 <source srcset="img/firsova-size-285@2x.png" media="(min-width: 1440px)">
                 <source srcset="img/firsova-size-190@2x.png" media="(min-width: 768px)">
                 <img src="img/firsova-size-70@2x.png" alt="Таня Фирсова">
@@ -655,15 +664,24 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/srilanka-size-S@2x.png" alt="Флаг Шри Ланки">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/srilanka-size-L@2x.webp">
+                      <img src="img/srilanka-size-S@2x.png" alt="Флаг Шри Ланки">
+                    </picture>
                     <span class="user-card__country-card-title">Шри Ланка</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/thailand-size-S@2x.png" alt="Флаг Таиланда">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/thailand-size-L@2x.webp">
+                      <img src="img/thailand-size-S@2x.png" alt="Флаг Таиланда">
+                    </picture>
                     <span class="user-card__country-card-title">Таиланд</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/seychelles-size-S@2x.png" alt="Флаг Сейшел">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/seychelles-size-L@2x.webp">
+                      <img src="img/seychelles-size-S@2x.png" alt="Флаг Сейшел">
+                    </picture>
                     <span class="user-card__country-card-title">Сейшелы</span>
                   </li>
                 </ul>
@@ -712,9 +730,12 @@
             </li>
             <li class="cards__item user-card travellers__user-card">
               <picture class="user-card__photo">
+                <source type="image/webp" srcset="img/demin-size-285@2x.webp" media="(min-width: 1440px)">
+                <source type="image/webp" srcset="img/demin-size-190@2x.webp" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/demin-size-70@2x.webp">
                 <source srcset="img/demin-size-285@2x.png" media="(min-width: 1440px)">
                 <source srcset="img/demin-size-190@2x.png" media="(min-width: 768px)">
-                <img src="img/demin-size-100@2x.png" alt="Петя Демин">
+                <img src="img/demin-size-70@2x.png" alt="Петя Демин">
               </picture>
               <div class="user-card__like-wrapper">
                 <button class="user-card__button-like" type="button" aria-label="like"></button>
@@ -748,11 +769,17 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/belgium-size-S@2x.png" alt="Флаг Бельгии>">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/belgium-size-S@2x.webp">
+                      <img src="img/belgium-size-S@2x.png" alt="Флаг Бельгии>">
+                    </picture>
                     <span class="user-card__country-card-title">Бельгия</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/czech-size-S@2x.png" alt="Флаг Чехии">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/czech-size-S@2x.webp">
+                      <img src="img/czech-size-S@2x.png" alt="Флаг Чехии">
+                    </picture>
                     <span class="user-card__country-card-title">Чехия</span>
                   </li>
                 </ul>
@@ -801,6 +828,9 @@
             </li>
             <li class="cards__item user-card travellers__user-card">
               <picture class="user-card__photo">
+                <source type="image/webp" srcset="img/smolov-size-285@2x.webp" media="(min-width: 1440px)">
+                <source type="image/webp" srcset="img/smolov-size-190@2x.webp" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/smolov-size-70@2x.webp">
                 <source srcset="img/smolov-size-285@2x.png" media="(min-width: 1440px)">
                 <source srcset="img/smolov-size-190@2x.png" media="(min-width: 768px)">
                 <img src="img/smolov-size-70@2x.png" alt="Марк Смолов">
@@ -837,15 +867,24 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/USA-size-L@1x.png" alt="Флаг США>">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/USA-size-L@1x.webp">
+                      <img src="img/USA-size-L@1x.png" alt="Флаг США>">
+                    </picture>
                     <span class="user-card__country-card-title">США</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/australia-size-L@1x.png" alt="Флаг Австралия">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/australia-size-L@1x.webp">
+                      <img src="img/australia-size-L@1x.png" alt="Флаг Австралия">
+                    </picture>
                     <span class="user-card__country-card-title">Австралия</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/dominica-size-L@1x.png" alt="Флаг Доминика">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/dominica-size-L@1x.webp">
+                      <img src="img/dominica-size-L@1x.png" alt="Флаг Доминика">
+                    </picture>
                     <span class="user-card__country-card-title">Доминика</span>
                   </li>
                 </ul>
@@ -894,6 +933,9 @@
             </li>
             <li class="cards__item user-card travellers__user-card">
               <picture class="user-card__photo">
+                <source type="image/webp" srcset="img/rogovaya-size-285@2x.webp" media="(min-width: 1440px)">
+                <source type="image/webp" srcset="img/rogovaya-size-190@2x.webp" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/rogovaya-size-70@2x.webp">
                 <source srcset="img/rogovaya-size-285@2x.png" media="(min-width: 1440px)">
                 <source srcset="img/rogovaya-size-190@2x.png" media="(min-width: 768px)">
                 <img src="img/rogovaya-size-70@2x.png" alt="Лариса Роговая">
@@ -927,11 +969,17 @@
                 <h3 class="user-card__legend">хочет посетить:</h3>
                 <ul class="user-card__to-visit">
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/UK-size-L@1x.png" alt="Флаг Великобритании>">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/UK-size-L@1x.webp">
+                      <img src="img/UK-size-L@1x.png" alt="Флаг Великобритании>">
+                    </picture>
                     <span class="user-card__country-card-title">Великобритания</span>
                   </li>
                   <li class="user-card__country-card">
-                    <img class="user-card__country-card-image" src="img/germany-size-L@1x.png" alt="Флаг Германии">
+                    <picture class="user-card__country-card-image">
+                      <source type="image/webp" srcset="img/germany-size-L@1x.webp">
+                      <img src="img/germany-size-L@1x.png" alt="Флаг Германии">
+                    </picture>
                     <span class="user-card__country-card-title">Германия</span>
                   </li>
                 </ul>
@@ -1000,6 +1048,9 @@
     <div class="container footer__container">
       <a class="footer__logo-link" href="index.html">
         <picture class="footer__logo-image">
+          <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.webp">
+          <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.webp">
+          <source type="image/webp"srcset="img/logo-mobile-blue@2x.webp">
           <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
           <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
           <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">

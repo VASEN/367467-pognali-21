@@ -13,11 +13,17 @@
     <div class="header__menu">
       <a class="header__logo-link" href="index.html">
         <picture class="header__logo-image">
+          <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-tablet-white@2x.webp">
+          <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.webp">
+          <source type="image/webp"srcset="img/logo-mobile-white@2x.webp">
           <source media="(min-width: 1439px)" srcset="img/logo-desktop-white@2x.png">
           <source media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.png">
           <img src="img/logo-mobile-white@2x.png" alt="Логотип туристического сервиса Погнали">
         </picture>
         <picture class="header__logo-image--blue">
+          <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.webp">
+          <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.webp">
+          <source type="image/webp"srcset="img/logo-mobile-blue@2x.webp">
           <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
           <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
           <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
@@ -115,7 +121,10 @@
               </circle>
             </svg>
           </div>
-          <img class="user-profile__photo" src="img/demin-size-100@2x.png" alt="Петя Демин">
+          <picture>
+            <source type="image/webp"srcset="img/demin-size-100@2x.webp">
+            <img class="user-profile__photo" src="img/demin-size-100@2x.png" alt="Петя Демин">
+          </picture>
           <label class="button-change-photo">
             <input class="user-profile__change-photo" type="file" name="change-photo">
             <span class="button-change-photo__title"><span class="button-change-photo--full">Сменить </span>фото</span>
@@ -452,7 +461,10 @@
                   </div>
                   <span class="route__graph"></span>
                   <div class="route__country-wrapper">
-                    <img class="route__country-flag" src="img/BaH-size-L@2x.png" alt="Флаг Босния и герцеговина">
+                    <picture>
+                      <source type="image/webp" srcset="img/BaH-size-L@2x.webp">
+                      <img class="route__country-flag" src="img/BaH-size-L@2x.png" alt="Флаг Босния и герцеговина">
+                    </picture>
                     <button class="route__button button-delete" type="button" aria-label="Удалить страну"></button>
                   </div>
                 </div>
@@ -467,7 +479,10 @@
                   </div>
                   <span class="route__graph"></span>
                   <div class="route__country-wrapper">
-                    <img class="route__country-flag" src="img/czech-size-L@2x.png" alt="Флаг Чехия">
+                    <picture>
+                      <source type="image/webp" srcset="img/czech-size-L@2x.webp">
+                      <img class="route__country-flag" src="img/czech-size-L@2x.png" alt="Флаг Чехия">
+                    </picture>
                     <button class="route__button button-delete" type="button" aria-label="Удалить страну"></button>
                   </div>
                 </div>
@@ -853,7 +868,10 @@
               <div class="slider-item__module country-plan">
                 <div class="country-plan__wrapper">
                   <h4 class="country-plan__title">Босния и Герцеговина</h4>
-                  <img class="country-plan__country-flag" src="img/BaH-size-L@2x.png" alt="Флаг Босния и герцеговина">
+                  <picture>
+                    <source type="image/webp" srcset="img/BaH-size-L@2x.webp">
+                    <img class="country-plan__country-flag" src="img/BaH-size-L@2x.png" alt="Флаг Босния и герцеговина">
+                  </picture>
                 </div>
                 <div class="country-plan__text-wrapper">
                   <textarea class="country-plan__text" name="BaH-plan" id="BaH-plan" placeholder="План действий" required></textarea>
@@ -864,7 +882,10 @@
               <div class="slider-item__module country-plan">
                 <div class="country-plan__wrapper">
                   <h4 class="country-plan__title">Чехия</h4>
-                  <img class="country-plan__country-flag" src="img/czech-size-L@2x.png" alt="Флаг Чехия">
+                  <picture>
+                    <source type="image/webp" srcset="img/czech-size-L@2x.webp">
+                    <img class="country-plan__country-flag" src="img/czech-size-L@2x.png" alt="Флаг Чехия">
+                  </picture>
                 </div>
                 <div class="country-plan__text-wrapper">
                   <textarea class="country-plan__text" name="czech-plan" id="czech-plan" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
@@ -886,6 +907,9 @@
   <div class="container footer__container">
     <a class="footer__logo-link" href="index.html">
       <picture class="footer__logo-image">
+        <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.webp">
+        <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.webp">
+        <source type="image/webp"srcset="img/logo-mobile-blue@2x.webp">
         <source media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.png">
         <source media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.png">
         <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
