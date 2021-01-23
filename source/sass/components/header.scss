@@ -86,7 +86,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 59px;
+  grid-template-rows: 52px;
   grid-template-areas:
     "logo toggle"
     "menu-nav menu-nav"
@@ -99,7 +99,7 @@
 
   @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 140px;
+    grid-template-rows: 130px;
 
     grid-template-areas:
       "logo toggle user-nav"
