@@ -20,7 +20,7 @@
             <source media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.png">
             <img src="img/logo-mobile-white@2x.png" alt="Логотип туристического сервиса Погнали">
           </picture>
-          <picture class="header__logo-image--blue">
+          <picture class="header__logo-image header__logo-image--blue">
             <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-desktop-blue@2x.webp">
             <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-blue@2x.webp">
             <source type="image/webp" srcset="img/logo-mobile-blue@2x.webp">
@@ -63,19 +63,19 @@
                     <svg class="header__telephone-image" viewBox="0 0 18 18">
                       <use xlink:href="img/sprite.svg#icon-call"></use>
                     </svg>
-                    <svg class="header__telephone-image--opened" viewBox="0 0 19 17">
+                    <svg class="header__telephone-image header__telephone-image--opened" viewBox="0 0 19 17">
                       <use xlink:href="img/sprite.svg#icon-telephone"></use>
                     </svg>
                   </span>
-              <span class="header__telephone--full">8 800 555-86-28</span>
+              <span class="header__telephone header__telephone--full">8 800 555-86-28</span>
             </a>
-            <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
+            <a class="header__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
                   <span class="header__email-image-wrapper">
                     <svg class="header__mail-image" viewBox="0 0 45 45">
                       <use xlink:href="img/sprite.svg#icon-mail"></use>
                     </svg>
                   </span>
-              <span class="header__email--full">mail@htmlacademy.ru</span>
+              <span class="header__email header__email--full">mail@htmlacademy.ru</span>
             </a>
           </div>
         </div>
@@ -99,7 +99,7 @@
       </div>
     </div>
   </header>
-  <main class="form-page__main">
+  <main class="page-main">
     <div class="page__title-wrapper">
       <div class="container">
         <h1 class="page__title">Направления</h1>
@@ -113,7 +113,7 @@
             <div class="level user-profile__level">
               <span class="level__number">80</span>
               <span class="level__text">level</span>
-              <svg class="level__circle--form" viewBox="0 0 100 100">
+              <svg class="level__circle level__circle--form" viewBox="0 0 100 100">
                 <circle r="47" cx="50" cy="50"
                         fill="none" stroke-width="3"
                         stroke="#FF8D30"
@@ -128,7 +128,7 @@
             </picture>
             <label class="button-change-photo">
               <input class="user-profile__change-photo" type="file" name="change-photo">
-              <span class="button-change-photo__title"><span class="button-change-photo--full">Сменить </span>фото</span>
+              <span class="button-change-photo__title"><span class="button-change-photo__text">Сменить </span>фото</span>
             </label>
             <div class="user-profile__wrapper user-profile__tags-wrapper">
               <h3 class="user-profile__legend user-profile__tags-legend">Тэги</h3>
@@ -276,25 +276,25 @@
                   <thead>
                     <tr class="calendar__title">
                       <td class="calendar__title-day" aria-label="Понедельник">
-                        <span class="calendar__title--short">П</span><span class="calendar__title--full">н</span>
+                        <span class="calendar__title">П</span><span class="calendar__title calendar__title--full">н</span>
                       </td>
                       <td class="calendar__title-day" aria-label="Вторинк">
-                        <span class="calendar__title--short">В</span><span class="calendar__title--full">т</span>
+                        <span class="calendar__title">В</span><span class="calendar__title calendar__title--full">т</span>
                       </td>
                       <td class="calendar__title-day" aria-label="Среда">
-                        <span class="calendar__title--short">С</span><span class="calendar__title--full">р</span>
+                        <span class="calendar__title">С</span><span class="calendar__title calendar__title--full">р</span>
                       </td>
                       <td class="calendar__title-day" aria-label="Четверг">
-                        <span class="calendar__title--short">Ч</span><span class="calendar__title--full">т</span>
+                        <span class="calendar__title">Ч</span><span class="calendar__title calendar__title--full">т</span>
                       </td>
                       <td class="calendar__title-day" aria-label="Пятница">
-                        <span class="calendar__title--short">П</span><span class="calendar__title--full">т</span>
+                        <span class="calendar__title">П</span><span class="calendar__title calendar__title--full">т</span>
                       </td>
                       <td class="calendar__title-day calendar__title-day--holiday" aria-label="Суббота">
-                        <span class="calendar__title--short">С</span><span class="calendar__title--full">б</span>
+                        <span class="calendar__title">С</span><span class="calendar__title calendar__title--full">б</span>
                       </td>
                       <td class="calendar__title-day calendar__title-day--holiday" aria-label="Воскресенье">
-                        <span class="calendar__title--short">В</span><span class="calendar__title--full">с</span>
+                        <span class="calendar__title">В</span><span class="calendar__title calendar__title--full">с</span>
                       </td>
                     </tr>
                   </thead>
@@ -319,7 +319,7 @@
                         <button class="calendar__day-button calendar__day-button--past" type="button">28</button>
                       </td>
                       <td class="calendar__day">
-                        <button class="calendar__day-button calendar__day-button--past" type="button">1<span class="calendar__day--start-month">&nbsp;мар</span></button>
+                        <button class="calendar__day-button calendar__day-button--past" type="button">1<span class="calendar__start-month">&nbsp;мар</span></button>
                       </td>
                     </tr>
                     <tr class="calendar__week">
@@ -402,13 +402,13 @@
                         <button class="calendar__day-button calendar__day-button--past" type="button">25</button>
                       </td>
                       <td class="calendar__day">
-                        <button class="calendar__day-button calendar__day-button--start calendar__day-button--selected" type="button">26 <span class="calendar__day--start-trip">Заезд</span></button>
+                        <button class="calendar__day-button calendar__day-button--start calendar__day-button--selected" type="button">26 <span class="calendar__start-trip">Заезд</span></button>
                       </td>
                       <td class="calendar__day">
                         <button class="calendar__day-button calendar__day-button--selected" type="button">27</button>
                       </td>
                       <td class="calendar__day">
-                        <button class="calendar__day-button calendar__day-button--end calendar__day-button--selected" type="button">28 <span class="calendar__day--end-trip">Выезд</span></button>
+                        <button class="calendar__day-button calendar__day-button--end calendar__day-button--selected" type="button">28 <span class="calendar__end-trip">Выезд</span></button>
                       </td>
                       <td class="calendar__day">
                         <button class="calendar__day-button calendar__day-button--available" type="button">29</button>
@@ -422,7 +422,7 @@
                         <button class="calendar__day-button calendar__day-button--available" type="button">31</button>
                       </td>
                       <td class="calendar__day">
-                        <button class="calendar__day-button calendar__day-button--available" type="button">1<span class="calendar__day--start-month">&nbsp;апр</span></button>
+                        <button class="calendar__day-button calendar__day-button--available" type="button">1<span class="calendar__start-month">&nbsp;апр</span></button>
                       </td>
                       <td class="calendar__day">
                         <button class="calendar__day-button calendar__day-button--available" type="button">2</button>
@@ -442,7 +442,7 @@
               </div>
               <a class="slider-item__next-step button-rect" href="#step-2">Следующий шаг</a>
             </div>
-            <div class="slider-item slider-item step-two" id="step-2">
+            <div class="slider__item slider-item step-two" id="step-2">
               <div class="slider-item__step-two-wrapper">
                 <h3 class="slider-item__title">
                   <span>Шаг 2.&nbsp;</span>
@@ -858,7 +858,7 @@
                 <a class="slider-item__prev-step button" href="#step-1">На шаг назад</a>
               </div>
             </div>
-            <div class="slide__item slider-item step-three" id="step-3">
+            <div class="slider__item slider-item step-three" id="step-3">
               <div class="slider-item__step-three-wrapper">
                 <h3 class="slider-item__title">
                   <span>Шаг 3.</span>
@@ -900,7 +900,7 @@
                 <span class="country-plan__graph"></span>
               </div>
               <div class="slider-item__button-wrapper">
-                <button class="step-tree__button-round slider-item__next-step button-rect" type="submit">Отправить</button>
+                <button class="step-three__button-round slider-item__next-step button-rect" type="submit">Отправить</button>
                 <a class="slider-item__prev-step button" href="#step-2">На шаг назад</a>
               </div>
             </div>

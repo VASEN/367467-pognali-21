@@ -51,10 +51,12 @@
     letter-spacing: unset;
 
     border-radius: 0 0 10px 10px;
+  }
+}
 
-    &--full {
-      display: none;
-    }
+.button-change-photo__text {
+  @include desktop {
+    display: none;
   }
 }
 

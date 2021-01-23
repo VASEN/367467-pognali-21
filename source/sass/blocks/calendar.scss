@@ -53,25 +53,6 @@
 
   border: 1px solid $color-grey-light;
 
-  &--start-month {
-    display: none;
-
-    @include desktop {
-      display: inline;
-    }
-  }
-
-  &--start-trip,
-  &--end-trip {
-    display: none;
-
-    @include desktop {
-      display: inline;
-
-      margin-top: 5px;
-    }
-  }
-
   @include tablet {
     min-height: 70px;
   }
@@ -83,6 +64,25 @@
 
     text-align: left;
     vertical-align: top;
+  }
+}
+
+.calendar__start-month {
+  display: none;
+
+  @include desktop {
+    display: inline;
+  }
+}
+
+.calendar__start-trip,
+.calendar__end-trip {
+  display: none;
+
+  @include desktop {
+    display: inline;
+
+    margin-top: 5px;
   }
 }
 

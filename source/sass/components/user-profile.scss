@@ -110,23 +110,6 @@
   }
 }
 
-.level__circle--form {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100px;
-  height: 100px;
-  z-index: 1;
-
-  transform: rotate(-90deg);
-
-  @include tablet {
-    width: 94px;
-    height: 94px;
-  }
-}
-
 .user-profile__photo {
   width: 100px;
   height: 100px;
