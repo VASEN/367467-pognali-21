@@ -1,6 +1,3 @@
-@import "../common/variables";
-@import "../common/mixins";
-
 .companions {
   position: relative;
 
@@ -165,8 +162,6 @@
 .companions__level .level__number {
   margin-top: 5px;
 }
-
-
 
 .companions .user-card__wrapper {
   @include tablet {
