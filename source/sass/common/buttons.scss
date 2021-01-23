@@ -278,7 +278,7 @@
   }
 }
 
-.button-feedback__icon {
+.button-feedback-icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -311,18 +311,6 @@
     min-width: 330px;
   }
 
-  &--full {
-    display: none;
-
-    @include desktop {
-      display: block;
-
-      margin-left: 35px;
-
-      @include font(24px, 24px, $font-weight-bold);
-    }
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -347,6 +335,18 @@
 
       margin-right: 22px;
     }
+  }
+}
+
+.button-feedback-icon__text {
+  display: none;
+
+  @include desktop {
+    display: block;
+
+    margin-left: 35px;
+
+    @include font(24px, 24px, $font-weight-bold);
   }
 }
 

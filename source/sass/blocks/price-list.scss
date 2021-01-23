@@ -1,12 +1,6 @@
 @import "../common/variables";
 @import "../common/mixins";
 
-.price-list__wrapper {
-  @include tablet {
-    position: relative;
-  }
-}
-
 .price-list {
   counter-reset: list;
 

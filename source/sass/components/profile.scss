@@ -75,6 +75,12 @@
   }
 }
 
+.profile__price-list-wrapper {
+  @include tablet {
+    position: relative;
+  }
+}
+
 .profile__wrapper-logo {
   position: absolute;
   top: 37px;

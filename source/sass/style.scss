@@ -4,7 +4,7 @@
 @import "common/global";
 @import "common/helpers";
 @import "common/buttons";
-@import "blocks/hero-quote";
+@import "common/page-main";
 // Blocks
 @import "blocks/header-navigation";
 @import "blocks/actions-list";
@@ -26,6 +26,7 @@
 @import "blocks/pagination";
 @import "blocks/range";
 @import "blocks/alphabet-test";
+@import "blocks/hero-quote";
 // Components
 @import "components/header";
 @import "components/footer";
@@ -36,6 +37,7 @@
 @import "components/profile";
 @import "components/feedback";
 @import "components/map";
+@import "components/map-image";
 @import "components/new-plan";
 @import "components/user-plans";
 @import "components/user-profile";

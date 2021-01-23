@@ -142,13 +142,6 @@
   }
 }
 
-.hero__button-round {
-  padding: 11px 28px 9px 29px;
-  box-sizing: border-box;
-
-  line-height: 20px;
-}
-
 .hero__menu-auth-wrapper {
   position: absolute;
   top: 400px;
@@ -166,4 +159,91 @@
   @include tablet {
     display: none;
   }
+}
+
+.hero__user-navigation-button {
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-saffron;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    margin: 0;
+
+    @include font(20px, 20px, $font-weight-bold);
+  }
+}
+
+.hero__contacts {
+  grid-area: contacts;
+
+  display: flex;
+
+  @include font(16px, 18px, $font-weight-bold);
+  text-transform: uppercase;
+}
+
+.hero__telephone,
+.hero__email {
+  display: flex;
+  align-items: center;
+
+  color: $color-blue-cobalt;
+
+}
+
+.hero__telephone {
+  &:hover .hero__telephone-image-wrapper,
+  &:focus .hero__telephone-image-wrapper {
+    background-color: $color-orange-hover;
+  }
+
+  &:active .hero__telephone-image {
+    opacity: 0.3;
+  }
+}
+
+.hero__email {
+  &:hover .hero__email-image-wrapper,
+  &:focus .hero__email-image-wrapper {
+    background-color: $color-orange;
+  }
+
+  &:active .hero__mail-image {
+    opacity: 0.3;
+  }
+}
+
+.hero__telephone-image-wrapper,
+.hero__email-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.hero__telephone-image-wrapper {
+  background-color: $color-orange;
+}
+
+.hero__email-image-wrapper {
+  background-color: $color-yellow-saffron;
+}
+
+.hero__telephone-image,
+.hero__mail-image {
+  width: 18px;
+  height: 18px;
+
+  fill: $color-blue-sapphire;
 }
