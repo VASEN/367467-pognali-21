@@ -18,4 +18,8 @@
     border-top: 9px solid transparent;
     border-bottom: 9px solid transparent;
   }
+
+  @include tablet{
+    min-width: unset;
+  }
 }

@@ -5,7 +5,7 @@
 }
 
 .sort__container {
-  padding: 20px 0 28px;
+  padding: 20px 0 25px;
 
   @include tablet {
     padding-top: 45px;
@@ -62,7 +62,7 @@
   }
 
   @include desktop {
-    margin-bottom: 12px;
+    margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
 

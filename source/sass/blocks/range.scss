@@ -1,5 +1,9 @@
 .range {
   padding: 23px 0;
+
+  @include desktop {
+    padding-top: 34px;
+  }
 }
 
 .range__line {

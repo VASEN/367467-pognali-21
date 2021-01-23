@@ -88,7 +88,7 @@
 
   @include tablet {
     display: inline-flex;
-    padding-top: 55px;
+    padding-top: 35px;
 
     @include font(20px, 20px, $font-weight-bold);
     text-transform: uppercase;
