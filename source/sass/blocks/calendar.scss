@@ -12,7 +12,7 @@
 
 .calendar__title {
   text-align: center;
-  color: $color-black-bluish;
+  color: inherit;
 
   &--full {
     display: none;
@@ -33,7 +33,7 @@
   @include desktop {
     padding-left: 16px;
     padding-top: 14px;
-    padding-bottom: 14px;
+    padding-bottom: 20px;
 
     text-align: left;
   }
@@ -55,7 +55,7 @@
   }
 
   @include desktop {
-    height: 72px;
+    //height: 72px;
     min-width: 138px;
     box-sizing: border-box;
 
@@ -156,7 +156,7 @@
   @include desktop {
     display: flex;
 
-    min-height: 71px;
+    min-height: 70px;
     padding-left: 15px;
     padding-top: 15px;
 

@@ -16,12 +16,12 @@
 
   @include tablet {
     padding-top: 125px;
-    padding-bottom: 135px;
+    padding-bottom: 110px;
   }
 
   @include desktop {
     padding-top: 128px;
-    padding-bottom: 135px;
+    padding-bottom: 117px;
   }
 }
 
@@ -52,7 +52,7 @@
   @include tablet {
     grid-template-columns: 94px 1fr 94px;
     grid-column-gap: 60px;
-    grid-row-gap: 45px;
+    grid-row-gap: 48px;
   }
 
   @include desktop {

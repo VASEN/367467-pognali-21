@@ -1,4 +1,6 @@
 .route {
+  margin-bottom: 25px;
+
   @include tablet {
     position: relative;
     padding-top: 42px;
@@ -19,7 +21,7 @@
   }
 
   @include desktop {
-    padding-top: 60px;
+    padding-top: 65px;
 
     &::before {
       right: 230px;
@@ -38,6 +40,10 @@
   width: 100%;
 
   margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -84,6 +90,10 @@
 
   @include desktop {
     grid-template-columns: 1fr 80px 190px;
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
   }
 }
 

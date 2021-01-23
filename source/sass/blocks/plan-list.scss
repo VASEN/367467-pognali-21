@@ -57,6 +57,12 @@
   background-color: $color-blue-ocean;
   border-radius: 50%;
 
+  opacity: 0.3;
+
+  &:first-child {
+    opacity: 1;
+  }
+
   &:last-child {
     margin-right: 0;
   }
