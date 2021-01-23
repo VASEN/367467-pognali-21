@@ -43,10 +43,8 @@
   }
 }
 
-.catalog-page__sort {
-  @include desktop {
-    order: 1;
-  }
+.catalog-page .page-main {
+  background-color: $color-white-smoky;
 }
 
 .catalog-page .footer {
