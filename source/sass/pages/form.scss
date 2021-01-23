@@ -10,6 +10,18 @@
 
   &--opened {
     background-color: $color-white;
+
+    @include desktop {
+      background-color: $color-cobalt-blue;
+    }
+  }
+
+  &--scrolled {
+    background-color: $color-white;
+  }
+
+  &--scrolled .header__menu {
+    background-color: $color-white;
   }
 }
 
@@ -18,47 +30,10 @@
 
   &--opened {
     background-color: $color-white;
-  }
 
-  &--opened .header__menu-items-wrapper {
-    display: block;
-    grid-area: items-wr;
-
-    @include tablet {
-      display: contents;
+    @include desktop {
+      background-color: $color-cobalt-blue;
     }
-  }
-
-  @include desktop {
-    display: grid;
-    grid-template-areas: none;
-    grid-template-columns: max-content auto max-content;
-    grid-template-rows: 158px;
-
-    min-height: auto;
-    padding-top: 0;
-  }
-}
-
-.form-page .header__logo-link {
-  @include desktop {
-    grid-area: unset;
-  }
-}
-
-.form-page .header__menu-items-wrapper {
-  display: none;
-
-  @include tablet {
-    order: 2;
-    display: grid;
-  }
-}
-
-.form-page .header-navigation {
-  @include desktop {
-    order: 1;
-    grid-area: unset;
   }
 }
 

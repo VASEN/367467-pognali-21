@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header header--opened header--nojs">
     <div class="container header__container ">
-      <div class="header__menu">
-        <a class="header__logo-link">
+      <div class="header__menu header__menu--opened">
+        <a class="header__logo-link header__logo-link--opened">
           <picture class="header__logo-image">
             <source type="image/webp" media="(min-width: 1439px)" srcset="img/logo-tablet-white@2x.webp">
             <source type="image/webp" media="(min-width: 767px)" srcset="img/logo-tablet-white@2x.webp">
@@ -29,7 +29,7 @@
             <img src="img/logo-mobile-blue@2x.png" alt="Логотип туристического сервиса Погнали">
           </picture>
         </a>
-        <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
+        <button class="header__menu-toggle header__menu-toggle--opened" type="button" aria-label="Открыть меню"></button>
           <nav class="header__navigation header-navigation">
             <ul class="header-navigation__list">
               <li class="header-navigation__item">
@@ -57,16 +57,16 @@
             <div class="header__user-navigation">
               <a class="button-round header__user-navigation-button" href="#"><span>Авторизация</span></a>
             </div>
-            <div class="header__contacts">
+            <div class="header__contacts header__contacts--opened">
               <a class="header__telephone" href="tel:88005558628" aria-label="Позвоните нам!">
-              <span class="header__telephone-image-wrapper">
-                <svg class="header__telephone-image" viewBox="0 0 18 18">
-                  <use xlink:href="img/sprite.svg#icon-call"></use>
-                </svg>
-                <svg class="header__telephone-image--opened" viewBox="0 0 19 17">
-                  <use xlink:href="img/sprite.svg#icon-telephone"></use>
-                </svg>
-              </span>
+                <span class="header__telephone-image-wrapper">
+                  <svg class="header__telephone-image" viewBox="0 0 18 18">
+                    <use xlink:href="img/sprite.svg#icon-call"></use>
+                  </svg>
+                  <svg class="header__telephone-image--opened" viewBox="0 0 19 17">
+                    <use xlink:href="img/sprite.svg#icon-telephone"></use>
+                  </svg>
+                </span>
                 <span class="header__telephone--full">8 800 555-86-28</span>
               </a>
               <a class="header__email contacts__email" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам письмо!">
@@ -79,7 +79,7 @@
               </a>
             </div>
           </div>
-          <div class="header__social">
+          <div class="header__social header__social--opened">
             <a class="header__social-link header__social-link--fb" aria-label="Погнали в Facebook" href="#">
               <svg viewBox="0 0 14 28">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>

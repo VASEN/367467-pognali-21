@@ -23,7 +23,7 @@
     background-color: $color-white;
 
     @include desktop {
-      background-color: $color-blue-cobalt;
+      background-color: $color-blue-sapphire;
     }
   }
 
@@ -34,7 +34,16 @@
   &--scrolled .header__menu {
     background-color: $color-white;
 
+    &--opened {
+      @include desktop {
+        padding: 0 60px;
+      }
+    }
+
     @include desktop {
+      grid-template-rows: unset;
+      grid-template-areas: "logo menu-nav items-wr";
+
       height: 90px;
       padding: 0;
     }
@@ -56,6 +65,23 @@
 
   &--scrolled .header-navigation__link {
     color: $color-blue-cobalt;
+  }
+
+  &--nojs {
+    position: static;
+  }
+
+  &--nojs .header__menu-toggle {
+    display: none;
+  }
+
+  &--nojs .header__menu {
+    position: static;
+    top: unset;
+    left: unset;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -113,7 +139,15 @@
     }
 
     @include desktop {
-      background-color: $color-blue-cobalt;
+      position: static;
+      display: grid;
+      grid-template-columns: max-content auto max-content;
+      grid-template-rows: unset;
+
+      padding-left: 0;
+      padding-right: 0;
+
+      background-color: $color-blue-sapphire;
     }
   }
 
@@ -121,6 +155,8 @@
     display: block;
 
     @include desktop {
+      grid-column: unset;
+
       display: flex;
     }
   }
@@ -140,6 +176,16 @@
     @include tablet {
       display: contents;
     }
+
+    @include desktop {
+      display: grid;
+      grid-area: unset;
+      grid-template-areas: unset;
+      grid-template-columns: auto auto;
+      order: 1;
+      align-items: center;
+      align-self: center;
+    }
   }
 
   &--opened .header__user-navigation {
@@ -155,6 +201,18 @@
       grid-row: 1/2;
 
       margin-bottom: 0;
+    }
+
+    @include desktop {
+      grid-column: 2/-1;
+      grid-row: unset;
+    }
+  }
+
+  &--opened .header__contacts {
+    @include desktop {
+      grid-column: 1/2;
+      grid-row: 1/-1;
     }
   }
 }
@@ -371,6 +429,10 @@
   &--opened .header__email {
     &--full {
       display: inline;
+
+      @include desktop {
+        display: none;
+      }
     }
 
     &:hover .header__telephone-image-wrapper,
@@ -392,10 +454,25 @@
       width: 68px;
       height: 68px;
     }
+
+    @include desktop {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--opened .header__telephone-image-wrapper {
+    @include desktop {
+      background-color: $color-orange;
+    }
   }
 
   &--opened .header__telephone-image {
     display: none;
+
+    @include desktop {
+      display: block;
+    }
 
     &--opened {
       display: block;
@@ -408,6 +485,16 @@
         width: 23px;
         height: 23px;
       }
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &--opened .header__email-image-wrapper {
+    @include desktop {
+      background-color: $color-yellow-saffron;
     }
   }
 
@@ -417,6 +504,10 @@
     @include tablet {
       width: 28px;
       height: 19px;
+    }
+
+    @include desktop {
+      fill: $color-blue-sapphire;
     }
   }
 }
