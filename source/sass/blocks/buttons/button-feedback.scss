@@ -39,6 +39,10 @@
       @include font(24px, 24px, $font-weight-bold);
     }
   }
+
+  &:invalid {
+    color: $color-red-scarlett;
+  }
 }
 
 .button-feedback-icon {
