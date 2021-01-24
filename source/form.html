@@ -105,107 +105,108 @@
         <h1 class="page__title">Направления</h1>
       </div>
     </div>
-    <section class="user-profile">
-      <div class="container user-profile__container">
-        <h2 class="visually-hidden">Профиль пользователя Петя Демин</h2>
-        <div class="user-card user-profile__card">
-          <form class="user-profile__form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="level user-profile__level">
-              <span class="level__number">80</span>
-              <span class="level__text">level</span>
-              <svg class="level__circle level__circle--form" viewBox="0 0 100 100">
-                <circle r="47" cx="50" cy="50"
-                        fill="none" stroke-width="3"
-                        stroke="#FF8D30"
-                        stroke-dasharray="240 307.7"
-                        stroke-linecap="square">
-                </circle>
-              </svg>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <section class="user-profile">
+        <div class="container user-profile__container">
+          <h2 class="visually-hidden">Профиль пользователя Петя Демин</h2>
+          <div class="user-card user-profile__card">
+            <div class="user-profile__user-wrapper">
+              <div class="level user-profile__level">
+                <span class="level__number">80</span>
+                <span class="level__text">level</span>
+                <svg class="level__circle level__circle--form" viewBox="0 0 100 100">
+                  <circle r="47" cx="50" cy="50"
+                          fill="none" stroke-width="3"
+                          stroke="#FF8D30"
+                          stroke-dasharray="240 307.7"
+                          stroke-linecap="square">
+                  </circle>
+                </svg>
+              </div>
+              <picture class="user-profile__photo">
+                <source type="image/webp" srcset="img/demin-size-100@2x.webp">
+                <img  src="img/demin-size-100@2x.png" alt="Петя Демин">
+              </picture>
+              <label class="button-change-photo">
+                <input class="user-profile__change-photo" type="file" name="change-photo">
+                <span class="button-change-photo__title"><span class="button-change-photo__text">Сменить </span>фото</span>
+              </label>
+              <div class="user-profile__wrapper user-profile__tags-wrapper">
+                <h3 class="user-profile__legend user-profile__tags-legend">Тэги</h3>
+                <label class="visually-hidden" for="user-profile__tags">Тэги</label>
+                <textarea class="user-profile__tags-editor" name="tags" id="user-profile__tags" rows="1">#бургер #бар #футбол #концерт #крафт</textarea>
+              </div>
+              <div class="user-profile__wrapper user-profile__travel-wrapper">
+                <h3 class="user-profile__legend">Транспорт</h3>
+                <ul class="user-profile__travel-list travel-list">
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="plane" id="travel-by-plane" checked>
+                    <label class="user-profile__travel-label" for="travel-by-plane" title="Самолетом">
+                      <svg class="user-profile__travel-image">
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="bus" id="travel-by-bus" checked>
+                    <label class="user-profile__travel-label" for="travel-by-bus" title="На автобусе">
+                      <svg class="user-profile__travel-image">
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="cycle" id="travel-by-cycle">
+                    <label class="user-profile__travel-label" for="travel-by-cycle" title="На велосипеде">
+                      <svg class="user-profile__travel-image">
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="user-profile__travel-item">
+                    <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="walk" id="travel-walk" checked>
+                    <label class="user-profile__travel-label" for="travel-walk" title="Пешком">
+                      <svg class="user-profile__travel-image">
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
+                      </svg>
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <picture class="user-profile__photo">
-              <source type="image/webp" srcset="img/demin-size-100@2x.webp">
-              <img  src="img/demin-size-100@2x.png" alt="Петя Демин">
-            </picture>
-            <label class="button-change-photo">
-              <input class="user-profile__change-photo" type="file" name="change-photo">
-              <span class="button-change-photo__title"><span class="button-change-photo__text">Сменить </span>фото</span>
-            </label>
-            <div class="user-profile__wrapper user-profile__tags-wrapper">
-              <h3 class="user-profile__legend user-profile__tags-legend">Тэги</h3>
-              <label class="visually-hidden" for="user-profile__tags">Тэги</label>
-              <textarea class="user-profile__tags-editor" name="tags" id="user-profile__tags" rows="1">#бургер #бар #футбол #концерт #крафт</textarea>
-            </div>
-            <div class="user-profile__wrapper user-profile__travel-wrapper">
-              <h3 class="user-profile__legend">Транспорт</h3>
-              <ul class="user-profile__travel-list travel-list">
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="plane" id="travel-by-plane" checked>
-                  <label class="user-profile__travel-label" for="travel-by-plane" title="Самолетом">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-plane"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="bus" id="travel-by-bus" checked>
-                  <label class="user-profile__travel-label" for="travel-by-bus" title="На автобусе">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-bus"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="cycle" id="travel-by-cycle">
-                  <label class="user-profile__travel-label" for="travel-by-cycle" title="На велосипеде">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-bicycle"></use>
-                    </svg>
-                  </label>
-                </li>
-                <li class="user-profile__travel-item">
-                  <input class="visually-hidden user-profile__travel-list-input" type="checkbox" name="walk" id="travel-walk" checked>
-                  <label class="user-profile__travel-label" for="travel-walk" title="Пешком">
-                    <svg class="user-profile__travel-image">
-                      <use xlink:href="img/sprite.svg#icon-run"></use>
-                    </svg>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="user-plans">
-      <div class="user-plans__container container">
-        <h2 class="user-plans__title title">Мои планы:</h2>
-        <ol class="user-plans__list">
-          <li class="user-plans__item plan-item">
-            <div class="plan-item__col-1">
-              <span class="plan-item__number">1.</span>
-              <p class="plan-item__countries">Франция, Италия</p>
-            </div>
-            <div class="plan-item__col-2">
-              <p class="plan-item__companions plan-item__text">3 попутчика</p>
-              <p class="plan-item__dates plan-item__text">26 мар &mdash; 29 мар</p>
-            </div>
-            <a class="plan-item__change" href="#">Изменить</a>
-          </li>
-          <li class="user-plans__item plan-item">
-            <div class="plan-item__col-1">
-              <span class="plan-item__number">2.</span>
-              <p class="plan-item__countries">Таиланд, Индонезия</p>
-            </div>
-            <div class="plan-item__col-2">
-              <p class="plan-item__companions plan-item__text">1 попутчик</p>
-              <p class="plan-item__dates plan-item__text">1 июл &mdash; 15 июл</p>
-            </div>
-            <a class="plan-item__change" href="#">Изменить</a>
-          </li>
-        </ol>
-      </div>
-    </section>
-    <section class="new-plan">
+      </section>
+      <section class="user-plans">
+        <div class="user-plans__container container">
+          <h2 class="user-plans__title title">Мои планы:</h2>
+          <ol class="user-plans__list">
+            <li class="user-plans__item plan-item">
+              <div class="plan-item__col-1">
+                <span class="plan-item__number">1.</span>
+                <p class="plan-item__countries">Франция, Италия</p>
+              </div>
+              <div class="plan-item__col-2">
+                <p class="plan-item__companions plan-item__text">3 попутчика</p>
+                <p class="plan-item__dates plan-item__text">26 мар &mdash; 29 мар</p>
+              </div>
+              <a class="plan-item__change" href="#">Изменить</a>
+            </li>
+            <li class="user-plans__item plan-item">
+              <div class="plan-item__col-1">
+                <span class="plan-item__number">2.</span>
+                <p class="plan-item__countries">Таиланд, Индонезия</p>
+              </div>
+              <div class="plan-item__col-2">
+                <p class="plan-item__companions plan-item__text">1 попутчик</p>
+                <p class="plan-item__dates plan-item__text">1 июл &mdash; 15 июл</p>
+              </div>
+              <a class="plan-item__change" href="#">Изменить</a>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="new-plan">
       <div class="container new-plan__container">
         <div class="new-plan__wrapper">
           <h2 class="new-plan__title title">Добавить план:</h2>
@@ -216,7 +217,6 @@
           </ul>
         </div>
         <div class="new-plan__slider slider">
-          <form class="new-plan__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="slider__item slider-item step-one" id="step-1">
               <div class="slider-item__step-one-wrapper">
                 <h3 class="slider-item__title">
@@ -904,10 +904,10 @@
                 <a class="slider-item__prev-step button" href="#step-2">На шаг назад</a>
               </div>
             </div>
-          </form>
         </div>
       </div>
     </section>
+    </form>
   </main>
   <footer class="page__footer footer">
   <div class="container footer__container">
